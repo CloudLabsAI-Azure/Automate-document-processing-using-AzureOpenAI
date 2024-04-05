@@ -1,9 +1,9 @@
-# 
+# Automate document processing by using Azure AI & OpenAI
 
 ### Overview
-In this lab, 
+In this lab, you will gain proficiency in automated document processing by leveraging a suite of Azure AI services. This includes Azure OpenAI, Azure Form Recognizer, Azure Cognitive Search, Azure Cosmos DB, Azure App Service, and Power BI integration. Also, you will learn to streamline document handling workflows, harnessing the power of cutting-edge AI technologies for enhanced efficiency and data insights.
 
-###
+### 
 
 1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource type with the name similar to **cogservicesbpa{suffix}**.
 
@@ -201,3 +201,8 @@ After you are satisfied with the custom model performance, you can retrieve the 
 7. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
    ![Create an indexer](images/create-an-indexer.png)
+
+
+### Task 5: Connect Function App to Cosmos DB
+
+1. 
