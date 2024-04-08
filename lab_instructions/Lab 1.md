@@ -1,20 +1,6 @@
-# Create and Deploy a Form Recognizer Custom Model
+# Automate document processing using AzureOpenAI
 
 ### Overview
-In this lab, you will create (train) an Azure Form Recognizer custom model using a sample training dataset. Custom models extract and analyze distinct data and use cases from forms and documents specific to your business. To create a custom model, you label a dataset of documents with the values you want to extract and train the model on the labeled dataset. You only need five examples of the same form or document type to get started. For this lab, you will use the dataset provided at [Custom Model Sample Files](/SampleInvoices/Custom%20Model%20Sample/).
-
-
-### Goal
-* Use a sample training data set to train a custom model in the Azure Form Recognizer Studio.
-* Label the training data documents with custom fields of interest.
-* Test the trained model on test data, visualized results, and confidence scores in the studio.
-* Use the custom model in the BPA pipeline.
-
-
-### Pre-requisites
-* The accelerator is deployed and ready in the resource group.
-* You have an Azure subscription and permission to create a Form Recognizer Resource.
-* You have access to the sample invoices folder with the invoices to upload.
 
 ### Instructions
 
@@ -226,13 +212,3 @@ After you are satisfied with the custom model performance, you can retrieve the 
 ## Review
 
 In this lab, you have accomplished the following:
-
-* Use a sample training data set to train a custom model in the Azure Form Recognizer Studio.
-* Label the training data documents with custom fields of interest.
-* Test the trained model on test data, visualized results, and confidence scores in the studio.
-* Use the custom model in the BPA pipeline.
-
-## More Resources
-
-**Getting Started with Form Recognizer Studio**: https://learn.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/form-recognizer-studio-overview?view=form-recog-3.0.0  
-**Form Recognizer Documentation**: https://learn.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/concept-invoice?view=form-recog-3.0.0
