@@ -1,6 +1,6 @@
-# **Getting Started with Your Azure-OpenAI-and-Form-Recognizer-Workshop Workshop**
+# **Getting Started with Your Automate-document-processing-using-AzureOpenAI Workshop**
  
-Welcome to your Azure-OpenAI-and-Form-Recognizer-Workshop workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+Welcome to your Automate-document-processing-using-AzureOpenAI Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
  
 ## **Accessing Your Lab Environment**
  
