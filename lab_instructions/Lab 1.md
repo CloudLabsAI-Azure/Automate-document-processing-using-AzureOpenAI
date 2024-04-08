@@ -4,53 +4,52 @@
 
 ### Instructions
 
-### Task 1: Creating a Form Recognizer Resource
+### Task 1: Creating a Document Intelligence Resource
 
-1. Go to the Resource group, search, and select the **Azure AI services multi-service account** resource type with the name similar to **cogservicesbpa{suffix}**.
+1. Search for **Document Intelligence** and select it.
 
-   ![Alt text](images/select-multi-service.png)
+   ![Alt text](images/1-9.png)
 
-2. Click on the Document Intelligence tab and select **Go to studio**.
+2. Click on **Create**.
 
    ![Alt text](images/select-document-intelligence.png)
 
-3. In Document Intelligence Studio, scroll down to Custom Models and choose **Try it now**.
+3. Add the **project** and **instance** details.
 
    ![Alt text](images/tryitnow.png)
 
-4. Under My Project, click on **+ Create a project**.
+4. In the **Overview** pane, under **Document Intelligence studio** ,click on **Try it**.
 
    ![Alt text](images/create-a-project.png)
 
-5. Enter the following details and click on **Continue**  **(3)**.
+5. In **Document Intelligence studio**, scroll down to **Custom Models** and click on **Get Started**.
+
+6. Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
      ![Alt text](images/enter-project-details.png)
 
-6. Enter the following details **Configure service resource** and click on **Continue** **(5)**.
+7. Enter the following details **Configure service resource** and click on **Continue** **(5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
-   - Form Recognizer or Cognitive Service Resource: Select the available Cognitive Service Form Recognizer name similar to **cogservicesbpass{suffix}** **(3)**.
+   - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
+   - Document Intelligence or Cognitive Service Resource: Select **Document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
    - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
 
      ![configuring service resource](images/configure-service-resource.png)
 
-7. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
+8. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **business-process-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
-   - Check the box to **Create new storage account** **(3)**
-   - Storage account name: **formrecognizer<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
-   - Location: **East US** **(5)**.
-   - Pricing tier: **Standard_LRS Standard** **(6)**.
-   - Blob container name: **custommoduletext** **(7)**.
+   - Resource group: **Document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
+   - Storage account name: Select **formrecognizer<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
+   - Blob container name: **documents** **(5)**.
    
         ![storage account](images/connect-training-data-source.png)
 
-8. Validate the information and choose **Create project**.
+9. Validate the information and choose **Create project**.
 
      ![Alt text](images/create-project.png)
 
