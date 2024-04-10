@@ -12,17 +12,26 @@
 
 2. Click on **Create**.
 
-   ![Alt text](images/select-document-intelligence.png)
+   ![Alt text](images/1-10.png)
 
 3. Add the **project** and **instance** details.
 
-   ![Alt text](images/tryitnow.png)
+   - Subscription: Select your **Default Subscription** **(1)**.
+   - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
+   - Region:
+   - Name: **Document-Intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
+   - Pricing Tier: **Standard SO** **(5)**
+   - Click on **Review and Create** **(6)**
+     
+   ![Alt text](images/1-2.png)
 
 4. In the **Overview** pane, under **Document Intelligence studio** ,click on **Try it**.
 
-   ![Alt text](images/create-a-project.png)
+   ![Alt text](images/1-3.png)
 
 5. In **Document Intelligence studio**, scroll down to **Custom Models** and click on **Get Started**.
+
+   ![Alt text](images/1-4.png)
 
 6. Enter the following details and click on **Continue**  **(3)**.
     
@@ -35,23 +44,23 @@
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
-   - Document Intelligence or Cognitive Service Resource: Select **Document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
-   - API version: **2022-08-31 (3.0 General Availability)** **(4)**.
+   - Document Intelligence or Cognitive Service Resource: Select **Document-Intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
+   - API version: **2024-02-29** **(4)**.
 
-     ![configuring service resource](images/configure-service-resource.png)
+     ![configuring service resource](images/1-5.png)
 
-8. Enter the following details **Connect training data source** and click on **Continue** **(8)**.
+8. Enter the following details **Connect training data source** and click on **Continue** **(5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **Document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
-   - Storage account name: Select **formrecognizer<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
-   - Blob container name: **documents** **(5)**.
+   - Storage account name: Select **bpa5lbj6ctnjktgm** **(3)**.
+   - Blob container name: **documents** **(4)**.
    
-        ![storage account](images/connect-training-data-source.png)
+        ![storage account](images/1-6.png)
 
 9. Validate the information and choose **Create project**.
 
-     ![Alt text](images/create-project.png)
+     ![Alt text](images/1-7.png)
 
 ### Task 2: Train and Label data
 
