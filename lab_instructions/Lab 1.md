@@ -2,6 +2,8 @@
 
 ### Overview
 
+Automate document processing with AzureOpenAI, a powerful solution leveraging Azure's infrastructure and OpenAI's advanced AI models. Seamlessly extract, analyze, and manage information from various document types with high accuracy and efficiency. Utilize cutting-edge natural language processing and machine learning techniques to streamline workflows and improve productivity. Empower your organization with automated document understanding, reducing manual tasks and unlocking valuable insights from unstructured data.
+
 ### Instructions
 
 ### Task 1: Creating a Document Intelligence Resource
