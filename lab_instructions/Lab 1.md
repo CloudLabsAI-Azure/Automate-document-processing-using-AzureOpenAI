@@ -73,7 +73,7 @@ In this lab, you will perform:
    - Storage account name: Select **storage<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
    - Blob container name: **documents** **(4)**.
    
-        ![storage account](images/1-6.png)
+        ![storage account](images/au-1.png)
 
 9. Validate the information and choose **Create project**.
 
