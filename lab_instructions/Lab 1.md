@@ -2,12 +2,21 @@
 
 ### Lab Overview
 
-Automate document processing with AzureOpenAI, a powerful solution leveraging Azure's infrastructure and OpenAI's advanced AI models. Seamlessly extract, analyze, and manage information from various document types with high accuracy and efficiency. Utilize cutting-edge natural language processing and machine learning techniques to streamline workflows and improve productivity. Empower your organization with automated document understanding, reducing manual tasks and unlocking valuable insights from unstructured data.
+Processing of forms and documents is part of several scenarios both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone.
+
+Azure Form Recognizer is an Applied AI Service that enables you to extract text, table data, key-value pairs, and layout information from forms and documents. In this lab, you will learn how to build an end-to-end document processing automation solution utilizing Azure Form Recognizer, Logic Apps, Azure Cosmos DB, and Power BI.
 
 ### Lab Objectives
 
 In this lab, you will perform:
 
+- Provision a Form Recognizer resource.
+- Train a custom model in Form Recognizer Studio.
+- Compose two custom template models together into a single model.
+- Create a Logic App workflow that responds to Event Grid events.
+- Integrate Form Recognizer into a Logic Apps workflow.
+- Store the extracted information from the Form Recognizer’s model in Azure Cosmos DB.
+- Use Power BI to visualize the insights from the analysis of the forms.
 
 
 ### Instructions
