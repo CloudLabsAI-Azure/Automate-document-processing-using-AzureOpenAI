@@ -62,7 +62,7 @@ In this lab, you will perform:
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
    - Document Intelligence or Cognitive Service Resource: Select **Document-Intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
-   - API version: **2024-02-29** **(4)**.
+   - API version: **Select the default version** **(4)**.
 
      ![configuring service resource](images/1-5.png)
 
@@ -70,7 +70,7 @@ In this lab, you will perform:
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **Document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
-   - Storage account name: Select **bpa5lbj6ctnjktgm** **(3)**.
+   - Storage account name: Select **storage<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
    - Blob container name: **documents** **(4)**.
    
         ![storage account](images/1-6.png)
