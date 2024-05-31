@@ -4,7 +4,7 @@
 
 Processing of forms and documents is part of several scenarios both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone.
 
-Azure Form Recognizer is an Applied AI Service that enables you to extract text, table data, key-value pairs, and layout information from forms and documents. In this lab, you will learn how to build an end-to-end document processing automation solution utilizing Azure Form Recognizer, Logic Apps, Azure Cosmos DB, and Power BI.
+Azure Form Recognizer is an Applied AI Service that enables you to extract text, table data, key-value pairs, and layout information from forms and documents. In this lab, you will learn how to use train documents via Document Intelligence resource and further processing the documents to Cosmos DB via Azure functions. 
 
 ### Lab Objectives
 
@@ -12,9 +12,7 @@ In this lab, you will perform:
 
 - Provision a Form Recognizer resource.
 - Train a custom model in Form Recognizer Studio.
-- Compose two custom template models together into a single model.
-- Create a Logic App workflow that responds to Event Grid events.
-- Integrate Form Recognizer into a Logic Apps workflow.
+- Create an Azure Functions project.
 - Store the extracted information from the Form Recognizer’s model in Azure Cosmos DB.
 - Use Power BI to visualize the insights from the analysis of the forms.
 
@@ -27,37 +25,25 @@ In this lab, you will perform:
 
    ![Alt text](images/1-9.png)
 
-2. Click on **Create**.
-
-   ![Alt text](images/1-10.png)
-
-3. Add the **project** and **instance** details.
-
-   - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
-   - Region:
-   - Name: **Document-Intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(4)**.
-   - Pricing Tier: **Standard SO** **(5)**
-   - Click on **Review and Create** **(6)**
+1. Navigate to **Document-Intelligence-<inject key="Deployment ID" enableCopy="false"/>**
      
-   ![Alt text](images/1-2.png)
 
-4. In the **Overview** pane, under **Document Intelligence studio** ,click on **Try it**.
+1. In the **Overview** pane, under **Document Intelligence studio** ,click on **Try it**.
 
    ![Alt text](images/1-3.png)
 
-5. In **Document Intelligence studio**, scroll down to **Custom Models** and click on **Get Started**.
+1. In **Document Intelligence studio**, scroll down to **Custom Models** and click on **Get Started**.
 
    ![Alt text](images/1-4.png)
 
-6. Enter the following details and click on **Continue**  **(3)**.
+1. Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
      ![Alt text](images/enter-project-details.png)
 
-7. Enter the following details **Configure service resource** and click on **Continue** **(5)**.
+1. Enter the following details **Configure service resource** and click on **Continue** **(5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
@@ -66,7 +52,7 @@ In this lab, you will perform:
 
      ![configuring service resource](images/1-5.png)
 
-8. Enter the following details **Connect training data source** and click on **Continue** **(5)**.
+1. Enter the following details **Connect training data source** and click on **Continue** **(5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **Document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
@@ -75,7 +61,7 @@ In this lab, you will perform:
    
         ![storage account](images/au-1.png)
 
-9. Validate the information and choose **Create project**.
+1. Validate the information and choose **Create project**.
 
      ![Alt text](images/1-7.png)
 
