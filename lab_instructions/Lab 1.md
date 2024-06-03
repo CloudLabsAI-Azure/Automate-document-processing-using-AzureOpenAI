@@ -121,6 +121,8 @@ In this step, you will upload 6 training documents to train the model.
 
 ### Task 3: Deploy Function App
 
+1. Navigate to the document intelligence resource you created earlier and copy the **endpoint** and **API key** in a notepad.
+   
 1. Navigate to **Visual Studio Code** and open the folder **funtion-app** from **C:/Labfiles/function_app**.
 
 1. Click on the **Azure symbol (1)** , select **Create Function (2)** by clicking on the **funtion-app icon (3)**
@@ -138,6 +140,39 @@ In this step, you will upload 6 training documents to train the model.
    - Select subscription → choose your **Azure subscription** with the storage account you created → select your **storage account** → then select the name of the storage input container. Press **Enter** to confirm.
 
    - Select how your would like to open your project → choose **Open the project in the current window** from the dropdown menu.
+
+1. In VS Code, navigate to the function's requirements.txt file. This file defines the dependencies for your script. Add the following Python packages to the file:
+   
+`
+cryptography
+azure-functions
+azure-storage-blob
+azure-identity
+requests
+pandas
+numpy
+`
+
+1. Open the **function-app.py** file and add the following import statements:
+
+   `
+import logging
+from azure.storage.blob import BlobServiceClient
+import azure.functions as func
+import json
+import time
+from requests import get, post
+import os
+import requests
+from collections import OrderedDict
+import numpy as np
+import pandas as pd
+`
+
+1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document. Fill in your **endpoint and key values (1)**.
+
+`
+
 
 ## Review
 
