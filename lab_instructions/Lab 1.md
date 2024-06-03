@@ -119,106 +119,25 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Alt text](images/result.png)
 
-### Task 3: Build a new pipeline with the custom model module in BPA
+### Task 3: Deploy Function App
 
-After you are satisfied with the custom model performance, you can retrieve the model ID and use it in a new BPA pipeline with the Custom Model module in the next step.
+1. Navigate to **Visual Studio Code** and open the folder **funtion-app** from **C:/Labfiles/function_app**.
 
-1. Navigate back to the Resource groups and select the resource group **business-process -<inject key="Deployment ID" enableCopy="false"/>**.
+1. Click on the **Azure symbol (1)** , select **Create Function (2)** by clicking on the **funtion-app icon (3)**
 
-    ![Alt text](images/rgg.png)
+1. You'll be prompted to configure several settings:
 
-2. Go to the Resource group, search, and select the **Static Web App** resource type with the name similar to **webappbpa{suffix}**.
+   - Select a language → choose **Python**.
 
-   ![webappbpa](images/static-web-page.png)
+   - Select a Python interpreter to create a virtual environment → select **Python 3.11**.
 
-3. On the **Static Web App** page, click on **View app in browser**.
+   - Select a template → choose **Azure Blob Storage trigger** and give the trigger a name or accept the default name. Press **Enter** to confirm.
 
-      ![webappbpa](images/formm.png)
+   - Select setting → choose ➕**Create new local app setting** from the dropdown menu.
 
-4. Once the **Business Process Automation Accelerator** page loaded successfully, click on the **Create/Update/Delete Pipelines**. 
+   - Select subscription → choose your **Azure subscription** with the storage account you created → select your **storage account** → then select the name of the storage input container. Press **Enter** to confirm.
 
-   ![Web APP](images/select-create-pipeline.png)
-
-5. On the **Create Or Select A Pipeline** page, enter New Pipeline Name as **workshop** **(1)**, and click on the **Create Custom Pipeline** **(2)**. 
-
-   ![workshop](images/create-pipeline.png)
-
-6. On the **Select a document type to get started** page, select **PDF Document**
-
-   ![workshop](images/image-document.png)
-
-7. On the **Select a stage to add it to your pipeline configuration** page, search and select for **Form Recognizer Custom Model (Batch)**.
-
-   ![workshop](images/form-recognizer-custom-model.png)
-
-8. On the pop-up, enter the Model ID as **customfrs** **(1)** and click on **Submit** **(2)**. 
-
-   ![Model ID](images/pipeline-model-id.png)
-
-9. On the **Select a stage to add it to your pipeline configuration** page, scroll down to review the **Pipeline Preview**, and click on **Done**.
-
-   ![Pipeline Preview](images/done-pipeline.png)
-
-10. On the **Piplelines workshop** page, click on **Home**. 
-
-      ![home-pipeline](images/home-pipeline.png)
-
-11. On the **Business Process Automation Accelerator** page, click on **Ingest Documents**.
-
-      ![ingest-documents](images/ingest-documents.png)
-
-12. On the **Upload a document to Blob Storage** page, from the drop-down select a Pipeline with the name **workshop** **(1)**, and click on **Upload or drop a file right here**.
-
-      ![Upload a document](images/upload-document-to-blob.png)
-
-13. For documents, enter the following `C:\Users\Public\Desktop\Data\Lab 1 Step 3.7` **(1)** path and hit enter. You can upload multiple invoices one by one.
-
-      ![Upload a document](images/pipeline-folder.png)
-
-### Task 4: Configure Azure Cognitive Search 
-
-1. Navigate back to the resource group window, search, and select **Search Service** with a name similar to **bpa{suffix}**.
-
-   ![search service](images/rg3.png)
-
-2. On the **Search service** page, click on **Import data**.
-
-   ![Data source](images/BPAA1.png)
-
-3. Enter the following details for **Connect to your data**.
-
-   - Data Source: Select **Azure Blob Storage** **(1)**
-   - Data Source Name: Enter **workshop** **(2)**.
-   - Parsing mode: Select **JSON** **(3)**.
-   - Click on **Choose an existing connection** **(4)** under Connection string.
-  
-     ![Connection to your data](images/connection-to-your-data.png)
-
-4. On the **Storage accounts** page, select the storage account named similar to **bpass{suffix}**. 
-
-     ![Storage account](images/stoarge-account.png)
-
-5. Select **results** **(1)** container from the **Containers** page and click on **Select** **(2)**. It will redirect back to **Connection to your data** page.
-
-     ![Storage account](images/continers.png)   
-  
-6. On the **Connect to your data** page, enter the **workshop** **(1)** as **Blob folder** and click on **Next : Add cognitive skills (Optional) (2)**.
-
-   ![Connection](images/connection-to-your-data-blob(1).png)
-
-7. On the **Add cognitive skills (Optional)** click on **Skip to : Customize target index**.
-
-8. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
-
-      ![Connection](images/retrievable-searchable.png)
-
-9. Expand the **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
-
-      ![import-data](images/BPA5.png)
-
-7. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
-   
-   ![Create an indexer](images/create-an-indexer.png)
+   - Select how your would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
 ## Review
 
