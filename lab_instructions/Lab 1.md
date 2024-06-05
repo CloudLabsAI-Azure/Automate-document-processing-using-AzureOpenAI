@@ -4,7 +4,7 @@
 
 Processing of forms and documents is part of several scenarios both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone.
 
-Azure Form Recognizer is an Applied AI Service that enables you to extract text, table data, key-value pairs, and layout information from forms and documents. In this lab, you will learn how to use train documents via Document Intelligence resource and further processing the documents to Cosmos DB via Azure functions. 
+Azure Form Recognizer is an Applied AI Service that enables you to extract text, table data, key-value pairs, and layout information from forms and documents. In this lab, you will learn how to use train documents via Document Intelligence resource. We will be processing the documents to Cosmos DB via Azure functions and further analysing the document in Power BI. 
 
 ### Lab Objectives
 
@@ -15,7 +15,6 @@ In this lab, you will perform:
 - Create an Azure Functions project.
 - Store the extracted information from the Form Recognizer’s model in Azure Cosmos DB.
 - Use Power BI to visualize the insights from the analysis of the forms.
-
 
 ### Instructions
 
@@ -190,8 +189,6 @@ In this step, you will upload 6 training documents to train the model.
     'Ocp-Apim-Subscription-Key': apim_key,
         }
 
-    text1=os.path.basename(myblob.name)
-
 ```
 
 1. Next, add code to query the service and get the returned data.
@@ -228,7 +225,84 @@ results = resp_json
 
 ```
 
-1. Fill in your own values for the storage account name and key.
+1. Add the following code to connect to the Azure Storage output container. Fill in the values for the storage account name and key.
+
+```
+
+# This is the connection to the blob storage, with the Azure Python SDK
+    blob_service_client = BlobServiceClient.from_connection_string("DefaultEndpointsProtocol=https;AccountName="Storage Account Name";AccountKey="storage account key";EndpointSuffix=core.windows.net")
+    container_client=blob_service_client.get_container_client("output")
+
+```
+
+1. Next, add the following code that parses the returned Document Intelligence response, constructs a .csv file, and uploads it to the output container
+
+```
+
+# The code below extracts the json format into tabular data.
+    # Please note that you need to adjust the code below to your form structure.
+    # It probably won't work out-of-the-box for your specific form.
+    pages = results["analyzeResult"]["pageResults"]
+
+    def make_page(p):
+        res=[]
+        res_table=[]
+        y=0
+        page = pages[p]
+        for tab in page["tables"]:
+            for cell in tab["cells"]:
+                res.append(cell)
+                res_table.append(y)
+            y=y+1
+
+        res_table=pd.DataFrame(res_table)
+        res=pd.DataFrame(res)
+        res["table_num"]=res_table[0]
+        h=res.drop(columns=["boundingBox","elements"])
+        h.loc[:,"rownum"]=range(0,len(h))
+        num_table=max(h["table_num"])
+        return h, num_table, p
+
+    h, num_table, p= make_page(0)
+
+    for k in range(num_table+1):
+        new_table=h[h.table_num==k]
+        new_table.loc[:,"rownum"]=range(0,len(new_table))
+        row_table=pages[p]["tables"][k]["rows"]
+        col_table=pages[p]["tables"][k]["columns"]
+        b=np.zeros((row_table,col_table))
+        b=pd.DataFrame(b)
+        s=0
+        for i,j in zip(new_table["rowIndex"],new_table["columnIndex"]):
+            b.loc[i,j]=new_table.loc[new_table.loc[s,"rownum"],"text"]
+            s=s+1
+
+```
+
+1. Finally, the last block of code uploads the extracted table and text data to your blob storage element.
+
+```
+# Here is the upload to the blob storage
+    tab1_csv=b.to_csv(header=False,index=False,mode='w')
+    name1=(os.path.splitext(text1)[0]) +'.csv'
+    container_client.upload_blob(name=name1,data=tab1_csv)
+```
+
+### Task 4: Run the Function App
+
+1. Press F5 to run the function
+
+1. Once the funtion has been run successfully, navigate to `portal.azure.com`.
+
+1. Navigate to storage account and click on the output container.
+
+1. Click on the folder created as a result of the trigger and verify the json analysing the document has been generated.
+
+### Task 5: Utilize Cosmos DB to process the documents
+
+
+### Task 6: Visulalize with PowerBI
+
 ## Review
 
 In this lab, you have accomplished the following:
