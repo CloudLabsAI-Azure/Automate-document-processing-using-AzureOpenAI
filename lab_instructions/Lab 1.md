@@ -122,6 +122,8 @@ In this step, you will upload 6 training documents to train the model.
 ### Task 3: Deploy Function App
 
 1. Navigate to the document intelligence resource you created earlier and copy the **endpoint** and **API key** in a notepad.
+
+1. Also, copy the **storage account key** and **endpoint** in a notepad for later use.
    
 1. Navigate to **Visual Studio Code** and open the folder **funtion-app** from **C:/Labfiles/function_app**.
 
@@ -143,37 +145,90 @@ In this step, you will upload 6 training documents to train the model.
 
 1. In VS Code, navigate to the function's requirements.txt file. This file defines the dependencies for your script. Add the following Python packages to the file:
    
-`
-cryptography
-azure-functions
-azure-storage-blob
-azure-identity
-requests
-pandas
-numpy
-`
+   ```
+   cryptography
+   azure-functions
+   azure-storage-blob
+   azure-identity
+   requests
+   pandas
+   numpy
+
+   ```
 
 1. Open the **function-app.py** file and add the following import statements:
 
-   `
-import logging
-from azure.storage.blob import BlobServiceClient
-import azure.functions as func
-import json
-import time
-from requests import get, post
-import os
-import requests
-from collections import OrderedDict
-import numpy as np
-import pandas as pd
-`
+   ```
+
+   import logging
+   from azure.storage.blob import BlobServiceClient
+   import azure.functions as func
+   import json
+   import time
+   from requests import get, post
+   import os
+   import requests
+   from collections import OrderedDict
+   import numpy as np
+   import pandas as pd
+
+   ```
 
 1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document. Fill in your **endpoint and key values (1)**.
 
-`
+```
 
+# This is the call to the Document Intelligence endpoint
+    endpoint = r"Your Document Intelligence Endpoint"
+    apim_key = "Your Document Intelligence Key"
+    post_url = endpoint + "/formrecognizer/v2.1/layout/analyze"
+    source = myblob.read()
 
+    headers = {
+    # Request headers
+    'Content-Type': 'application/pdf',
+    'Ocp-Apim-Subscription-Key': apim_key,
+        }
+
+    text1=os.path.basename(myblob.name)
+
+```
+
+1. Next, add code to query the service and get the returned data.
+
+```
+
+   resp = requests.post(url=post_url, data=source, headers=headers)
+
+if resp.status_code != 202:
+    print("POST analyze failed:\n%s" % resp.text)
+    quit()
+print("POST analyze succeeded:\n%s" % resp.headers)
+get_url = resp.headers["operation-location"]
+
+wait_sec = 25
+
+time.sleep(wait_sec)
+# The layout API is async therefore the wait statement
+
+resp = requests.get(url=get_url, headers={"Ocp-Apim-Subscription-Key": apim_key})
+
+resp_json = json.loads(resp.text)
+
+status = resp_json["status"]
+
+if status == "succeeded":
+    print("POST Layout Analysis succeeded:\n%s")
+    results = resp_json
+else:
+    print("GET Layout results failed:\n%s")
+    quit()
+
+results = resp_json
+
+```
+
+1. Fill in your own values for the storage account name and key.
 ## Review
 
 In this lab, you have accomplished the following:
