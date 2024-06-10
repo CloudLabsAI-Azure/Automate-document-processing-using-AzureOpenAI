@@ -12,9 +12,9 @@ In this lab, you will perform:
 
 - Provision a Form Recognizer resource.
 - Train a custom model in Form Recognizer Studio.
-- Create an Azure Functions project.
-- Store the extracted information from the Form Recognizer’s model in Azure Cosmos DB.
-- Use Power BI to visualize the insights from the analysis of the forms.
+- Create an Azure Functions project and analyse the documents using function trigger.
+- Use your own data with Azure OpenAI.
+- Store the data in Cosmos DB and visualize in Power BI
 
 ### Instructions
 
