@@ -130,14 +130,6 @@ In this step, you will upload 6 training documents to train the model.
 1. Navigate to **Access Keys** under Security + Networking pane and copy the **Connection String** in a notepad.
 
    ![select-models](images/doc5.png)
-
-1. Click on **Containers** under the **Data Storage tab** in the left pane and select the **input** container.
-
-   ![select-models](images/doc6.png)
-
-1. Click on **Shared Access Tokens (1)** under the **Settings** tab from the left pane, provide **Read, Add, Create and Write (2)** permissions and click on **Generate SAS Token and URL (3)**.
-
-   ![select-models](images/doc7.png)
    
 1. Navigate to **Visual Studio Code**, click on **Open Folder (1)** , navigate to **C:/Labfiles (2)** and select **funtion-app (3)**.
 
@@ -287,22 +279,40 @@ In this step, you will upload 6 training documents to train the model.
 1. Add the following code to connect to the Azure Storage output container. Fill in the values for the **storage account name and key value**.
 
    ```
-   
-   # This is the connection to the blob storage, with the Azure Python SDK
+       # This is the connection to the blob storage, with the Azure Python SDK
        blob_service_client = BlobServiceClient.from_connection_string("DefaultEndpointsProtocol=https;AccountName="Storage Account Name";AccountKey="storage account key";EndpointSuffix=core.windows.net")
        container_client=blob_service_client.get_container_client("output")
    
+       # Assuming `results` is your JSON data
+       data = json.dumps(results)
+
+       # Create a new blob and upload the data
+       blob_name = myblob.name + ".json"
+       blob_client = container_client.get_blob_client(blob_name)
+       blob_client.upload_blob(data, overwrite=True)
    ```
 
 ### Task 4: Run the Function App
 
-1. Press F5 to run the function
+1. Press **F5** to run the function
 
 1. Once the funtion has been run successfully, navigate to `portal.azure.com`.
 
-1. Navigate to storage account and click on the output container.
+1. Navigate to storage account and click on the **Input** container.
 
-1. Click on the folder created as a result of the trigger and verify the json analysing the document has been generated.
+1. Click on **Upload** button, in **Upload blob** pop-up window click on **Browse for files**.
+
+1. Navigate to **C:\LabFiles\Sample_data\test\**, select **Invoice_6**, and click on **Open**.
+
+1. In the **Upload blob** pop-up window click on **Upload**.
+
+1. Naviagte back to the **VS code** and verify the **logs**.
+
+1. Once the funcation app triggered successfully, naviagte back to the **storage account**.
+
+1. In the storage account click on **Containers** and select **Output** container.
+
+1. Click on the **input** folder  and verify the **json** analysing the document has been generated successfully.
 
 ### Task 5: Working with AI Search
 
