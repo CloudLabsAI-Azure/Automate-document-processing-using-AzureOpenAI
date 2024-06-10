@@ -331,11 +331,8 @@ In this step, you will upload 6 training documents to train the model.
 Click on **Next: Add cognitive skills (Optional) (8)**
 
    ![train-module](images/doc24.png)
+
 1.
-### Task 6: Utilize Cosmos DB to process the documents
-
-
-### Task 7: Visulalize with PowerBI
 
 ## Review
 
