@@ -56,13 +56,13 @@ In this lab, you will perform:
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **Document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
    - Storage account name: Select **storage<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
-   - Blob container name: **documents** **(4)**.
+   - Blob container name: **analysis** **(4)**.
    
-        ![storage account](images/au-1.png)
+        ![storage account](images/doc1.png)
 
 1. Validate the information and choose **Create project**.
 
-     ![Alt text](images/1-7.png)
+     ![Alt text](images/doc2.png)
 
 ### Task 2: Train and Label data
 
@@ -72,7 +72,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Browse for files](images/browse-for-files.png)
 
-2.  On the file explorer, enter the following `C:\LabFiles` **(1)** path hit **enter**, select all train JPEG files **invoice_1 to **invoice_5** **(2)**, and hit **Open** **(3)**.
+2.  On the file explorer, enter the following `C:\LabFiles` **(1)** path hit **enter**, select all train JPEG files **invoice_1 to invoice_5** **(2)**, and hit **Open** **(3)**.
 
 
 3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
@@ -81,7 +81,7 @@ In this step, you will upload 6 training documents to train the model.
 
 4. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)** and hit **enter**.
 
-     ![run-now](images/add-field.png)
+     ![run-now](images/doc3.png)
 
      ![run-now](images/add-field-name.png)
 
@@ -118,18 +118,30 @@ In this step, you will upload 6 training documents to train the model.
 1. Navigate to the document intelligence resource you created earlier.
 
 1. Navigate to **Keys and Endpoint (1)** under Resource Management pane, copy the **key (2)** and **endpoint (3)** in a notepad.
+
+   ![select-models](images/doc4.png)
    
 1. Navigate to **storage<inject key="Deployment ID" enableCopy="false"/>**
 
 1. Navigate to **Access Keys** under Security + Networking pane and copy the **Connection String** in a notepad.
 
+   ![select-models](images/doc5.png)
+
 1. Click on **Containers** under the **Data Storage tab** in the left pane and select the **input** container.
 
+   ![select-models](images/doc6.png)
+
 1. Click on **Shared Access Tokens (1)** under the **Settings** tab from the left pane, provide **Read, Add, Create and Write (2)** permissions and click on **Generate SAS Token and URL (3)**.
+
+   ![select-models](images/doc7.png)
    
 1. Navigate to **Visual Studio Code**, click on **Open Folder (1)** , navigate to **C:/Labfiles (2)** and select **funtion-app (3)**.
 
+   ![select-models](images/doc8.png)
+
 1. Click on the **Azure symbol (1)** , select **Create Function (2)** by clicking on the **funtion-app icon (3)**
+
+   ![select-models](images/doc9.png)
 
 1. You'll be prompted to configure several settings:
 
@@ -164,6 +176,8 @@ In this step, you will upload 6 training documents to train the model.
    
       ```
 
+      ![select-models](images/doc10.png)
+   
 1. Open the **function-app.py** file and add the following import statements:
 
       ```
@@ -182,6 +196,8 @@ In this step, you will upload 6 training documents to train the model.
    
       ```
 
+      ![select-models](images/doc11.png)
+   
 1. Add the following code to trigger the script when a file is uploaded to the input storage container. Replace the values of **container-name** and **storage-account-name** with **input** and **storage<inject key="Deployment ID" enableCopy="false"/>** respectively.
 
       ```
