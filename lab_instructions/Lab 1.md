@@ -127,17 +127,23 @@ In this step, you will upload 6 training documents to train the model.
 
 1. Click on **Shared Access Tokens (1)** under the **Settings** tab from the left pane, provide **Read, Add, Create and Write (2)** permissions and click on **Generate SAS Token and URL (3)**.
    
-1. Navigate to **Visual Studio Code** and open the folder **funtion-app** from **C:/Labfiles**.
+1. Navigate to **Visual Studio Code**, click on **Open Folder (1)** , navigate to **C:/Labfiles (2)** and select **funtion-app (3)**.
 
 1. Click on the **Azure symbol (1)** , select **Create Function (2)** by clicking on the **funtion-app icon (3)**
 
 1. You'll be prompted to configure several settings:
 
+   - Select the folder → choose **function-app**.
+     
    - Select a language → choose **Python**.
+
+   - Select a Python Programming Model → choose **Model V2**.
 
    - Select a Python interpreter to create a virtual environment → select **Python 3.11**.
 
-   - Select a template → choose **Azure Blob Storage trigger** and give the trigger a name or accept the default name. Press **Enter** to confirm.
+   - Select a template → choose **Blob trigger** and give the trigger a name or accept the default name. Press **Enter** to confirm.
+
+   - The path within your storage container that the trigger will monitor → **input**.
 
    - Select setting → choose ➕**Create new local app setting** from the dropdown menu.
 
