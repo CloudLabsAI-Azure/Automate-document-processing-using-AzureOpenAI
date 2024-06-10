@@ -61,26 +61,14 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    
    * **Password**: <inject key="AzureAdUserPassword"></inject>
    
-      ![](images/signin-pword.png "Enter Password")
+      ![OpenAI](images/sc900-image-2.png)
      
-1. If you see the pop-up **Stay Signed in?**, select **No**.
-
-1. If you see the pop-up **You have free Azure Advisor recommendations!**, close the window to continue the lab.
-
-1. If a **Welcome to Microsoft Azure** popup window appears, select **Maybe Later** to skip the tour.
-   
-1. Now you will see the Azure Portal Dashboard, click on **Resource groups** from the Navigate panel to see the resource groups.
-
-   ![](images/select-rg.png "Resource groups")
-   
-1. Confirm that you have all resource groups present as shown below.
-
-   ![](images/rg.png "Resource groups")
-   
-1. Verify the resources deployed in the resource group.
-
-   ![](images/resources.png "Resource groups")
-   
-1. Now, click on **Next** from the lower right corner to move on to the next page.
+1. If prompted to stay signed in, you can click "No."
+ 
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+ 
+1. Click "Next" from the bottom right corner to embark on your Lab journey!
+ 
+     ![OpenAI](images/sc900-image-3.png)
  
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
