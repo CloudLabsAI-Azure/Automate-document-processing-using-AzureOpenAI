@@ -151,7 +151,7 @@ In this step, you will upload 6 training documents to train the model.
 
    - Select how your would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
-1. In VS Code, navigate to the function's requirements.txt file. This file defines the dependencies for your script. Add the following Python packages to the file:
+1. In VS Code, navigate to the function's **requirements.txt** file. This file defines the dependencies for your script. Add the following Python packages to the file:
    
       ```
       cryptography
