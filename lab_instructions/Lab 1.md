@@ -73,51 +73,49 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Browse for files](images/browse-for-files.png)
 
-2.  On the file explorer, enter the following `C:\LabFiles` **(1)** path hit **enter**, select all train JPEG files **invoice_1 to invoice_5** **(2)**, and hit **Open** **(3)**.
+1.  On the file explorer, enter the following `C:\LabFiles` **(1)** path hit **enter**, select all train JPEG files **invoice_1 to invoice_5** **(2)**, and hit **Open** **(3)**.
 
    ![Alt text](images/doc13.png)
 
-3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
+1. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
      ![train-upload](images/run-now.png)
 
-4. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization** **(3)** and hit **enter**.
+1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization** **(3)** and hit **enter**.
 
      ![run-now](images/doc3.png)
 
      ![run-now](images/doc14.png)
 
-5. Label the new field added by selecting **Contoso (1)** in the top left of each document uploaded. Do this for all five documents wherever there is an organization mentioned.
+1. Label the new field added by selecting **Contoso (1)** in the top left of each document uploaded. Do this for all five documents wherever there is an organization mentioned.
 
      ![train-module](images/doc15.png)
 
-6. Create a new field name as **Address (1)** and label the new field added by **selecting the address (2)** as shown in the below image and do this for all the five documents.
+1. Create a new field name as **Address (1)** and label the new field added by **selecting the address (2)** as shown in the below image and do this for all the five documents.
 
    ![train-module](images/doc16.png)
    
-8. Once all the documents are labeled, click on **Train** in the top right corner.
+1. Once all the documents are labeled, click on **Train** in the top right corner.
 
      ![Train](images/doc17.png)
 
-9. Specify the model ID as **model**, Model Description as **custom model** , from the drop-down select **Template** as Build Mode and click on **Train**..
+1. Specify the model ID as **model**, Model Description as **custom model** , from the drop-down select **Template** as Build Mode and click on **Train**..
 
      ![Name](images/doc18.png)
 
-10. Click on **Go to Models**. 
+1. Click on **Go to Models**. 
 
-   ![Alt text](images/training-in-progress.png)
-
-11. Wait till the model status shows **succeeded**. Once the status Select the model **model**  **(1)** you created and choose **Test** **(2)**.
+1. Wait till the model status shows **succeeded**. Once the status Select the model **model**  **(1)** you created and choose **Test** **(2)**.
 
      ![select-models](images/doc19.png)
 
-12. On the Test model window, click on **Browse for files**. 
+1. On the Test model window, click on **Browse for files**. 
 
      ![select-models](images/test-upload.png)
 
-13. On the file explorer, enter the following `C:\LabFiles` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
+1. On the file explorer, enter the following `C:\LabFiles` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
 
-14. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step along with its confidence score.
+1. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step along with its confidence score.
 
 ### Task 3: Deploy Function App
 
@@ -310,11 +308,30 @@ In this step, you will upload 6 training documents to train the model.
 
 1. Search for **AI Search** and select it.
 
+   ![train-module](images/doc21.png)
+   
 1. Navigate to **search-<inject key="Deployment ID" enableCopy="false"/>**.
 
+   ![train-module](images/doc22.png)
+   
 1. Click on **Import data**.
 
-1. 
+   ![train-module](images/doc23.png)
+
+1. Provide the following values:
+
+   - Data Source: **Azure Blob Storage (1)**
+   - Data Source Name: **data-source-<inject key="Deployment ID" enableCopy="false"/> (2)**
+   - Parsing Mode: **JSON (3)**
+   - Subscription: **Select the default subscription (4)**
+   - Connection string: Select **storage<inject key="Deployment ID" enableCopy="false"/>** and then select **output** container **(5)**.
+   - Container Name: **Output (6)**
+   - Blob Folder: **Input (7)**
+
+Click on **Next: Add cognitive skills (Optional) (8)**
+
+   ![train-module](images/doc24.png)
+1.
 ### Task 6: Utilize Cosmos DB to process the documents
 
 
