@@ -25,7 +25,8 @@ In this lab, you will perform:
    ![Alt text](images/1-9.png)
 
 1. Navigate to **Document-Intelligence-<inject key="Deployment ID" enableCopy="false"/>**
-     
+
+   ![Alt text](images/doc12.png)
 
 1. In the **Overview** pane, under **Document Intelligence studio** ,click on **Try it**.
 
@@ -74,44 +75,49 @@ In this step, you will upload 6 training documents to train the model.
 
 2.  On the file explorer, enter the following `C:\LabFiles` **(1)** path hit **enter**, select all train JPEG files **invoice_1 to invoice_5** **(2)**, and hit **Open** **(3)**.
 
+   ![Alt text](images/doc13.png)
 
 3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
      ![train-upload](images/run-now.png)
 
-4. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization_sample** **(3)** and hit **enter**.
+4. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization** **(3)** and hit **enter**.
 
      ![run-now](images/doc3.png)
 
-     ![run-now](images/add-field-name.png)
+     ![run-now](images/doc14.png)
 
-5. Label the new field added by selecting **CONTOSO LTD** in the top left of each document uploaded. Do this for all six documents.
+5. Label the new field added by selecting **Contoso (1)** in the top left of each document uploaded. Do this for all five documents wherever there is an organization mentioned.
 
-     ![train-module](images/train-module.png)
+     ![train-module](images/doc15.png)
 
-6. Once all the documents are labeled, click on **Train** in the top right corner.
+6. Create a new field name as **Address (1)** and label the new field added by **selecting the address (2)** as shown in the below image and do this for all the five documents.
 
-     ![Train](images/train-module1.png)
+   ![train-module](images/doc16.png)
+   
+8. Once all the documents are labeled, click on **Train** in the top right corner.
 
-7. Specify the model ID as **customfrs** **(1)**, Model Description as **custom model** **(2)**, from the drop-down select **Template** **(3)** as Build Mode and click on **Train** **(4)**.
+     ![Train](images/doc17.png)
 
-     ![Name](images/train-a-new-model.png)
+9. Specify the model ID as **model**, Model Description as **custom model** , from the drop-down select **Template** as Build Mode and click on **Train**..
 
-8. Click on **Go to Models**. 
+     ![Name](images/doc18.png)
+
+10. Click on **Go to Models**. 
 
    ![Alt text](images/training-in-progress.png)
 
-9. Wait till the model status shows **succeeded** **(1)**. Once the status Select the model **customfrs** **(2)** you created and choose **Test** **(3)**.
+11. Wait till the model status shows **succeeded**. Once the status Select the model **model**  **(1)** you created and choose **Test** **(2)**.
 
-     ![select-models](images/select-models1.png)
+     ![select-models](images/doc19.png)
 
-10. On the Test model window, click on **Browse for files**. 
+12. On the Test model window, click on **Browse for files**. 
 
      ![select-models](images/test-upload.png)
 
-11. On the file explorer, enter the following `C:\LabFiles` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
+13. On the file explorer, enter the following `C:\LabFiles` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
 
-12. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step along with its confidence score.
+14. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step along with its confidence score.
 
 ### Task 3: Deploy Function App
 
