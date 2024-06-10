@@ -197,14 +197,14 @@ In this step, you will upload 6 training documents to train the model.
 
       ```
 
-1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document. Replace **endpoint and key values** with the ones we have copied in the notepad earlier.
+1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document. Replace **endpoint, key value and model name** with the ones we have copied in the notepad earlier.
 
    ```
    
    # This is the call to the Document Intelligence endpoint
        endpoint = r"Your Document Intelligence Endpoint"
        apim_key = "Your Document Intelligence Key"
-       post_url = endpoint + ""
+       post_url = endpoint + "/formrecognizer/documentModels/**<MODEL-NAME>**:analyze?api-version=2023-02-28-preview"
        source = myblob.read()
    
        headers = {
@@ -249,7 +249,7 @@ In this step, you will upload 6 training documents to train the model.
    
    ```
 
-1. Add the following code to connect to the Azure Storage output container. Fill in the values for the storage account name and key.
+1. Add the following code to connect to the Azure Storage output container. Fill in the values for the **storage account name and key value**.
 
    ```
    
@@ -257,59 +257,6 @@ In this step, you will upload 6 training documents to train the model.
        blob_service_client = BlobServiceClient.from_connection_string("DefaultEndpointsProtocol=https;AccountName="Storage Account Name";AccountKey="storage account key";EndpointSuffix=core.windows.net")
        container_client=blob_service_client.get_container_client("output")
    
-   ```
-
-1. Next, add the following code that parses the returned Document Intelligence response, constructs a .csv file, and uploads it to the output container
-
-   ```
-   
-   # The code below extracts the json format into tabular data.
-       # Please note that you need to adjust the code below to your form structure.
-       # It probably won't work out-of-the-box for your specific form.
-       pages = results["analyzeResult"]["pageResults"]
-   
-       def make_page(p):
-           res=[]
-           res_table=[]
-           y=0
-           page = pages[p]
-           for tab in page["tables"]:
-               for cell in tab["cells"]:
-                   res.append(cell)
-                   res_table.append(y)
-               y=y+1
-   
-           res_table=pd.DataFrame(res_table)
-           res=pd.DataFrame(res)
-           res["table_num"]=res_table[0]
-           h=res.drop(columns=["boundingBox","elements"])
-           h.loc[:,"rownum"]=range(0,len(h))
-           num_table=max(h["table_num"])
-           return h, num_table, p
-   
-       h, num_table, p= make_page(0)
-   
-       for k in range(num_table+1):
-           new_table=h[h.table_num==k]
-           new_table.loc[:,"rownum"]=range(0,len(new_table))
-           row_table=pages[p]["tables"][k]["rows"]
-           col_table=pages[p]["tables"][k]["columns"]
-           b=np.zeros((row_table,col_table))
-           b=pd.DataFrame(b)
-           s=0
-           for i,j in zip(new_table["rowIndex"],new_table["columnIndex"]):
-               b.loc[i,j]=new_table.loc[new_table.loc[s,"rownum"],"text"]
-               s=s+1
-   
-   ```
-
-1. Finally, the last block of code uploads the extracted table and text data to your blob storage element.
-
-   ```
-   # Here is the upload to the blob storage
-       tab1_csv=b.to_csv(header=False,index=False,mode='w')
-       name1=(os.path.splitext(text1)[0]) +'.csv'
-       container_client.upload_blob(name=name1,data=tab1_csv)
    ```
 
 ### Task 4: Run the Function App
