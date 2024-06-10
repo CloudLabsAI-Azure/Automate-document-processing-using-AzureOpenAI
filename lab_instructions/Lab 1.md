@@ -182,14 +182,29 @@ In this step, you will upload 6 training documents to train the model.
    
       ```
 
-1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document. Fill in your **endpoint and key values (1)**.
+1. Add the following code to trigger the script when a file is uploaded to the input storage container. Replace the values of **container-name** and **storage-account-name** with **input** and **storage<inject key="Deployment ID" enableCopy="false"/>** respectively.
+
+      ```
+
+      app = func.FunctionApp()
+   
+   @app.blob_trigger(arg_name="myblob", path="<container-name>", connection="<storage-account-name>_STORAGE")
+   
+   def blob_trigger(myblob: func.InputStream):
+       logging.info(f"Python blob trigger function processed blob"
+                   f"Name: {myblob.name}" 
+                   f"Blob Size: {myblob.length} bytes")
+
+      ```
+
+1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document. Replace **endpoint and key values** with the ones we have copied in the notepad earlier.
 
    ```
    
    # This is the call to the Document Intelligence endpoint
        endpoint = r"Your Document Intelligence Endpoint"
        apim_key = "Your Document Intelligence Key"
-       post_url = endpoint + "/formrecognizer/v2.1/layout/analyze"
+       post_url = endpoint + ""
        source = myblob.read()
    
        headers = {
