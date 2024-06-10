@@ -8,11 +8,11 @@
 
 2. On the Resource group, search, and select the **Azure OpenAI** resource type with the name similar to **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
-   ![OpenAI](images/openai.png)
+      ![OpenAI](images/openai.png)
 
 3. On the **Azure OpenAI** page, click on **Go to Azure OpenAI Studio**.
 
-   ![OpenAI Studio](images/OpenAI-Studio.png)
+      ![OpenAI Studio](images/OpenAI-Studio.png)
 
 4. On the **Azure OpenAI Studio**, scroll down click on **Bring your own data**.
 
@@ -28,7 +28,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     - Subscription: Select your subscription from the drop-down section **(2)**
 
-    - Select Azure Blob storage resource: Choose the already created storage account **storage-<inject key="Deployment ID">** **(3)**. 
+    - Select Azure Blob storage resource: Choose the already created storage account **storage<inject key="Deployment ID">** **(3)**. 
       
       - **Note**: If asked for turn on CORS, click on **Turn on CORS**.
 
