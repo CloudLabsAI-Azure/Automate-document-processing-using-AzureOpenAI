@@ -285,10 +285,19 @@ In this step, you will upload 6 training documents to train the model.
 
 1. Click on the folder created as a result of the trigger and verify the json analysing the document has been generated.
 
-### Task 5: Utilize Cosmos DB to process the documents
+### Task 5: Working with AI Search
+
+1. Search for **AI Search** and select it.
+
+1. Navigate to **search-<inject key="Deployment ID" enableCopy="false"/>**.
+
+1. Click on **Import data**.
+
+1. 
+### Task 6: Utilize Cosmos DB to process the documents
 
 
-### Task 6: Visulalize with PowerBI
+### Task 7: Visulalize with PowerBI
 
 ## Review
 
