@@ -109,21 +109,25 @@ In this step, you will upload 6 training documents to train the model.
 
      ![select-models](images/test-upload.png)
 
-11. On the file explorer, enter the following `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
-
-     ![test-file-upload](images/test-file-upload.png)
+11. On the file explorer, enter the following `C:\LabFiles` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
 
 12. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step along with its confidence score.
 
-     ![Alt text](images/result.png)
-
 ### Task 3: Deploy Function App
 
-1. Navigate to the document intelligence resource you created earlier and copy the **endpoint** and **API key** in a notepad.
+1. Navigate to the document intelligence resource you created earlier.
 
-1. Also, copy the **storage account key** and **endpoint** in a notepad for later use.
+1. Navigate to **Keys and Endpoint (1)** under Resource Management pane, copy the **key (2)** and **endpoint (3)** in a notepad.
    
-1. Navigate to **Visual Studio Code** and open the folder **funtion-app** from **C:/Labfiles/function_app**.
+1. Navigate to **storage<inject key="Deployment ID" enableCopy="false"/>**
+
+1. Navigate to **Access Keys** under Security + Networking pane and copy the **Connection String** in a notepad.
+
+1. Click on **Containers** under the **Data Storage tab** in the left pane and select the **input** container.
+
+1. Click on **Shared Access Tokens (1)** under the **Settings** tab from the left pane, provide **Read, Add, Create and Write (2)** permissions and click on **Generate SAS Token and URL (3)**.
+   
+1. Navigate to **Visual Studio Code** and open the folder **funtion-app** from **C:/Labfiles**.
 
 1. Click on the **Azure symbol (1)** , select **Create Function (2)** by clicking on the **funtion-app icon (3)**
 
