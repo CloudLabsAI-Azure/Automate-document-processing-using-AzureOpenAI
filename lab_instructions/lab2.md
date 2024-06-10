@@ -92,6 +92,11 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/parameters.png)
 
+### Task 4: Utilize Cosmos DB to process the documents
+
+
+### Task 5: Visulalize with PowerBI
+
 ## Review
 
 In this lab, you have accomplished the following:
