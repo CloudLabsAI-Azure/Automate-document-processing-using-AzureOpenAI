@@ -12,11 +12,11 @@
 
 3. On the **Azure OpenAI** page, click on **Go to Azure OpenAI Studio**.
 
-      ![OpenAI Studio](images/OpenAI-Studio.png)
+      ![OpenAI Studio](images/launch-openaist.png)
 
 4. On the **Azure OpenAI Studio**, scroll down click on **Bring your own data**.
 
-   ![Azure OpenAI Studio](images/bringdata.png)
+   ![Azure OpenAI Studio](images/bring-data.png)
 
 ### Task 2: Upload your own data
 
@@ -32,7 +32,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
       
       - **Note**: If asked for turn on CORS, click on **Turn on CORS**.
 
-         ![](images/cors.png)
+         ![](images/data-source.png)
 
     - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(4)**.
 
@@ -42,7 +42,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 2. On the **Data Management**, click on **Browse for a file** **(1)** enter the following `C:\LabFiles\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)** files.
 
-   ![data-management](images/data-management.png)
+   ![data-management](images/labfiles.png)
 
 3. It will redirect to **Data management**, click on **Upload files** **(1)**, and click on **Next** **(2)**.
 
