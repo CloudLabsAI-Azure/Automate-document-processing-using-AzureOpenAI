@@ -177,6 +177,21 @@ In this step, you will upload 6 training documents to train the model.
       ```
 
       ![select-models](images/doc10.png)
+
+1. Open the **local.settings.json** and add the following statement and fill the respective values:
+
+   ```
+      {
+     "IsEncrypted": false,
+     "Values": {
+       "AzureWebJobsStorage": "storage-account-SAS-TOKEN",
+       "FUNCTIONS_WORKER_RUNTIME": "python",
+       "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
+       "storageaccount-name_STORAGE": "<Connection-string>",
+       "AzureWebJobsSecretStorageType": "Files"
+     }
+   }
+   ```
    
 1. Open the **function-app.py** file and add the following import statements:
 
