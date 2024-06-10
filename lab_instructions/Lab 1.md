@@ -184,7 +184,7 @@ In this step, you will upload 6 training documents to train the model.
       {
      "IsEncrypted": false,
      "Values": {
-       "AzureWebJobsStorage": "storage-account-SAS-TOKEN",
+       "AzureWebJobsStorage": "<Connection-string>",
        "FUNCTIONS_WORKER_RUNTIME": "python",
        "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
        "storageaccount-name_STORAGE": "<Connection-string>",
