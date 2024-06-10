@@ -72,9 +72,8 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Browse for files](images/browse-for-files.png)
 
-2.  On the file explorer, enter the following `C:\Users\Public\Desktop\Data\Custom Model Sample` **(1)** path hit **enter**, select all train JPEG files **train1 to train6** **(2)**, and hit **Open** **(3)**.
+2.  On the file explorer, enter the following `C:\LabFiles` **(1)** path hit **enter**, select all train JPEG files **invoice_1 to **invoice_5** **(2)**, and hit **Open** **(3)**.
 
-     ![train-upload](images/train-upload.png)
 
 3. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
