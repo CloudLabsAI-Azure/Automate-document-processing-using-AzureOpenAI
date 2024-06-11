@@ -117,7 +117,9 @@ In this step, you will upload 6 training documents to train the model.
 
 1. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization_sample** **(2)** we created in the last step along with its confidence score.
 
-### Task 3: Deploy Function App
+### Task 3: Creation of Function App
+
+We will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
 
 1. Navigate to the document intelligence resource you created earlier.
 
