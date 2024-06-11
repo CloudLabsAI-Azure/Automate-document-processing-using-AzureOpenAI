@@ -202,6 +202,30 @@ We will be using Azure Functions to process documents that are uploaded to an Az
      }
    }
    ```
+
+1. Create a file **__init.py__** and add the following statements:
+
+   ```
+   
+   import logging
+   from azure.storage.blob import BlobServiceClient
+   import azure.functions as func
+   import json
+   import time
+   from requests import get, post
+   import os
+   import requests
+   from collections import OrderedDict
+   import numpy as np
+   import pandas as pd
+   app = func.FunctionApp()
+    
+   def blob_trigger(myblob: func.InputStream):
+   logging.info(f"Python blob trigger function processed blob"
+                f"Name: {myblob.name}" 
+                f"Blob Size: {myblob.length} bytes")
+
+   ```
    
 1. Open the **function-app.py** file and add the following import statements:
 
