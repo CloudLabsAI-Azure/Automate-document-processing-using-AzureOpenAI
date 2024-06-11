@@ -6,13 +6,13 @@
 
 ### Task 1: Navigate to Azure OpenAI Playground
 
-1. Navigate back to the Resource groups and select the resource group **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
+1. In `portal.azure.com`, search for openai and select **Azure OpenAI**.
 
-   ![OpenAI](images/rgg.png)
+   ![OpenAI](images/doc35.png)
 
-2. On the Resource group, search, and select the **Azure OpenAI** resource type with the name similar to **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
+2. Click on **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
-      ![OpenAI](images/openai.png)
+      ![OpenAI](images/doc36.png)
 
 3. On the **Azure OpenAI** page, click on **Go to Azure OpenAI Studio**.
 
