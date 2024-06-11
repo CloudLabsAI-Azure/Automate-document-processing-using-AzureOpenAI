@@ -155,7 +155,9 @@ In this step, you will upload 6 training documents to train the model.
 
    - Select setting → choose ➕**Create new local app setting** from the dropdown menu.
 
-   - Select subscription → choose your **Azure subscription** with the storage account you created → select your **storage account** → then select the name of the storage input container. Press **Enter** to confirm.
+   - Select subscription → choose the **Default Subscription**,
+
+   - Select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
 
    - Select how your would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
