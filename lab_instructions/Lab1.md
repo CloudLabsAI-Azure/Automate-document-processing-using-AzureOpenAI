@@ -28,9 +28,9 @@ In this lab, you will perform:
 
    ![Alt text](images/doc12.png)
 
-1. In the **Overview** pane, under **Document Intelligence studio** ,click on **Try it**.
+1. In the **Overview** pane, scroll down to **Get Started** tab and click on **Go to Document Intelligence studio**.
 
-   ![Alt text](images/1-3.png)
+   ![Alt text](images/doc30.png)
 
 1. In **Document Intelligence studio**, scroll down to **Custom Models** and click on **Get Started**.
 
@@ -73,13 +73,13 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Browse for files](images/browse-for-files.png)
 
-1. On the file explorer, enter the following `C:\LabFiles\Train` **(1)** path hit **enter**, select all train JPEG files **invoice_1 to invoice_5** **(2)**, and hit **Open** **(3)**.
+1. On the file explorer, enter the following `C:\LabFiles\Train`  path hit **enter**, select all train JPEG files present inside **Train** folder i.e **invoice_1 to invoice_5** **(2)**, and hit **Open** **(3)**.
 
-   ![Alt text](images/doc13.png)
+   ![Alt text](images/doc34.png)
 
 1. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
-     ![train-upload](images/run-now.png)
+     ![train-upload](images/doc31.png)
 
 1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization** **(3)** and hit **enter**.
 
@@ -105,6 +105,8 @@ In this step, you will upload 6 training documents to train the model.
 
 1. Click on **Go to Models**. 
 
+   ![Name](images/doc32.png)
+   
 1. Wait till the model status shows **succeeded**. Once the status Select the model **model**  **(1)** you created and choose **Test** **(2)**.
 
      ![select-models](images/doc19.png)
@@ -117,6 +119,8 @@ In this step, you will upload 6 training documents to train the model.
 
 1. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization** **(2)** we created in the last step along with its confidence score.
 
+   ![Name](images/doc33.png)
+   
 ### Task 3: Creation of Function App
 
 We will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
