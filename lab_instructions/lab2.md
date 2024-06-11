@@ -1,5 +1,9 @@
 # Utilize your Data Set using OpenAI
 
+### Architecture Diagram
+
+![Name](images/archi2.PNG)
+
 ### Task 1: Navigate to Azure OpenAI Playground
 
 1. Navigate back to the Resource groups and select the resource group **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
