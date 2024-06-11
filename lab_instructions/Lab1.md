@@ -206,7 +206,6 @@ We will be using Azure Functions to process documents that are uploaded to an Az
 1. Create a file **__init.py__** and add the following statements:
 
    ```
-   
    import logging
    from azure.storage.blob import BlobServiceClient
    import azure.functions as func
@@ -221,16 +220,15 @@ We will be using Azure Functions to process documents that are uploaded to an Az
    app = func.FunctionApp()
     
    def blob_trigger(myblob: func.InputStream):
-   logging.info(f"Python blob trigger function processed blob"
-                f"Name: {myblob.name}" 
-                f"Blob Size: {myblob.length} bytes")
+     logging.info(f"Python blob trigger function processed blob"
+                  f"Name: {myblob.name}" 
+                  f"Blob Size: {myblob.length} bytes")
 
    ```
    
 1. Open the **function-app.py** file and add the following import statements:
 
       ```
-   
       import logging
       from azure.storage.blob import BlobServiceClient
       import azure.functions as func
@@ -242,7 +240,6 @@ We will be using Azure Functions to process documents that are uploaded to an Az
       from collections import OrderedDict
       import numpy as np
       import pandas as pd
-   
       ```
 
       ![select-models](images/doc11.png)
@@ -250,23 +247,20 @@ We will be using Azure Functions to process documents that are uploaded to an Az
 1. Add the following code to trigger the script when a file is uploaded to the input storage container. Replace the values of **container-name** and **storage-account-name** with **input** and **storage<inject key="Deployment ID" enableCopy="false"/>** respectively.
 
       ```
-
       app = func.FunctionApp()
    
-   @app.blob_trigger(arg_name="myblob", path="<container-name>", connection="<storage-account-name>_STORAGE")
+      @app.blob_trigger(arg_name="myblob", path="<container-name>", connection="<storage-account-name>_STORAGE")
    
-   def blob_trigger(myblob: func.InputStream):
-       logging.info(f"Python blob trigger function processed blob"
-                   f"Name: {myblob.name}" 
-                   f"Blob Size: {myblob.length} bytes")
-
+      def blob_trigger(myblob: func.InputStream):
+          logging.info(f"Python blob trigger function processed blob"
+                      f"Name: {myblob.name}" 
+                      f"Blob Size: {myblob.length} bytes")
       ```
 
 1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document. Replace **endpoint, key value and model name** with the ones we have copied in the notepad earlier.
 
    ```
-   
-   # This is the call to the Document Intelligence endpoint
+       # This is the call to the Document Intelligence endpoint
        endpoint = r"Your Document Intelligence Endpoint"
        apim_key = "Your Document Intelligence Key"
        post_url = endpoint + "/formrecognizer/documentModels/<MODEL-NAME>:analyze?api-version=2023-02-28-preview"
@@ -277,41 +271,34 @@ We will be using Azure Functions to process documents that are uploaded to an Az
        'Content-Type': 'application/pdf',
        'Ocp-Apim-Subscription-Key': apim_key,
            }
-   
    ```
 
 1. Next, add code to query the service and get the returned data.
 
    ```
-   
       resp = requests.post(url=post_url, data=source, headers=headers)
    
-   if resp.status_code != 202:
-       print("POST analyze failed:\n%s" % resp.text)
-       quit()
-   print("POST analyze succeeded:\n%s" % resp.headers)
-   get_url = resp.headers["operation-location"]
-   
-   wait_sec = 25
-   
-   time.sleep(wait_sec)
-   # The layout API is async therefore the wait statement
-   
-   resp = requests.get(url=get_url, headers={"Ocp-Apim-Subscription-Key": apim_key})
-   
-   resp_json = json.loads(resp.text)
-   
-   status = resp_json["status"]
-   
-   if status == "succeeded":
-       print("POST Layout Analysis succeeded:\n%s")
-       results = resp_json
-   else:
-       print("GET Layout results failed:\n%s")
-       quit()
-   
-   results = resp_json
-   
+      if resp.status_code != 202:
+          print("POST analyze failed:\n%s" % resp.text)
+          quit()
+      print("POST analyze succeeded:\n%s" % resp.headers)
+      get_url = resp.headers["operation-location"]
+      
+      wait_sec = 25
+      time.sleep(wait_sec)
+      # The layout API is async therefore the wait statement
+      resp = requests.get(url=get_url, headers={"Ocp-Apim-Subscription-Key": apim_key})
+      resp_json = json.loads(resp.text)
+      status = resp_json["status"]
+      
+      if status == "succeeded":
+          print("POST Layout Analysis succeeded:\n%s")
+          results = resp_json
+      else:
+          print("GET Layout results failed:\n%s")
+          quit()
+      
+      results = resp_json
    ```
 
 1. Add the following code to connect to the Azure Storage output container. Fill in the values for the **storage account name and key value**.
