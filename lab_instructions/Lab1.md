@@ -14,8 +14,8 @@ Azure Form Recognizer is an Applied AI Service that enables you to extract text,
 
 In this lab, you will perform:
 
-- Provision a Form Recognizer resource.
-- Train a custom model in Form Recognizer Studio.
+- Provision a Document Intelligence resource.
+- Train a custom model in Document Intelligence Studio.
 - Create an Azure Functions project and analyse the documents using function trigger.
 - Use your own data with Azure OpenAI.
 - Store the data in Cosmos DB and visualize in Power BI
