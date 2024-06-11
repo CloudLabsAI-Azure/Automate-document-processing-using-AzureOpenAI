@@ -62,15 +62,13 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 6. On the **Review and finish** page, click on **Save and close**.
 
-   ![Save and close](images/addata.png)
+   ![Save and close](images/save-and-close.png)
 
 ### Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
 1. Under the **Assistant Setup** pane, wait until your data upload is finished.
 
    ![upload-data](images/upload-data.png)
-
-   ![upload-data](images/BPA3.png)
 
 2. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
