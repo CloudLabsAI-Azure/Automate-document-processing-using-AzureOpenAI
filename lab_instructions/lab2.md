@@ -56,7 +56,11 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
    ![keyword](images/uploadfiles1.png)
 
-5. On the **Review and finish** page, click on **Save and close**.
+5. On the **Data Connection page**, select **API Key**.
+
+   ![keyword](images/api.png)
+
+6. On the **Review and finish** page, click on **Save and close**.
 
    ![Save and close](images/addata.png)
 
