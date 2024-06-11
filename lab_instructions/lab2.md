@@ -100,7 +100,18 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/parameters.png)
 
+7. Click on **Deploy to** on the top right and click on **a new webapp**.
 
+8. Add the following details and click on **Deploy**:
+
+   - Name: **webapp (1)**
+   - Subscription: **Select the default subscription (2)**
+   - Resource Group: Select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(3)**
+   - Location: **Select East US (4)**
+   - Pricing Plan: **Choose Basic (B1) (5)**
+   - **Enable** chat history in the web app **(6)**
+
+9. 
 ## Review
 
 In this lab, you have accomplished the following:
