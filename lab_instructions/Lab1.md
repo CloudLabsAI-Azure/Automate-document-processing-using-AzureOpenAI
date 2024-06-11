@@ -6,6 +6,10 @@ Processing of forms and documents is part of several scenarios both in business 
 
 Azure Form Recognizer is an Applied AI Service that enables you to extract text, table data, key-value pairs, and layout information from forms and documents. In this lab, you will learn how to use train documents via Document Intelligence resource. We will be processing the documents to Cosmos DB via Azure functions and further analysing the document in Power BI. 
 
+### Architecture Diagram
+
+   ![Name](images/archi1.PNG)
+
 ### Lab Objectives
 
 In this lab, you will perform:
