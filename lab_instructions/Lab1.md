@@ -73,7 +73,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Browse for files](images/browse-for-files.png)
 
-1. On the file explorer, enter the following `C:\LabFiles\sample-data\Train` **(1)** path hit **enter**, select all train JPEG files **invoice_1 to invoice_5** **(2)**, and hit **Open** **(3)**.
+1. On the file explorer, enter the following `C:\LabFiles\Train` **(1)** path hit **enter**, select all train JPEG files **invoice_1 to invoice_5** **(2)**, and hit **Open** **(3)**.
 
    ![Alt text](images/doc13.png)
 
@@ -113,7 +113,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![select-models](images/test-upload.png)
 
-1. On the file explorer, enter the following `C:\LabFiles\sample-data\Test` **(1)** path hit **enter**, select all test JPEG files **test1 and test2** **(2)**, and hit **Open** **(3)**.
+1. On the file explorer, enter the following `C:\LabFiles\Test` **(1)** path hit **enter**, select all test JPEG files **invoice6 and invoice7** **(2)**, and hit **Open** **(3)**.
 
 1. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization** **(2)** we created in the last step along with its confidence score.
 
