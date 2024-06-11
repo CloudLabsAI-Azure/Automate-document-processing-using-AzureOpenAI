@@ -184,7 +184,7 @@ We will be using Azure Functions to process documents that are uploaded to an Az
    
       ```
 
-   **>Note:** In cases of an error, please run `pip install -r requirements.txt`
+      >**Note:** In cases of an error, please run `pip install -r requirements.txt`
 
       ![select-models](images/doc10.png)
 
