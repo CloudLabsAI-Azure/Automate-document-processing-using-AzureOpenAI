@@ -104,14 +104,24 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 8. Add the following details and click on **Deploy**:
 
-   - Name: **webapp (1)**
+   - Name: **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)**
    - Subscription: **Select the default subscription (2)**
    - Resource Group: Select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(3)**
    - Location: **Select East US (4)**
    - Pricing Plan: **Choose Basic (B1) (5)**
    - **Enable** chat history in the web app **(6)**
 
-9. 
+9. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created.
+
+      > **Note:** In cases of permissions asked, click on **Accept**.
+
+      ![Alt text](images/doc50.png)
+      
+10. Click on **Browse** and the web app is up and running.
+
+    ![Alt text](images/doc51.png)
+
+12. Chat with the bot and check its working state.
 ## Review
 
 In this lab, you have accomplished the following:
