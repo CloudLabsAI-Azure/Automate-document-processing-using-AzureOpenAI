@@ -323,7 +323,7 @@ We will be using Azure Functions to process documents that are uploaded to an Az
 
 1. Once the funtion has been run successfully, navigate to `portal.azure.com`.
 
-1. Navigate to storage account and click on the **Input** container.
+1. Navigate to storage account **storage<inject key="Deployment ID" enableCopy="false"/>** and click on the **Input** container.
 
 1. Click on **Upload** button, in **Upload blob** pop-up window click on **Browse for files**.
 
@@ -362,12 +362,21 @@ We will be using Azure Functions to process documents that are uploaded to an Az
    - Connection string: Select **storage<inject key="Deployment ID" enableCopy="false"/>** and then select **output** container **(5)**.
    - Container Name: **Output (6)**
    - Blob Folder: **Input (7)**
-
-Click on **Next: Add cognitive skills (Optional) (8)**
+   - Click on **Next: Add cognitive skills (Optional) (8)**
 
    ![train-module](images/doc24.png)
 
-1.
+1. On the Add **cognitive skills (Optional)** click on **Skip to : Customize target index**.
+
+1. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
+
+   ![](images/retrievable-searchable.png)
+
+1. Expand the **aggregatedResults** **(1)** > **customFormRec** **(2)** > **documents** **(3)** > **fields** **(4)** under it, expand **Organization_sample (5)**. Make the three fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
+
+1. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+   
+   ![Create an indexer](images/create-an-indexer.png)   
 
 ## Review
 
