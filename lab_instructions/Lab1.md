@@ -184,6 +184,8 @@ We will be using Azure Functions to process documents that are uploaded to an Az
    
       ```
 
+   **>Note:** In cases of an error, please run `pip install -r requirements.txt`
+
       ![select-models](images/doc10.png)
 
 1. Open the **local.settings.json** and add the following statement and fill the respective values:
