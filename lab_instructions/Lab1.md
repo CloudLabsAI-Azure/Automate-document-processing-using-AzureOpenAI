@@ -196,7 +196,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
    }
    ```
 
-1. Create a file __init.py__ and add the following statements:
+1. Create a file `__init.py__` and add the following statements:
 
    ```
    import logging
