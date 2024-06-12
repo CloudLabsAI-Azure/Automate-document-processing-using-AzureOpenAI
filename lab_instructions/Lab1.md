@@ -167,11 +167,11 @@ We will be using Azure Functions to process documents that are uploaded to an Az
 
    - Select subscription → choose the **Default Subscription**,
 
-   - Select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
+   - Click on **Sign in to Azure** and select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
 
    - Select how your would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
-1. In VS Code, navigate to the function's **requirements.txt** file. This file defines the dependencies for your script. Add the following Python packages to the file:
+1. In VS Code, navigate to the function's **requirements.txt** file. This file defines the dependencies for your script. Add the following Python packages to the file and click on ` Ctrl + S ` :
    
       ```
       cryptography
@@ -226,7 +226,7 @@ We will be using Azure Functions to process documents that are uploaded to an Az
 
    ```
    
-1. Open the **function-app.py** file and add the following import statements:
+1. Open the **function-app.py** file and add the following import statements by replacing the existing ones:
 
       ```
       import logging
