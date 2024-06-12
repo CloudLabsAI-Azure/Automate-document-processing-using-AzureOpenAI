@@ -129,7 +129,13 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/doc51.png)
 
-1. Chat with the bot and check its working state.
+1. Chat with the bot and check its working state. Provide questions related to the document we had previously uploaded.
+
+1. Search for cosmos DB in the portal and select the resource.
+
+1. Verify **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** has been created.
+
+1. Go to Data Explorer, expand **db_conversation_history** database **(1)** > **conversations** container **(2)** and verify that the conversations has been captured by cosmos db from webapp as shown in the below image.
 
 ## Review
 
