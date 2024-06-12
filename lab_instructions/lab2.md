@@ -130,8 +130,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
     ![Alt text](images/doc51.png)
 
 1. Chat with the bot and check its working state.
+
 ## Review
 
-In this lab, you have accomplished the following:
+In this lab, you have uploaded your own data and interacted with Azure OpenAI ChatGPT LLM using webapp.
 
-* How to leverage the ChatGPT LLM to extract a concise summary from your own document repository using OpenAI.
+### You have successfully completed the lab
