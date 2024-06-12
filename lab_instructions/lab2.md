@@ -2,7 +2,7 @@
 
 ### Architecture Diagram
 
-![Name](images/doc88.PNG)
+![Name](images/doc89.PNG)
 
 ### Task 1: Navigate to Azure OpenAI Playground
 
