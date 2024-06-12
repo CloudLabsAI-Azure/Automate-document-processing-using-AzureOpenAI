@@ -98,7 +98,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/parameters.png)
 
-7. Click on **Deploy to** on the top right and click on **a new webapp**.
+7. Click on **Deploy to (1)** on the top right and click on **a new webapp (2)**.
 
 8. Add the following details and click on **Deploy**:
 
