@@ -319,6 +319,80 @@ We will be using Azure Functions to process documents that are uploaded to an Az
        blob_client.upload_blob(data, overwrite=True)
    ```
 
+1. Please verify that the code should look like this at the end.
+
+```
+import logging
+from azure.storage.blob import BlobServiceClient
+import azure.functions as func
+import json
+import time
+from requests import get, post
+import os
+import requests
+from collections import OrderedDict
+import numpy as np
+import pandas as pd
+
+app = func.FunctionApp()
+
+@app.blob_trigger(arg_name="myblob", path="<input container", connection="storage<DID>_STORAGE") 
+
+def blob_trigger(myblob: func.InputStream):
+    logging.info(f"Python blob trigger function processed blob"
+                f"Name: {myblob.name}"
+                f"Blob Size: {myblob.length} bytes")
+
+# This is the call to the Document Intelligence endpoint
+    endpoint = r"<document-intelligence-endpoint>"
+    apim_key = "<document-intelligence-key>"
+    post_url = endpoint + "/formrecognizer/documentModels/<model-name>:analyze?api-version=2023-07-31"
+    source = myblob.read()
+    
+    headers = {
+        # Request headers
+        'Content-Type': 'application/pdf',
+        'Ocp-Apim-Subscription-Key': apim_key,
+            }
+    
+    resp = requests.post(url=post_url, data=source, headers=headers)
+
+    if resp.status_code != 202:
+        print("POST analyze failed:\n%s" % resp.text)
+        quit()
+    print("POST analyze succeeded:\n%s" % resp.headers)
+    get_url = resp.headers["operation-location"]
+    
+    wait_sec = 25
+    time.sleep(wait_sec)
+    # The layout API is async therefore the wait statement
+    resp = requests.get(url=get_url, headers={"Ocp-Apim-Subscription-Key": apim_key})
+    resp_json = json.loads(resp.text)
+    status = resp_json["status"]
+    
+    if status == "succeeded":
+        print("POST Layout Analysis succeeded:\n%s")
+        results = resp_json
+    else:
+        print("GET Layout results failed:\n%s")
+        quit()
+    
+    results = resp_json
+
+    # This is the connection to the blob storage, with the Azure Python SDK
+    blob_service_client = BlobServiceClient.from_connection_string("<storage account connection string")
+    container_client=blob_service_client.get_container_client("output")
+
+    # Assuming `results` is your JSON data
+    data = json.dumps(results)
+
+    # Create a new blob and upload the data
+    blob_name = myblob.name + ".json"
+    blob_client = container_client.get_blob_client(blob_name)
+    blob_client.upload_blob(data, overwrite=True)
+
+```
+
 ### Task 4: Run the Function App
 
 1. Press **F5** to run the function
