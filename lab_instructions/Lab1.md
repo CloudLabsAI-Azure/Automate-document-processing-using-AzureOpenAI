@@ -105,9 +105,9 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Train](images/doc17.png)
 
-1. Specify the model ID as **model**, Model Description as **custom model** , from the drop-down select **Template** as Build Mode and click on **Train**..
+1. Specify the model ID as **model (1)**, Model Description as **custom model (2)** , from the drop-down select **Template (3)** as Build Mode and click on **Train (4)**.
 
-     ![Name](images/doc18.png)
+     ![Name](images/doc68.png)
 
 1. Click on **Go to Models**. 
 
