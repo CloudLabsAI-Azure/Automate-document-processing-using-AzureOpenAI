@@ -26,6 +26,10 @@
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
+1. Click on **Add a data source** under **Add your data** of the **Setup** tab.
+
+   ![](images/doc70.png)
+   
 1. Fill the following details in **Select or add data source** and click on **Next** **(6)**.
     
     - Select data source: **Upload files (preview)** **(1)**
@@ -44,23 +48,23 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       ![add-data](images/uploadfiles.png) 
 
-2. On the **Data Management**, click on **Browse for a file** **(1)** enter the following `C:\LabFiles\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)** files.
+1. On the **Data Management**, click on **Browse for a file** **(1)** enter the following `C:\LabFiles\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)** files.
 
    ![data-management](images/labfiles.png)
 
-3. It will redirect to **Data management**, click on **Upload files** **(1)**, and click on **Next** **(2)**.
+1. It will redirect to **Data management**, click on **Upload files** **(1)**, and click on **Next** **(2)**.
 
    ![data-management](images/data-management-upload.png)
 
-4. On the **Data Management** page, from the drop-down select **keyword (1)** as Search type and click on **Next (2)**.
+1. On the **Data Management** page, from the drop-down select **keyword (1)** as Search type and click on **Next (2)**.
 
    ![keyword](images/uploadfiles1.png)
 
-5. On the **Data Connection page**, select **API Key**.
+1. On the **Data Connection page**, select **API Key**.
 
    ![keyword](images/api.png)
 
-6. On the **Review and finish** page, click on **Save and close**.
+1. On the **Review and finish** page, click on **Save and close**.
 
    ![Save and close](images/save-and-close.png)
 
@@ -70,7 +74,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
    ![upload-data](images/upload-data.png)
 
-2. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
+1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
     ```
     how to operate Android Auto in Porche Taycan? give step-by-step instructions
@@ -78,15 +82,15 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       ![chat-session-one](images/screen.png)
 
-3. You can also configure the responses of your bot by selecting the system message under **Assistance Setup**, and click on **System message** **(1)** to replace the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** and click on **Save changes** **(3)**. Here we have edited the default system message.
+1. You can also configure the responses of your bot by selecting the system message under **Assistance Setup**, and click on **System message** **(1)** to replace the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** and click on **Save changes** **(3)**. Here we have edited the default system message.
 
    ![assistant-setup-system-message](images/applychnages.png)
 
-4. On **Update system message?** pop-up, click on **Continue**.
+1. On **Update system message?** pop-up, click on **Continue**.
 
    ![Alt text](images/continue.png)
 
-5. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
+1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
     ```
     What is your name
@@ -94,13 +98,15 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    
    ![chat-session-two](images/recogniserlab1-2.png)
 
-6. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
+1. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
     ![Alt text](images/parameters.png)
 
-7. Click on **Deploy to (1)** on the top right and click on **a new webapp (2)**.
+1. Click on **Deploy to (1)** on the top right and click on **a new webapp (2)**.
 
-8. Add the following details and click on **Deploy**:
+   ![](images/doc71.png)
+
+1. Add the following details and click on **Deploy**:
 
    - Name: **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)**
    - Subscription: **Select the default subscription (2)**
@@ -109,17 +115,21 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    - Pricing Plan: **Choose Basic (B1) (5)**
    - **Enable** chat history in the web app **(6)**
 
-9. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created.
+1. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created.
 
+      ![](images/doc73.png)
+
+      ![](images/doc74.png)
+   
       > **Note:** In cases of permissions asked, click on **Accept**.
 
       ![Alt text](images/doc50.png)
       
-10. Click on **Browse** and the web app is up and running.
+1. Click on **Browse** and the web app is up and running.
 
     ![Alt text](images/doc51.png)
 
-12. Chat with the bot and check its working state.
+1. Chat with the bot and check its working state.
 ## Review
 
 In this lab, you have accomplished the following:
