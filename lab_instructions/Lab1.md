@@ -121,9 +121,11 @@ In this step, you will upload 6 training documents to train the model.
 
 1. On the file explorer, enter the following `C:\LabFiles\Test` **(1)** path hit **enter**, select all test PDF files **invoice6 and invoice7** **(2)**, and hit **Open** **(3)**.
 
-1. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization** **(2)** we created in the last step along with its confidence score.
+      ![select-models](images/stu6.png)
 
-   ![Name](images/doc33.png)
+1. Once uploaded, select one test model, and click on **Run analysis**, Now you can see on the right-hand side that the model was able to detect the field **Organization** and **Address** we created in the last step along with its confidence score.
+
+   ![Name](images/stu7.png)
    
 ### Task 3: Creation of Function App
 
@@ -266,6 +268,8 @@ You will be using Azure Functions to process documents that are uploaded to an A
            }
    ```
 
+   ![select-models](images/stu1.png)
+   
 1. Next, add code to query the service and get the returned data.
 
    ```
@@ -399,11 +403,13 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. In the storage account **storage<inject key="Deployment ID" enableCopy="false"/>**, navigate to **Containers** under the **Data Storage** tab and select **input** container.
 
-   ![select-models](images/doc75.png)
+   ![select-models](images/stu2.png)
    
 1. In the input container, click on **Upload** button, in the **Upload blob** pop-up window click on **Browse for files**.
 
-1. Navigate to `C:\LabFiles\test`, select **Invoice_6**, and click on **Open**.
+   ![select-models](images/stu3.png)
+
+1. Navigate to `C:\LabFiles\test`, select **Invoice_6 and Invoice_7**, and click on **Open**.
 
    ![select-models](images/doc76.png)
 
@@ -438,6 +444,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
    - Parsing Mode: **JSON (3)**
    - Subscription: **Select the default subscription (4)**
    - Connection string: Select **storage<inject key="Deployment ID" enableCopy="false"/>** and then select **output** container **(5)**.
+
+        ![select-models](images/stu5.png)
+     
    - Container Name: **Output (6)**
    - Blob Folder: **Input (7)**
    - Click on **Next: Add cognitive skills (Optional) (8)**
