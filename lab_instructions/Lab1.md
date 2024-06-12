@@ -327,7 +327,7 @@ We will be using Azure Functions to process documents that are uploaded to an Az
 
 1. Click on **Upload** button, in **Upload blob** pop-up window click on **Browse for files**.
 
-1. Navigate to **C:\LabFiles\Sample_data\test\**, select **Invoice_6**, and click on **Open**.
+1. Navigate to **C:\LabFiles\test\**, select **Invoice_6**, and click on **Open**.
 
 1. In the **Upload blob** pop-up window click on **Upload**.
 
