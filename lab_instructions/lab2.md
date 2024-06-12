@@ -16,7 +16,7 @@
 
    ![OpenAI](images/doc35.png)
 
-2. Click on **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
+2. In the Azure AI Services | Azure OpenAI tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
       ![OpenAI](images/doc36.png)
 
@@ -24,7 +24,7 @@
 
       ![OpenAI Studio](images/launch-openaist.png)
 
-4. On the **Azure OpenAI Studio**, scroll down click on **Bring your own data**.
+4. On the **Azure OpenAI Studio**, scroll down and click on **Bring your own data**.
 
    ![Azure OpenAI Studio](images/bring-data.png)
 
@@ -44,7 +44,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     - Select Azure Blob storage resource: Choose the already created storage account **storage<inject key="Deployment ID">** **(3)**. 
       
-      - **Note**: If asked for turn on CORS, click on **Turn on CORS**.
+      - **Note**: **Turn on CORS** when prompted.
 
          ![](images/data-source.png)
 
@@ -66,7 +66,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
    ![keyword](images/uploadfiles1.png)
 
-1. On the **Data Connection page**, select **API Key**.
+1. On the **Data Connection page**, select **API Key** and click on Next.
 
    ![keyword](images/api.png)
 
@@ -76,7 +76,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 ### Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
-1. Under the **Assistant Setup** pane, wait until your data upload is finished.
+1. Under the **Add you data** pane of the **Setup** tab, wait until your data upload is finished.
 
    ![upload-data](images/upload-data.png)
 
