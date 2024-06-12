@@ -75,9 +75,9 @@ In this step, you will upload 6 training documents to train the model.
 
 1. Click on **Browse for files**.
 
-     ![Browse for files](images/browse-for-files.png)
+     ![Browse for files](images/doc39.png)
 
-1. On the file explorer, enter the following `C:\LabFiles\Train`  path hit **enter**, select all train JPEG files present inside **Train** folder i.e **invoice_1 to invoice_5** **(2)**, and hit **Open** **(3)**.
+1. On the file explorer, enter the following path `C:\LabFiles\Train`, hit **enter**, select all train PDF files present inside **Train** folder i.e **invoice_1 to invoice_5** **(2)**, and hit **Open** **(3)**.
 
    ![Alt text](images/doc34.png)
 
@@ -119,7 +119,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![select-models](images/test-upload.png)
 
-1. On the file explorer, enter the following `C:\LabFiles\Test` **(1)** path hit **enter**, select all test JPEG files **invoice6 and invoice7** **(2)**, and hit **Open** **(3)**.
+1. On the file explorer, enter the following `C:\LabFiles\Test` **(1)** path hit **enter**, select all test PDF files **invoice6 and invoice7** **(2)**, and hit **Open** **(3)**.
 
 1. Once uploaded, select one test model, and click on **Run analysis** **(1)**, Now you can see on the right-hand side that the model was able to detect the field **Organization** **(2)** we created in the last step along with its confidence score.
 
@@ -127,7 +127,7 @@ In this step, you will upload 6 training documents to train the model.
    
 ### Task 3: Creation of Function App
 
-We will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
+You will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
 
 1. Navigate to the document intelligence resource you created earlier.
 
