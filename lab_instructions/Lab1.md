@@ -244,7 +244,7 @@ We will be using Azure Functions to process documents that are uploaded to an Az
 
       ![select-models](images/doc11.png)
    
-1. Add the following code to trigger the script when a file is uploaded to the input storage container. Replace the values of **container-name** and **storage-account-name** with **input** and **storage<inject key="Deployment ID" enableCopy="false"/>** respectively.
+1. You can leave the generated main function as it is which looks like below.
 
       ```
       app = func.FunctionApp()
