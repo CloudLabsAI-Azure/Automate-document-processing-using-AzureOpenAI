@@ -444,7 +444,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    ![train-module](images/doc24.png)
 
-1. On the Add **cognitive skills (Optional)** click on **Skip to : Customize target index**.
+1. On the Add **cognitive skills (Optional)**, click on **Skip to : Customize target index**.
 
 1. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
 
@@ -458,18 +458,20 @@ You will be using Azure Functions to process documents that are uploaded to an A
    
    ![Create an indexer](images/create-an-indexer.png)
 
-1. Select **indexes** and click on **azureblob-index**.
+1. Select **indexes** under the **search management** tab and click on **azureblob-index**.
 
    ![Create an indexer](images/doc95.png)
 
-1. Click on **Search**.
+1. In the **azureblob-index**, click on **Search** button.
 
    ![Create an indexer](images/doc99.png)
 
-1. Verify the document that has been analysed, search for `fields` and you can verify the fields given while training the document has been analysed.
+1. Verify the document that has been analysed
 
    ![Create an indexer](images/doc96.png)
 
+1. Search for `fields` and verify the fields given while training the document has been analysed.
+   
    ![Create an indexer](images/doc97.png)
 
    ![Create an indexer](images/doc98.png)
