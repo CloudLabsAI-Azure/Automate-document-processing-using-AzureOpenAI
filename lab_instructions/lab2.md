@@ -1,5 +1,11 @@
 # Utilize your Data Set using OpenAI
 
+### Lab Objectives
+
+- Use your own data
+- Interact with Azure OpenAI ChatGPT LLM
+- Assess by employing a web application alongside Cosmos DB
+  
 ### Architecture Diagram
 
 ![Name](images/doc89.PNG)
