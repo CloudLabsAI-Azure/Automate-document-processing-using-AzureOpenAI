@@ -133,9 +133,13 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Search for cosmos DB in the portal and select the resource.
 
+    ![Create an indexer](images/doc94.png)
+
 1. Verify **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** has been created.
 
 1. Go to Data Explorer, expand **db_conversation_history** database **(1)** > **conversations** container **(2)** and verify that the conversations has been captured by cosmos db from webapp as shown in the below image.
+
+    ![Create an indexer](images/doc93.png)
 
 ## Review
 
