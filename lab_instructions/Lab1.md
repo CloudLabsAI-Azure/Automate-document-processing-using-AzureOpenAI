@@ -250,7 +250,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
                       f"Blob Size: {myblob.length} bytes")
       ```
 
-1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document. Replace **Your Document Intelligence Endpoint** with **<inject key="documentIntelligenceEndpoint"></inject>** and **Your Document Intelligence Key** with **<inject key="documentIntelligenceKey"></inject>**. Replace <MODEL-NAME> with **model**.
+1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document. Replace **Your Document Intelligence Endpoint** with **<inject key="documentIntelligenceEndpoint"></inject>** and **Your Document Intelligence Key** with **<inject key="documentIntelligenceKey"></inject>**. Replace `<MODEL-NAME>` with **model**.
 
    ```
        # This is the call to the Document Intelligence endpoint
