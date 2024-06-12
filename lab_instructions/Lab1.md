@@ -385,43 +385,49 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 ### Task 4: Run the Function App
 
-1. Press **F5** to run the function
+1. In VS Code, click on the ellipsis above, expand **Terminal (1)** and select **New Terminal (2)**.
+
+1. Press **F5** to run the function.
 
 1. Once the funtion has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
 
    ![select-models](images/doc90.png)
 
-1. Navigate to storage account **storage<inject key="Deployment ID" enableCopy="false"/>** and click on the **Input** container.
+1. In the search bar, search and select **Storage Account**.
+
+1. Select storage account **storage<inject key="Deployment ID" enableCopy="false"/>**.
+
+1. In the storage account **storage<inject key="Deployment ID" enableCopy="false"/>**, navigate to **Containers** under the **Data Storage** tab and select **input** container.
 
    ![select-models](images/doc75.png)
+   
+1. In the input container, click on **Upload** button, in the **Upload blob** pop-up window click on **Browse for files**.
 
-1. Click on **Upload** button, in **Upload blob** pop-up window click on **Browse for files**.
-
-1. Navigate to `C:\LabFiles\test\`, select **Invoice_6**, and click on **Open**.
+1. Navigate to `C:\LabFiles\test`, select **Invoice_6**, and click on **Open**.
 
    ![select-models](images/doc76.png)
 
-1. In the **Upload blob** pop-up window click on **Upload**.
+1. In the **Upload blob** pop-up window, click on **Upload** button.
 
-1. Naviagte back to the **VS code** and verify the **logs**.
+1. Navigate back to the **VS code** and verify the **logs**.
 
-1. Once the funcation app triggered successfully, naviagte back to the **storage account**.
+1. Once the function app triggered successfully, navigate back to the **storage account**.
 
-1. In the storage account click on **Containers** and select **Output** container.
+1. In the storage account, click on **Containers** under Data Storage tab and select **Output** container.
 
-1. Click on the **input** folder  and verify the **json** analysing the document has been generated successfully.
+1. In the ouput container, click on the **input** folder and verify the **json** analysing the document has been generated successfully.
 
 ### Task 5: Working with AI Search
 
-1. Search for **AI Search** and select it.
+1. In the search bar, search for **AI Search** and select it.
 
    ![train-module](images/doc21.png)
    
-1. Navigate to **search-<inject key="Deployment ID" enableCopy="false"/>**.
+1. In **Azure AI services | AI Search** tab, select **search-<inject key="Deployment ID" enableCopy="false"/>**.
 
    ![train-module](images/doc22.png)
    
-1. Click on **Import data**.
+1. In the Overview page of **search-<inject key="Deployment ID" enableCopy="false"/>**, click on **Import data**.
 
    ![train-module](images/doc23.png)
 
