@@ -325,11 +325,11 @@ We will be using Azure Functions to process documents that are uploaded to an Az
 
 1. Once the funtion has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
 
-   ![select-models](images/doc75.png)
+   ![select-models](images/doc90.png)
 
 1. Navigate to storage account **storage<inject key="Deployment ID" enableCopy="false"/>** and click on the **Input** container.
 
-   ![select-models](images/doc90.png)
+   ![select-models](images/doc75.png)
 
 1. Click on **Upload** button, in **Upload blob** pop-up window click on **Browse for files**.
 
