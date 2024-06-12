@@ -167,7 +167,9 @@ We will be using Azure Functions to process documents that are uploaded to an Az
 
    - Select subscription → choose the **Default Subscription**,
 
-   - Click on **Sign in to Azure** and select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
+   - Click on **Sign in to Azure** and click on **Allow** if prompted.
+
+   - Select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
 
    - Select how your would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
@@ -321,13 +323,19 @@ We will be using Azure Functions to process documents that are uploaded to an Az
 
 1. Press **F5** to run the function
 
-1. Once the funtion has been run successfully, navigate to `portal.azure.com`.
+1. Once the funtion has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
+
+   ![select-models](images/doc75.png)
 
 1. Navigate to storage account **storage<inject key="Deployment ID" enableCopy="false"/>** and click on the **Input** container.
+
+   ![select-models](images/doc90.png)
 
 1. Click on **Upload** button, in **Upload blob** pop-up window click on **Browse for files**.
 
 1. Navigate to **C:\LabFiles\test\**, select **Invoice_6**, and click on **Open**.
+
+   ![select-models](images/doc76.png)
 
 1. In the **Upload blob** pop-up window click on **Upload**.
 
