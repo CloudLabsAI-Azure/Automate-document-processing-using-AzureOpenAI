@@ -97,7 +97,9 @@ In this step, you will upload 6 training documents to train the model.
 
      ![train-module](images/doc15.png)
 
-1. Create a new field name as **Address (1)** and label the new field added by **selecting the address (2)** as shown in the below image and do this for all the five documents.
+1. Click on **+ Add a field** **(1)**, enter the field name as **Address** **(2)** and hit **enter**.
+   
+1. Label the new field added by **selecting the address (2)** as shown in the below image and do this for all the five documents.
 
    ![train-module](images/doc16.png)
    
