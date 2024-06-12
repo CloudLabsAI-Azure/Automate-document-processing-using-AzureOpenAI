@@ -128,20 +128,8 @@ In this step, you will upload 6 training documents to train the model.
 ### Task 3: Creation of Function App
 
 You will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
-
-1. Navigate to the document intelligence resource you created earlier.
-
-1. Navigate to **Keys and Endpoint (1)** under Resource Management pane, copy the **key (2)** and **endpoint (3)** in a notepad.
-
-   ![select-models](images/doc4.png)
    
-1. Navigate to **storage<inject key="Deployment ID" enableCopy="false"/>**
-
-1. Navigate to **Access Keys** under Security + Networking pane and copy the **Connection String** in a notepad.
-
-   ![select-models](images/doc5.png)
-   
-1. Navigate to **Visual Studio Code**, click on **Open Folder (1)** , navigate to **C:/Labfiles (2)** and select **funtion-app (3)**.
+1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it. click on **Open Folder (1)** , navigate to **C:/Labfiles (2)** and select **funtion-app (3)**.
 
    ![select-models](images/doc8.png)
 
@@ -165,9 +153,12 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    - Select setting → choose ➕**Create new local app setting** from the dropdown menu.
 
-   - Select subscription → choose the **Default Subscription**,
+   - Click on **Sign in to Azure** and click on **Allow** if prompted. This will navigate to Azure Portal and select your Azure Account.
 
-   - Click on **Sign in to Azure** and click on **Allow** if prompted.
+        - Email: <inject key="AzureAdUserEmail"></inject>
+        - Password: <inject key="AzureAdUserPassword"></inject>
+
+   - Select subscription → choose the **Default Subscription**,
 
    - Select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
 
