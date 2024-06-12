@@ -181,7 +181,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![select-models](images/doc10.png)
 
-1. Open the **local.settings.json** and add the following statement and fill the respective values:
+1. Click on the **local.settings.json** file and replace **AzureWebJobsStorage** with the storage account connection string **<inject key="connectionString"></inject>**. Ensure to keep the rest as default.
 
    ```
       {
@@ -190,13 +190,13 @@ You will be using Azure Functions to process documents that are uploaded to an A
        "AzureWebJobsStorage": "<Connection-string>",
        "FUNCTIONS_WORKER_RUNTIME": "python",
        "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
-       "storageaccount-name_STORAGE": "<Connection-string>",
+       "storageaccount-name_STORAGE": "<Connection-string-DEFAULT>",
        "AzureWebJobsSecretStorageType": "Files"
      }
    }
    ```
 
-1. Create a file **__init.py__** and add the following statements:
+1. Create a file __init.py__ and add the following statements:
 
    ```
    import logging
