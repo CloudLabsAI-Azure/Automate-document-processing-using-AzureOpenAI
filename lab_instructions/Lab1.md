@@ -333,7 +333,7 @@ We will be using Azure Functions to process documents that are uploaded to an Az
 
 1. Click on **Upload** button, in **Upload blob** pop-up window click on **Browse for files**.
 
-1. Navigate to **C:\LabFiles\test\**, select **Invoice_6**, and click on **Open**.
+1. Navigate to `C:\LabFiles\test\`, select **Invoice_6**, and click on **Open**.
 
    ![select-models](images/doc76.png)
 
@@ -382,10 +382,30 @@ We will be using Azure Functions to process documents that are uploaded to an Az
 
 1. Expand the **AnalyzeResult** **(1)** > **documents** **(2)** > **fields** **(3)** , expand **Organization** and **Address** and make the two fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
 
+   ![](images/doc92.png)
+      
 1. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
-   ![Create an indexer](images/create-an-indexer.png)   
+   ![Create an indexer](images/create-an-indexer.png)
 
+1. Select **indexes** and click on **azureblob-index**.
+
+   ![Create an indexer](images/doc95.png)
+
+1. Click on **Search**.
+
+   ![Create an indexer](images/doc99.png)
+
+1. Verify the document that has been analysed, search for `fields` and you can verify the fields given while training the document has been analysed.
+
+   ![Create an indexer](images/doc96.png)
+
+   ![Create an indexer](images/doc97.png)
+
+   ![Create an indexer](images/doc98.png)
+   
 ## Review
 
-In this lab, you have accomplished the following:
+In this lab, you have trained datasets using document intelligence resource, triggered the documents using function app blob trigger, analysed the documents produced by storage account in AI Search.
+
+### You have successfully completed the lab
