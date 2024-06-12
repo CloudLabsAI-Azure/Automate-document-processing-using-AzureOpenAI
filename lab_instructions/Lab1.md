@@ -16,10 +16,9 @@ In this lab, you will learn how to use train documents via Document Intelligence
 
 In this lab, you will perform:
 
-- Provision a Document Intelligence resource.
 - Train a custom model in Document Intelligence Studio.
-- Create an Azure Functions project and analyse the documents using function trigger.
-- Analyze using AI Search Indexer
+- Create Function App trigger to process documents.
+- Analyze using AI Search Indexer.
 
 ### Instructions
 
