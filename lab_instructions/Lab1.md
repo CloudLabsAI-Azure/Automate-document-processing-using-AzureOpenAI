@@ -81,6 +81,8 @@ In this step, you will upload 6 training documents to train the model.
 
    ![Alt text](images/doc34.png)
 
+   ![Alt text](images/doc69.png)
+
 1. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
      ![train-upload](images/doc31.png)
