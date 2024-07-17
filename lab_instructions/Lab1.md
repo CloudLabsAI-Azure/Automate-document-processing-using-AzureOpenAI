@@ -417,7 +417,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    ![select-models](images/stu2.png)
    
-1. In the input container, click on **Upload** button, in the **Upload blob** pop-up window click on **Browse for files**.
+1. In the input container, click on **Upload (1)** button, in the **Upload blob** pop-up window click on **Browse for files (2)**.
 
    ![select-models](images/stu3.png)
 
@@ -460,7 +460,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
         ![select-models](images/stu5(1).png)
      
    - Container Name: **Output (6)**
-   - Blob Folder: **Input (7)**
+   - Blob Folder: **input (7)**
    - Click on **Next: Add cognitive skills (Optional) (8)**
 
    ![train-module](images/doc24.png)
