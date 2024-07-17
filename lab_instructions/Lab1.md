@@ -36,11 +36,11 @@ In this lab, you will perform:
 
    ![Alt text](images/doc30.png)
 
-1. In **Document Intelligence studio**, scroll down to **Custom Models** and click on **Get Started**.
+1. In **Document Intelligence studio**, scroll down to **Custom Models** and click on **Get Started** for Custom extraction model.
 
    ![Alt text](images/1-4.png)
 
-1. Enter the following details and click on **Continue**  **(3)**.
+1. Click on **New project** ,Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
@@ -59,7 +59,7 @@ In this lab, you will perform:
 1. Enter the following details **Connect training data source** and click on **Continue** **(5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
-   - Resource group: **Document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
+   - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
    - Storage account name: Select **storage<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
    - Blob container name: **analysis** **(4)**.
    
@@ -206,9 +206,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. Right click on function-app folder and click on **New File**.
 
-   ![select-models](images/stu10.png)
+   ![select-models](images/stu11.png)
    
-1. Provide the name as `__init.py__` and add the following statements:
+1. Provide the name as `__init__.py` and add the following statements:
 
    ```
    import logging
@@ -401,7 +401,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. In VS Code, click on the ellipsis above, expand **Terminal (1)** and select **New Terminal (2)**.
 
-   ![select-models](images/stu11.png)
+   ![select-models](images/stu10.png)
 
 1. Press **F5** to run the function.
 
@@ -423,7 +423,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. Navigate to `C:\LabFiles\test`, select **Invoice_6 and Invoice_7**, and click on **Open**.
 
-   ![select-models](images/doc76.png)
+   ![select-models](images/doc76(1).png)
 
 1. In the **Upload blob** pop-up window, click on **Upload** button.
 
@@ -457,7 +457,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
    - Subscription: **Select the default subscription (4)**
    - Connection string: Select **storage<inject key="Deployment ID" enableCopy="false"/>** and then select **output** container **(5)**.
 
-        ![select-models](images/stu5.png)
+        ![select-models](images/stu5(1).png)
      
    - Container Name: **Output (6)**
    - Blob Folder: **Input (7)**
