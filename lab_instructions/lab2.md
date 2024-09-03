@@ -125,6 +125,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    - Pricing Plan: **Choose Basic (B1) (5)**
    - **Enable** chat history in the web app **(6)**
    - Click **Deploy (7)**
+
      ![](images/web-01.png)
 
        >**Note:** In cases of an error `No instances were able to satisfy the request`, please change the name of the resource and try deploying in any other region.
