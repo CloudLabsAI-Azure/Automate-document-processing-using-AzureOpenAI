@@ -92,9 +92,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       ![chat-session-one](images/screen.png)
 
-1. You can also configure the responses of your bot by selecting the system message under **Assistance Setup**, and click on **System message** **(1)** to replace the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** and click on **Save changes** **(3)**. Here we have edited the default system message.
+1. You can customize the responses of your bot by selecting the **system message**. Click on **System message** **(1)** to update the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** and click on **Apply changes** **(3)**. Here we have edited the default system message.
 
-   ![assistant-setup-system-message](images/applychnages.png)
+   ![assistant-setup-system-message](images/sys_msg.png)
 
 1. On **Update system message?** pop-up, click on **Continue**.
 
@@ -112,9 +112,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/parameters.png)
 
-1. Click on **Deploy to (1)** on the top right and click on **a new webapp (2)**.
+1. On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
 
-   ![](images/doc71.png)
+   ![](images/deploy_web.png)
 
 1. Add the following details and click on **Deploy**:
 
@@ -124,7 +124,8 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    - Location: **Select Central US (4)**
    - Pricing Plan: **Choose Basic (B1) (5)**
    - **Enable** chat history in the web app **(6)**
-
+   - Click **Deploy (7)**
+     ![](images/web-01.png)
 
        >**Note:** In cases of an error `No instances were able to satisfy the request`, please change the name of the resource and try deploying in any other region.
     
