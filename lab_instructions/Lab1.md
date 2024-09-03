@@ -247,9 +247,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
       import pandas as pd
       ```
 
-      ![select-models](images/doc11.png)
+      ![select-models](images/change_code-11.png)
    
-1. You can leave the generated main function as it is which looks like below.
+1. There's no need to modify the main function, which is shown below:
 
       ```
       app = func.FunctionApp()
@@ -396,6 +396,8 @@ You will be using Azure Functions to process documents that are uploaded to an A
        blob_client = container_client.get_blob_client(blob_name)
        blob_client.upload_blob(data, overwrite=True)
    ```
+
+> **Note**: Please make sure the indentation of the code remains unchanges and proper to run the code successfully
 
 ### Task 4: Run the Function App
 
