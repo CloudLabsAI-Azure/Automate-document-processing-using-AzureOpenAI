@@ -189,7 +189,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![select-models](images/doc10.png)
 
-1. Click on the **local.settings.json** file and replace **AzureWebJobsStorage** with the storage account connection string **<inject key="connectionString"></inject>**. Ensure to keep the rest as default.
+1. Click on the **local.settings.json** file and replace **AzureWebJobsStorage** with the storage account connection string **<inject key="connectionString"></inject>**. You can also update the configuration by adding `"AzureWebJobsSecretStorageType": "Files"` if it isn’t already included. Ensure to keep the rest as default.
 
    ```
       {
@@ -247,9 +247,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
       import pandas as pd
       ```
 
-      ![select-models](images/doc11.png)
+      ![select-models](images/change_code-11.png)
    
-1. You can leave the generated main function as it is which looks like below.
+1. There's no need to modify the main function, which is shown below:
 
       ```
       app = func.FunctionApp()
@@ -397,6 +397,8 @@ You will be using Azure Functions to process documents that are uploaded to an A
        blob_client.upload_blob(data, overwrite=True)
    ```
 
+> **Note**: Please make sure the indentation of the code remains unchanges and proper to run the code successfully
+
 ### Task 4: Run the Function App
 
 1. In VS Code, click on the ellipsis above, expand **Terminal (1)** and select **New Terminal (2)**.
@@ -433,7 +435,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. In the storage account, click on **Containers** under Data Storage tab and select **Output** container.
 
-1. In the ouput container, click on the **input** folder and verify the **json** analysing the document has been generated successfully.
+1. In the **Output** container, click on the **input** folder and verify the **json** analysing the document has been generated successfully.
+
+   ![train-module](images/output.png)
 
 ### Task 5: Working with AI Search
 

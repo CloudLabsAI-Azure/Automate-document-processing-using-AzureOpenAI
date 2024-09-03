@@ -24,9 +24,13 @@
 
       ![OpenAI Studio](images/launch-openaist.png)
 
-4. On the **Azure OpenAI Studio**, scroll down and click on **Bring your own data**.
+4. In the prompt select **Explore the new experience**.
 
-   ![Azure OpenAI Studio](images/bring-data.png)
+     ![OpenAI Studio](images/explore_new-exp.jpg)
+
+6. On the **Azure OpenAI Studio**, scroll down and click on **Bring your own data**.
+
+   ![Azure OpenAI Studio](images/build_code.png)
 
 ### Task 2: Upload your own data
 
@@ -34,7 +38,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Click on **Add a data source** under **Add your data** of the **Setup** tab.
 
-   ![](images/doc70.png)
+   ![Azure OpenAI Studio](images/add_data-1432.png)
    
 1. Fill the following details in **Select or add data source** and click on **Next** **(6)**.
     
@@ -76,9 +80,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 ### Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
-1. Under the **Add you data** pane of the **Setup** tab, wait until your data upload is finished.
+1. Under the **Add you data** pane , wait until your data upload is finished.
 
-   ![upload-data](images/upload-data.png)
+   ![upload-data](images/add_data-011.png)
 
 1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
@@ -88,9 +92,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       ![chat-session-one](images/screen.png)
 
-1. You can also configure the responses of your bot by selecting the system message under **Assistance Setup**, and click on **System message** **(1)** to replace the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** and click on **Save changes** **(3)**. Here we have edited the default system message.
+1. You can customize the responses of your bot by selecting the **system message**. Click on **System message** **(1)** to update the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** and click on **Apply changes** **(3)**. Here we have edited the default system message.
 
-   ![assistant-setup-system-message](images/applychnages.png)
+   ![assistant-setup-system-message](images/sys_msg.png)
 
 1. On **Update system message?** pop-up, click on **Continue**.
 
@@ -108,9 +112,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/parameters.png)
 
-1. Click on **Deploy to (1)** on the top right and click on **a new webapp (2)**.
+1. On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
 
-   ![](images/doc71.png)
+   ![](images/deploy_web.png)
 
 1. Add the following details and click on **Deploy**:
 
@@ -120,7 +124,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    - Location: **Select Central US (4)**
    - Pricing Plan: **Choose Basic (B1) (5)**
    - **Enable** chat history in the web app **(6)**
+   - Click **Deploy (7)**
 
+     ![](images/web-01.png)
 
        >**Note:** In cases of an error `No instances were able to satisfy the request`, please change the name of the resource and try deploying in any other region.
     
@@ -148,7 +154,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Go to Data Explorer, expand **db_conversation_history** database **(1)** > **conversations** container **(2)** and verify that the conversations has been captured by cosmos db from webapp as shown in the below image.
 
-    ![Create an indexer](images/doc93.png)
+    ![Create an indexer](images/DB-01-1.png)
 
 ## Review
 
