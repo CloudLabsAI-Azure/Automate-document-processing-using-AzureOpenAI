@@ -24,9 +24,13 @@
 
       ![OpenAI Studio](images/launch-openaist.png)
 
-4. On the **Azure OpenAI Studio**, scroll down and click on **Bring your own data**.
+4. In the prompt select **Explore the new experience**.
 
-   ![Azure OpenAI Studio](images/bring-data.png)
+     ![OpenAI Studio](images/explore_new-exp.jpg)
+
+6. On the **Azure OpenAI Studio**, scroll down and click on **Bring your own data**.
+
+   ![Azure OpenAI Studio](images/build_code.png)
 
 ### Task 2: Upload your own data
 
@@ -34,7 +38,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Click on **Add a data source** under **Add your data** of the **Setup** tab.
 
-   ![](images/doc70.png)
+   ![](images/add_data-1.png)
    
 1. Fill the following details in **Select or add data source** and click on **Next** **(6)**.
     
