@@ -189,7 +189,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![select-models](images/doc10.png)
 
-1. Click on the **local.settings.json** file and replace **AzureWebJobsStorage** with the storage account connection string **<inject key="connectionString"></inject>**. Ensure to keep the rest as default.
+1. Click on the **local.settings.json** file and replace **AzureWebJobsStorage** with the storage account connection string **<inject key="connectionString"></inject>**. You can also update the configuration by adding `"AzureWebJobsSecretStorageType": "Files"` if it isn’t already included. Ensure to keep the rest as default.
 
    ```
       {
