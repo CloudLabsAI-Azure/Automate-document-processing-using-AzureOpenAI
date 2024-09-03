@@ -38,7 +38,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Click on **Add a data source** under **Add your data** of the **Setup** tab.
 
-   ![](images/add_data-1.png)
+   ![Azure OpenAI Studio](images/add_data-1432.png)
    
 1. Fill the following details in **Select or add data source** and click on **Next** **(6)**.
     
@@ -80,9 +80,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 ### Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
-1. Under the **Add you data** pane of the **Setup** tab, wait until your data upload is finished.
+1. Under the **Add you data** pane , wait until your data upload is finished.
 
-   ![upload-data](images/upload-data.png)
+   ![upload-data](images/add_data-011.png)
 
 1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
