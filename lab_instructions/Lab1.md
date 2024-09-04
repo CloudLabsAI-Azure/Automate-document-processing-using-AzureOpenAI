@@ -40,7 +40,7 @@ In this lab, you will perform:
 
    ![Alt text](images/1-4.png)
 
-1. Click on **New project** ,Enter the following details and click on **Continue**  **(3)**.
+1. Click on **Create a project** ,Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
@@ -93,7 +93,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![run-now](images/doc14.png)
 
-1. Label the new field added by selecting **Contoso (1)** in the top left of each document uploaded. Do this for all five documents wherever there is an organization mentioned.
+1. Ensure you have selected **invoice_1** and Label the new field added by selecting **Contoso (1)** in the top left of each document uploaded. Do this for all five documents wherever there is an organization mentioned.
 
      ![train-module](images/doc15.png)
 
@@ -249,8 +249,11 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![select-models](images/change_code-11.png)
    
-1. There's no need to modify the main function, which is shown below:
+1.  Modify the main function, where replace:
 
+    - path = **input**
+    
+    - connection = **storage<inject key="Deployment ID" enableCopy="false"/>_STORAGE**
       ```
       app = func.FunctionApp()
    
@@ -262,7 +265,10 @@ You will be using Azure Functions to process documents that are uploaded to an A
                       f"Blob Size: {myblob.length} bytes")
       ```
 
-1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document. Replace **Your Document Intelligence Endpoint** with **<inject key="documentIntelligenceEndpoint"></inject>** and **Your Document Intelligence Key** with **<inject key="documentIntelligenceKey"></inject>**. Replace `<MODEL-NAME>` with **model**.
+1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document.
+   - Replace **Your Document Intelligence Endpoint** : **<inject key="documentIntelligenceEndpoint"></inject>**.
+   - Replace **Your Document Intelligence Key** : **<inject key="documentIntelligenceKey"></inject>**.
+   - Replace `<MODEL-NAME>` with **model**.
 
    ```
        # This is the call to the Document Intelligence endpoint
@@ -308,7 +314,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
       results = resp_json
    ```
 
-1. Add the following code to connect to the Azure Storage output container. Replace {storage-connection-string} with **<inject key="connectionString"></inject>**.
+1. Add the following code to connect to the Azure Storage output container.
+   
+   - Replace {storage-connection-string} : **<inject key="connectionString"></inject>**.
 
    ```
        # This is the connection to the blob storage, with the Azure Python SDK
@@ -459,7 +467,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
    - Data Source Name: **data-source-<inject key="Deployment ID" enableCopy="false"/> (2)**
    - Parsing Mode: **JSON (3)**
    - Subscription: **Select the default subscription (4)**
-   - Connection string: Select **storage<inject key="Deployment ID" enableCopy="false"/>** and then select **output** container **(5)**.
+   - Connection string: Click on **Choose an existing Connection** then Select **storage<inject key="Deployment ID" enableCopy="false"/>** and then select **output** container **(5)**.
 
         ![select-models](images/stu5(1).png)
      
