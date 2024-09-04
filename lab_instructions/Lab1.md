@@ -407,6 +407,13 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 > **Note**: Please make sure the indentation of the code remains unchanges and proper to run the code successfully
 
+<validation step="f6ff6b66-6e60-4f01-8f68-42007b7a3ce1" />
+ 
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com.
+
 ### Task 4: Run the Function App
 
 1. In VS Code, click on the ellipsis above, expand **Terminal (1)** and select **New Terminal (2)**.
@@ -446,6 +453,13 @@ You will be using Azure Functions to process documents that are uploaded to an A
 1. In the **Output** container, click on the **input** folder and verify the **json** analysing the document has been generated successfully.
 
    ![train-module](images/output.png)
+
+<validation step="44d3193c-9401-4326-a2f5-067cf63f0c54" />
+ 
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
 ### Task 5: Working with AI Search
 
