@@ -94,11 +94,11 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. You can customize the responses of your bot by selecting the **system message**. Click on **System message** **(1)** to update the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** and click on **Apply changes** **(3)**. Here we have edited the default system message.
 
-   ![assistant-setup-system-message](images/sys_msg.png)
+   ![assistant-setup-system-message](images/lab2update.png)
 
 1. On **Update system message?** pop-up, click on **Continue**.
 
-   ![Alt text](images/continue.png)
+   ![Alt text](images/lab2uupdate.png)
 
 1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
@@ -156,6 +156,12 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Create an indexer](images/DB-01-1.png)
 
+<validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
+ 
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 ## Review
 
 In this lab, you have uploaded your own data and interacted with Azure OpenAI ChatGPT LLM using webapp.
