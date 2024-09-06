@@ -1,4 +1,4 @@
-# Automate document processing using AzureOpenAI
+# Lab 01: Automate document processing using AzureOpenAI
 
 ### Lab Overview
 
