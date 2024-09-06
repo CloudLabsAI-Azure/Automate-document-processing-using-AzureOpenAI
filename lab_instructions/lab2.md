@@ -1,4 +1,4 @@
-# Utilize your Data Set using OpenAI
+# Lab 02: Utilize your Data Set using OpenAI
 
 ## Lab Objectives
 
