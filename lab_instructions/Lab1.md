@@ -467,15 +467,15 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![train-module](images/doc21.png)
    
-1. In **Azure AI services | AI Search** tab, select **search-<inject key="Deployment ID" enableCopy="false"/>**.
+2. In **Azure AI services | AI Search** tab, select **search-<inject key="Deployment ID" enableCopy="false"/>**.
 
       ![train-module](images/doc22.png)
    
-1. In the Overview page of **search-<inject key="Deployment ID" enableCopy="false"/>**, click on **Import data**.
+3. In the Overview page of **search-<inject key="Deployment ID" enableCopy="false"/>**, click on **Import data**.
 
       ![train-module](images/doc23.png)
 
-1. Provide the following values:
+4. Provide the following values:
 
       - Data Source: **Azure Blob Storage (1)**
       - Data Source Name: **data-source-<inject key="Deployment ID" enableCopy="false"/> (2)**
@@ -490,37 +490,37 @@ You will be using Azure Functions to process documents that are uploaded to an A
      
            ![train-module](images/doc24.png)
 
-1. On the Add **cognitive skills (Optional)**, click on **Skip to : Customize target index**.
+5. On the Add **cognitive skills (Optional)**, click on **Skip to : Customize target index**.
 
-1. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
+6. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
 
       ![](images/retrievable-searchable.png)
 
-1. Expand the **AnalyzeResult** **(1)** > **documents** **(2)** > **fields** **(3)** , expand **Organization** and **Address** and make the two fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
+7. Expand the **AnalyzeResult** **(1)** > **documents** **(2)** > **fields** **(3)** , expand **Organization** and **Address** and make the two fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
 
       ![](images/doc92.png)
       
-1. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+8. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
       ![Create an indexer](images/create-an-indexer.png)
 
-1. Select **indexes** under the **search management** tab and click on **azureblob-index**.
+9. Select **indexes** under the **search management** tab and click on **azureblob-index**.
 
       ![Create an indexer](images/doc95.png)
 
-1. In the **azureblob-index**, click on **Search** button.
+10. In the **azureblob-index**, click on **Search** button.
 
-      ![Create an indexer](images/doc99.png)
+       ![Create an indexer](images/doc99.png)
 
-1. Verify the document that has been analysed
+11. Verify the document that has been analysed
 
-      ![Create an indexer](images/doc96.png)
+       ![Create an indexer](images/doc96.png)
 
-1. Search for `fields` and verify the fields given while training the document has been analysed.
+12. Search for `fields` and verify the fields given while training the document has been analysed.
    
-      ![Create an indexer](images/doc97.png)
+       ![Create an indexer](images/doc97.png)
 
-      ![Create an indexer](images/doc98.png)
+       ![Create an indexer](images/doc98.png)
     
 ## Review
 
