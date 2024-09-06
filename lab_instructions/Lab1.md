@@ -418,13 +418,13 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. In VS Code, click on the ellipsis above, expand **Terminal (1)** and select **New Terminal (2)**.
 
-   ![select-models](images/stu10.png)
+      ![select-models](images/stu10.png)
 
 1. Press **F5** to run the function.
 
 1. Once the funtion has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
 
-   ![select-models](images/doc90.png)
+      ![select-models](images/doc90.png)
 
 1. In the search bar, search and select **Storage Account**.
 
@@ -432,15 +432,15 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. In the storage account **storage<inject key="Deployment ID" enableCopy="false"/>**, navigate to **Containers** under the **Data Storage** tab and select **input** container.
 
-   ![select-models](images/stu2.png)
+      ![select-models](images/stu2.png)
    
 1. In the input container, click on **Upload (1)** button, in the **Upload blob** pop-up window click on **Browse for files (2)**.
 
-   ![select-models](images/stu3.png)
+      ![select-models](images/stu3.png)
 
 1. Navigate to `C:\LabFiles\test`, select **Invoice_6 and Invoice_7**, and click on **Open**.
 
-   ![select-models](images/doc76(1).png)
+      ![select-models](images/doc76(1).png)
 
 1. In the **Upload blob** pop-up window, click on **Upload** button.
 
@@ -452,7 +452,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. In the **Output** container, click on the **input** folder and verify the **json** analysing the document has been generated successfully.
 
-   ![train-module](images/output.png)
+    ![train-module](images/output.png)
 
 <validation step="44d3193c-9401-4326-a2f5-067cf63f0c54" />
  
@@ -465,15 +465,15 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. In the search bar, search for **AI Search** and select it.
 
-   ![train-module](images/doc21.png)
+      ![train-module](images/doc21.png)
    
 1. In **Azure AI services | AI Search** tab, select **search-<inject key="Deployment ID" enableCopy="false"/>**.
 
-   ![train-module](images/doc22.png)
+      ![train-module](images/doc22.png)
    
 1. In the Overview page of **search-<inject key="Deployment ID" enableCopy="false"/>**, click on **Import data**.
 
-   ![train-module](images/doc23.png)
+      ![train-module](images/doc23.png)
 
 1. Provide the following values:
 
@@ -489,40 +489,40 @@ You will be using Azure Functions to process documents that are uploaded to an A
    - Blob Folder: **input (7)**
    - Click on **Next: Add cognitive skills (Optional) (8)**
 
-   ![train-module](images/doc24.png)
+        ![train-module](images/doc24.png)
 
 1. On the Add **cognitive skills (Optional)**, click on **Skip to : Customize target index**.
 
 1. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
 
-   ![](images/retrievable-searchable.png)
+      ![](images/retrievable-searchable.png)
 
 1. Expand the **AnalyzeResult** **(1)** > **documents** **(2)** > **fields** **(3)** , expand **Organization** and **Address** and make the two fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
 
-   ![](images/doc92.png)
+      ![](images/doc92.png)
       
 1. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
    
-   ![Create an indexer](images/create-an-indexer.png)
+      ![Create an indexer](images/create-an-indexer.png)
 
 1. Select **indexes** under the **search management** tab and click on **azureblob-index**.
 
-   ![Create an indexer](images/doc95.png)
+      ![Create an indexer](images/doc95.png)
 
 1. In the **azureblob-index**, click on **Search** button.
 
-   ![Create an indexer](images/doc99.png)
+      ![Create an indexer](images/doc99.png)
 
 1. Verify the document that has been analysed
 
-   ![Create an indexer](images/doc96.png)
+      ![Create an indexer](images/doc96.png)
 
 1. Search for `fields` and verify the fields given while training the document has been analysed.
    
-   ![Create an indexer](images/doc97.png)
+      ![Create an indexer](images/doc97.png)
 
-   ![Create an indexer](images/doc98.png)
-   
+      ![Create an indexer](images/doc98.png)
+    
 ## Review
 
 In this lab, you have trained datasets using document intelligence resource, triggered the documents using function app blob trigger, analysed the documents produced by storage account in AI Search.
