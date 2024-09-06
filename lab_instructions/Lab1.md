@@ -485,11 +485,11 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
         ![select-models](images/stu5(1).png)
      
-   - Container Name: **Output (6)**
-   - Blob Folder: **input (7)**
-   - Click on **Next: Add cognitive skills (Optional) (8)**
+       - Container Name: **Output (6)**
+       - Blob Folder: **input (7)**
+       - Click on **Next: Add cognitive skills (Optional) (8)**
 
-        ![train-module](images/doc24.png)
+            ![train-module](images/doc24.png)
 
 1. On the Add **cognitive skills (Optional)**, click on **Skip to : Customize target index**.
 
