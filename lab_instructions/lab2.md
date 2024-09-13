@@ -1,10 +1,11 @@
 # Lab 02: Utilize your Data Set using OpenAI
 
 ## Lab Objectives
+In this lab you will perform,
 
-- Use your own data
-- Interact with Azure OpenAI ChatGPT LLM
-- Assess by employing a web application alongside Cosmos DB
+- **Task 1**: Navigate to Azure OpenAI Playground
+- **Task 2**: Upload your own data
+- **Task 3**: Interact with Azure OpenAI ChatGPT LLM using your own data
   
 ## Architecture Diagram
 
@@ -158,6 +159,6 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    
 ## Review
 
-In this lab, you have uploaded your own data and interacted with Azure OpenAI ChatGPT LLM using webapp.
+In this lab, you learned how to use Azure OpenAI Studio to upload your own data, and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
 
 ### You have successfully completed the lab
