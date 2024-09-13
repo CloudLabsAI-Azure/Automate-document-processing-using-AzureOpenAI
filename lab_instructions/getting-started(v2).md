@@ -1,4 +1,5 @@
 # **Getting Started with Your Automate-document-processing-using-AzureOpenAI Workshop**
+## Overall Estimated Duration: 4 Hours
  
 Welcome to your Automate-document-processing-using-AzureOpenAI Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
 
