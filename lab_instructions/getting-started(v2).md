@@ -33,7 +33,7 @@ Participants should have: Basic knowledge and understanding of the following
 
 **Azure Document Intelligence** processes and extracts data from documents. **Azure Functions** trigger the document processing based on blob changes. **Azure Storage Account** stores the documents to be processed. **Azure AI Search** indexes and searches the extracted data. **Azure OpenAI Service** provides AI capabilities for natural language processing and generation. **Web Application** facilitates user interaction and displays the results of the AI processing. A storage mechanism stores chat history for viewing and analysis.
 
-![Architecture](media/architecture1.PNG)
+![Architecture](images/archi2.png)
 
 ## Explanation of Components
 
