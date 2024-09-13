@@ -9,17 +9,17 @@ In this lab, participants will explore document processing using Azure services 
 ## Objectives
 
 1. **Document Processing with Azure Services:**
-   - Utilize Azure services for text extraction, data extraction, sentiment analysis, language detection, OCR, and document classification.
-   - Train datasets using Azure's Document Intelligence resource to analyze and manage various document types.
+- Utilize Azure services for text extraction, data extraction, sentiment analysis, language detection, OCR, and document classification.
+- Train datasets using Azure's Document Intelligence resource to analyze and manage various document types.
 
 2. **Trigger-Based Document Analysis:**
-   - Set up and configure a Function App with a blob trigger to automatically process documents stored in Azure Storage.
-   - Analyze the documents produced by the storage account using Azure AI Search for efficient data retrieval and insights.
+- Set up and configure a Function App with a blob trigger to automatically process documents stored in Azure Storage.
+- Analyze the documents produced by the storage account using Azure AI Search for efficient data retrieval and insights.
 
 3. **Integration and Interaction:**
-   - Upload and process your own data using the trained Document Intelligence model.
-   - Interact with Azure OpenAI's ChatGPT LLM through a web application to assess and utilize the processed document data.
-   - Evaluate the integration of processed data with Cosmos DB to enhance data management and application functionality.
+- Upload and process your own data using the trained Document Intelligence model.
+- Interact with Azure OpenAI's ChatGPT LLM through a web application to assess and utilize the processed document data.
+- Evaluate the integration of processed data with Cosmos DB to enhance data management and application functionality.
 
 ## Prerequisites
 
@@ -29,7 +29,7 @@ Participants should have: Basic knowledge and understanding of the following
 - Experience with Azure cloud services, including how to navigate the Azure portal.
 - Basic knowledge of programming languages commonly used with AI models, such as Python.
   
-## Architecture
+## Architecture Diagram
 
 **Azure Document Intelligence** processes and extracts data from documents. **Azure Functions** trigger the document processing based on blob changes. **Azure Storage Account** stores the documents to be processed. **Azure AI Search** indexes and searches the extracted data. **Azure OpenAI Service** provides AI capabilities for natural language processing and generation. **Web Application** facilitates user interaction and displays the results of the AI processing. A storage mechanism stores chat history for viewing and analysis.
 
