@@ -1,5 +1,7 @@
 # Lab 01: Automate document processing using AzureOpenAI
 
+## Estimated Duration: 3 Hours
+
 ### Lab Overview
 
 Processing of forms and documents is part of several scenarios both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone.
