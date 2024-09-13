@@ -16,9 +16,11 @@ In this lab, you will learn how to use train documents via Document Intelligence
 
 In this lab, you will perform:
 
-- Train a custom model in Document Intelligence Studio.
-- Create Function App trigger to process documents.
-- Analyze using AI Search Indexer.
+- **Task 1**: Creating a Document Intelligence Resource
+- **Task 2**: Train and Label data
+- **Task 3**: Creation of Function App
+- **Task 4**: Run the Function App
+- **Task 5**: Working with AI Search
 
 ### Instructions
 
