@@ -1,5 +1,7 @@
 # Lab 01: Automate document processing using AzureOpenAI
 
+## Estimated Duration: 3 Hours
+
 ### Lab Overview
 
 Processing of forms and documents is part of several scenarios both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone.
@@ -16,9 +18,11 @@ In this lab, you will learn how to use train documents via Document Intelligence
 
 In this lab, you will perform:
 
-- Train a custom model in Document Intelligence Studio.
-- Create Function App trigger to process documents.
-- Analyze using AI Search Indexer.
+- **Task 1**: Creating a Document Intelligence Resource
+- **Task 2**: Train and Label data
+- **Task 3**: Creation of Function App
+- **Task 4**: Run the Function App
+- **Task 5**: Working with AI Search
 
 ### Instructions
 
@@ -524,6 +528,6 @@ You will be using Azure Functions to process documents that are uploaded to an A
     
 ## Review
 
-In this lab, you have trained datasets using document intelligence resource, triggered the documents using function app blob trigger, analysed the documents produced by storage account in AI Search.
+In this lab, you used Azure services to automate document processing by creating a Document Intelligence resource and training a custom model for data extraction. You then developed an Azure Function App to process documents from Blob Storage, analyze them via the Document Intelligence API, and store results as JSON files. Lastly, you set up Azure AI Search to index and search the analyzed documents, integrating these components for efficient document management.
 
 ### You have successfully completed the lab
