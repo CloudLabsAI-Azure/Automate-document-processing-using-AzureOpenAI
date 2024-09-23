@@ -12,7 +12,7 @@ In this lab, participants will explore document processing using Azure services 
 - Learn how to upload custom data into Azure OpenAI Studio, interact with the ChatGPT model using the uploaded content, and deploy the AI as a web app. Additionally, capture and store conversation history in Cosmos DB for enhanced traceability and persistence.
 
 - Explore how Azure services can be used to process documents by extracting and analyzing information from various file types, such as PDFs and images. Train document models via Azure Document Intelligence and integrate them with Azure OpenAI for intelligent data extraction and interaction.
-- 
+  
 ## Prerequisites
 
 Participants should have: Basic knowledge and understanding of the following
