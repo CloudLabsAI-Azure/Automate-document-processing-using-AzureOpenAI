@@ -100,7 +100,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
    ![Asklater](images/asklater.png)
      
-1. If prompted to stay signed in, you can click "No."
+1. If prompted to **stay signed in**, you can click **"No"**.
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
    
