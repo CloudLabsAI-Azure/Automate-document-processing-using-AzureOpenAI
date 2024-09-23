@@ -9,19 +9,10 @@ In this lab, participants will explore document processing using Azure services 
 
 ## Objectives
 
-1. **Document Processing with Azure Services:**
-- Utilize Azure services for text extraction, data extraction, sentiment analysis, language detection, OCR, and document classification.
-- Train datasets using Azure's Document Intelligence resource to analyze and manage various document types.
+- Learn how to upload custom data into Azure OpenAI Studio, interact with the ChatGPT model using the uploaded content, and deploy the AI as a web app. Additionally, capture and store conversation history in Cosmos DB for enhanced traceability and persistence.
 
-2. **Trigger-Based Document Analysis:**
-- Set up and configure a Function App with a blob trigger to automatically process documents stored in Azure Storage.
-- Analyze the documents produced by the storage account using Azure AI Search for efficient data retrieval and insights.
-
-3. **Integration and Interaction:**
-- Upload and process your own data using the trained Document Intelligence model.
-- Interact with Azure OpenAI's ChatGPT LLM through a web application to assess and utilize the processed document data.
-- Evaluate the integration of processed data with Cosmos DB to enhance data management and application functionality.
-
+- Explore how Azure services can be used to process documents by extracting and analyzing information from various file types, such as PDFs and images. Train document models via Azure Document Intelligence and integrate them with Azure OpenAI for intelligent data extraction and interaction.
+- 
 ## Prerequisites
 
 Participants should have: Basic knowledge and understanding of the following
