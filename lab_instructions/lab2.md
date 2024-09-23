@@ -1,6 +1,6 @@
 # Lab 02: Utilize your Data Set using OpenAI
 
-## Estimated Duration: 1 Hours
+## Estimated Duration: 1 Hour
 
 ## Lab Objectives
 In this lab you will perform,
