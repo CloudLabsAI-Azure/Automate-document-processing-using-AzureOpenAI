@@ -12,9 +12,9 @@ In this lab, you will learn how to leverage Azure OpenAI to interact with custom
 ## Lab Objectives
 In this lab you will perform,
 
-- **Task 1**: Navigate to Azure OpenAI Playground
-- **Task 2**: Upload your own data
-- **Task 3**: Interact with Azure OpenAI ChatGPT LLM using your own data
+- Task 01: Navigate to Azure OpenAI Playground
+- Task 02: Upload your own data
+- Task 03: Interact with Azure OpenAI ChatGPT LLM using your own data
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
