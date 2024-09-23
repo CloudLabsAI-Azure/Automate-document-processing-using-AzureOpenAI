@@ -159,7 +159,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Create an indexer](images/DB-01-1.png)
    
-## Review
+## Summary
 
 In this lab, you learned how to use Azure OpenAI Studio to upload your own data, and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
 
