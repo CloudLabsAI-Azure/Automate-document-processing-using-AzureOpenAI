@@ -95,18 +95,15 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
    * **Password**: <inject key="AzureAdUserPassword"></inject>
    
       ![OpenAI](images/sc900-image-2.png)
+
+1. If you see the pop-up **Action Required**, keep default and then click on **Ask later**. If you see the pop-up Help us protect your account, click on **Skip for now**(14 days until this is required), and then click on **Next**.
+
+   ![Asklater](images/asklater.png)
      
 1. If prompted to stay signed in, you can click "No."
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
- 
-1. Click "Next" from the bottom right corner to embark on your Lab journey!
- 
-     ![OpenAI](images/sc900-image(3).png)
    
-1. If you see the pop-up **Action Required**, keep default and then click on **Ask later**. If you see the pop-up Help us protect your account, click on **Skip for now**(14 days until this is required), and then click on **Next**.
-
-   ![Asklater](images/asklater.png)
 
 ## Support Contact
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
