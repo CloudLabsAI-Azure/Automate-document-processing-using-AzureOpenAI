@@ -16,11 +16,11 @@ In this lab, you will learn how to use train documents via Document Intelligence
 
 In this lab, you will perform:
 
-- **Task 1**: Creating a Document Intelligence Resource
-- **Task 2**: Train and Label data
-- **Task 3**: Creation of Function App
-- **Task 4**: Run the Function App
-- **Task 5**: Working with AI Search
+- Task 01: Creating a Document Intelligence Resource
+- Task 02: Train and Label data
+- Task 03: Creation of Function App
+- Task 04: Run the Function App
+- Task 05: Working with AI Search
 
 
 ## Task 1: Creating a Document Intelligence Resource
