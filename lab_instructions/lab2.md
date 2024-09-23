@@ -1,6 +1,13 @@
 # Lab 02: Utilize your Data Set using OpenAI
 
-## Estimated Duration: 1 Hours
+### Estimated Duration: 1 Hour
+## Overview
+
+In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into Azure OpenAI Studio, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
+  
+## Architecture Diagram
+
+![Name](images/doc89.PNG)
 
 ## Lab Objectives
 In this lab you will perform,
@@ -8,12 +15,8 @@ In this lab you will perform,
 - **Task 1**: Navigate to Azure OpenAI Playground
 - **Task 2**: Upload your own data
 - **Task 3**: Interact with Azure OpenAI ChatGPT LLM using your own data
-  
-## Architecture Diagram
 
-![Name](images/doc89.PNG)
-
-### Task 1: Navigate to Azure OpenAI Playground
+## Task 1: Navigate to Azure OpenAI Playground
 
 1. In `portal.azure.com`, search for **openai** and select **Azure OpenAI**.
 
@@ -35,7 +38,7 @@ In this lab you will perform,
 
    ![Azure OpenAI Studio](images/build_code.png)
 
-### Task 2: Upload your own data
+## Task 2: Upload your own data
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
@@ -159,7 +162,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Create an indexer](images/DB-01-1.png)
    
-## Review
+## Summary
 
 In this lab, you learned how to use Azure OpenAI Studio to upload your own data, and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
 

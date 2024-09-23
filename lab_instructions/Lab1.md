@@ -1,20 +1,18 @@
 # Lab 01: Automate document processing using AzureOpenAI
 
-## Estimated Duration: 3 Hours
-
-### Lab Overview
-
+### Estimated Duration: 3 Hours
+## Overview
 Processing of forms and documents is part of several scenarios both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone.
 
-Document processing using Azure involves leveraging Azure services and tools to analyze, extract information from, and manage various types of documents, such as text files, images, PDFs, and more. This process typically includes tasks like text extraction, data extraction, sentiment analysis, language detection, optical character recognition (OCR), and document classification. 
+Document processing using Azure involves leveraging Azure services and tools to analyze, extract information from, and manage various types of documents, such as text files, images, PDFs, and more. This process typically includes tasks like text extraction, data extraction, sentiment analysis, language detection, optical character recognition (OCR), and document classification.
 
-In this lab, you will learn how to use train documents via Document Intelligence resource. We will be processing the documents via Azure functions and Azure OpenAI. 
+In this lab, you will learn how to use train documents via Document Intelligence resource. We will be processing the documents via Azure functions and Azure OpenAI.
 
-### Architecture Diagram
+## Architecture Diagram
 
    ![Name](images/archi1.PNG)
 
-### Lab Objectives
+## Lab Objectives
 
 In this lab, you will perform:
 
@@ -24,9 +22,8 @@ In this lab, you will perform:
 - **Task 4**: Run the Function App
 - **Task 5**: Working with AI Search
 
-### Instructions
 
-### Task 1: Creating a Document Intelligence Resource
+## Task 1: Creating a Document Intelligence Resource
 
 1. Search for **Document Intelligence** and select it.
 
@@ -73,7 +70,7 @@ In this lab, you will perform:
 
      ![Alt text](images/doc2.png)
 
-### Task 2: Train and Label data
+## Task 2: Train and Label data
 
 In this step, you will upload 6 training documents to train the model.
 
@@ -137,7 +134,7 @@ In this step, you will upload 6 training documents to train the model.
 
    ![Name](images/stu7.png)
    
-### Task 3: Creation of Function App
+## Task 3: Creation of Function App
 
 You will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
    
@@ -418,7 +415,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-### Task 4: Run the Function App
+## Task 4: Run the Function App
 
 1. In VS Code, click on the ellipsis above, expand **Terminal (1)** and select **New Terminal (2)**.
 
@@ -465,7 +462,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at labs-support@spektrasystems.com.
 
-### Task 5: Working with AI Search
+## Task 5: Working with AI Search
 
 1. In the search bar, search for **AI Search** and select it.
 
@@ -526,7 +523,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
        ![Create an indexer](images/doc98.png)
     
-## Review
+## Summary
 
 In this lab, you used Azure services to automate document processing by creating a Document Intelligence resource and training a custom model for data extraction. You then developed an Azure Function App to process documents from Blob Storage, analyze them via the Document Intelligence API, and store results as JSON files. Lastly, you set up Azure AI Search to index and search the analyzed documents, integrating these components for efficient document management.
 
