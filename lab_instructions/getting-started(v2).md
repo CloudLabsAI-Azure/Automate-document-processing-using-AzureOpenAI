@@ -1,10 +1,11 @@
-# Automate-document-processing-using-AzureOpenAI
-## Overall Estimated Duration: 4 Hours
+# Automate document processing using Azure OpenAI
+### Overall Estimated Duration: 4 Hours
 ## Overview
 
 In this lab, participants will explore document processing using Azure services to streamline and enhance the management of various document types. The focus will be on leveraging Azure's capabilities for analyzing and extracting data from documents, whether in electronic or printed formats. The lab will cover the end-to-end process, including data extraction, sentiment analysis, language detection, OCR, and document classification. Participants will utilize Azure tools such as the Document Intelligence resource, Azure Functions for blob triggers, and AI Search for document analysis. Additionally, they will integrate their processed data with Azure OpenAI's ChatGPT LLM via a web application and Cosmos DB to assess and interact with the information effectively.
 
 ## Objectives
+Use Azure services to automate document processing, including data extraction, sentiment analysis, OCR, and classification. They will integrate Azure OpenAI's ChatGPT and Cosmos DB to analyze and interact with the processed data through a web application.
 
 - **Automate document processing using AzureOpenAI:** Learn how to upload custom data into Azure OpenAI Studio, interact with the ChatGPT model using the uploaded content, and deploy the AI as a web app. Additionally, capture and store conversation history in Cosmos DB for enhanced traceability and persistence.
 
@@ -18,9 +19,11 @@ Participants should have: Basic knowledge and understanding of the following
 - Experience with Azure cloud services, including how to navigate the Azure portal.
 - Basic knowledge of programming languages commonly used with AI models, such as Python.
   
-## Architecture Diagram
+## Architecture
 
 **Azure Document Intelligence** processes and extracts data from documents. **Azure Functions** trigger the document processing based on blob changes. **Azure Storage Account** stores the documents to be processed. **Azure AI Search** indexes and searches the extracted data. **Azure OpenAI Service** provides AI capabilities for natural language processing and generation. **Web Application** facilitates user interaction and displays the results of the AI processing. A storage mechanism stores chat history for viewing and analysis.
+
+## Architecture Diagram
 
 ![Architecture](images/archi5.png)
 
@@ -114,7 +117,9 @@ Learner Support Contacts:
 
    - Email Support: labs-support@spektrasystems.com.
    - Live Chat Support: https://cloudlabs.ai/labs-support
- 
+
 Now you're all set to explore the powerful world of technology. Feel free to reach out if you have any questions along the way. Enjoy your workshop!
+
+Now, click on **Next** from the lower right corner to move on to the next page.
 
 ## Happy Learning!!

@@ -1,7 +1,6 @@
 # Lab 02: Utilize your Data Set using OpenAI
 
 ### Estimated Duration: 1 Hour
-## Overview
 
 In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into Azure OpenAI Studio, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
   
@@ -12,9 +11,9 @@ In this lab, you will learn how to leverage Azure OpenAI to interact with custom
 ## Lab Objectives
 In this lab you will perform,
 
-- **Task 1**: Navigate to Azure OpenAI Playground
-- **Task 2**: Upload your own data
-- **Task 3**: Interact with Azure OpenAI ChatGPT LLM using your own data
+- Task 01: Navigate to Azure OpenAI Playground
+- Task 02: Upload your own data
+- Task 03: Interact with Azure OpenAI ChatGPT LLM using your own data
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
