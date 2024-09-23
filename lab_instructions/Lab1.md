@@ -8,7 +8,7 @@ Document processing using Azure involves leveraging Azure services and tools to 
 
 In this lab, you will learn how to use train documents via Document Intelligence resource. We will be processing the documents via Azure functions and Azure OpenAI.
 
-### Architecture Diagram
+## Architecture Diagram
 
    ![Name](images/archi1.PNG)
 
