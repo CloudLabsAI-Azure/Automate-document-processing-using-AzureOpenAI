@@ -16,7 +16,7 @@ In this lab you will perform,
 - **Task 2**: Upload your own data
 - **Task 3**: Interact with Azure OpenAI ChatGPT LLM using your own data
 
-### Task 1: Navigate to Azure OpenAI Playground
+## Task 1: Navigate to Azure OpenAI Playground
 
 1. In `portal.azure.com`, search for **openai** and select **Azure OpenAI**.
 
@@ -38,7 +38,7 @@ In this lab you will perform,
 
    ![Azure OpenAI Studio](images/build_code.png)
 
-### Task 2: Upload your own data
+## Task 2: Upload your own data
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
