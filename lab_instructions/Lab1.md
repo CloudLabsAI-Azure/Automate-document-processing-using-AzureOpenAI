@@ -1,6 +1,12 @@
 # Lab 01: Automate document processing using AzureOpenAI
 
 ## Estimated Duration: 3 Hours
+### Overview
+Processing of forms and documents is part of several scenarios both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone.
+
+Document processing using Azure involves leveraging Azure services and tools to analyze, extract information from, and manage various types of documents, such as text files, images, PDFs, and more. This process typically includes tasks like text extraction, data extraction, sentiment analysis, language detection, optical character recognition (OCR), and document classification.
+
+In this lab, you will learn how to use train documents via Document Intelligence resource. We will be processing the documents via Azure functions and Azure OpenAI.
 
 ### Architecture Diagram
 
