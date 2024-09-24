@@ -13,7 +13,7 @@ Use Azure services to automate document processing, including data extraction, s
   
 ## Prerequisites
 
-Participants should have: Basic knowledge and understanding of the following:
+Participants should have basic knowledge and understanding of the following:
 
 - Familiarity with AI concepts.
 - Experience with Azure cloud services, including how to navigate the Azure portal.
