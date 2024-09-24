@@ -13,7 +13,7 @@ Use Azure services to automate document processing, including data extraction, s
   
 ## Prerequisites
 
-Participants should have: Basic knowledge and understanding of the following
+Participants should have: Basic knowledge and understanding of the following:
 
 - Familiarity with AI concepts.
 - Experience with Azure cloud services, including how to navigate the Azure portal.
@@ -39,7 +39,7 @@ The architecture for this lab involves the following key components:
 - **Azure Web App:** is a fully managed platform for building, deploying, and scaling web applications. It supports various programming languages and frameworks,and offers features like continuous deployment, scaling, and integration with other Azure services.
 
 ## Getting Started with the Lab
-Welcome to your Automate-document-processing-using-AzureOpenAI Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience:
+Welcome to your Automate-document-processing-using-AzureOpenAI Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience.
  
 ## Accessing Your Lab Environment
  
