@@ -29,11 +29,7 @@ In this lab you will perform,
 
       ![OpenAI Studio](images/launch-openaist.png)
 
-4. In the prompt select **Explore the new experience**.
-
-     ![OpenAI Studio](images/explore_new-exp.jpg)
-
-6. On the **Azure OpenAI Studio**, scroll down and click on **Bring your own data**.
+4. On the **Azure OpenAI Studio**, scroll down and click on **Bring your own data**.
 
    ![Azure OpenAI Studio](images/build_code.png)
 
@@ -49,7 +45,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
     
     - Select data source: **Upload files (preview)** **(1)**
 
-    - Subscription: Select your subscription from the drop-down section **(2)**
+    - Subscription: Select your **subscription** from the drop-down section **(2)**
 
     - Select Azure Blob storage resource: Choose the already created storage account **storage<inject key="Deployment ID">** **(3)**. 
       
@@ -59,10 +55,10 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(4)**.
 
-    - Enter the index name: Give an index name as **aoaiworkshop** **(5)**.
-    - Click on Next
+    - Enter the index name: Give an index name as **aoaiworkshop** **(5)**
       
-
+    - Click on **Next**
+      
 1. On the **Upload files**, click on **Browse for a file** **(1)** enter the following `C:\LabFiles\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)** files.
 
    ![data-management](images/labfiles.png)
