@@ -66,20 +66,6 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
 
   ![OpenAI](images/res.png)
 
-## Lab Duration Extension
-
-1. To extend the duration of the lab, kindly click the **Hourglass** icon in the top right corner of the lab environment. 
-
-   ![OpenAI](images/gext.png)
-
-    >**Note:** You will get the **Hourglass** icon when 10 minutes are remaining in the lab.
-
-2. Click **OK** to extend your lab duration.
- 
-   ![OpenAI](images/gext2.png)
-
-3. If you have not extended the duration prior to when the lab is about to end, a pop-up will appear, giving you the option to extend. Click **OK** to proceed.
-
 
 ## Let's Get Started with Azure Portal
  
