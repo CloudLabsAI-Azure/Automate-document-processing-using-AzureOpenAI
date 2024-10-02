@@ -79,7 +79,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
    ![Save and close](images/save-and-close.png)
 
-### Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
+### Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data (READ-ONLY)
 
 1. Under the **Add you data** pane , wait until your data upload is finished.
 
