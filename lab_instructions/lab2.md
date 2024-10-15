@@ -131,7 +131,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Verify the successful deployment of the app in openai studio by navigating to **Deployments (1)**, click on **App Deployments (2)** and verify the webapp is in **Succeeded (3)** state.
 
-     ![](images/au-.png)
+     ![](images/au-4.png)
     
 1. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created.
 
