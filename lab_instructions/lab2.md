@@ -153,7 +153,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
        ![](images/deploy_web.png)
 
-   - Click on **Update an existing web app (1)**, select the **default Subscription (2)** and **webapp-<inject key="Deployment ID" enableCopy="false"/>** (3), check in the box for **Enable chat copilot in web app (4)** and click on **Deploy (5)**.
+   - Click on **Update an existing web app (1)**, select the **default subscription (2)** and select **webapp-<inject key="Deployment ID" enableCopy="false"/>** (3), check in the box for **Enable chat copilot in web app (4)** and click on **Deploy (5)**.
      
       ![](images/au-3.png)
      
