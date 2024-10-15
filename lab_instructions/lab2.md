@@ -122,14 +122,16 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    - Name: **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)**
    - Subscription: **Select the default subscription (2)**
    - Resource Group: Select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(3)**
-   - Location: **Select Central US (4)**
-   - Pricing Plan: **Choose Basic (B1) (5)**
+   - Location: **Select Sweden Central (4)**
+   - Pricing Plan: **Choose Standard (S1) (5)**
    - **Enable** chat history in the web app **(6)**
    - Click **Deploy (7)**
 
-     ![](images/web-01.png)
+     ![](images/au-1.png)
 
-       >**Note:** In cases of an error `No instances were able to satisfy the request`, please change the name of the resource and try deploying in any other region.
+1. Verify the successful deployment of the app in openai studio by navigating to **Deployments (1)**, click on **App Deployments (2)** and verify the webapp is in **Succeeded (3)** state.
+
+     ![](images/au-.png)
     
 1. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created.
 
@@ -145,6 +147,22 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/doc51.png)
 
+      > **Note:** In cases of an internal server error, navigate back to Azure OpenAI studio and follow the below steps:
+
+   - On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
+
+       ![](images/deploy_web.png)
+
+   - Click on **Update an existing web app (1)**, select the **default Subscription (2)** and **webapp-<inject key="Deployment ID" enableCopy="false"/>** (3), check in the box for **Enable chat copilot in web app (4)** and click on **Deploy (5)**.
+     
+      ![](images/au-3.png)
+     
+   - Navigate to App servives, select **webapp-<inject key="Deployment ID" enableCopy="false"/>**, click on **Deployment (1)**, select **Deployment center (2)** and click on Logs and verify its in **success (3)** state.
+
+      ![](images/au-2.png)
+     
+   - Click on **Browse** from the overview tab again.
+     
 1. Chat with the bot and check its working state. Provide questions related to the document we had previously uploaded.
 
 1. Search for cosmos DB in the portal and select the resource.
