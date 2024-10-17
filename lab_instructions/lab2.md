@@ -19,15 +19,15 @@ In this lab you will perform,
 
 1. In `portal.azure.com`, search for **openai** and select **Azure OpenAI**.
 
-   ![OpenAI](images/doc35.png)
+   ![OpenAI](images/ment1.png)
 
 2. In the Azure AI Services | Azure OpenAI tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
-      ![OpenAI](images/doc36.png)
+      ![OpenAI](images/ment-2.png)
 
 3. On the **Azure OpenAI** page, click on **Go to Azure OpenAI Studio**.
 
-      ![OpenAI Studio](images/launch-openaist.png)
+      ![OpenAI Studio](images/ment3.png)
 
 4. On the **Azure OpenAI Studio**, scroll down and click on **Bring your own data**.
 
