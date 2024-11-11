@@ -47,7 +47,7 @@ In this lab, you will perform:
 
      ![Alt text](images/enter-project-details.png)
 
-1. Enter the following details **Configure service resource** and click on **Continue** **(5)**.
+1. Enter the following details for **Configure service resource** and click on **Continue** **(5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
@@ -56,7 +56,7 @@ In this lab, you will perform:
 
      ![configuring service resource](images/1-5.png)
 
-1. Enter the following details **Connect training data source** and click on **Continue** **(5)**.
+1. Enter the following details for **Connect training data source** and click on **Continue** **(5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
@@ -97,9 +97,11 @@ In this step, you will upload 6 training documents to train the model.
 
      ![train-module](images/doc15.png)
 
-1. Click on **+ Add a field** **(1)**, enter the field name as **Address** **(2)** and hit **enter**.
+1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Address** **(3)** and hit **enter**.
 
-   ![Alt text](images/stu12.png)
+   ![Alt text](images/doc3.png)
+   ![Alt text](images/imag1.png)
+   
    
 1. Label the new field added by **selecting the address (2)** as shown in the below image and do this for all the five documents.
 
