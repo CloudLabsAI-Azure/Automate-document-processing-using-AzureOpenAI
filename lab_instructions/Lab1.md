@@ -52,9 +52,9 @@ In this lab, you will perform:
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
    - Document Intelligence or Cognitive Service Resource: Select **Document-Intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
-   - API version: **Select the default version** **(4)**.
+   - API version: Select **2023-07-31(3.1 General Availability)** **(4)**.
 
-     ![configuring service resource](images/1-5.png)
+     ![configuring service resource](images/imag2.png)
 
 1. Enter the following details for **Connect training data source** and click on **Continue** **(5)**.
 
@@ -119,7 +119,7 @@ In this step, you will upload 6 training documents to train the model.
 
    ![Name](images/doc32.png)
    
-1. Wait till the model status shows **succeeded**. Once the status Select the model **model**  **(1)** you created and choose **Test** **(2)**.
+1. Wait till the model status shows **succeeded**. Once the status has succeeded, Select the model **model**  **(1)** you created and choose **Test** **(2)**.
 
      ![select-models](images/doc19.png)
 
@@ -272,21 +272,21 @@ You will be using Azure Functions to process documents that are uploaded to an A
    - Replace **Your Document Intelligence Key** : **<inject key="documentIntelligenceKey"></inject>**.
    - Replace `<MODEL-NAME>` with **model**.
 
-   ```
-       # This is the call to the Document Intelligence endpoint
-       endpoint = r"Your Document Intelligence Endpoint"
-       apim_key = "Your Document Intelligence Key"
-       post_url = endpoint + "/formrecognizer/documentModels/<MODEL-NAME>:analyze?api-version=2023-02-28-preview"
-       source = myblob.read()
-   
-       headers = {
-       # Request headers
-       'Content-Type': 'application/pdf',
-       'Ocp-Apim-Subscription-Key': apim_key,
-           }
-   ```
+      ```
+         # This is the call to the Document Intelligence endpoint
+         endpoint = r"Your Document Intelligence Endpoint"
+         apim_key = "Your Document Intelligence Key"
+         post_url = endpoint + "/formrecognizer/documentModels/<MODEL-NAME>:analyze?api-version=2023-02-28-preview"
+         source = myblob.read()
+      
+         headers = {
+         # Request headers
+         'Content-Type': 'application/pdf',
+         'Ocp-Apim-Subscription-Key': apim_key,
+            }
+      ```
 
-   ![select-models](images/stu1.png)
+      ![select-models](images/stu1.png)
    
 1. Next, add code to query the service and get the returned data.
 
@@ -320,19 +320,19 @@ You will be using Azure Functions to process documents that are uploaded to an A
    
    - Replace {storage-connection-string} : **<inject key="connectionString"></inject>**.
 
-   ```
-       # This is the connection to the blob storage, with the Azure Python SDK
-       blob_service_client = BlobServiceClient.from_connection_string("{storage-connection-string}")
-       container_client=blob_service_client.get_container_client("output")
-   
-       # Assuming `results` is your JSON data
-       data = json.dumps(results)
+      ```
+         # This is the connection to the blob storage, with the Azure Python SDK
+         blob_service_client = BlobServiceClient.from_connection_string("{storage-connection-string}")
+         container_client=blob_service_client.get_container_client("output")
+      
+         # Assuming `results` is your JSON data
+         data = json.dumps(results)
 
-       # Create a new blob and upload the data
-       blob_name = myblob.name + ".json"
-       blob_client = container_client.get_blob_client(blob_name)
-       blob_client.upload_blob(data, overwrite=True)
-   ```
+         # Create a new blob and upload the data
+         blob_name = myblob.name + ".json"
+         blob_client = container_client.get_blob_client(blob_name)
+         blob_client.upload_blob(data, overwrite=True)
+      ```
 
 1. Please verify to ensure that the final code matches as below.
 
@@ -422,7 +422,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![select-models](images/stu10.png)
 
-1. Press **F5** to run the function.
+1. Press **ctrl + F5** to run the function.
 
 1. Once the funtion has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
 

@@ -37,9 +37,9 @@ In this lab you will perform,
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
-1. Click on **Add a data source** under **Add your data** of the **Setup** tab.
+1. Click on **+ Add a data source** under **Add your data** of the **Setup** tab.
 
-   ![Azure OpenAI Studio](images/add_data-1432.png)
+   ![Azure OpenAI Studio](images/imag3.png)
    
 1. Fill the following details in **Select or add data source** and click on **Next** **(6)**.
     
