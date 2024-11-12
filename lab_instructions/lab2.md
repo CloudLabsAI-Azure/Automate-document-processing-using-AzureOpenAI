@@ -111,7 +111,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
-    ![Alt text](images/parameters.png)
+    ![Alt text](images/imag6.png)
 
 1. On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
 
@@ -133,7 +133,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
      ![](images/au-4.png)
     
-1. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created.
+1. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created and select it.
 
       ![](images/doc73.png)
 
