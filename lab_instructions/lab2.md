@@ -93,9 +93,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       ![chat-session-one](images/screen.png)
 
-1. You can customize the responses of your bot by selecting the **system message**. Click on **System message** **(1)** to update the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** and click on **Apply changes** **(3)**. Here we have edited the default system message.
+1. You can customize the responses of your bot by  updating the message `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** under **Give the model instructions and context**  and click on **Save** **(3)**.
 
-   ![assistant-setup-system-message](images/lab2update.png)
+   ![assistant-setup-system-message](images/imag5.png)
 
 1. On **Update system message?** pop-up, click on **Continue**.
 
