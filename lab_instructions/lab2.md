@@ -93,7 +93,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       ![chat-session-one](images/screen.png)
 
-1. You can customize the responses of your bot by  updating the message `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** under **Give the model instructions and context**  and click on **Save** **(3)**.
+1. You can customize the responses of your bot by  updating the message `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(1)** under **Give the model instructions and context**  and click on **Save** **(2)**.
 
    ![assistant-setup-system-message](images/imag5.png)
 
