@@ -83,7 +83,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Under the **Add you data** pane , wait until your data upload is finished.
 
-   ![upload-data](images/add_data-011.png)
+   ![upload-data](images/imag4.png)
 
 1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
