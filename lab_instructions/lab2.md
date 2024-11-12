@@ -83,7 +83,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Under the **Add you data** pane , wait until your data upload is finished.
 
-   ![upload-data](images/add_data-011.png)
+   ![upload-data](images/imag4.png)
 
 1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
@@ -93,9 +93,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       ![chat-session-one](images/screen.png)
 
-1. You can customize the responses of your bot by selecting the **system message**. Click on **System message** **(1)** to update the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** and click on **Apply changes** **(3)**. Here we have edited the default system message.
+1. You can customize the responses of your bot by  updating the message `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(1)** under **Give the model instructions and context**  and click on **Save** **(2)**.
 
-   ![assistant-setup-system-message](images/lab2update.png)
+   ![assistant-setup-system-message](images/imag5.png)
 
 1. On **Update system message?** pop-up, click on **Continue**.
 
@@ -111,7 +111,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
-    ![Alt text](images/parameters.png)
+    ![Alt text](images/imag6.png)
 
 1. On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
 
@@ -133,7 +133,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
      ![](images/au-4.png)
     
-1. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created.
+1. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created and select it.
 
       ![](images/doc73.png)
 
