@@ -37,9 +37,9 @@ In this lab you will perform,
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
-1. Click on **Add a data source** under **Add your data** of the **Setup** tab.
+1. Click on **+ Add a data source** under **Add your data** of the **Setup** tab.
 
-   ![Azure OpenAI Studio](images/add_data-1432.png)
+   ![Azure OpenAI Studio](images/imag3.png)
    
 1. Fill the following details in **Select or add data source** and click on **Next** **(6)**.
     
@@ -174,6 +174,13 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 1. Go to Data Explorer, expand **db_conversation_history** database **(1)** > **conversations** container **(2)** and verify that the conversations has been captured by cosmos db from webapp as shown in the below image.
 
     ![Create an indexer](images/DB-01-1.png)
+
+<validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
+ 
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
    
 ## Summary
 
