@@ -407,7 +407,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
        blob_client.upload_blob(data, overwrite=True)
    ```
 
-> **Note**: Please make sure the indentation of the code remains unchanges and proper to run the code successfully
+> **Note**: Please make sure the indentation of the code remains unchanged and proper to run the code successfully
 
 <validation step="f6ff6b66-6e60-4f01-8f68-42007b7a3ce1" />
  
