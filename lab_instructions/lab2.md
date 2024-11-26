@@ -61,15 +61,15 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
             ![Azure OpenAI Studio](images/CORS-1.png)
           
-          - Under allowed methods : enable only  **GET** **POST** **OPTIONS** **PUT**(1)
-          - Under exposed headers type **content-length**(2)
+          - Under allowed methods : enable only  **GET** **POST** **OPTIONS** **PUT** (1)
+          - Under exposed headers type **content-length** (2)
           - Max age : **120** (3)
           - In the second column
-              - Allowed origins : * (4)
-              - Under allowed methods , enable only  **GET** **POST** **OPTIONS** **PUT**(5)
-              - Allowed headers : * (6)
-              - Exposed headers : * (7)
-              - Max age : **200** (8)
+               - Allowed origins : * (4)
+               - Under allowed methods , enable only  **GET** **POST** **OPTIONS** **PUT**(5)
+               - Allowed headers : * (6)
+               - Exposed headers : * (7)
+               - Max age : **200** (8)
           
            ![Azure OpenAI Studio](images/save.png)
         
