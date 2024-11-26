@@ -49,31 +49,24 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     - Select Azure Blob storage resource: Choose the already created storage account **storage<inject key="Deployment ID">** **(3)**. 
       
-      - **Note**: **Turn on CORS** when prompted.
+         > **Note**: **Turn on CORS** when prompted.
 
          ![](images/data-source.png)
 
-      - **Note**: If you encounter any issues while enabling CORS, please follow the steps below :
+      > **Note**: If you encounter any issues while enabling CORS, please follow the steps below :
 
-          - Navigate to azure portal.
-          - In azure portal search storage account and select storage<inject key="Deployment ID" enableCopy="false"/>
-          - On the left-hand side, search for **CORS(1)** and Select **Resource sharing (CORS)(2)**
+         - Navigate to the Azure portal.
+         - Search for storage account in the search bar and select **storage<inject key="Deployment ID" enableCopy="false"/>**.
+         - In the left pane, search for **CORS (1)** and select **Resource sharing (CORS) (2)**.
 
             ![Azure OpenAI Studio](images/CORS-1.png)
           
-          - Under allowed methods : enable only  **GET** **POST** **OPTIONS** **PUT** (1)
-          - Under exposed headers type **content-length** (2)
-          - Max age : **120** (3)
-          - In the second row 
-               - Allowed origins : * (4)
-               - Under allowed methods , enable only  **GET** **POST** **OPTIONS** **PUT**(5)
-               - Allowed headers : * (6)
-               - Exposed headers : * (7)
-               - Max age : **200** (8)
+         - In the 1st row, enable **GET** **POST** **OPTIONS** **PUT** **(1)** under allowed methods, under exposed headers,  provide it as **content-length** **(2)** and set the Max age as **120** **(3)**
+         - In the second row set the Allowed origins to * **(4)**, enable **GET** **POST** **OPTIONS** **PUT** **(5)** under allowed methods , set the Allowed headers and Exposed headers to * **(6)** and * **(7)** respectively and the Max age to **200 (8)**
           
            ![Azure OpenAI Studio](images/save.png)
 
-         
+         - Navigate back to the Azure OpenAI Studio, close the window and re-perform step 1 and 2.
             
     - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(4)**.
 
