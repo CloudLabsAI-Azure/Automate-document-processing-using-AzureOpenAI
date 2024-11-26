@@ -53,6 +53,26 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
          ![](images/data-source.png)
 
+      - **Note**: If you encounter any issues while enabling CORS, please follow the steps below :
+
+          - Navigate to azure portal.
+          - In azure portal search storage account and select storage<inject key="Deployment ID" enableCopy="false"/>
+          - On the left-hand side, search for **CORS(1)** and Select **Resource sharing (CORS)(2)**
+
+            ![Azure OpenAI Studio](images/CORS-1.png)
+          
+          - Under allowed methods : enable only  **GET** **POST** **OPTIONS** **PUT**(1)
+          - Under exposed headers type **content-length**(2)
+          - Max age : **120** (3)
+          - In the second column
+              - Allowed origins : * (4)
+              - Under allowed methods , enable only  **GET** **POST** **OPTIONS** **PUT**(5)
+              - Allowed headers : * (6)
+              - Exposed headers : * (7)
+              - Max age : **200** (8)
+          
+           ![Azure OpenAI Studio](images/save.png)
+        
     - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(4)**.
 
     - Enter the index name: Give an index name as **aoaiworkshop** **(5)**
