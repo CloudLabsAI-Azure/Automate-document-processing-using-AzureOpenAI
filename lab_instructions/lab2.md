@@ -1,50 +1,51 @@
-# Utilize your Data Set using OpenAI
+# Lab 02: Utilize your Data Set using OpenAI
 
-## Lab Objectives
+### Estimated Duration: 1 Hour
 
-- Use your own data
-- Interact with Azure OpenAI ChatGPT LLM
-- Assess by employing a web application alongside Cosmos DB
+In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into Azure OpenAI Studio, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
   
 ## Architecture Diagram
 
 ![Name](images/doc89.PNG)
 
-### Task 1: Navigate to Azure OpenAI Playground
+## Lab Objectives
+In this lab you will perform,
+
+- Task 01: Navigate to Azure OpenAI Playground
+- Task 02: Upload your own data
+- Task 03: Interact with Azure OpenAI ChatGPT LLM using your own data
+
+## Task 1: Navigate to Azure OpenAI Playground
 
 1. In `portal.azure.com`, search for **openai** and select **Azure OpenAI**.
 
-   ![OpenAI](images/doc35.png)
+   ![OpenAI](images/ment1.png)
 
 2. In the Azure AI Services | Azure OpenAI tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
-      ![OpenAI](images/doc36.png)
+      ![OpenAI](images/ment-2.png)
 
 3. On the **Azure OpenAI** page, click on **Go to Azure OpenAI Studio**.
 
-      ![OpenAI Studio](images/launch-openaist.png)
+      ![OpenAI Studio](images/ment3.png)
 
-4. In the prompt select **Explore the new experience**.
-
-     ![OpenAI Studio](images/explore_new-exp.jpg)
-
-6. On the **Azure OpenAI Studio**, scroll down and click on **Bring your own data**.
+4. On the **Azure OpenAI Studio**, scroll down and click on **Bring your own data**.
 
    ![Azure OpenAI Studio](images/build_code.png)
 
-### Task 2: Upload your own data
+## Task 2: Upload your own data
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
-1. Click on **Add a data source** under **Add your data** of the **Setup** tab.
+1. Click on **+ Add a data source** under **Add your data** of the **Setup** tab.
 
-   ![Azure OpenAI Studio](images/add_data-1432.png)
+   ![Azure OpenAI Studio](images/imag3.png)
    
 1. Fill the following details in **Select or add data source** and click on **Next** **(6)**.
     
     - Select data source: **Upload files (preview)** **(1)**
 
-    - Subscription: Select your subscription from the drop-down section **(2)**
+    - Subscription: Select your **subscription** from the drop-down section **(2)**
 
     - Select Azure Blob storage resource: Choose the already created storage account **storage<inject key="Deployment ID">** **(3)**. 
       
@@ -54,10 +55,10 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(4)**.
 
-    - Enter the index name: Give an index name as **aoaiworkshop** **(5)**.
-    - Click on Next
+    - Enter the index name: Give an index name as **aoaiworkshop** **(5)**
       
-
+    - Click on **Next**
+      
 1. On the **Upload files**, click on **Browse for a file** **(1)** enter the following `C:\LabFiles\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)** files.
 
    ![data-management](images/labfiles.png)
@@ -82,7 +83,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Under the **Add you data** pane , wait until your data upload is finished.
 
-   ![upload-data](images/add_data-011.png)
+   ![upload-data](images/imag4.png)
 
 1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
@@ -92,13 +93,13 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       ![chat-session-one](images/screen.png)
 
-1. You can customize the responses of your bot by selecting the **system message**. Click on **System message** **(1)** to update the value under the system message with `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(2)** and click on **Apply changes** **(3)**. Here we have edited the default system message.
+1. You can customize the responses of your bot by  updating the message `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(1)** under **Give the model instructions and context**  and click on **Save** **(2)**.
 
-   ![assistant-setup-system-message](images/sys_msg.png)
+   ![assistant-setup-system-message](images/imag5.png)
 
 1. On **Update system message?** pop-up, click on **Continue**.
 
-   ![Alt text](images/continue.png)
+   ![Alt text](images/lab2uupdate.png)
 
 1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
@@ -110,7 +111,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
-    ![Alt text](images/parameters.png)
+    ![Alt text](images/imag6.png)
 
 1. On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
 
@@ -121,16 +122,18 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    - Name: **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)**
    - Subscription: **Select the default subscription (2)**
    - Resource Group: Select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(3)**
-   - Location: **Select Central US (4)**
-   - Pricing Plan: **Choose Basic (B1) (5)**
+   - Location: **Select Sweden Central (4)**
+   - Pricing Plan: **Choose Standard (S1) (5)**
    - **Enable** chat history in the web app **(6)**
    - Click **Deploy (7)**
 
-     ![](images/web-01.png)
+     ![](images/au-1.png)
 
-       >**Note:** In cases of an error `No instances were able to satisfy the request`, please change the name of the resource and try deploying in any other region.
+1. Verify the successful deployment of the app in openai studio by navigating to **Deployments (1)**, click on **App Deployments (2)** and verify the webapp is in **Succeeded (3)** state.
+
+     ![](images/au-4.png)
     
-1. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created.
+1. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created and select it.
 
       ![](images/doc73.png)
 
@@ -144,6 +147,22 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/doc51.png)
 
+      > **Note:** In cases of an internal server error, navigate back to Azure OpenAI studio and follow the below steps:
+
+   - On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
+
+       ![](images/deploy_web.png)
+
+   - Click on **Update an existing web app (1)**, select the **default subscription (2)** and select **webapp-<inject key="Deployment ID" enableCopy="false"/>** (3), check in the box for **Enable chat copilot in web app (4)** and click on **Deploy (5)**.
+     
+      ![](images/au-3.png)
+     
+   - Navigate to App servives, select **webapp-<inject key="Deployment ID" enableCopy="false"/>**, click on **Deployment (1)**, select **Deployment center (2)** and click on Logs and verify its in **success (3)** state.
+
+      ![](images/au-2.png)
+     
+   - Click on **Browse** from the overview tab again.
+     
 1. Chat with the bot and check its working state. Provide questions related to the document we had previously uploaded.
 
 1. Search for cosmos DB in the portal and select the resource.
@@ -156,8 +175,15 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Create an indexer](images/DB-01-1.png)
 
-## Review
+<validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
+ 
+>**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
+   
+## Summary
 
-In this lab, you have uploaded your own data and interacted with Azure OpenAI ChatGPT LLM using webapp.
+In this lab, you learned how to use Azure OpenAI Studio to upload your own data, and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
 
 ### You have successfully completed the lab
