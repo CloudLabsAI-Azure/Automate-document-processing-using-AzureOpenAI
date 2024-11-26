@@ -34,7 +34,7 @@ In this lab, you will perform:
 
 1. In the **Overview** pane, scroll down to **Get Started** tab and click on **Go to Document Intelligence studio**.
 
-   ![Alt text](images/doc30.png)
+   ![Alt text](images/di.png)
 
 1. In **Document Intelligence studio**, scroll down to **Custom Models** and click on **Get Started** for Custom extraction model.
 
@@ -423,6 +423,8 @@ You will be using Azure Functions to process documents that are uploaded to an A
       ![select-models](images/stu10.png)
 
 1. Press **ctrl + F5** to run the function.
+
+>**Note**: If any pop-up occurs close it . 
 
 1. Once the funtion has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
 
