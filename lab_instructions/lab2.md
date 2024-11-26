@@ -64,7 +64,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
           - Under allowed methods : enable only  **GET** **POST** **OPTIONS** **PUT** (1)
           - Under exposed headers type **content-length** (2)
           - Max age : **120** (3)
-          - In the second column
+          - In the second row 
                - Allowed origins : * (4)
                - Under allowed methods , enable only  **GET** **POST** **OPTIONS** **PUT**(5)
                - Allowed headers : * (6)
@@ -72,7 +72,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
                - Max age : **200** (8)
           
            ![Azure OpenAI Studio](images/save.png)
-        
+
+         
+            
     - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(4)**.
 
     - Enter the index name: Give an index name as **aoaiworkshop** **(5)**
@@ -111,7 +113,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
     how to operate Android Auto in Porche Taycan? give step-by-step instructions
     ```
 
-      ![chat-session-one](images/screen.png)
+      ![chat-session-one](images/screen-1.png)
 
 1. You can customize the responses of your bot by  updating the message `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(1)** under **Give the model instructions and context**  and click on **Apply changes** **(2)**.
 
@@ -127,7 +129,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
     What is your name
     ```
    
-   ![chat-session-two](images/recogniserlab1-2.png)
+   ![chat-session-two](images/name-1.png)
 
 1. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
@@ -167,7 +169,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/doc51.png)
 
-      > **Note:** In cases of an internal server error, navigate back to Azure OpenAI studio and follow the below steps:
+      > **Note:** In case of an internal server error, navigate back to Azure OpenAI studio and follow the below steps:
 
    - On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
 
