@@ -25,13 +25,13 @@ In this lab you will perform,
 
       ![OpenAI](images/ment-2.png)
 
-3. On the **Azure OpenAI** page, click on **Go to Azure OpenAI Studio**.
+3. On the **Azure OpenAI** page, click on **Go to Azure AI Foundry portal**.
 
-      ![OpenAI Studio](images/ment3.png)
+      ![OpenAI Studio](images/ima2.png)
 
-4. On the **Azure OpenAI Studio**, scroll down and click on **Bring your own data**.
+4. On the **Azure AI Foundry**, scroll down and click on **Bring your own data**.
 
-   ![Azure OpenAI Studio](images/build_code.png)
+   ![Azure OpenAI Studio](images/ima3.png)
 
 ## Task 2: Upload your own data
 
@@ -67,7 +67,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
           
            ![Azure OpenAI Studio](images/save.png)
 
-         - Navigate back to the Azure OpenAI Studio, close the window and re-perform step 1 and 2.
+         - Navigate back to the Azure AI Foundry portal , close the window and re-perform step 1 and 2.
             
     - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(4)**.
 
@@ -163,7 +163,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/doc51.png)
 
-      > **Note:** In case of an internal server error, navigate back to Azure OpenAI studio and follow the below steps:
+      > **Note:** In case of an internal server error, navigate back to Azure AI Foundry portal and follow the below steps:
 
    - On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
 
