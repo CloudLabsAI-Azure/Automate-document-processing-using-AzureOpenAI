@@ -40,7 +40,7 @@ In this lab, you will perform:
 
    ![Alt text](images/1-4.png)
 
-1. Click on **Create a project** ,Enter the following details and click on **Continue**  **(3)**.
+1. Click on **+ Create a project** ,Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
@@ -143,7 +143,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    ![select-models](images/doc8.png)
 
-1. Click on the **Azure symbol (1)** , select **Create Function (2)** by clicking on the **funtion-app icon (3)**
+1. Click on the **Azure symbol (1)** , select **funtion-app icon (2)** and then **Create Function.. (3)**
 
    ![select-models](images/doc9.png)
 
@@ -424,7 +424,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. Press **ctrl + F5** to run the function.
 
->**Note**: If any pop-up occurs close it . 
+   > **Note:** If required install python debugger
+   
+   >**Note**: If any pop-up occurs close it . 
 
 1. Once the funtion has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
 
@@ -500,7 +502,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![](images/retrievable-searchable.png)
 
-7. Expand the **AnalyzeResult** **(1)** > **documents** **(2)** > **fields** **(3)** , expand **Organization** and **Address** and make the two fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer** **(7)**.
+7. Expand the **AnalyzeResult** **(1)** > **documents** **(2)** > **fields** **(3)** , expand **Organization** and **Address** and make the two fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer**.
 
       ![](images/doc92.png)
       
