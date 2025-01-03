@@ -25,7 +25,7 @@ Participants should have basic knowledge and understanding of the following:
 
 ## Architecture Diagram
 
-![Architecture](images/archi5.png)
+![Architecture](images/new-arch-lab-2.png)
 
 ## Explanation of Components
 

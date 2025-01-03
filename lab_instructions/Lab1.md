@@ -32,7 +32,7 @@ In this lab, you will perform:
 
    ![Alt text](images/doc12.png)
 
-1. In the **Overview** pane, scroll down to **Get Started** tab and click on **Go to Document Intelligence studio**.
+1. In the **Overview** pane, scroll down to **Get Started** tab and click on **Go to Document Intelligence studio** and sign in with the same user details used to login azure.
 
    ![Alt text](images/di.png)
 
@@ -45,7 +45,7 @@ In this lab, you will perform:
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
-     ![Alt text](images/enter-project-details.png)
+     ![Alt text](images/new-automate-lab1-1.png)
 
 1. Enter the following details for **Configure service resource** and click on **Continue** **(5)**.
 
@@ -193,7 +193,10 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![select-models](images/doc10.png)
 
-1. Click on the **local.settings.json** file and replace **AzureWebJobsStorage** with the storage account connection string **<inject key="connectionString"></inject>**. You can also update the configuration by adding `"AzureWebJobsSecretStorageType": "Files"` if it isn’t already included. Ensure to keep the rest as default.
+1. Click on the **local.settings.json** file 
+   - Replace **AzureWebJobsStorage** value with the storage account connection string **<inject key="connectionString"></inject>**.
+   -  You can also update the configuration by adding `"AzureWebJobsSecretStorageType": "Files"` if it isn’t already included.
+   - Replace **storageaccount-name** in storageaccount-name_STORAGE with **storage<inject key="Deployment ID" enableCopy="false"/>** and its value with the storage account connection string **<inject key="connectionString"></inject>**.
 
    ```
       {
@@ -210,7 +213,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. Right click on function-app folder and click on **New File**.
 
-   ![select-models](images/stu11.png)
+   ![select-models](images/new-automate-lab1-4.png)
    
 1. Provide the name as `__init__.py` and add the following statements:
 
@@ -422,7 +425,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. In VS Code, click on the ellipsis above, expand **Terminal (1)** and select **New Terminal (2)**.
 
-      ![select-models](images/stu10.png)
+   ![select-models](images/stu10.png)
 
 1. Press **ctrl + F5** to run the function.
 
@@ -440,7 +443,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. In the storage account **storage<inject key="Deployment ID" enableCopy="false"/>**, navigate to **Containers** under the **Data Storage** tab and select **input** container.
 
-      ![select-models](images/stu2.png)
+      ![select-models](images/new-automate-lab1-8.png)
    
 1. In the input container, click on **Upload (1)** button, in the **Upload blob** pop-up window click on **Browse for files (2)**.
 
@@ -512,7 +515,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
    
       ![Create an indexer](images/create-an-indexer.png)
 
-9. Select **indexes** under the **search management** tab and click on **azureblob-index**.
+9. Select **Indexes** under the **search management** tab and click on **azureblob-index**.
 
       ![Create an indexer](images/doc95.png)
 
@@ -534,4 +537,4 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 In this lab, you used Azure services to automate document processing by creating a Document Intelligence resource and training a custom model for data extraction. You then developed an Azure Function App to process documents from Blob Storage, analyze them via the Document Intelligence API, and store results as JSON files. Lastly, you set up Azure AI Search to index and search the analyzed documents, integrating these components for efficient document management.
 
-### You have successfully completed the lab
+### You have successfully completed the lab. Click on Next >> to procced with next Lab.

@@ -6,7 +6,7 @@ In this lab, you will learn how to leverage Azure OpenAI to interact with custom
   
 ## Architecture Diagram
 
-![Name](images/doc89.PNG)
+![Name](images/new-arch-lab-1.png)
 
 ## Lab Objectives
 In this lab you will perform,
@@ -123,7 +123,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
     What is your name
     ```
    
-   ![chat-session-two](images/name-1.png)
+   ![chat-session-two](images/new-automate-lab1-6.png)
 
 1. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
@@ -187,7 +187,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Create an indexer](images/doc94.png)
 
-1. Verify **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** has been created.
+1. Verify **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** has been created then select it.
 
 1. Go to Data Explorer, expand **db_conversation_history** database **(1)** > **conversations** container **(2)** and verify that the conversations has been captured by cosmos db from webapp as shown in the below image.
 
