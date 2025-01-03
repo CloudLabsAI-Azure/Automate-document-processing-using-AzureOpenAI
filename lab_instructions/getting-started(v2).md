@@ -25,7 +25,7 @@ Participants should have basic knowledge and understanding of the following:
 
 ## Architecture Diagram
 
-![Architecture](images/archi5.png)
+![Architecture](images/new-arch-lab-2.png)
 
 ## Explanation of Components
 
@@ -98,7 +98,7 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
      
 1. If prompted to **stay signed in**, you can click **"No"**.
  
-1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click "Maybe Later" to skip the tour.
+1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
    
 
 ## Support Contact
