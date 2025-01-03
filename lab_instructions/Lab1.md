@@ -528,11 +528,11 @@ You will be using Azure Functions to process documents that are uploaded to an A
       ![Create an indexer](images/doc96.png)
 
 1. Search for `fields` and verify the fields given while training the document has been analysed.
-   
-       ![Create an indexer](images/doc97.png)
 
-       ![Create an indexer](images/doc98.png)
-    
+   ![Create an indexer](images/doc97.png)
+
+   ![Create an indexer](images/doc98.png)
+
 ## Summary
 
 In this lab, you used Azure services to automate document processing by creating a Document Intelligence resource and training a custom model for data extraction. You then developed an Azure Function App to process documents from Blob Storage, analyze them via the Document Intelligence API, and store results as JSON files. Lastly, you set up Azure AI Search to index and search the analyzed documents, integrating these components for efficient document management.
