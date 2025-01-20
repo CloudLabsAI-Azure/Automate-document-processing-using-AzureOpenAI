@@ -145,7 +145,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
      ![](images/au-1.png)
 
-1. Verify the successful deployment of the app in AI Foundry portal by navigating to **Deployments (1)**, click on **App Deployments (2)** and verify the webapp is in **Succeeded (3)** state.
+1. Verify the successful deployment of the app in Azure AI Foundry portal by navigating to **Deployments (1)**, click on **App Deployments (2)** and verify the webapp is in **Succeeded (3)** state.
 
      ![](images/au-4.png)
     
