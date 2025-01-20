@@ -145,7 +145,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
      ![](images/au-1.png)
 
-1. Verify the successful deployment of the app in openai studio by navigating to **Deployments (1)**, click on **App Deployments (2)** and verify the webapp is in **Succeeded (3)** state.
+1. Verify the successful deployment of the app in AI Foundry portal by navigating to **Deployments (1)**, click on **App Deployments (2)** and verify the webapp is in **Succeeded (3)** state.
 
      ![](images/au-4.png)
     
@@ -202,6 +202,6 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    
 ## Summary
 
-In this lab, you learned how to use Azure OpenAI Studio to upload your own data, and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
+In this lab, you learned how to use Azure AI Foundry to upload your own data, and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
 
 ### You have successfully completed the lab
