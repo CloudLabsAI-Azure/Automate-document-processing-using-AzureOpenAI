@@ -198,18 +198,18 @@ You will be using Azure Functions to process documents that are uploaded to an A
    -  You can also update the configuration by adding `"AzureWebJobsSecretStorageType": "Files"` if it isn’t already included.
    - Replace **storageaccount-name** in storageaccount-name_STORAGE with **storage<inject key="Deployment ID" enableCopy="false"/>** and its value with the storage account connection string **<inject key="connectionString"></inject>**.
 
-   ```
-      {
-     "IsEncrypted": false,
-     "Values": {
-       "AzureWebJobsStorage": "<Connection-string>",
-       "FUNCTIONS_WORKER_RUNTIME": "python",
-       "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
-       "storageaccount-name_STORAGE": "<Connection-string-DEFAULT>",
-       "AzureWebJobsSecretStorageType": "Files"
-     }
-   }
-   ```
+      ```
+         {
+        "IsEncrypted": false,
+        "Values": {
+          "AzureWebJobsStorage": "<Connection-string>",
+          "FUNCTIONS_WORKER_RUNTIME": "python",
+          "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
+          "storageaccount-name_STORAGE": "<Connection-string-DEFAULT>",
+          "AzureWebJobsSecretStorageType": "Files"
+        }
+      }
+      ```
 
 1. Right click on function-app folder and click on **New File**.
 
