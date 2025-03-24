@@ -281,7 +281,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
          # This is the call to the Document Intelligence endpoint
          endpoint = r"Your Document Intelligence Endpoint"
          apim_key = "Your Document Intelligence Key"
-         post_url = endpoint + "/formrecognizer/documentModels/<MODEL-NAME>:analyze?api-version=2023-02-28-preview"
+         post_url = endpoint + "/formrecognizer/documentModels/<MODEL-NAME>:analyze?api-version=2023-07-31"
          source = myblob.read()
       
          headers = {
