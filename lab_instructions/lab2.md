@@ -193,7 +193,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Create an indexer](images/DB-01-1.png)
 
-<validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
+<validation step="0a6c8ddb-b5d6-42c3-a219-6df5eeca866d" />
  
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
