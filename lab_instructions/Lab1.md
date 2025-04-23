@@ -414,7 +414,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 > **Note**: Please make sure the indentation of the code remains unchanged and proper to run the code successfully
 
-<validation step="f6ff6b66-6e60-4f01-8f68-42007b7a3ce1" />
+<validation step="3cdf751e-c41a-4153-8198-4eb48d2386ec" />
 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -465,7 +465,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    ![train-module](images/output.png)
 
-<validation step="44d3193c-9401-4326-a2f5-067cf63f0c54" />
+<validation step="e6ed8fd1-9636-4dee-b152-c82af60ce717" />
 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 

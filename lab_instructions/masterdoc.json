@@ -5,15 +5,15 @@
         "BaseURL": "https://github.com/CloudLabsAI-Azure/Automate-document-processing-using-AzureOpenAI",
         "Files": [
             {
-                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Automate-document-processing-using-AzureOpenAI/main/lab_instructions/getting-started(v2).md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Automate-document-processing-using-AzureOpenAI/guided-labs/lab_instructions/getting-started(v2).md",
                 "Order": 1
             },
             {
-                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Automate-document-processing-using-AzureOpenAI/main/lab_instructions/Lab1.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Automate-document-processing-using-AzureOpenAI/guided-labs/lab_instructions/Lab1.md",
                 "Order": 2
             },
             {
-                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Automate-document-processing-using-AzureOpenAI/main/lab_instructions/lab2.md",
+                "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Automate-document-processing-using-AzureOpenAI/guided-labs/lab_instructions/lab2.md",
                 "Order": 3
             }
         ]
