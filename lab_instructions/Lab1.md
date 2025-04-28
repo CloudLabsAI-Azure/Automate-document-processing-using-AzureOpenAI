@@ -77,11 +77,9 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Browse for files](images/doc39.png)
 
-1. On the file explorer, enter the following path `C:\LabFiles\Train`, hit **enter**, select all train PDF files present inside **Train** folder i.e **Invoice_1 to Invoice_5** **(2)**, and hit **Open** **(3)**.
+1. On the file explorer, enter the following path `C:\LabFiles\Train`, hit **enter**, select all train PDF files present inside **Train** folder i.e **Invoice_1 to Invoice_5** **(2)**, and hit **Open**.
 
-   ![Alt text](images/doc34.png)
-
-   ![Alt text](images/doc69.png)
+   ![Alt text](images/doc69upd1.png)
 
 1. Once uploaded, choose **Run now** in the pop-up window under Run Layout.
 
@@ -129,7 +127,7 @@ In this step, you will upload 6 training documents to train the model.
 
 1. On the file explorer, enter the following `C:\LabFiles\Test` **(1)** path hit **enter**, select all test PDF files **Invoice6 and Invoice7** **(2)**, and hit **Open** **(3)**.
 
-      ![select-models](images/stu6.png)
+      ![select-models](images/stu6upd.png)
 
 1. Once uploaded, select one test model, and click on **Run analysis**, Now you can see on the right-hand side that the model was able to detect the field **Organization** and **Address** we created in the last step along with its confidence score.
 
@@ -198,14 +196,14 @@ You will be using Azure Functions to process documents that are uploaded to an A
    -  You can also update the configuration by adding `"AzureWebJobsSecretStorageType": "Files"` if it isn’t already included.
    - Replace **storageaccount-name** in storageaccount-name_STORAGE with **storage<inject key="Deployment ID" enableCopy="false"/>** and its value with the storage account connection string **<inject key="connectionString"></inject>**.
 
-      ```
+      ```json
          {
         "IsEncrypted": false,
         "Values": {
           "AzureWebJobsStorage": "<Connection-string>",
           "FUNCTIONS_WORKER_RUNTIME": "python",
           "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
-          "storageaccount-name_STORAGE": "<Connection-string-DEFAULT>",
+          "storageaccount-name_STORAGE": "<inject key="connectionString"></inject>",
           "AzureWebJobsSecretStorageType": "Files"
         }
       }
