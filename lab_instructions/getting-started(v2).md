@@ -45,38 +45,38 @@ Welcome to your Automate-document-processing-using-AzureOpenAI Workshop! We've p
  
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
-  ![OpenAI](images/new-get-start-25-9.png)
+  ![OpenAI](images/new-get-start-25-9upd.png)
 
  
 ## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-  ![OpenAI](images/new-get-start-25-2.png)
+  ![OpenAI](images/new-get-start-25-2upd.png)
  
 ## Utilizing the Split Window Feature
  
 For convenience, you can open the lab guide in a separate window by selecting the **Split Window** button from the Top right corner.
  
-  ![OpenAI](images/new-get-start-25-3.png)
+  ![OpenAI](images/new-get-start-25-3upd.png)
 
 ## Managing Your Virtual Machine
  
 Feel free to start, stop, or restart your virtual machine as needed from the **Resources** tab. Your experience is in your hands!
 
-  ![OpenAI](images/new-get-start-25-4.png)
+  ![OpenAI](images/new-get-start-25-4upd.png)
 
 ## Lab Validation
 
 1. After completing the task, hit the **Validate** button under Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task, if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](images/new-get-start-25-5.png)
+   ![Inline Validation](images/new-get-start-25-5upd.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
 1. To adjust the zoom level for the environment page, click the **A↕ : 100%** icon located next to the timer in the lab environment.
 
-     ![OpenAI](images/new-get-start-25-6.png)
+     ![OpenAI](images/new-get-start-25-6upd.png)
 
 ## Let's Get Started with Azure Portal
  
