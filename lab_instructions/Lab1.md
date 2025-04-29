@@ -139,7 +139,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
    
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it. click on **Open Folder (1)** , navigate to **C:/Labfiles** and select **funtion-app (2)** folder and then select **Select Folder (3)**.
 
-   ![select-models](images/doc8.png)
+   ![select-models](images/doc8upd.png)
 
 1. On the **Do you trust the authors of the files in this folder?** tab, select **Yes,I trust the authors**.
 
@@ -153,8 +153,6 @@ You will be using Azure Functions to process documents that are uploaded to an A
      
    - Select a language → choose **Python**.
 
-   - Select a Python Programming Model → choose **Model V2**.
-
    - Select a Python interpreter to create a virtual environment → select **Python 3.11.9**.
 
    - Select a template → choose **Blob trigger** and give the trigger a name or accept the default name. Press **Enter** to confirm.
@@ -167,6 +165,10 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
         - Email: <inject key="AzureAdUserEmail"></inject>
         - Password: <inject key="AzureAdUserPassword"></inject>
+
+   - In the pop-up click on **No,this app only**.
+
+      ![select-models](images/pop-upupd.png)
 
    - Select subscription → choose the **Default Subscription**,
 
@@ -339,83 +341,111 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. Please verify to ensure that the final code matches as below.
 
-   ```
-   import logging
-   from azure.storage.blob import BlobServiceClient
-   import azure.functions as func
-   import json
-   import time
-   from requests import get, post
-   import os
-   import requests
-   from collections import OrderedDict
-   import numpy as np
-   import pandas as pd
-   
-   app = func.FunctionApp()
-   
-   @app.blob_trigger(arg_name="myblob", path="<input container", connection="storage<DID>_STORAGE") 
-   
-   def blob_trigger(myblob: func.InputStream):
-       logging.info(f"Python blob trigger function processed blob"
-                   f"Name: {myblob.name}"
-                   f"Blob Size: {myblob.length} bytes")
-   
-       # This is the call to the Document Intelligence endpoint
-       endpoint = r"<document-intelligence-endpoint>"
-       apim_key = "<document-intelligence-key>"
-       post_url = endpoint + "/formrecognizer/documentModels/<model-name>:analyze?api-version=2023-07-31"
-       source = myblob.read()
-       
-       headers = {
-           # Request headers
-           'Content-Type': 'application/pdf',
-           'Ocp-Apim-Subscription-Key': apim_key,
-               }
-       
-       resp = requests.post(url=post_url, data=source, headers=headers)
-   
-       if resp.status_code != 202:
-           print("POST analyze failed:\n%s" % resp.text)
-           quit()
-       print("POST analyze succeeded:\n%s" % resp.headers)
-       get_url = resp.headers["operation-location"]
-       
-       wait_sec = 25
-       time.sleep(wait_sec)
-       # The layout API is async therefore the wait statement
-       resp = requests.get(url=get_url, headers={"Ocp-Apim-Subscription-Key": apim_key})
-       resp_json = json.loads(resp.text)
-       status = resp_json["status"]
-       
-       if status == "succeeded":
-           print("POST Layout Analysis succeeded:\n%s")
-           results = resp_json
-       else:
-           print("GET Layout results failed:\n%s")
-           quit()
-       
-       results = resp_json
-   
-       # This is the connection to the blob storage, with the Azure Python SDK
-       blob_service_client = BlobServiceClient.from_connection_string("<storage account connection string")
-       container_client=blob_service_client.get_container_client("output")
-   
-       # Assuming `results` is your JSON data
-       data = json.dumps(results)
-   
-       # Create a new blob and upload the data
-       blob_name = myblob.name + ".json"
-       blob_client = container_client.get_blob_client(blob_name)
-       blob_client.upload_blob(data, overwrite=True)
-   ```
+      ```
+      import logging
+      from azure.storage.blob import BlobServiceClient
+      import azure.functions as func
+      import json
+      import time
+      from requests import get, post
+      import os
+      import requests
+      from collections import OrderedDict
+      import numpy as np
+      import pandas as pd
+      
+      app = func.FunctionApp()
+      
+      @app.blob_trigger(arg_name="myblob", path="<input container", connection="storage<DID>_STORAGE") 
+      
+      def blob_trigger(myblob: func.InputStream):
+         logging.info(f"Python blob trigger function processed blob"
+                     f"Name: {myblob.name}"
+                     f"Blob Size: {myblob.length} bytes")
+      
+         # This is the call to the Document Intelligence endpoint
+         endpoint = r"<document-intelligence-endpoint>"
+         apim_key = "<document-intelligence-key>"
+         post_url = endpoint + "/formrecognizer/documentModels/<model-name>:analyze?api-version=2023-07-31"
+         source = myblob.read()
+         
+         headers = {
+            # Request headers
+            'Content-Type': 'application/pdf',
+            'Ocp-Apim-Subscription-Key': apim_key,
+                  }
+         
+         resp = requests.post(url=post_url, data=source, headers=headers)
+      
+         if resp.status_code != 202:
+            print("POST analyze failed:\n%s" % resp.text)
+            quit()
+         print("POST analyze succeeded:\n%s" % resp.headers)
+         get_url = resp.headers["operation-location"]
+         
+         wait_sec = 25
+         time.sleep(wait_sec)
+         # The layout API is async therefore the wait statement
+         resp = requests.get(url=get_url, headers={"Ocp-Apim-Subscription-Key": apim_key})
+         resp_json = json.loads(resp.text)
+         status = resp_json["status"]
+         
+         if status == "succeeded":
+            print("POST Layout Analysis succeeded:\n%s")
+            results = resp_json
+         else:
+            print("GET Layout results failed:\n%s")
+            quit()
+         
+         results = resp_json
+      
+         # This is the connection to the blob storage, with the Azure Python SDK
+         blob_service_client = BlobServiceClient.from_connection_string("<storage account connection string")
+         container_client=blob_service_client.get_container_client("output")
+      
+         # Assuming `results` is your JSON data
+         data = json.dumps(results)
+      
+         # Create a new blob and upload the data
+         blob_name = myblob.name + ".json"
+         blob_client = container_client.get_blob_client(blob_name)
+         blob_client.upload_blob(data, overwrite=True)
+      ```
+   > **Note**: Please make sure the indentation of the code remains unchanged and proper to run the code successfully
 
-> **Note**: Please make sure the indentation of the code remains unchanged and proper to run the code successfully
+1. Open the **launch.json (1)** under `.vscode` (2) folder and replace the code with the below code
 
->**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
+      ```
+      {
+         "version": "0.2.0",
+         "configurations": [
+            {
+                  "name": "Python Debugger: Current File",
+                  "type": "debugpy",
+                  "request": "launch",
+                  "program": "${file}",
+                  "console": "integratedTerminal"
+            },
+            {
+                  "name": "Attach to Python Functions",
+                  "type": "debugpy",
+                  "request": "attach",
+                  "connect": {
+                     "host": "localhost",
+                     "port": 9091
+                  },
+                  "preLaunchTask": "func: host start"
+            }
+         ]
+      }
+      ```
+
+      ![select-models](images/stu1aupd.png)
+
+   >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
+   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
+   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
+   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 <validation step="f6ff6b66-6e60-4f01-8f68-42007b7a3ce1" />
 
@@ -428,8 +458,11 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. Press **ctrl + F5** to run the function.
 
+   > **Note:** If you see any errors related to the debugger, then go to extensions from the left pane and install the **Python debugger extension**.
+      ![select-models](images/error.png)
 
-   > **Note:** If you see a pop-up, click on **Debug anyway** and install the python debugger
+
+   > **Note:** Install the python packages if required.
    
    >**Note**: If any pop-up occurs close it . 
 

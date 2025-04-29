@@ -129,9 +129,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/imag6.png)
 
-1. On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
+1. On the **Chat** , Click on **Deploy to (1)** on the top right and click on **as a webapp (2)**.
 
-   ![](images/default-1.png)
+   ![](images/default-1upd.png)
 
 1. Add the following details and click on **Deploy**:
 
@@ -154,14 +154,14 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
       ![](images/doc73.png)
 
       ![](images/doc74.png)
-   
-      > **Note:** In cases of permissions asked, click on **Accept**.
-
-      ![Alt text](images/doc50.png)
       
 1. Click on **Browse** and the web app is up and running.
 
     ![Alt text](images/doc51.png)
+
+      > **Note:** In cases of permissions asked, click on **Accept**.
+
+      ![Alt text](images/doc50.png)
 
       > **Note:** In case of an internal server error, navigate back to Azure AI Foundry portal and follow the below steps:
 
