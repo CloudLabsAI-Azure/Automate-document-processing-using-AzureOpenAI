@@ -101,7 +101,7 @@ In this step, you will upload 6 training documents to train the model.
    ![Alt text](images/imag1.png)
    
    
-1. Label the new field added by **selecting the address (2)** as shown in the below image and do this for all the five documents.
+1. Label the new field added by **selecting the address (2)** as shown in the below image and do this for all the **five documents**.
 
    ![train-module](images/doc16.png)
    
@@ -161,7 +161,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    - The path within your storage container that the trigger will monitor → **input**.
 
-   - Select setting → choose ➕**Create new local app setting** from the dropdown menu.
+   - Select setting → choose **+ Create new local app setting** from the dropdown menu.
 
    - Click on **Sign in to Azure** and click on **Allow** if prompted. This will navigate to Azure Portal and select your Azure Account.
 
@@ -273,11 +273,11 @@ You will be using Azure Functions to process documents that are uploaded to an A
 1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document.
    - Replace **Your Document Intelligence Endpoint** : **<inject key="documentIntelligenceEndpoint"></inject>**.
    - Replace **Your Document Intelligence Key** : **<inject key="documentIntelligenceKey"></inject>**.
-   - Replace `<MODEL-NAME>` with **model**.
+   - Replace `<model-name>` with **model**.
 
       ```
          # This is the call to the Document Intelligence endpoint
-         endpoint = r"Your Document Intelligence Endpoint"
+         endpoint = "Your Document Intelligence Endpoint"
          apim_key = "Your Document Intelligence Key"
          post_url = endpoint + "/formrecognizer/documentModels/<MODEL-NAME>:analyze?api-version=2023-07-31"
          source = myblob.read()
@@ -412,12 +412,13 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 > **Note**: Please make sure the indentation of the code remains unchanged and proper to run the code successfully
 
-<validation step="f6ff6b66-6e60-4f01-8f68-42007b7a3ce1" />
-
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
+
+<validation step="f6ff6b66-6e60-4f01-8f68-42007b7a3ce1" />
+
 
 ## Task 4: Run the Function App
 
@@ -427,7 +428,8 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. Press **ctrl + F5** to run the function.
 
-   > **Note:** If required install python debugger
+
+   > **Note:** If you see a pop-up, click on **Debug anyway** and install the python debugger
    
    >**Note**: If any pop-up occurs close it . 
 
