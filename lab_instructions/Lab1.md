@@ -1,6 +1,6 @@
 # Lab 01: Automate document processing using AzureOpenAI
 
-### Estimated Duration: 3 Hours
+## Estimated Duration: 3 Hours
 
 
 Processing of forms and documents is part of several scenarios both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone.
@@ -91,7 +91,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![run-now](images/doc14.png)
 
-1. Ensure you have selected **Invoice_1** and Label the new field added by selecting **Contoso (1)** in the top left of each document uploaded. Do this for all five documents wherever there is an organization mentioned.
+1. Ensure you have selected **Invoice_1** and label the new field added by selecting **Contoso (1)** in the top left of each document uploaded. Do this for all five documents wherever there is an organization mentioned.
 
      ![train-module](images/doc15.png)
 
@@ -99,8 +99,7 @@ In this step, you will upload 6 training documents to train the model.
 
    ![Alt text](images/doc3.png)
    ![Alt text](images/imag1.png)
-   
-   
+
 1. Label the new field added by **selecting the address (2)** as shown in the below image and do this for all the **five documents**.
 
    ![train-module](images/doc16.png)
@@ -137,13 +136,13 @@ In this step, you will upload 6 training documents to train the model.
 
 You will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
    
-1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it. click on **Open Folder (1)** , navigate to **C:/Labfiles** and select **funtion-app (2)** folder and then select **Select Folder (3)**.
+1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it. click on **Open Folder (1)** , navigate to **C:/Labfiles** and select **function-app (2)** folder and then select **Select Folder (3)**.
 
    ![select-models](images/doc8upd.png)
 
 1. On the **Do you trust the authors of the files in this folder?** tab, select **Yes,I trust the authors**.
 
-1. Click on the **Azure symbol (1)** , select **funtion-app icon (2)** and then **Create Function.. (3)**
+1. Click on the **Azure symbol (1)** , select **function-app icon (2)** and then **Create Function.. (3)**
 
    ![select-models](images/doc9.png)
 
@@ -174,7 +173,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    - Select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
 
-   - Select how your would like to open your project → choose **Open the project in the current window** from the dropdown menu.
+   - Select how you would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
 1. In VS Code, navigate to the function's **requirements.txt** file. This file defines the dependencies for your script. Add the following Python packages to the file and click on ` Ctrl + S ` :
    
@@ -462,11 +461,11 @@ You will be using Azure Functions to process documents that are uploaded to an A
       ![select-models](images/error.png)
 
 
-   > **Note:** Install the python packages if required.
-   
-   >**Note**: If any pop-up occurs close it . 
+      > **Note:** Install the python packages if required.
+      
+      >**Note**: If any pop-up occurs close it.
 
-1. Once the funtion has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
+1. Once the function has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
 
    ![select-models](images/doc90.png)
 
@@ -570,4 +569,4 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 In this lab, you used Azure services to automate document processing by creating a Document Intelligence resource and training a custom model for data extraction. You then developed an Azure Function App to process documents from Blob Storage, analyze them via the Document Intelligence API, and store results as JSON files. Lastly, you set up Azure AI Search to index and search the analyzed documents, integrating these components for efficient document management.
 
-### You have successfully completed the lab. Click on Next >> to procced with next Lab.
+## You have successfully completed the lab. Click on Next >> to procced with next Lab.

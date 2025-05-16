@@ -1,6 +1,6 @@
 # Lab 02: Utilize your Data Set using OpenAI
 
-### Estimated Duration: 1 Hour
+## Estimated Duration: 1 Hour
 
 In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into Azure AI Foundry portal, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
   
@@ -95,7 +95,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
    ![Save and close](images/save-and-close.png)
 
-### Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
+## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
 1. Under the **Add you data** pane , wait until your data upload is finished.
 
@@ -173,7 +173,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
      
       ![](images/au-3.png)
      
-   - Navigate to App servives, select **webapp-<inject key="Deployment ID" enableCopy="false"/>**, click on **Deployment (1)**, select **Deployment center (2)** and click on Logs and verify its in **success (3)** state.
+   - Navigate to App services, select **webapp-<inject key="Deployment ID" enableCopy="false"/>**, click on **Deployment (1)**, select **Deployment center (2)** and click on Logs and verify its in **success (3)** state.
 
       ![](images/au-2.png)
      
@@ -202,6 +202,6 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    
 ## Summary
 
-In this lab, you learned how to use Azure AI Foundry to upload your own data, and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
+In this lab, you learned how to use Azure AI Foundry to upload your own data and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
 
-### You have successfully completed the lab
+## You have successfully completed the lab
