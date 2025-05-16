@@ -459,11 +459,11 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    > **Note:** If you see any errors related to the debugger, then go to extensions from the left pane and install the **Python debugger extension**.
 
-   ![select-models](images/error.png)
-
    > **Note:** Install the python packages if required.
 
-   >**Note**: If any pop-up occurs close it.
+   > **Note**: If any pop-up occurs close it.
+
+      ![select-models](images/error.png)
 
 1. Once the function has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
 
