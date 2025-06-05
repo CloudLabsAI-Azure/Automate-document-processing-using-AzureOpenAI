@@ -21,10 +21,9 @@ In this lab, you will perform:
 - Task 04: Run the Function App
 - Task 05: Working with AI Search
 
-
 ## Task 1: Creating a Document Intelligence Resource
 
-1. Search for **Document Intelligences** and select it.
+1. Search for **Document intelligences** and select it.
 
    ![Alt text](images/1-9.png)
 
@@ -136,11 +135,13 @@ In this step, you will upload 6 training documents to train the model.
 
 You will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
    
-1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it. click on **Open Folder (1)** , navigate to **C:/Labfiles** and select **function-app (2)** folder and then select **Select Folder (3)**.
+1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it. click on **Open Folder (1)** , navigate to `C:/Labfiles` and select **function-app (2)** folder and then select **Select Folder (3)**.
 
    ![select-models](images/doc8upd.png)
 
 1. On the **Do you trust the authors of the files in this folder?** tab, select **Yes,I trust the authors**.
+
+      ![select-models](images/yesauth.png)
 
 1. Click on the **Azure symbol (1)** , select **function-app icon (2)** and then **Create Function.. (3)**
 
@@ -210,33 +211,6 @@ You will be using Azure Functions to process documents that are uploaded to an A
       }
       ```
 
-1. Right click on function-app folder and click on **New File**.
-
-   ![select-models](images/new-automate-lab1-4.png)
-   
-1. Provide the name as `__init__.py` and add the following statements:
-
-   ```
-   import logging
-   from azure.storage.blob import BlobServiceClient
-   import azure.functions as func
-   import json
-   import time
-   from requests import get, post
-   import os
-   import requests
-   from collections import OrderedDict
-   import numpy as np
-   import pandas as pd
-   app = func.FunctionApp()
-    
-   def blob_trigger(myblob: func.InputStream):
-     logging.info(f"Python blob trigger function processed blob"
-                  f"Name: {myblob.name}" 
-                  f"Blob Size: {myblob.length} bytes")
-
-   ```
-   
 1. Open the **function-app.py** file and add the following import statements by replacing the existing ones:
 
       ```
@@ -253,7 +227,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
       import pandas as pd
       ```
 
-      ![select-models](images/change_code-11.png)
+      ![select-models](images/change_code-11upd.png)
    
 1.  Modify the main function, where replace:
 
@@ -439,7 +413,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
       }
       ```
 
-      ![select-models](images/stu1aupd.png)
+      ![select-models](images/stu1aupd1.png)
 
    >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
    > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -453,7 +427,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. In VS Code, click on the ellipsis above, expand **Terminal (1)** and select **New Terminal (2)**.
 
-   ![select-models](images/stu10.png)
+   ![select-models](images/stu10upd.png)
 
 1. Press **ctrl + F5** to run the function.
 
@@ -497,12 +471,12 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    ![train-module](images/output.png)
 
-<validation step="44d3193c-9401-4326-a2f5-067cf63f0c54" />
-
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
+
+<validation step="44d3193c-9401-4326-a2f5-067cf63f0c54" />
 
 ## Task 5: Working with AI Search
 
@@ -510,9 +484,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![train-module](images/doc21.png)
    
-1. In **Azure AI services | AI Search** tab, select **search-<inject key="Deployment ID" enableCopy="false"/>**.
+1. In **AI foundry | AI Search** tab, select **search-<inject key="Deployment ID" enableCopy="false"/>**.
 
-      ![train-module](images/doc22.png)
+      ![train-module](images/doc22upd.png)
    
 1. In the Overview page of **search-<inject key="Deployment ID" enableCopy="false"/>**, click on **Import data**.
 
@@ -549,7 +523,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. Select **Indexes** under the **search management** tab and click on **azureblob-index**.
 
-      ![Create an indexer](images/doc95.png)
+      ![Create an indexer](images/doc95upd.png)
 
 1. In the **azureblob-index**, click on **Search** button.
 
@@ -569,4 +543,5 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 In this lab, you used Azure services to automate document processing by creating a Document Intelligence resource and training a custom model for data extraction. You then developed an Azure Function App to process documents from Blob Storage, analyze them via the Document Intelligence API, and store results as JSON files. Lastly, you set up Azure AI Search to index and search the analyzed documents, integrating these components for efficient document management.
 
-## You have successfully completed the lab. Click on Next >> to procced with next Lab.
+### You have successfully completed the lab. 
+### Click on Next >> to procced with next Lab.

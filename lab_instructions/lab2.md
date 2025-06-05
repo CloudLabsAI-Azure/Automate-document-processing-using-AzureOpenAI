@@ -21,25 +21,25 @@ In this lab you will perform,
 
    ![OpenAI](images/ment1.png)
 
-2. In the Azure AI Services | Azure OpenAI tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
+2. In the **AI foundry | Azure OpenAI** tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
-      ![OpenAI](images/ment-2.png)
+   ![OpenAI](images/ment-2upd.png)
 
 3. On the **Azure OpenAI** page, click on **Go to Azure AI Foundry portal**.
 
-      ![OpenAI Studio](images/ima2.png)
+   ![OpenAI Studio](images/ima2upd.png)
 
-4. On the **Azure AI Foundry**, scroll down and click on **Bring your own data**.
+   > **Note:** Note: If you don’t see an option like the one shown in the image above, refer to the image below to navigate to Azure AI Foundry.
 
-   ![Azure OpenAI Studio](images/ima3.png)
+      ![OpenAI Studio](images/aifoundry.png)
 
 ## Task 2: Upload your own data
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
-1. Click on **+ Add a data source** under **Add your data** of the **Setup** tab.
+1. Click on **+ Add a data source** under **Add your data** of the **Setup** tab in the **Chat** playground.
 
-   ![Azure OpenAI Studio](images/imag3.png)
+   ![Azure OpenAI Studio](images/imag3upd.png)
    
 1. Fill the following details in **Select or add data source** and click on **Next** **(6)**.
     
