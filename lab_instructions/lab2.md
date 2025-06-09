@@ -145,10 +145,8 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
      ![](images/au-1.png)
 
-1. Verify the successful deployment of the app in Azure AI Foundry portal by navigating to **Deployments (1)**, click on **App Deployments (2)** and verify the webapp is in **Succeeded (3)** state.
+   > **Note:** Wait for 10 minutes for the webapp to be deployed successfully.
 
-     ![](images/au-4.png)
-    
 1. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created and select it.
 
       ![](images/doc73.png)
@@ -158,6 +156,8 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 1. Click on **Browse** and the web app is up and running.
 
     ![Alt text](images/doc51.png)
+
+      > **Note:** If you see a blank screen wait for sometime and refresh the page.
 
       > **Note:** In cases of permissions asked, click on **Accept**.
 
