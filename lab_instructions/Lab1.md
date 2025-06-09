@@ -499,7 +499,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
       - Parsing Mode: **JSON (3)**
       - Subscription: **Select the default subscription (4)**
       - Connection string: Click on **Choose an existing Connection** then Select **storage<inject key="Deployment ID" enableCopy="false"/>** and then select **output** container **(5)**.
-      - Container Name: **Output (6)**
+      - Container Name: **output (6)**
       - Blob Folder: **input (7)**
       - Click on **Next: Add cognitive skills (Optional) (8)**
 
