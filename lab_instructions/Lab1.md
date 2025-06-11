@@ -415,14 +415,6 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![select-models](images/stu1aupd1.png)
 
-   >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-   > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-   > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-   > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
-
-<validation step="f6ff6b66-6e60-4f01-8f68-42007b7a3ce1" />
-
-
 ## Task 4: Run the Function App
 
 1. In VS Code, click on the ellipsis above, expand **Terminal (1)** and select **New Terminal (2)**.
@@ -449,7 +441,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. In the storage account **storage<inject key="Deployment ID" enableCopy="false"/>**, navigate to **Containers** under the **Data Storage** tab and select **input** container.
 
-   ![select-models](images/new-automate-lab1-8.png)
+   ![select-models](images/new-automate-lab1-8upd.png)
    
 1. In the input container, click on **Upload (1)** button, in the **Upload blob** pop-up window click on **Browse for files (2)**.
 
