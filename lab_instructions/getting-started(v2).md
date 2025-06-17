@@ -1,4 +1,4 @@
-# Automate Document Processing by using Azure AI & OpenAI
+# Automate Document Processing using Azure OpenAI
 ## Overall Estimated Duration: 4 Hours
 ## Overview
 
