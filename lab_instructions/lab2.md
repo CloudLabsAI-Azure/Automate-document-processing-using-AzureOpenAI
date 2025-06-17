@@ -75,13 +75,13 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
       
     - Click on **Next**
       
-1. On the **Upload files**, click on **Browse for a file** **(1)** enter the following `C:\LabFiles\Data\Lab 2` **(2)** path and hit enter, select the **Panamera-from-2021-Porsche-Connect-Good-to-know-Owner-s-Manual** **(3)** pdf  file and click on **Open** **(4)** files.
+1. On the **Upload files**, click on **Browse for a file** **(1)** enter the following `C:\LabFiles\Data\Lab 2` **(2)** path and hit enter, select all the files here **(3)** pdf  file and click on **Open** **(4)** files.
 
-   ![data-management](images/labfiles.png)
+   ![data-management](images/labfilesv2.png)
 
 1. Click on **Upload files** **(1)**, and click on **Next** **(2)**.
 
-   ![data-management](images/data-management-upload.png)
+   ![data-management](images/datamanagementv2.png)
 
 1. On the **Data Management** page, from the drop-down select **keyword (1)** as Search type and click on **Next (2)**.
 
