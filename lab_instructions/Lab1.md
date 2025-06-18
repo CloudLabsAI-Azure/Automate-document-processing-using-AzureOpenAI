@@ -1,4 +1,4 @@
-# Lab 01: Automate document processing using AzureOpenAI
+# Lab 01: Automate document processing using <code style="color : red">Azure AI Document Intelligence</code>
 
 ## Estimated Duration: 3 Hours
 
