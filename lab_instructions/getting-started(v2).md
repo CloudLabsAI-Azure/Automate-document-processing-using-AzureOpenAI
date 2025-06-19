@@ -52,7 +52,7 @@ Once you're ready to dive in, your virtual machine and lab guide will be right a
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
  
-  ![OpenAI](images/new-get-start-25-2upd.png)
+  ![OpenAI](images/new-get-start-25-2upd-1.png)
  
 ## Utilizing the Split Window Feature
  

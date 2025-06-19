@@ -125,7 +125,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    
    ![chat-session-two](images/new-automate-lab1-6.png)
 
-1. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
+1. In the **Setup** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
     ![Alt text](images/imag6.png)
 
@@ -152,6 +152,8 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
       ![](images/doc73.png)
 
       ![](images/doc74.png)
+
+      ![](images/app-service-1.png)
       
 1. Click on **Browse** and the web app is up and running.
 
@@ -188,10 +190,11 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
     ![Create an indexer](images/doc94.png)
 
 1. Verify **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** has been created then select it.
+   ![Create an indexer](images/cosmos-db.png)
 
 1. Go to Data Explorer, expand **db_conversation_history** database **(1)** > **conversations** container **(2)** and verify that the conversations has been captured by cosmos db from webapp as shown in the below image.
 
-    ![Create an indexer](images/DB-01-1.png)
+    ![Create an indexer](images/DB-01-1-upd.png)
 
 <validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
  
