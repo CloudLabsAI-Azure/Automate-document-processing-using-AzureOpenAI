@@ -1,4 +1,4 @@
-# Lab 01: Automate Document Processing using <code style="color : red">Azure AI Document Intelligence</code>
+# Lab 01: Automate Document Processing using Azure AI Document Intelligence
 
 ## Estimated Duration: 3 Hours
 
@@ -35,7 +35,9 @@ In this lab, you will perform:
 1. In **Document Intelligence studio**, scroll down to **Custom Models** and click on **Get Started** for Custom extraction model.
 
    ![Alt text](images/1-4.png)
+
    > Note: If prompted to log in, use the credentials provided in the Environment tab.
+
 1. Click on **+ Create a project**. Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
@@ -94,9 +96,10 @@ In this step, you will upload 6 training documents to train the model.
 1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Address** **(3)** and hit **enter**.
 
    ![Alt text](images/doc3.png)
+
    ![Alt text](images/imag1.png)
 
-1. Label the new field added by **selecting the address (2)** as shown in the image below and do this for all the **five documents**.
+1. Label the new field added by **selecting the address (2)** as shown in the image below, and do this for all the **five documents**.
 
    ![train-module](images/doc16.png)
    
@@ -124,7 +127,7 @@ In this step, you will upload 6 training documents to train the model.
 
       ![select-models](images/stu6upd.png)
 
-1. Once uploaded, select one test model, and click on **Run analysis**, Now you can see on the right-hand side that the model was able to detect the field **Organization** and **Address** we created in the last step, along with its confidence score.
+1. Once uploaded, select one test model, and click on **Run analysis**. Now you can see on the right-hand side that the model was able to detect the field **Organization** and **Address** we created in the last step, along with its confidence score.
 
    ![Name](images/stu7-upd.png)
    
@@ -137,13 +140,14 @@ You will be using Azure Functions to process documents that are uploaded to an A
    ![select-models](images/vs-code-1.png)
 
 1. Once inside the Vs-code click on **Open Folder (1)**.
+
    ![select-models](images/vs-code-2.png)
 
 3. Now, navigate to `C:/Labfiles` and select **function-app (2)** folder and then select **Select Folder (3)**.
 
    ![select-models](images/doc8upd.png)
 
-1. On the **Do you trust the authors of the files in this folder?** tab, select **Yes,I trust the authors**.
+1. On the **Do you trust the authors of the files in this folder?** tab, select **Yes, I trust the authors**.
 
       ![select-models](images/yesauth.png)
 
@@ -165,16 +169,17 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    - Select setting → choose **+ Create new local app setting** from the dropdown menu.
 
-   - Click on **Sign in to Azure** and click on **Allow** if prompted. This will navigate to Azure Portal and select your Azure Account.
+   - Click on **Sign in to Azure** and click on **Allow** if prompted. This will navigate to the Azure Portal and select your Azure Account.
 
         - Email: <inject key="AzureAdUserEmail"></inject>
+
         - Password: <inject key="AzureAdUserPassword"></inject>
 
    - In the pop-up click on **No,this app only**.
 
       ![select-models](images/pop-upupd.png)
 
-   - Select subscription → choose the **Default Subscription**,
+   - Select subscription → choose the **Default Subscription**.
 
    - Select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
 
@@ -390,7 +395,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
       ```
    > **Note**: Please make sure the indentation of the code remains unchanged and proper to run the code successfully
 
-1. Open the **launch.json (1)** under `.vscode` (2) folder and replace the code with the below code
+1. Open the **launch.json (1)** under `.vscode` **(2)** folder and replace the code with the below code
 
       ```
       {
@@ -429,7 +434,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    > **Note:** If you see any errors related to the debugger, then go to extensions from the left pane and install the **Python debugger extension**.
 
-   > **Note:** Install the python packages if required.
+   > **Note:** Install the Python packages if required.
 
    > **Note**: If any pop-up occurs, close it.
 
@@ -539,5 +544,4 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 In this lab, you used Azure services to automate document processing by creating a Document Intelligence resource and training a custom model for data extraction. You then developed an Azure Function App to process documents from Blob Storage, analyze them via the Document Intelligence API, and store results as JSON files. Lastly, you set up Azure AI Search to index and search the analyzed documents, integrating these components for efficient document management.
 
-### You have successfully completed the lab. 
-### Click on Next >> to procced with next Lab.
+### Click on Next >> to proceed with the next Lab.
