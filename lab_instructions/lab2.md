@@ -9,7 +9,7 @@ In this lab, you will learn how to leverage Azure OpenAI to interact with custom
 ![Name](images/new-arch-lab-1.png)
 
 ## Lab Objectives
-In this lab you will perform,
+In this lab, you will perform,
 
 - Task 01: Navigate to Azure OpenAI Playground
 - Task 02: Upload your own data
@@ -29,7 +29,7 @@ In this lab you will perform,
 
    ![OpenAI Studio](images/ima2upd.png)
 
-   > **Note:** Note: If you don’t see an option like the one shown in the image above, refer to the image below to navigate to Azure AI Foundry.
+   > **Note:** If you don’t see an option like the one shown in the image above, refer to the image below to navigate to Azure AI Foundry.
 
       ![OpenAI Studio](images/aifoundry.png)
 
@@ -97,7 +97,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 ## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
-1. Under the **Add you data** pane, wait until your data upload is finished.
+1. Under the **Add your data** pane, wait until your data upload is finished.
 
    ![upload-data](images/imag4.png)
 
@@ -129,7 +129,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/imag6.png)
 
-1. On the **Chat** , Click on **Deploy to (1)** on the top right and click on **as a webapp (2)**.
+1. On the **Chat**, Click on **Deploy to (1)** on the top right and click on **as a webapp (2)**.
 
    ![](images/default-1upd.png)
 
@@ -159,13 +159,13 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/doc51.png)
 
-      > **Note:** If you see a blank screen, wait for sometime and refresh the page.
+      > **Note:** If you see a blank screen, wait for some time and refresh the page.
 
       > **Note:** In cases of permissions asked, click on **Accept**.
 
       ![Alt text](images/doc50.png)
 
-      > **Note:** In case of an internal server error, navigate back to the Azure AI Foundry portal and follow the below steps:
+      > **Note:** In case of an internal server error, navigate back to the Azure AI Foundry portal and follow the steps below:
 
    - On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
 
@@ -185,14 +185,15 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
      
 1. Chat with the bot and check its working state. Provide questions related to the document we had previously uploaded.
 
-1. Search for cosmos DB in the portal and select the resource.
+1. Search for Cosmos DB in the portal and select the resource.
 
     ![Create an indexer](images/doc94.png)
 
 1. Verify **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** has been created then select it.
+   
    ![Create an indexer](images/cosmos-db.png)
 
-1. Go to Data Explorer, expand **db_conversation_history** database **(1)** > **conversations** container **(2)** and verify that the conversations has been captured by cosmos db from webapp as shown in the below image.
+1. Go to Data Explorer, expand **db_conversation_history** database **(1)** > **conversations** container **(2)** and verify that the conversations have been captured by Cosmos DB from webapp as shown in the image below.
 
     ![Create an indexer](images/DB-01-1-upd.png)
 
