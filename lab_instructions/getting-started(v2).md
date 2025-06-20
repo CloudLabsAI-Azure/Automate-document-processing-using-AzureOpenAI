@@ -7,9 +7,9 @@ In this hands-on lab, you will explore document processing using Azure services 
 ## Objectives
 Use Azure services to automate document processing, including data extraction, sentiment analysis, OCR, and classification. They will integrate Azure OpenAI's ChatGPT and Cosmos DB to analyze and interact with the processed data through a web application.
 
-- **Automate document processing using Azure Document Intelligence**: Explore how Azure services can be used to process documents by extracting and analyzing information from various file types, such as PDFs and images. Train document models via Azure Document Intelligence and integrate them with Azure OpenAI for intelligent data extraction and interaction.
+- **Automate document processing using Azure Document Intelligence:** Explore how Azure services can be used to process documents by extracting and analyzing information from various file types, such as PDFs and images. Train document models via Azure Document Intelligence and integrate them with Azure OpenAI for intelligent data extraction and interaction.
 
-- **Utilize your Data Set using OpenAI**: Learn how to upload custom data into Azure AI Foundry, interact with the Azure OpenAI model using the uploaded content, and deploy the AI as a web app. Additionally, capture and store conversation history in Cosmos DB for enhanced traceability and persistence.
+- **Utilize your Data Set using OpenAI:** Learn how to upload custom data into Azure AI Foundry, interact with the Azure OpenAI model using the uploaded content, and deploy the AI as a web app. Additionally, capture and store conversation history in Cosmos DB for enhanced traceability and persistence.
   
 ## Prerequisites
 
@@ -39,6 +39,7 @@ The architecture for this lab involves the following key components:
 - **Azure Web App:** is a fully managed platform for building, deploying, and scaling web applications. It supports various programming languages and frameworks, and offers features like continuous deployment, scaling, and integration with other Azure services.
 
 ## Getting Started with the Lab
+
 Welcome to your Automate-document-processing-using-AzureOpenAI Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience.
  
 ## Accessing Your Lab Environment
@@ -46,7 +47,6 @@ Welcome to your Automate-document-processing-using-AzureOpenAI Workshop! We've p
 Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
 
   ![OpenAI](images/new-get-start-25-9upd.png)
-
  
 ## Exploring Your Lab Resources
  
@@ -84,28 +84,27 @@ Feel free to start, stop, or restart your virtual machine as needed from the **R
  
     ![OpenAI](images/sc900-image(1).png)
 
-1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. In that enter the following email/username, and click on **Next**. 
+1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email/username, and click on **Next**. 
 
-   * **Email/Username**: <inject key="AzureAdUserEmail"></inject>
+   * **Email/Username:** <inject key="AzureAdUserEmail"></inject>
    
       ![OpenAI](images/sc900-image-1.png)
      
 1. Now enter the following password and click on **Sign in**.
    
-   * **Password**: <inject key="AzureAdUserPassword"></inject>
+   * **Password:** <inject key="AzureAdUserPassword"></inject>
    
       ![OpenAI](images/sc900-image-2.png)
 
-1. If you see the pop-up **Action Required**, keep default and then click on **Ask later**. If you see the pop-up Help us protect your account, click on **Skip for now**(14 days until this is required), and then click on **Next**.
+1. If you see the pop-up **Action Required**, keep default and then click on **Ask later**. If you see the pop-up Help us protect your account, click on **Skip for now** (14 days until this is required), and then click on **Next**.
 
    ![Asklater](images/asklater.png)
 
    >**NOTE:** Do not enable MFA, select **Ask Later**.
      
-1. If prompted to **stay signed in**, you can click **"No"**.
+1. If prompted to **Stay signed in**, you can click **"No"**.
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
-   
 
 ## Support Contact
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
