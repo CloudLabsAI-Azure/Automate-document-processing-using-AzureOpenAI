@@ -2,7 +2,7 @@
 
 ## Estimated Duration: 1 Hour
 
-In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into Azure AI Foundry portal, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
+In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into the Azure AI Foundry portal, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
   
 ## Architecture Diagram
 
@@ -62,12 +62,12 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
             ![Azure OpenAI Studio](images/CORS-1.png)
           
          - In the first row, ensure only **GET**, **POST**, **OPTIONS**, **PUT** **(1)** is enabled under allowed methods, provide it as **content-length** **(2)** under exposed headers and set the Max age to **120** **(3)**.
-         - In the second row, set the Allowed origins to * **(4)**, enable **GET**, **POST**, **OPTIONS**, **PUT** **(5)** under allowed methods , set the Allowed headers and Exposed headers to * **(6)** and * **(7)** respectively and the Max age to **200 (8)**.
+         - In the second row, set the Allowed origins to * **(4)**, enable **GET**, **POST**, **OPTIONS**, **PUT** **(5)** under allowed methods, set the Allowed headers and Exposed headers to * **(6)** and * **(7)** respectively and the Max age to **200 (8)**.
          - Click on **Save**.
           
            ![Azure OpenAI Studio](images/save.png)
 
-         - Navigate back to the Azure AI Foundry portal , close the window and re-perform step 1 and 2.
+         - Navigate back to the Azure AI Foundry portal, close the window and re-perform steps 1 and 2.
             
     - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(4)**.
 
@@ -97,14 +97,14 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 ## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
-1. Under the **Add you data** pane , wait until your data upload is finished.
+1. Under the **Add you data** pane, wait until your data upload is finished.
 
    ![upload-data](images/imag4.png)
 
 1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
     ```
-    how to operate Android Auto in Porche Taycan? give step-by-step instructions
+    How to operate Android Auto in Porche Taycan? give step-by-step instructions
     ```
 
       ![chat-session-one](images/screen-1.png)
@@ -125,7 +125,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    
    ![chat-session-two](images/new-automate-lab1-6.png)
 
-1. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
+1. In the **Setup** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
     ![Alt text](images/imag6.png)
 
@@ -152,18 +152,20 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
       ![](images/doc73.png)
 
       ![](images/doc74.png)
+
+      ![](images/app-service-1.png)
       
 1. Click on **Browse** and the web app is up and running.
 
     ![Alt text](images/doc51.png)
 
-      > **Note:** If you see a blank screen wait for sometime and refresh the page.
+      > **Note:** If you see a blank screen, wait for sometime and refresh the page.
 
       > **Note:** In cases of permissions asked, click on **Accept**.
 
       ![Alt text](images/doc50.png)
 
-      > **Note:** In case of an internal server error, navigate back to Azure AI Foundry portal and follow the below steps:
+      > **Note:** In case of an internal server error, navigate back to the Azure AI Foundry portal and follow the below steps:
 
    - On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
 
@@ -188,10 +190,11 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
     ![Create an indexer](images/doc94.png)
 
 1. Verify **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** has been created then select it.
+   ![Create an indexer](images/cosmos-db.png)
 
 1. Go to Data Explorer, expand **db_conversation_history** database **(1)** > **conversations** container **(2)** and verify that the conversations has been captured by cosmos db from webapp as shown in the below image.
 
-    ![Create an indexer](images/DB-01-1.png)
+    ![Create an indexer](images/DB-01-1-upd.png)
 
 <validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
  

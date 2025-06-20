@@ -2,7 +2,7 @@
 
 ## Estimated Duration: 3 Hours
 
-Processing of forms and documents is part of several scenarios both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone. Document processing using Azure involves leveraging Azure services and tools to analyze, extract information from, and manage various types of documents, such as text files, images, PDFs, and more. This process typically includes tasks like text extraction, data extraction, sentiment analysis, language detection, optical character recognition (OCR), and document classification. In this lab, you will learn how to use train documents via Document Intelligence resource. We will be processing the documents via Azure functions and <code style="color : red">**Azure AI Document Intelligence**</code>.
+Processing of forms and documents is part of several scenarios both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone. Document processing using Azure involves leveraging Azure services and tools to analyze, extract information from, and manage various types of documents, such as text files, images, PDFs, and more. This process typically includes tasks like text extraction, data extraction, sentiment analysis, language detection, optical character recognition (OCR), and document classification. In this lab, you will learn how to train documents via the Document Intelligence resource. We will be processing the documents via Azure functions and <code style="color : red">**Azure AI Document Intelligence**</code>.
 
 ## Architecture Diagram
 
@@ -28,14 +28,14 @@ In this lab, you will perform:
 
    ![Alt text](images/doc12.png)
 
-1. In the **Overview** pane, scroll down to **Get Started** tab and click on **Go to Document Intelligence studio** and sign in with the same user details used to login azure.
+1. In the **Overview** pane, scroll down to **Get Started** tab and click on **Go to Document Intelligence Studio** and sign in with the same user details used to log in Azure.
 
    ![Alt text](images/di.png)
 
 1. In **Document Intelligence studio**, scroll down to **Custom Models** and click on **Get Started** for Custom extraction model.
 
    ![Alt text](images/1-4.png)
-
+   > Note: If prompted to log in, use the credentials provided in the Environment tab.
 1. Click on **+ Create a project**. Enter the following details and click on **Continue**  **(3)**.
     
    - Project name: **testproject** **(1)**.
@@ -50,7 +50,7 @@ In this lab, you will perform:
    - Document Intelligence or Cognitive Service Resource: Select **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
    - API version: Select **2023-07-31(3.1 General Availability)** **(4)**.
 
-     ![configuring service resource](images/imag2.png)
+     ![configuring service resource](images/imag2-upd.png)
 
 1. Enter the following details for **Connect training data source** and click on **Continue** **(5)**.
 
@@ -73,7 +73,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Browse for files](images/doc39.png)
 
-1. On the file explorer, enter the following path `C:\LabFiles\Train`, hit **enter**, select all train PDF files present inside **Train** folder i.e **Invoice_1 to Invoice_5** **(2)**, and hit **Open**.
+1. On the file explorer, enter the following path `C:\LabFiles\Train`, hit **enter**, select all train PDF files present inside **Train** folder, i.e **Invoice_1 to Invoice_5** **(2)**, and hit **Open**.
 
    ![Alt text](images/doc69upd1.png)
 
@@ -96,7 +96,7 @@ In this step, you will upload 6 training documents to train the model.
    ![Alt text](images/doc3.png)
    ![Alt text](images/imag1.png)
 
-1. Label the new field added by **selecting the address (2)** as shown in the below image and do this for all the **five documents**.
+1. Label the new field added by **selecting the address (2)** as shown in the image below and do this for all the **five documents**.
 
    ![train-module](images/doc16.png)
    
@@ -124,15 +124,22 @@ In this step, you will upload 6 training documents to train the model.
 
       ![select-models](images/stu6upd.png)
 
-1. Once uploaded, select one test model, and click on **Run analysis**, Now you can see on the right-hand side that the model was able to detect the field **Organization** and **Address** we created in the last step along with its confidence score.
+1. Once uploaded, select one test model, and click on **Run analysis**, Now you can see on the right-hand side that the model was able to detect the field **Organization** and **Address** we created in the last step, along with its confidence score.
 
-   ![Name](images/stu7.png)
+   ![Name](images/stu7-upd.png)
    
 ## Task 3: Creation of Function App
 
 You will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
    
-1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it. click on **Open Folder (1)** , navigate to `C:/Labfiles` and select **function-app (2)** folder and then select **Select Folder (3)**.
+1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it. 
+
+   ![select-models](images/vs-code-1.png)
+
+1. Once inside the Vs-code click on **Open Folder (1)**.
+   ![select-models](images/vs-code-2.png)
+
+3. Now, navigate to `C:/Labfiles` and select **function-app (2)** folder and then select **Select Folder (3)**.
 
    ![select-models](images/doc8upd.png)
 
@@ -424,7 +431,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    > **Note:** Install the python packages if required.
 
-   > **Note**: If any pop-up occurs close it.
+   > **Note**: If any pop-up occurs, close it.
 
       ![select-models](images/error.png)
 
@@ -452,7 +459,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. Navigate back to the **VS code** and verify the **logs**.
 
-1. Once the function app triggered successfully, navigate back to the **storage account**.
+1. Once the function app is triggered successfully, navigate back to the **storage account**.
 
 1. In the storage account, click on **Containers** under Data Storage tab and select **Output** container.
 
