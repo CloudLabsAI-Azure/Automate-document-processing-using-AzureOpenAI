@@ -28,7 +28,7 @@ In this lab, you will perform:
 
    ![Alt text](images/doc12.png)
 
-1. In the **Overview (1)** pane, scroll down to **Get Started** tab and click on **Go to Document Intelligence Studio (2)** and sign in with the same user details used to log in Azure.
+1. In the **Overview (1)** pane, scroll down to the **Get Started** tab and click on **Go to Document Intelligence Studio (2)** and sign in with the same user details used to log in to Azure.
 
    ![Alt text](images/di.png)
 
@@ -127,7 +127,7 @@ In this step, you will upload 6 training documents to train the model.
 
       ![select-models](images/stu6upd.png)
 
-1. Once uploaded, select one test model, and click on **Run analysis**. Now you can see on the right-hand side that the model was able to detect the field **Organization** and **Address** we created in the last step, along with its confidence score.
+1. Once uploaded, select one test model and click on **Run analysis**. Now you can see on the right-hand side that the model was able to detect the field **Organization** and **Address** we created in the last step, along with its confidence score.
 
    ![Name](images/stu7-upd.png)
    
@@ -139,7 +139,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    ![select-models](images/vs-code-1.png)
 
-1. Once inside the Vs-code click on **File -> Open Folder (1)**.
+1. Once inside VS-Code, click on **File -> Open Folder**.
 
    ![select-models](images/vs-code-2.png)
 
