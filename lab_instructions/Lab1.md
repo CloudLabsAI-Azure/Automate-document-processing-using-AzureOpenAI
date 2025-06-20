@@ -195,7 +195,6 @@ You will be using Azure Functions to process documents that are uploaded to an A
       requests
       pandas
       numpy
-   
       ```
 
       >**Note:** In cases of an error, please run `pip install -r requirements.txt`
