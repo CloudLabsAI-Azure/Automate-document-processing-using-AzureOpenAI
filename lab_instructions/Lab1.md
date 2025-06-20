@@ -12,11 +12,11 @@ Processing of forms and documents is part of several scenarios both in business 
 
 In this lab, you will perform:
 
-- Task 01: Creating a Document Intelligence Resource
-- Task 02: Train and Label data
-- Task 03: Creation of Function App
-- Task 04: Run the Function App
-- Task 05: Working with AI Search
+- Task 1: Creating a Document Intelligence Resource
+- Task 2: Train and Label data
+- Task 3: Creation of Function App
+- Task 4: Run the Function App
+- Task 5: Working with AI Search
 
 ## Task 1: Creating a Document Intelligence Resource
 
@@ -28,15 +28,15 @@ In this lab, you will perform:
 
    ![Alt text](images/doc12.png)
 
-1. In the **Overview** pane, scroll down to **Get Started** tab and click on **Go to Document Intelligence Studio** and sign in with the same user details used to log in Azure.
+1. In the **Overview (1)** pane, scroll down to **Get Started** tab and click on **Go to Document Intelligence Studio (2)** and sign in with the same user details used to log in Azure.
 
    ![Alt text](images/di.png)
 
-1. In **Document Intelligence studio**, scroll down to **Custom Models** and click on **Get Started** for Custom extraction model.
+1. In **Document Intelligence Studio** page, scroll down to **Custom models** and click on **Get started** for Custom extraction model.
 
    ![Alt text](images/1-4.png)
 
-   > Note: If prompted to log in, use the credentials provided in the Environment tab.
+   > **Note:** If prompted to log in, use the credentials provided in the Environment tab.
 
 1. Click on **+ Create a project**. Enter the following details and click on **Continue**  **(3)**.
     
@@ -63,7 +63,7 @@ In this lab, you will perform:
    
         ![storage account](images/doc1.png)
 
-1. Validate the information and choose **Create project**.
+1. Review the configuration and select **Create project**.
 
      ![Alt text](images/doc2.png)
 
@@ -115,7 +115,7 @@ In this step, you will upload 6 training documents to train the model.
 
    ![Name](images/doc32.png)
    
-1. Wait till the model status shows **succeeded**. Once the status has succeeded, Select the model **model**  **(1)** you created and choose **Test** **(2)**.
+1. Wait till the model status shows **Succeeded**. Once the status has succeeded, Select the model **model**  **(1)** you created and choose **Test** **(2)**.
 
      ![select-models](images/doc19.png)
 
@@ -139,7 +139,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    ![select-models](images/vs-code-1.png)
 
-1. Once inside the Vs-code click on **Open Folder (1)**.
+1. Once inside the Vs-code click on **File -> Open Folder (1)**.
 
    ![select-models](images/vs-code-2.png)
 
@@ -426,11 +426,11 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 ## Task 4: Run the Function App
 
-1. In VS Code, click on the ellipsis above, expand **Terminal (1)** and select **New Terminal (2)**.
+1. In Visual Studio Code, click the **ellipsis (**...**)** in the top menu, then expand **Terminal (1)** and select **New Terminal (2)** from the dropdown. 
 
    ![select-models](images/stu10upd.png)
 
-1. Press **ctrl + F5** to run the function.
+1. Press **Ctrl + F5** to run the function.
 
    > **Note:** If you see any errors related to the debugger, then go to extensions from the left pane and install the **Python debugger extension**.
 
@@ -522,7 +522,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
    
       ![Create an indexer](images/create-an-indexer.png)
 
-1. Select **Indexes** under the **search management** tab and click on **azureblob-index**.
+1. Select **Indexes** under the **Search management** tab and click on **azureblob-index**.
 
       ![Create an indexer](images/doc95upd.png)
 

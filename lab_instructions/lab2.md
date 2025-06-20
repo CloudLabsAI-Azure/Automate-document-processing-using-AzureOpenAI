@@ -21,7 +21,7 @@ In this lab, you will perform,
 
    ![OpenAI](images/ment1.png)
 
-2. In the **AI foundry | Azure OpenAI** tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
+2. In the **AI Foundry | Azure OpenAI** tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
    ![OpenAI](images/ment-2upd.png)
 
@@ -37,7 +37,7 @@ In this lab, you will perform,
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
-1. Click on **+ Add a data source** under **Add your data** of the **Setup** tab in the **Chat** playground.
+1. In the Playground section, click on **Chat**. Then, under the **Setup** tab in the **Chat** playground, click **+ Add a data source (2)** within the **Add your data (1)** section. 
 
    ![Azure OpenAI Studio](images/imag3upd.png)
    
@@ -75,7 +75,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
       
     - Click on **Next**
       
-1. On the **Upload files**, click on **Browse for a file** **(1)** enter the following `C:\LabFiles\Data\Lab 2` **(2)** path and hit enter, select all the files here **(3)** pdf  file and click on **Open** **(4)** files.
+1. On the **Upload files** tab, click **Browse for a file**. Navigate to the path `C:\LabFiles\Data\Lab 2` and press Enter. Select all the PDF files in this folder, then click **Open** to upload them. 
 
    ![data-management](images/labfilesv2.png)
 
@@ -129,7 +129,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/imag6.png)
 
-1. On the **Chat**, Click on **Deploy to (1)** on the top right and click on **as a webapp (2)**.
+1. On the **Chat**, Click on **Deploy to (1)** on the top right and click on **...as a webapp (2)**.
 
    ![](images/default-1upd.png)
 
@@ -145,18 +145,20 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
      ![](images/au-1.png)
 
-   > **Note:** Wait for 10 minutes for the webapp to be deployed successfully.
+     > **Note:** Wait for 10 minutes for the webapp to be deployed successfully.
 
-1. Navigate to App Services and verify **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** has been created and select it.
+1. In the Azure Portal, search for **App Services** in the search bar and select it from the search results. 
 
       ![](images/doc73.png)
 
-      ![](images/doc74.png)
+1. Select the **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** App Service.
 
-      ![](images/app-service-1.png)
+      ![](images/doc74.png)
       
 1. Click on **Browse** and the web app is up and running.
 
+    ![](images/app-service-1.png)
+    
     ![Alt text](images/doc51.png)
 
       > **Note:** If you see a blank screen, wait for some time and refresh the page.
@@ -167,15 +169,15 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       > **Note:** In case of an internal server error, navigate back to the Azure AI Foundry portal and follow the steps below:
 
-   - On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
+   - In the **Chat (1)** section under Playgrounds, click **Deploy to (2)** in the top-right corner, then select **...as a webapp (3)**.
 
        ![](images/default-1.png)
 
-   - Click on **Update an existing web app (1)**, select the **default subscription (2)** and select **webapp-<inject key="Deployment ID" enableCopy="false"/>** (3), check in the box for **Enable chat copilot in web app (4)** and click on **Deploy (5)**.
+   - Click on **Update an existing web app (1)**, select the **default subscription (2)**, then choose **webapp-<inject key="Deployment ID" enableCopy="false"/> (3)**. Check the box for **Enable chat copilot in web app (4)**, and finally, click **Deploy (5)**.
      
       ![](images/au-3.png)
      
-   - Navigate to App services, select **webapp-<inject key="Deployment ID" enableCopy="false"/>**, click on **Deployment (1)**, select **Deployment center (2)** and click on Logs and verify its in **success (3)** state.
+   - Navigate to **App Services**, select **webapp-<inject key="Deployment ID" enableCopy="false"/>**, click on **Deployment (1)**, then select **Deployment Center (2)**. Go to the **Logs** tab and verify that the status is **Success (3)**.
 
       ![](images/au-2.png)
      
@@ -185,7 +187,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
      
 1. Chat with the bot and check its working state. Provide questions related to the document we had previously uploaded.
 
-1. Search for Cosmos DB in the portal and select the resource.
+1. In the Azure Portal, search for **Azure Cosmos DB** and select it from the search results.
 
     ![Create an indexer](images/doc94.png)
 
@@ -193,7 +195,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    
    ![Create an indexer](images/cosmos-db.png)
 
-1. Go to Data Explorer, expand **db_conversation_history** database **(1)** > **conversations** container **(2)** and verify that the conversations have been captured by Cosmos DB from webapp as shown in the image below.
+1. Go to **Data Explorer (1)** in your Azure Cosmos DB account, then expand the **db_conversation_history** database and the **conversations** container **(2)**. Verify that the conversation data has been successfully captured from the web app, as shown in the image below.
 
     ![Create an indexer](images/DB-01-1-upd.png)
 
