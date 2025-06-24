@@ -197,13 +197,13 @@ You will be using Azure Functions to process documents that are uploaded to an A
       numpy
       ```
 
-      >**Note:** In cases of an error, please run `pip install -r requirements.txt`
+1. From the terminal, please run `pip install -r requirements.txt` to insall all the requirements.
 
       ![select-models](images/doc10.png)
 
 1. Click on the **local.settings.json** file 
    - Replace **AzureWebJobsStorage** value with the storage account connection string **<inject key="connectionString"></inject>**.
-   -  You can also update the configuration by adding `"AzureWebJobsSecretStorageType": "Files"` if it isn’t already included.
+   -  Update the configuration by adding **`"AzureWebJobsSecretStorageType": "Files"`** if it isn’t already included.
    - Replace **storageaccount-name** in storageaccount-name_STORAGE with **storage<inject key="Deployment ID" enableCopy="false"/>** and its value with the storage account connection string **<inject key="connectionString"></inject>**.
 
       ```json
