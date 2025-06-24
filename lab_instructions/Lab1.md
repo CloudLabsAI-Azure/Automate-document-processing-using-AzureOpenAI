@@ -197,7 +197,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
       numpy
       ```
 
-1. From the terminal, please run `pip install -r requirements.txt` to insall all the requirements.
+1. From the terminal, please run `pip install -r requirements.txt` to install all the requirements.
 
       ![select-models](images/doc10.png)
 
@@ -254,7 +254,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
       ```
 
 1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document.
-   - Replace **Your Document Intelligence Endpoint** : **<inject key="documentIntelligenceEndpoint"></inject>**.
+   - Replace r**Your Document Intelligence Endpoint** : **<inject key="documentIntelligenceEndpoint"></inject>**.
    - Replace **Your Document Intelligence Key** : **<inject key="documentIntelligenceKey"></inject>**.
    - Replace `<model-name>` with **model**.
 
