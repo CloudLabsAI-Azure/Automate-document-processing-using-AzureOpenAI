@@ -171,7 +171,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    - Click on **Sign in to Azure** and click on **Allow** if prompted. This will navigate to the Azure Portal and select your Azure Account.
 
-        - Email: <inject key="AzureAdUserEmail" enableClicktoPaste="false"></inject>
+        - Email: <inject key="AzureAdUserEmail" enableClicktoPaste = false></inject>
 
         - Password: <inject key="AzureAdUserPassword"></inject>
 
