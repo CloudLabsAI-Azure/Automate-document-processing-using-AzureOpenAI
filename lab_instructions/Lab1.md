@@ -304,7 +304,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. Add the following code to connect to the Azure Storage output container.
    
-   - Replace {storage-connection-string} : **<inject key="connectionString"></inject>**.
+   - Replace {storage-connection-string} : **<inject key="connectionString" enableCopy="false"/></inject>**
 
       ```
          # This is the connection to the blob storage, with the Azure Python SDK
