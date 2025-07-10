@@ -26,11 +26,11 @@ In this lab, you will perform:
 
 1. Navigate to **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** by selecting it.
 
-   ![Alt text](images/doc12.png)
+   ![Alt text](images/100725(01).png)
 
 1. In the **Overview (1)** pane, scroll down to the **Get Started** tab and click on **Go to Document Intelligence Studio (2)** and sign in with the same user details used to log in to Azure.
 
-   ![Alt text](images/di.png)
+   ![Alt text](images/100725(02).png)
 
 1. In **Document Intelligence Studio** page, scroll down to **Custom models** and click on **Get started** for Custom extraction model.
 
@@ -39,6 +39,8 @@ In this lab, you will perform:
    > **Note:** If prompted to log in, use the credentials provided in the Environment tab.
 
 1. Click on **+ Create a project**. Enter the following details and click on **Continue**  **(3)**.
+
+   ![](images/100725(03).png)
     
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.

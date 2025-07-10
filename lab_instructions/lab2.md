@@ -77,7 +77,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
       
 1. On the **Upload files** tab, click **Browse for a file**. Navigate to the path `C:\LabFiles\Data\Lab 2` and press Enter. Select all the PDF files in this folder, then click **Open** to upload them. 
 
-   ![data-management](images/labfilesv2.png)
+   ![data-management](images/100725(05).png)
 
 1. Click on **Upload files** **(1)**, and click on **Next** **(2)**.
 
@@ -138,7 +138,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    - Name: **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)**
    - Subscription: **Select the default subscription (2)**
    - Resource Group: Select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(3)**
-   - Location: **Select Sweden Central (4)**
+   - Location: Select **Sweden Central (4)**
    - Pricing Plan: **Choose Standard (S1) (5)**
    - **Enable** chat history in the web app **(6)**
    - Click **Deploy (7)**
@@ -195,9 +195,9 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    
    ![Create an indexer](images/cosmos-db.png)
 
-1. Go to **Data Explorer (1)** in your Azure Cosmos DB account, then expand the **db_conversation_history** database and the **conversations** container **(2)**. Verify that the conversation data has been successfully captured from the web app, as shown in the image below.
+1. Go to **Data Explorer (1)** in your Azure Cosmos DB account, then expand the **db_conversation_history (2)** database and the **conversations** container **(3)**. Verify that the conversation data has been successfully captured from the web app, as shown in the image below.
 
-    ![Create an indexer](images/DB-01-1-upd.png)
+    ![Create an indexer](images/100725(06).png)
 
 <validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
  
