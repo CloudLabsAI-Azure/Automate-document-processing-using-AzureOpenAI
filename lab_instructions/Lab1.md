@@ -533,7 +533,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![Create an indexer](images/doc96.png)
 
-1. Search for `fields` and verify the fields given while training the document has been analysed.
+1. Search for `fields` and verify the fields given while training the document has been analyzed.
 
    ![Create an indexer](images/doc97.png)
 
