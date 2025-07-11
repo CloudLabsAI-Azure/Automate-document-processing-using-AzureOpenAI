@@ -455,7 +455,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    ![select-models](images/stu3.png)
 
-1. Navigate to `C:\LabFiles\test`, select **Invoice_6 and Invoice_7**, and click on **Open**.
+1. Navigate to `C:\LabFiles\Test`, select **Invoice_6 and Invoice_7**, and click on **Open**.
 
    ![select-models](images/doc76(1).png)
 
