@@ -17,7 +17,7 @@ In this lab, you will perform,
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
-1. In `portal.azure.com`, search for **openai** and select **Azure OpenAI**.
+1. In the Azure portal, search for **openai** and select **Azure OpenAI**.
 
    ![OpenAI](images/ment1.png)
 
