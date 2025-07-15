@@ -6,7 +6,7 @@ In this lab, you will learn how to leverage Azure OpenAI to interact with custom
   
 ## Architecture Diagram
 
-![Name](images/new-arch-lab-1.png)
+![Name](images/aaaarch%20diagram%202.png)
 
 ## Lab Objectives
 In this lab, you will perform,

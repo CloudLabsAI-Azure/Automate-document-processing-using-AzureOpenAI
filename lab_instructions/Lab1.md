@@ -6,7 +6,7 @@ Processing of forms and documents is part of several scenarios both in business 
 
 ## Architecture Diagram
 
-   ![Name](images/archi1.PNG)
+   ![Name](images/aaaarch%20diagram%201.png)
 
 ## Lab Objectives
 
@@ -60,7 +60,7 @@ In this lab, you will perform:
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
    - Document Intelligence or Cognitive Service Resource: Select **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
-   - API version: Select **2023-07-31(3.1 General Availability)** **(4)**.
+   - API version: Select **2023-07-31(3.1 General Availability) or we can use latest verion 2024-11-30 (4.0 General Availability)** **(4)**.
 
      ![configuring service resource](images/imag2-upd.png)
 
@@ -431,7 +431,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
       ```
    > **Note**: Please make sure the indentation of the code remains unchanged and proper to run the code successfully
 
-1. Open the **launch.json (1)** under `.vscode` **(2)** folder and replace the code with the below code
+1. Open the **launch.json (1)** under `.vscode` **(2)** folder and replace the entire code with the below code
 
       ```
       {
