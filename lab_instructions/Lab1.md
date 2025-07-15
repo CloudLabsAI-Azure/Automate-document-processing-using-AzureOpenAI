@@ -26,19 +26,29 @@ In this lab, you will perform:
 
 1. Navigate to **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** by selecting it.
 
-   ![Alt text](images/doc12.png)
+   ![Alt text](images/100725(01).png)
 
 1. In the **Overview (1)** pane, scroll down to the **Get Started** tab and click on **Go to Document Intelligence Studio (2)** and sign in with the same user details used to log in to Azure.
 
-   ![Alt text](images/di.png)
+   ![Alt text](images/100725(02).png)
 
 1. In **Document Intelligence Studio** page, scroll down to **Custom models** and click on **Get started** for Custom extraction model.
 
    ![Alt text](images/1-4.png)
 
+   **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+
+   **Password:** <inject key="AzureAdUserPassword"></inject>
+
+   ![](images/100725(08).png)
+
+   ![](images/100725(09).png)
+
    > **Note:** If prompted to log in, use the credentials provided in the Environment tab.
 
 1. Click on **+ Create a project**. Enter the following details and click on **Continue**  **(3)**.
+
+   ![](images/100725(03).png)
     
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
@@ -158,18 +168,41 @@ You will be using Azure Functions to process documents that are uploaded to an A
 1. You'll be prompted to configure several settings:
 
    - Select the folder → choose **function-app**.
+
+     ![](images/100725(10).png)
      
    - Select a language → choose **Python**.
 
+     ![](images/100725(11).png)
+
    - Select a Python interpreter to create a virtual environment → select **Python 3.11.9**.
+     
+     ![](images/100725(12).png)
 
    - Select a template → choose **Blob trigger** and give the trigger a name or accept the default name. Press **Enter** to confirm.
 
+     ![](images/100725(13).png)
+
+     ![](images/100725(14).png)
+
+
    - The path within your storage container that the trigger will monitor → **input**.
+
+     ![](images/100725(15).png)
 
    - Select setting → choose **+ Create new local app setting** from the dropdown menu.
 
+     ![](images/100725(16).png)
+
    - Click on **Sign in to Azure** and click on **Allow** if prompted. This will navigate to the Azure Portal and select your Azure Account.
+
+     ![](images/100725(17).png)
+
+     ![](images/100725(18).png)
+ 
+     ![](images/100725(19).png)
+
+     ![](images/100725(20).png)
 
         - Email: <inject key="AzureAdUserEmail" enableCopy="true"></inject>
 
@@ -182,6 +215,10 @@ You will be using Azure Functions to process documents that are uploaded to an A
    - Select subscription → choose the **Default Subscription**.
 
    - Select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
+
+     ![](images/100725(22).png)
+
+     ![](images/100725(23).png)
 
    - Select how you would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
@@ -502,8 +539,6 @@ You will be using Azure Functions to process documents that are uploaded to an A
       - Container Name: **output (6)**
       - Blob Folder: **input (7)**
       - Click on **Next: Add cognitive skills (Optional) (8)**
-
-           ![select-models](images/stu5(1).png)
      
            ![train-module](images/doc24.png)
 
