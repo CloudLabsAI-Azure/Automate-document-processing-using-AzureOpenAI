@@ -41,7 +41,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
    ![Azure OpenAI Studio](images/imag3upd.png)
    
-1. Fill the following details in **Select or add data source** and click on **Next** **(6)**.
+1. Fill the following details in **Select or add data source** and click on **Next**.
     
     - Select data source: **Upload files (preview)** **(1)**
 
@@ -83,11 +83,11 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
    ![data-management](images/datamanagementv2.png)
 
-1. On the **Data Management** page, from the drop-down select **keyword (1)** as Search type and click on **Next (2)**.
+1. On the **Data Management** page, from the drop-down select **Keyword (1)** as Search type and click on **Next (2)**.
 
    ![keyword](images/uploadfiles1.png)
 
-1. On the **Data Connection page**, select **API Key** and click on Next.
+1. On the **Data Connection page**, select **API Key** and click on **Next**.
 
    ![keyword](images/api.png)
 
@@ -120,7 +120,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
     ```
-    What is your name
+    What is your name?
     ```
    
    ![chat-session-two](images/new-automate-lab1-6.png)
@@ -195,7 +195,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    
    ![Create an indexer](images/cosmos-db.png)
 
-1. Go to **Data Explorer (1)** in your Azure Cosmos DB account, then expand the **db_conversation_history (2)** database and the **conversations** container **(3)**. Verify that the conversation data has been successfully captured from the web app, as shown in the image below.
+1. Go to **Data Explorer (2)** in your Azure Cosmos DB account, then expand the **db_conversation_history (3)** database and the **conversations** container **(4)**. Verify that the conversation data has been successfully captured from the web app **(5)**, as shown in the image below.
 
     ![Create an indexer](images/100725(06).png)
 
