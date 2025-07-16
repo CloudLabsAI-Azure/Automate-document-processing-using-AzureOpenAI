@@ -22,7 +22,7 @@ In this lab, you will perform:
 
 1. Search for **Document intelligences** and select it.
 
-   ![Alt text](images/1-9.png)
+   ![Alt text](images/100725(30)%20-%20Copy.png)
 
 1. Navigate to **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>**.
 
@@ -99,7 +99,13 @@ In this step, you will upload 6 training documents to train the model.
 
      ![run-now](images/doc14.png)
 
-1. Ensure you have selected **Invoice_1** and label the new field added by selecting **Contoso (1)** in the top left of each document uploaded. Do this for all five documents wherever there is an **Organization (2)** mentioned.
+1. Follow The below steps:
+
+   - Ensure you have selected **Invoice_1**
+
+   - Select **Contoso (1)** as shown in figure.
+
+   - It will prompt you to select **organization (2)** You will observe green tick on Invoice_1.pdf.
 
      ![train-module](images/doc15.png)
 
