@@ -60,7 +60,7 @@ In this lab, you will perform:
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
    - Document Intelligence or Cognitive Service Resource: Select **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
-   - API version: Select **2023-07-31(3.1 General Availability) either we can use latest verion 2024-11-30 (4.0 General Availability)** **(4)**.
+   - API version: Select **2024-11-30 (4.0 General Availability)** **(4)**.
 
      ![configuring service resource](images/100725(33).png)
 
