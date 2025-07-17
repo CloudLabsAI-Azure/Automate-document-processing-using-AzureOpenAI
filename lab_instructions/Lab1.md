@@ -22,7 +22,7 @@ In this lab, you will perform:
 
 1. Search for **Document intelligences** and select it.
 
-   ![Alt text](images/1-9.png)
+   ![Alt text](images/100725(30)%20-%20Copy.png)
 
 1. Navigate to **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>**.
 
@@ -60,9 +60,9 @@ In this lab, you will perform:
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
    - Document Intelligence or Cognitive Service Resource: Select **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
-   - API version: Select **2023-07-31(3.1 General Availability) or we can use latest verion 2024-11-30 (4.0 General Availability)** **(4)**.
+   - API version: Select **2024-11-30 (4.0 General Availability)** **(4)**.
 
-     ![configuring service resource](images/imag2-upd.png)
+     ![configuring service resource](images/100725(33).png)
 
 1. Enter the following details for **Connect training data source** and click on **Continue** **(5)**.
 
@@ -99,7 +99,13 @@ In this step, you will upload 6 training documents to train the model.
 
      ![run-now](images/doc14.png)
 
-1. Ensure you have selected **Invoice_1** and label the new field added by selecting **Contoso (1)** in the top left of each document uploaded. Do this for all five documents wherever there is an **Organization (2)** mentioned.
+1. Follow The below steps:
+
+   - Ensure you have selected **Invoice_1**
+
+   - Select **Contoso (1)** as shown in figure.
+
+   - It will prompt you to select **organization (2)** You will observe green tick on Invoice_1.pdf.
 
      ![train-module](images/doc15.png)
 
@@ -279,6 +285,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
     - path = **input**
     
     - connection = **storage<inject key="Deployment ID" enableCopy="false"/>_STORAGE**
+
+  
+
       ```
       app = func.FunctionApp()
    
@@ -474,7 +483,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    > **Note**: If any pop-up occurs, close it.
 
-      ![select-models](images/error.png)
+      ![select-models](images/100725(34).png)
 
 1. Once the function has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
 
@@ -486,7 +495,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. In the storage account **storage<inject key="Deployment ID" enableCopy="false"/>**, navigate to **Containers** under the **Data Storage** tab and select **input** container.
 
-   ![select-models](images/new-automate-lab1-8upd.png)
+   ![select-models](images/100725(35).png)
    
 1. In the input container, click on **Upload (1)** button, in the **Upload blob** pop-up window click on **Browse for files (2)**.
 
@@ -496,7 +505,10 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    ![select-models](images/doc76(1).png)
 
+   
 1. In the **Upload blob** pop-up window, click on **Upload** button.
+
+   ![select-models](images/100725(37).png)
 
 1. Navigate back to the **VS code** and verify the **logs**.
 

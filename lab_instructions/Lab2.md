@@ -81,7 +81,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Click on **Upload files** **(1)**, and click on **Next** **(2)**.
 
-   ![data-management](images/datamanagementv2.png)
+   ![data-management](images/100725(25)%20-%20Copy.png)
 
 1. On the **Data Management** page, from the drop-down select **Keyword (1)** as Search type and click on **Next (2)**.
 
@@ -149,11 +149,11 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. In the Azure Portal, search for **App Services** in the search bar and select it from the search results. 
 
-      ![](images/doc73.png)
+      ![](images/100725(27)%20-%20Copy.png)
 
 1. Select the **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** App Service.
 
-      ![](images/doc74.png)
+      ![](images/100725(28)%20-%20Copy.png)
       
 1. Click on **Browse** and the web app is up and running.
 
@@ -179,7 +179,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
      
    - Navigate to **App Services**, select **webapp-<inject key="Deployment ID" enableCopy="false"/>**, click on **Deployment (1)**, then select **Deployment Center (2)**. Go to the **Logs** tab and verify that the status is **Success (3)**.
 
-      ![](images/au-2.png)
+      ![](images/100725(32)%20-%20Copy.png)
      
    - Click on **Browse** from the overview tab again.
 
@@ -193,11 +193,11 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Verify **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** has been created then select it.
    
-   ![Create an indexer](images/cosmos-db.png)
+   ![Create an indexer](images/100725(26)%20-%20Copy.png)
 
 1. Go to **Data Explorer (2)** in your Azure Cosmos DB account, then expand the **db_conversation_history (3)** database and the **conversations** container **(4)**. Verify that the conversation data has been successfully captured from the web app **(5)**, as shown in the image below.
 
-    ![Create an indexer](images/100725(06).png)
+    ![Create an indexer](images/100725(29)%20-%20Copy.png)
 
 <validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
  
