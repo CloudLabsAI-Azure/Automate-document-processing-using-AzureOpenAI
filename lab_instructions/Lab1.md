@@ -90,7 +90,7 @@ In this step, you will upload 6 training documents to train the model.
 
 1. On the file explorer, enter the following path `C:\LabFiles\Train`**(1)**, press **Enter**, select all train PDF files present inside **Train** folder, i.e **Invoice_1 to Invoice_5** **(2)**, and click on **Open (3)**.
 
-   ![Alt text](images/t2p2.png)
+   ![Alt text](images/t2p2(1).png)
 
 1. Once uploaded, choose **Run now** in the pop-up window under **Run layout**.
 
@@ -170,9 +170,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![select-models](images/yesauth.png)
 
-5. Click on the **Azure symbol (1)** , select **function-app icon (2)** and then **Create Function.. (3)**
+5. Select the **Azure symbol (1)** from the left pane, and click on **function-app icon (2)** and click **Create Function... (3)**
 
-   ![select-models](images/doc9.png)
+   ![select-models](images/t3p5.png)
 
 6. You'll be prompted to configure several settings:
 
@@ -216,7 +216,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
          ![](images/100725(20).png)
 
-      - In the pop-up click on **No, this app only**.
+      - In the pop-up window click on **No, this app only**.
 
          ![select-models](images/pop-upupd.png)
 
@@ -366,6 +366,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
          blob_client = container_client.get_blob_client(blob_name)
          blob_client.upload_blob(data, overwrite=True)
       ```
+      ![select-models](images/t3p14.png)
 
 15. Please verify to ensure that the final code matches as below.
 
@@ -384,7 +385,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
       
       app = func.FunctionApp()
       
-      @app.blob_trigger(arg_name="myblob", path="<input container", connection="storage<DID>_STORAGE") 
+      @app.blob_trigger(arg_name="myblob", path="<input container>", connection="storage<DID>_STORAGE") 
       
       def blob_trigger(myblob: func.InputStream):
          logging.info(f"Python blob trigger function processed blob"
@@ -439,7 +440,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
          blob_client = container_client.get_blob_client(blob_name)
          blob_client.upload_blob(data, overwrite=True)
       ```
-   > **Note:** Please make sure the indentation of the code remains unchanged and proper to run the code successfully
+      > **Note:** Please make sure the indentation of the code remains unchanged and proper to run the code successfully
 
 16. Open the **launch.json (1)** under `.vscode` **(2)** folder and replace the entire code with the below and press `Ctrl+S` to save:
 
@@ -484,17 +485,17 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    > **Note**: If any pop-up occurs, close it.
 
-      ![select-models](images/100725(34).png)
+      ![select-models](images/t4p2.png)
 
 1. Once the function has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
 
    ![select-models](images/doc90.png)
 
-1. In the search bar, search and select **Storage Account**.
+1. In the search bar, search and select **Storage Account** under **Services**.
 
    ![select-models](images/t4p4.png)
 
-1. Select storage account **storage<inject key="Deployment ID" enableCopy="false"/>**.
+1. Select **storage<inject key="Deployment ID" enableCopy="false"/>** from the Storage accounts blade.
 
    ![select-models](images/t4p5.png)
 
@@ -506,24 +507,26 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    ![select-models](images/t4p7.png)
 
-1. Navigate to `C:\LabFiles\Test`, select **Invoice_6 and Invoice_7**, and click on **Open**.
+1. Navigate to `C:\LabFiles\Test` **(1)**, select **Invoice_6 and Invoice_7** **(2)**, and click on **Open (3)**.
 
-   ![select-models](images/doc76(1).png)
+   ![select-models](images/stu6upd.png)
 
    
 1. In the **Upload blob** pop-up window, click on **Upload** button.
 
    ![select-models](images/t4p9.png)
 
-1. Navigate back to the **VS code** and verify the **logs**.
+1. Navigate back to the **VS code** and verify the **logs** in the **Terminal**.
 
 1. Once the function app is triggered successfully, navigate back to the **storage account**.
 
 1. In the storage account, click on **Containers** under Data Storage tab and select **Output** container.
+   
+   ![select-models](images/t4p12.png)
 
 1. In the **Output** container, click on the **input** folder and verify the **json** analysing the document has been generated successfully.
 
-   ![train-module](images/output.png)
+   ![train-module](images/t4p13.png)
 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -534,7 +537,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 ## Task 5: Working with AI Search
 
-1. In the search bar, search for **AI Search** and select it.
+1. In the Azure Portal, type **AI Search** in the search bar and choose it from the **Services** section.
 
       ![train-module](images/doc21.png)
    
@@ -557,9 +560,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
       - Blob Folder: **input (7)**
       - Click on **Next: Add cognitive skills (Optional) (8)**
      
-        ![train-module](images/doc24.png)
+        ![train-module](images/t5p4.png)
 
-1. On the Add **cognitive skills (Optional)**, click on **Skip to : Customize target index**.
+1. On the **Add cognitive skills (Optional)**, click on **Skip to : Customize target index**.
 
 1. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
 
@@ -573,19 +576,19 @@ You will be using Azure Functions to process documents that are uploaded to an A
    
       ![Create an indexer](images/create-an-indexer.png)
 
-1. Select **Indexes** under the **Search management** tab and click on **azureblob-index**.
+1. Under the **Search management (1)** tab, select **Indexes (2)** and then click on **azureblob-index (3)**.
 
-      ![Create an indexer](images/doc95upd.png)
+      ![Create an indexer](images/t5p9.png)
 
 1. In the **azureblob-index**, click on **Search** button.
 
-      ![Create an indexer](images/doc99.png)
+      ![Create an indexer](images/t5p10.png)
 
-1. Verify the document that has been analysed
+1. Verify the document that has been analysed.
 
       ![Create an indexer](images/doc96.png)
 
-1. Search for `fields` and verify the fields given while training the document has been analysed.
+1. Search for `fields` and verify the fields **Organization and Address**, given while training the document has been analysed.
 
    ![Create an indexer](images/doc97.png)
 
@@ -596,3 +599,4 @@ You will be using Azure Functions to process documents that are uploaded to an A
 In this lab, you used Azure services to automate document processing by creating a **Document Intelligence** resource and training a custom model for data extraction. You then developed an **Azure Function App** to process documents from Blob Storage, analyze them via the Document Intelligence API, and store results as JSON files. Lastly, you set up Azure AI Search to index and search the analyzed documents, integrating these components for efficient document management.
 
 ### Click on Next >> to proceed with the next Lab.
+![nextpage](images/nextpage.png)
