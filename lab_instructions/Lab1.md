@@ -220,7 +220,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
          ![select-models](images/pop-upupd.png)
 
-   - Select subscription → choose the **Default Subscription**.
+   - If prompted, select subscription → choose the **Default Subscription**.
 
    - Select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
 
@@ -228,7 +228,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
      ![](images/100725(23).png)
 
-   - Select how you would like to open your project → choose **Open the project in the current window** from the dropdown menu.
+   - If prompted, select how you would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
 7. In VS Code, from the **Explorer (1)** in the left pane, navigate to the function's **requirements.txt (2)** file. This file defines the dependencies for your script. Add the following **Python packages (3)** to the file and click on ` Ctrl + S ` to save:
    
@@ -479,7 +479,13 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. Press **Ctrl + F5** to run the function.
 
-   > **Note:** If you see any errors related to the debugger, then go to extensions from the left pane and install the **Python debugger extension**.
+   > **Note:** If a debugger error appears, click **Debug Anyway**, then in the next pop-up, choose **Install debugpy Extension**. This will take you to the extension page, click **Install** to set up the **Python Debugger**. 
+
+      ![select-models](images/t4p2(debug).png)
+
+      ![select-models](images/t4p2(debug)2.png)
+
+      ![select-models](images/pythonextinst.png)
 
    > **Note:** Install the Python packages if required.
 
