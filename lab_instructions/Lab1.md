@@ -220,7 +220,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
          ![select-models](images/pop-upupd.png)
 
-   - If prompted, select subscription → choose the **Default Subscription**.
+         >**Note:** If prompted, select subscription → choose the **Default Subscription**.
 
    - Select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
 
@@ -228,7 +228,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
      ![](images/100725(23).png)
 
-   - If prompted, select how you would like to open your project → choose **Open the project in the current window** from the dropdown menu.
+      >**Note:** If prompted, select how you would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
 7. In VS Code, from the **Explorer (1)** in the left pane, navigate to the function's **requirements.txt (2)** file. This file defines the dependencies for your script. Add the following **Python packages (3)** to the file and click on ` Ctrl + S ` to save:
    
