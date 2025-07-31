@@ -101,7 +101,7 @@ Feel free to **Start, Restart,** or **Stop** your virtual machine as needed from
 
    >**NOTE:** Do not enable MFA, select **Ask Later**.
      
-1. If prompted to **Stay signed in**, you can click **"No"**.
+1. If prompted to **Stay signed in?**, click **"No"**.
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
 
