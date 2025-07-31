@@ -3,7 +3,7 @@
 ### Estimated Duration: 3 Hours
 
 ## Overview
-Processing of forms and documents is part of several scenarios both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone. Document processing using Azure involves leveraging Azure services and tools to analyze, extract information from, and manage various types of documents, such as text files, images, PDFs, and more. This process typically includes tasks like text extraction, data extraction, sentiment analysis, language detection, optical character recognition (OCR), and document classification. In this lab, you will learn how to train documents via the Document Intelligence resource. We will be processing the documents via **Azure Function Apps** and <code style="color : red">**Azure AI Document Intelligence**</code>.
+Processing of forms and documents is part of several scenarios, both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone. Document processing using Azure involves leveraging Azure services and tools to analyze, extract information from, and manage various types of documents, such as text files, images, PDFs, and more. This process typically includes tasks like text extraction, data extraction, sentiment analysis, language detection, optical character recognition (OCR), and document classification. In this lab, you will learn how to train documents via the Document Intelligence resource. We will be processing the documents via **Azure Function Apps** and <code style="color : red">**Azure AI Document Intelligence**</code>.
 
 ## Architecture Diagram
 
@@ -88,7 +88,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![Browse for files](images/doc39.png)
 
-1. On the file explorer, enter the following path `C:\LabFiles\Train`**(1)**, press **Enter**, select all train PDF files present inside **Train** folder, i.e **Invoice_1 to Invoice_5** **(2)**, and click on **Open (3)**.
+1. On the file explorer, enter the following path `C:\LabFiles\Train`**(1)**, press **Enter**, select all train PDF files present inside **Train** folder, i.e, **Invoice_1 to Invoice_5** **(2)**, and click on **Open (3)**.
 
    ![Alt text](images/t2p2(1).png)
 
@@ -102,7 +102,7 @@ In this step, you will upload 6 training documents to train the model.
 
      ![run-now](images/doc14.png)
 
-1. Follow the below steps:
+1. Follow the steps below:
 
    - Ensure you have selected **Invoice_1**
 
@@ -594,7 +594,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![Create an indexer](images/doc96.png)
 
-1. Search for `fields` and verify the fields **Organization and Address**, given while training the document has been analysed.
+1. Search for `fields` and verify the fields **Organization and Address**, given while training, the document has been analysed.
 
    ![Create an indexer](images/doc97.png)
 
