@@ -1,7 +1,8 @@
 # Lab 02: Utilize your Data Set using OpenAI
 
-## Estimated Duration: 1 Hour
+### Estimated Duration: 1 Hour
 
+## Overview
 In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into the Azure AI Foundry portal, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
   
 ## Architecture Diagram
@@ -17,7 +18,7 @@ In this lab, you will perform,
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
-1. In the Azure portal, search for **openai** and select **Azure OpenAI**.
+1. In the Azure portal, search for **OpenAI** and select **Azure OpenAI** from **Services**.
 
    ![OpenAI](images/ment1.png)
 
@@ -27,7 +28,7 @@ In this lab, you will perform,
 
 3. On the **Azure OpenAI** page, click on **Go to Azure AI Foundry portal**.
 
-   ![OpenAI Studio](images/ima2upd.png)
+   ![OpenAI Studio](images/l2t1p3.png)
 
    > **Note:** If you don’t see an option like the one shown in the image above, refer to the image below to navigate to Azure AI Foundry.
 
@@ -37,9 +38,9 @@ In this lab, you will perform,
 
 In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
 
-1. In the Playground section, click on **Chat**. Then, under the **Setup** tab in the **Chat** playground, click **+ Add a data source (2)** within the **Add your data (1)** section. 
+1. In the Playground section, click on **Chat (1)**. Then, under the **Setup** tab in the **Chat playground**, click on **Add your data (2)** and then click **+ Add a data source (3)** section. 
 
-   ![Azure OpenAI Studio](images/imag3upd.png)
+   ![Azure OpenAI Studio](images/l2t2p1.png)
    
 1. Fill the following details in **Select or add data source** and click on **Next**.
     
@@ -75,11 +76,11 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
       
     - Click on **Next**
       
-1. On the **Upload files** tab, click **Browse for a file**. Navigate to the path `C:\LabFiles\Data\Lab 2` and press Enter. Select all the PDF files in this folder, then click **Open** to upload them. 
+1. On the **Upload files** tab, click **Browse for a file (1)**. Navigate to the path `C:\LabFiles\Data\Lab 2` **(2)** and press Enter. Select all the **PDF files (3)** in this folder, then click **Open (4)** to upload them. 
 
-   ![data-management](images/100725(05).png)
+   ![data-management](images/l2t2p3.png)
 
-1. Click on **Upload files** **(1)**, and click on **Next** **(2)**.
+1. Click on **Upload files** **(1)**, and then click **Next** **(2)**.
 
    ![data-management](images/100725(25)%20-%20Copy.png)
 
@@ -99,7 +100,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. Under the **Add your data** pane, wait until your data upload is finished.
 
-   ![upload-data](images/imag4.png)
+   ![upload-data](images/l2t3p1.png)
 
 1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
@@ -107,7 +108,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
     How to operate Android Auto in Porche Taycan? give step-by-step instructions
     ```
 
-      ![chat-session-one](images/screen-1.png)
+      ![chat-session-one](images/l2t3p2.png)
 
 1. You can customize the responses of your bot by  updating the message `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(1)** under **Give the model instructions and context**  and click on **Apply changes** **(2)**.
 
@@ -129,7 +130,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/imag6.png)
 
-1. On the **Chat**, Click on **Deploy to (1)** on the top right and click on **...as a webapp (2)**.
+1. In the **Chat**, click on **Deploy (1)** from the top menu bar and select **...as a web app (2)**.
 
    ![](images/default-1upd.png)
 
@@ -147,7 +148,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
      > **Note:** Wait for 10 minutes for the webapp to be deployed successfully.
 
-1. In the Azure Portal, search for **App Services** in the search bar and select it from the search results. 
+1. In the Azure Portal, search for **App Services (1)** in the search bar and select **App Services (2)** from the **Services**. 
 
       ![](images/100725(27)%20-%20Copy.png)
 
@@ -155,7 +156,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       ![](images/100725(28)%20-%20Copy.png)
       
-1. Click on **Browse** and the web app is up and running.
+1. Click **Browse** to verify that the web app is running successfully after deployment.
 
     ![](images/app-service-1.png)
     
@@ -169,7 +170,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
       > **Note:** In case of an internal server error, navigate back to the Azure AI Foundry portal and follow the steps below:
 
-   - In the **Chat (1)** section under Playgrounds, click **Deploy to (2)** in the top-right corner, then select **...as a webapp (3)**.
+   - In the **Chat (1)** section under Playgrounds, click **Deploy to (2)** in the top-right corner, then select **...as a web app (3)**.
 
        ![](images/default-1.png)
 
@@ -187,15 +188,15 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
      
 1. Chat with the bot and check its working state. Provide questions related to the document we had previously uploaded.
 
-1. In the Azure Portal, search for **Azure Cosmos DB** and select it from the search results.
+1. In the Azure Portal, search for **Azure Cosmos DB (1)** and select **Azure Cosmos DB (2)** from the **Services**.
 
-    ![Create an indexer](images/doc94.png)
+    ![Create an indexer](images/l2t3p13.png)
 
-1. Verify **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** has been created then select it.
+1. Verify **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** has been created and then select it.
    
    ![Create an indexer](images/100725(26)%20-%20Copy.png)
 
-1. Go to **Data Explorer (2)** in your Azure Cosmos DB account, then expand the **db_conversation_history (3)** database and the **conversations** container **(4)**. Verify that the conversation data has been successfully captured from the web app **(5)**, as shown in the image below.
+1. In the **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** **(1)**, go to **Data Explorer (2)** in your Azure Cosmos DB account, then expand the **db_conversation_history (3)** database and the **conversations** container **(4)**. Verify that the conversation data has been successfully captured from the web app **(5)**, as shown in the image below.
 
     ![Create an indexer](images/100725(29)%20-%20Copy.png)
 
