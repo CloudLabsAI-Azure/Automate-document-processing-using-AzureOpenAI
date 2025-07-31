@@ -36,7 +36,7 @@ In this lab, you will perform,
 
 ## Task 2: Upload your own data
 
-In this step, we will be using Porche's owner manual for Taycan, Panamera, and Cayenne models.
+In this step, we will be using Porsche's owner manual for Taycan, Panamera, and Cayenne models.
 
 1. In the Playground section, click on **Chat (1)**. Then, under the **Setup** tab in the **Chat playground**, click on **Add your data (2)** and then click **+ Add a data source (3)** section. 
 
@@ -68,7 +68,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
           
            ![Azure OpenAI Studio](images/save.png)
 
-         - Navigate back to the Azure AI Foundry portal, close the window and re-perform steps 1 and 2.
+         - Navigate back to the Azure AI Foundry portal, close the window, and re-perform steps 1 and 2.
             
     - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(4)**.
 
@@ -105,12 +105,12 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
 
     ```
-    How to operate Android Auto in Porche Taycan? give step-by-step instructions
+    How to operate Android Auto in the Porsche Taycan? give step-by-step instructions
     ```
 
       ![chat-session-one](images/l2t3p2.png)
 
-1. You can customize the responses of your bot by  updating the message `Your name is Alice. You are an AI assistant that helps people find information about Porche cars. Your responses should not contain any harmful information` **(1)** under **Give the model instructions and context**  and click on **Apply changes** **(2)**.
+1. You can customize the responses of your bot by  updating the message `Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information` **(1)** under **Give the model instructions and context**  and click on **Apply changes** **(2)**.
 
    ![assistant-setup-system-message](images/chat-1.png)
 
