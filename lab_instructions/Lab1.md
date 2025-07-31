@@ -162,7 +162,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    ![select-models](images/vs-code-2.png)
 
-3. Now, navigate to `C:/Labfiles` and select **function-app (2)** folder and then click on **Select Folder (3)**.
+3. Now, navigate to `C:/Labfiles` **(1)** and select **function-app (2)** folder and then click on **Select Folder (3)**.
 
    ![select-models](images/doc8upd.png)
 
@@ -243,7 +243,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
       ```
       ![select-models](images/t3p7.png)
 
-8. From the terminal, please run `pip install -r requirements.txt` to install all the requirements.
+8. From the **Terminal**, please run `pip install -r requirements.txt` to install all the requirements.
 
       ![select-models](images/t3p8.png)
 
@@ -442,7 +442,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
       ```
       > **Note:** Please make sure the indentation of the code remains unchanged and proper to run the code successfully
 
-16. Open the **launch.json (1)** under `.vscode` **(2)** folder and replace the entire code with the below and press `Ctrl+S` to save:
+16. Under `.vscode` **(1)** folder, open the **launch.json (2)** and replace the entire code with the below and press `Ctrl+S` to save:
 
       ```
       {
