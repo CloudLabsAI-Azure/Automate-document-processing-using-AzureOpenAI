@@ -67,13 +67,13 @@ Feel free to **Start, Restart,** or **Stop** your virtual machine as needed from
 
 ## Lab Validation
 
-1. After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
    ![Inline Validation](images/new-get-start-25-5upd.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
-1. To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
+To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
      ![OpenAI](images/zoominwin(1).png)
 
