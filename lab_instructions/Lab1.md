@@ -230,7 +230,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       >**Note:** If prompted, select how you would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
-7. In VS Code, from the **Explorer (1)** in the left pane, navigate to the function's **requirements.txt (2)** file. This file defines the dependencies for your script. Add the following **Python packages (3)** to the file and click on ` Ctrl + S ` to save:
+7. In VS Code, from the **Explorer (1)** in the left pane, navigate to the function's **requirements.txt (2)** file. This file defines the dependencies for your script. Add the following **Python packages (3)** to the file and press ` Ctrl + S ` to save:
    
       ```
       cryptography
@@ -247,7 +247,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
       ![select-models](images/t3p8.png)
 
-9. Open the **local.settings.json** file and replace its contents with the configuration provided below and press `Ctrl+S` to save.
+9. Open the **local.settings.json** file and replace its contents with the configuration provided below, and press `Ctrl+S` to save.
 
       ```json
          {
@@ -263,8 +263,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
       ```
 
    - Replace **AzureWebJobsStorage** value with the storage account connection string **<inject key="connectionString" enableCopy="false"/></inject>**
-   -  Update the configuration by adding **`"AzureWebJobsSecretStorageType": "Files"`** if it isn’t already included.
+   - Update the configuration by adding **`"AzureWebJobsSecretStorageType": "Files"`** if it isn’t already included.
    - Replace **storageaccount-name** in storageaccount-name_STORAGE with **storage<inject key="Deployment ID" enableCopy="false"/>** and its value with the storage account connection string **<inject key="connectionString" enableCopy="false"/></inject>**
+
 
 10. Open the **function-app.py (1)** file and add the following **import statements (2)** by replacing the existing ones:
 
