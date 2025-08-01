@@ -443,7 +443,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
       ```
       > **Note:** Please make sure the indentation of the code remains unchanged and proper to run the code successfully
 
-16. Under `.vscode` **(1)** folder, open the **launch.json (2)** and replace the entire code with the below and press `Ctrl+S` to save:
+16. Under `.vscode` **(1)** folder, open the **launch.json (2)** and replace the entire code with the code given below and press `Ctrl+S` to save:
 
       ```
       {
@@ -527,7 +527,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 1. Once the function app is triggered successfully, navigate back to the **storage account**.
 
-1. In the storage account, click on **Containers** under Data Storage tab and select **Output** container.
+1. In the storage account, go to the **Data Storage (1)** section, click on **Containers (2)**, and then choose the **Output (3)** container.
    
    ![select-models](images/t4p12.png)
 
