@@ -18,7 +18,7 @@ In this lab, you will perform,
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
-1. In the Azure portal, search for **OpenAI** and select **Azure OpenAI** from **Services**.
+1. In the Azure portal, search for **OpenAI** in the search bar and select **Azure OpenAI** from **Services**.
 
    ![OpenAI](images/ment1.png)
 
@@ -162,7 +162,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
     
     ![Alt text](images/doc51.png)
 
-      > **Note:** If you see a blank screen, wait for some time and refresh the page.
+      > **Note:** If you see a blank screen, wait for sometime and refresh the page.
 
       > **Note:** In cases of permissions asked, click on **Accept**.
 
@@ -196,7 +196,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
    
    ![Create an indexer](images/100725(26)%20-%20Copy.png)
 
-1. In the **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** **(1)**, go to **Data Explorer (2)** in your Azure Cosmos DB account, then expand the **db_conversation_history (3)** database and the **conversations** container **(4)**. Verify that the conversation data has been successfully captured from the web app **(5)**, as shown in the image below.
+1. In the **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** **(1)**, go to **Data Explorer (2)** in your Azure Cosmos DB account, then expand the **db_conversation_history (3)** database and the **conversations (4)** container. Verify that the conversation data has been successfully captured from the web app **(5)**, as shown in the image below.
 
     ![Create an indexer](images/100725(29)%20-%20Copy.png)
 
