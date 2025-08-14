@@ -84,7 +84,7 @@ In this task, you will set up the Document Intelligence environment in Azure so 
 
 ## Task 2: Train and Label data
 
-In this task, you will upload and labels invoice documents to train a custom model in Document Intelligence Studio. It defines key fields like Organization and Address, then trains the model using the labeled data. Finally, it tests the model with new documents to verify accurate field extraction and review confidence scores. In this step, you will upload 6 training documents to train the model.
+In this step, you will upload 6 training documents to train the model.
 
 1. Click on **Browse for files**.
 
@@ -501,9 +501,9 @@ In this task, you will run the function in VS Code, It uploads test invoices to 
 
    ![select-models](images/doc90.png)
 
-1. In the search bar, search and select **Storage Account** under **Services**.
+1. In the search bar, search and select **Storage Account (1)** under **Services (2)**.
 
-   ![select-models](images/t4p4.png)
+   ![select-models](images/p1s4.png)
 
 1. Select **storage<inject key="Deployment ID" enableCopy="false"/>** from the Storage accounts blade.
 
@@ -547,19 +547,19 @@ In this task, you will run the function in VS Code, It uploads test invoices to 
 
 ## Task 5: Working with AI Search
 
-In this task, you connects Azure AI Search to the output container in Blob Storage to index analyzed document data. It configures the index and indexer so fields like Organization and Address are searchable and facetable. Finally, it verifies the indexed data by running a search and confirming the trained fields appear correctly.
+In this task, you will connect Azure AI Search to the output container in Blob Storage to index analyzed document data. It configures the index and indexer so fields like Organization and Address are searchable and facetable. Finally, it verifies the indexed data by running a search and confirming the trained fields appear correctly.
 
 1. In the Azure Portal, type **AI Search** in the search bar and choose it from the **Services** section.
 
-      ![train-module](images/doc21.png)
+      ![train-module](images/P1T5S2.png)
    
 1. In **AI foundry | AI Search** tab, select **search-<inject key="Deployment ID" enableCopy="false"/>**.
 
-      ![train-module](images/doc22upd.png)
+      ![train-module](images/P1T5S22.png)
    
 1. In the Overview page of **search-<inject key="Deployment ID" enableCopy="false"/>**, click on **Import data**.
 
-      ![train-module](images/doc23.png)
+      ![train-module](images/P1T5S3.png)
 
 1. Provide the following values:
 
