@@ -21,7 +21,7 @@ In this lab, you will perform:
 
 ## Task 1: Creating a Document Intelligence Resource
 
-This task sets up the Document Intelligence environment in Azure so you can build and train a custom document extraction model. It creates a project in Document Intelligence Studio, connects it to the correct Azure resource, and links a storage location for training data. By the end, you have a fully configured project ready for model training.
+In this task, you will set up the Document Intelligence environment in Azure so you can build and train a custom document extraction model. It creates a project in Document Intelligence Studio, connects it to the correct Azure resource, and links a storage location for training data. By the end, you have a fully configured project ready for model training.
 
 1. In the search bar, enter **Document Intelligence (1)** and select **Document Intelligence (2)** from the **Services** list.
 
@@ -84,9 +84,7 @@ This task sets up the Document Intelligence environment in Azure so you can buil
 
 ## Task 2: Train and Label data
 
-This task uploads and labels invoice documents to train a custom model in Document Intelligence Studio.
-It defines key fields like Organization and Address, then trains the model using the labeled data.
-Finally, it tests the model with new documents to verify accurate field extraction and review confidence scores. In this step, you will upload 6 training documents to train the model.
+In this task, you will upload and labels invoice documents to train a custom model in Document Intelligence Studio. It defines key fields like Organization and Address, then trains the model using the labeled data. Finally, it tests the model with new documents to verify accurate field extraction and review confidence scores. In this step, you will upload 6 training documents to train the model.
 
 1. Click on **Browse for files**.
 
@@ -156,7 +154,7 @@ Finally, it tests the model with new documents to verify accurate field extracti
    
 ## Task 3: Creation of Function App
 
-You will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
+In this task, you will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
    
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it. 
 
@@ -477,9 +475,7 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 ## Task 4: Run the Function App
 
-This task runs the function in VS Code, installing any required debugger or Python packages if prompted.
-It uploads test invoices to the input container in the Azure Storage account to trigger the function.
-Finally, it verifies the output JSON files in the output container to confirm successful document analysis.
+In this task, you will run the function in VS Code, It uploads test invoices to the input container in the Azure Storage account to trigger the function. Finally, it verifies the output JSON files in the output container to confirm successful document analysis.
 
 1. In Visual Studio Code, click the **ellipsis (**...**)** in the top menu, then expand **Terminal (1)** and select **New Terminal (2)** from the dropdown. 
 
@@ -551,8 +547,7 @@ Finally, it verifies the output JSON files in the output container to confirm su
 
 ## Task 5: Working with AI Search
 
-This task connects Azure AI Search to the output container in Blob Storage to index analyzed document data. It configures the index and indexer so fields like Organization and Address are searchable and facetable.
-Finally, it verifies the indexed data by running a search and confirming the trained fields appear correctly.
+In this task, you connects Azure AI Search to the output container in Blob Storage to index analyzed document data. It configures the index and indexer so fields like Organization and Address are searchable and facetable. Finally, it verifies the indexed data by running a search and confirming the trained fields appear correctly.
 
 1. In the Azure Portal, type **AI Search** in the search bar and choose it from the **Services** section.
 

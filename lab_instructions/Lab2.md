@@ -18,7 +18,7 @@ In this lab, you will perform,
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
-This task opens the Azure OpenAI resource in the Azure portal. It navigates to the Azure AI Foundry portal from the resource page. If the direct option is missing, it provides an alternate navigation method to reach Azure AI Foundry.
+In this task, you will open the Azure OpenAI resource in the Azure portal. It navigates to the Azure AI Foundry portal from the resource page. If the direct option is missing, it provides an alternate navigation method to reach Azure AI Foundry.
 
 1. In the Azure portal, search for **OpenAI (1)** in the search bar and select **Azure OpenAI (2)** from **Services**.
 
@@ -38,7 +38,7 @@ This task opens the Azure OpenAI resource in the Azure portal. It navigates to t
 
 ## Task 2: Upload your own data
 
-In this step, we will be using Porsche's owner manual for Taycan, Panamera, and Cayenne models.
+In this task, you will be using Porsche's owner manual for Taycan, Panamera, and Cayenne models.
 
 1. In the Playground section, click on **Chat (1)**. Then, under the **Setup** tab in the **Chat playground**, click on **Add your data (2)** and then click **+ Add a data source (3)** section. 
 
@@ -100,7 +100,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
 ## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
-This task tests and customizes an Azure OpenAI ChatGPT model with your own uploaded data, adjusting instructions, parameters, and deploying it as a web app. It verifies the deployment in Azure App Services, troubleshooting if needed to ensure the bot runs correctly. Finally, it checks Azure Cosmos DB to confirm conversation history from the web app is being stored successfully.
+In this task, you will be testing and customizes an Azure OpenAI ChatGPT model with your own uploaded data, adjusting instructions, parameters, and deploying it as a web app. It verifies the deployment in Azure App Services, troubleshooting if needed to ensure the bot runs correctly. Finally, it checks Azure Cosmos DB to confirm conversation history from the web app is being stored successfully.
 
 1. Under the **Add your data** pane, wait until your data upload is finished.
 
