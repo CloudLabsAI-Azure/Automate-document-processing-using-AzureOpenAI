@@ -39,11 +39,11 @@ The architecture for this lab involves the following key components:
 
 ## Getting Started with the Lab
 
-Welcome to your Automate-document-processing-using-AzureOpenAI Workshop! We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience.
+Welcome to your Automate Document Processing using Azure AI Document Intelligence and Azure OpenAI We've prepared a seamless environment for you to explore and learn about Azure services. Let's begin by making the most of this experience.
  
 ## Accessing Your Lab Environment
  
-Once you're ready to dive in, your virtual machine and lab guide will be right at your fingertips within your web browser.
+Once you're ready to dive in, your virtual machine and guide will be right at your fingertips within your web browser.
 
   ![OpenAI](images/new-get-start-25-9upd.png)
  
@@ -75,13 +75,13 @@ After completing the task, hit the **Validate** button under the Validation tab 
  
 To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
-     ![OpenAI](images/zoominwin(1).png)
+  ![OpenAI](images/zoominwin(1).png)
 
 ## Let's Get Started with Azure Portal
  
 1. On your virtual machine, click on the **Azure Portal** icon as shown below:
  
-    ![OpenAI](images/sc900-image(1).png)
+     ![OpenAI](images/sc900-image(1).png)
 
 1. On the **Sign in to Microsoft Azure** tab, you will see the login screen. Enter the following email/username, and click on **Next**. 
 

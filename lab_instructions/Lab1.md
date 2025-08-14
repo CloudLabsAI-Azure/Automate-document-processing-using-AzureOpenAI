@@ -1,6 +1,6 @@
 # Lab 01: Automate Document Processing using Azure AI Document Intelligence
 
-### Estimated Duration: 3 Hours
+### Estimated Duration: 120 Minutes
 
 ## Overview
 Processing of forms and documents is part of several scenarios, both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone. Document processing using Azure involves leveraging Azure services and tools to analyze, extract information from, and manage various types of documents, such as text files, images, PDFs, and more. This process typically includes tasks like text extraction, data extraction, sentiment analysis, language detection, optical character recognition (OCR), and document classification. In this lab, you will learn how to train documents via the Document Intelligence resource. We will be processing the documents via **Azure Function Apps** and <code style="color : red">**Azure AI Document Intelligence**</code>.
@@ -21,13 +21,15 @@ In this lab, you will perform:
 
 ## Task 1: Creating a Document Intelligence Resource
 
+In this task, you will set up the Document Intelligence environment in Azure so you can build and train a custom document extraction model. It creates a project in Document Intelligence Studio, connects it to the correct Azure resource, and links a storage location for training data. By the end, you have a fully configured project ready for model training.
+
 1. In the search bar, enter **Document Intelligence (1)** and select **Document Intelligence (2)** from the **Services** list.
 
-   ![Alt text](images/100725(30)%20-%20Copy.png)
+   ![Alt text](images/100.png)
 
 1. Navigate to **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>**.
 
-   ![Alt text](images/100725(01).png)
+   ![Alt text](images/101.png)
 
 1. In the **Overview (1)** pane, scroll down to the **Get Started** tab and click on **Go to Document Intelligence Studio (2)**.
 
@@ -37,7 +39,7 @@ In this lab, you will perform:
 
 1. In **Document Intelligence Studio** page, scroll down to **Custom models** and click on **Get started** for **Custom extraction model**. 
 
-   ![Alt text](images/1-4.png)
+   ![Alt text](images/102.png)
 
    >**Note:** If prompted, login using the below Azure credentials.
 
@@ -56,7 +58,7 @@ In this lab, you will perform:
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
-     ![Alt text](images/new-automate-lab1-1.png)
+     ![Alt text](images/103.png)
 
 1. Enter the following details for **Configure service resource** and click on **Continue** **(5)**.
 
@@ -65,7 +67,7 @@ In this lab, you will perform:
    - Document Intelligence or Cognitive Service Resource: Select **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
    - API version: Select **2024-11-30 (4.0 General Availability)** **(4)**.
 
-     ![configuring service resource](images/100725(33).png)
+     ![configuring service resource](images/104.png)
 
 1. Enter the following details for **Connect training data source** and click on **Continue** **(5)**.
 
@@ -78,7 +80,7 @@ In this lab, you will perform:
 
 1. Review the configuration and select **Create project**.
 
-     ![Alt text](images/t1p8.png)
+     ![Alt text](images/105.png)
 
 ## Task 2: Train and Label data
 
@@ -86,7 +88,7 @@ In this step, you will upload 6 training documents to train the model.
 
 1. Click on **Browse for files**.
 
-     ![Browse for files](images/doc39.png)
+     ![Browse for files](images/106.png)
 
 1. On the file explorer, enter the following path `C:\LabFiles\Train`**(1)**, press **Enter**, select all train PDF files present inside **Train** folder, i.e, **Invoice_1 to Invoice_5** **(2)**, and click on **Open (3)**.
 
@@ -94,7 +96,7 @@ In this step, you will upload 6 training documents to train the model.
 
 1. Once uploaded, choose **Run now** in the pop-up window under **Run layout**.
 
-     ![train-upload](images/doc31.png)
+     ![train-upload](images/107.png)
 
 1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization** **(3)** and press **Enter**.
 
@@ -152,7 +154,7 @@ In this step, you will upload 6 training documents to train the model.
    
 ## Task 3: Creation of Function App
 
-You will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
+In this task, you will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
    
 1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it. 
 
@@ -178,33 +180,32 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    - Select the folder → choose **function-app**.
 
-     ![](images/100725(10).png)
+     ![](images/108.png)
      
    - Select a language → choose **Python**.
 
-     ![](images/100725(11).png)
+     ![](images/109.png)
 
    - Select a Python interpreter to create a virtual environment → select **Python 3.11.9**.
      
-     ![](images/100725(12).png)
-
+     ![](images/110.png)
    - Select a template → choose **Blob trigger** and give the trigger a name or accept the default name. Press **Enter** to confirm.
 
-     ![](images/100725(13).png)
+     ![](images/111.png)
 
-     ![](images/100725(14).png)
+     ![](images/112.png)
 
    - The path within your storage container that the trigger will monitor → type **input** and press **Enter**.
 
-     ![](images/100725(15).png)
+     ![](images/113.png)
 
    - Select setting → choose **+ Create new local app setting** from the dropdown menu.
 
-     ![](images/100725(16).png)
+     ![](images/114.png)
 
    - Click on **Sign in to Azure** and click on **Allow** if prompted. This will navigate to the Azure Portal and select your Azure Account.
 
-     ![](images/100725(17).png)
+     ![](images/115.png)
 
      ![](images/100725(18).png)
 
@@ -224,9 +225,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    - Select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
 
-     ![](images/100725(22).png)
+     ![](images/116.png)
 
-     ![](images/100725(23).png)
+     ![](images/117.png)
 
       >**Note:** If prompted, select how you would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
@@ -474,6 +475,8 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 ## Task 4: Run the Function App
 
+In this task, you will run the function in VS Code, It uploads test invoices to the input container in the Azure Storage account to trigger the function. Finally, it verifies the output JSON files in the output container to confirm successful document analysis.
+
 1. In Visual Studio Code, click the **ellipsis (**...**)** in the top menu, then expand **Terminal (1)** and select **New Terminal (2)** from the dropdown. 
 
    ![select-models](images/t4p1.png)
@@ -498,9 +501,9 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
    ![select-models](images/doc90.png)
 
-1. In the search bar, search and select **Storage Account** under **Services**.
+1. In the search bar, search and select **Storage Account (1)** under **Services (2)**.
 
-   ![select-models](images/t4p4.png)
+   ![select-models](images/p1s4.png)
 
 1. Select **storage<inject key="Deployment ID" enableCopy="false"/>** from the Storage accounts blade.
 
@@ -544,17 +547,19 @@ You will be using Azure Functions to process documents that are uploaded to an A
 
 ## Task 5: Working with AI Search
 
+In this task, you will connect Azure AI Search to the output container in Blob Storage to index analyzed document data. It configures the index and indexer so fields like Organization and Address are searchable and facetable. Finally, it verifies the indexed data by running a search and confirming the trained fields appear correctly.
+
 1. In the Azure Portal, type **AI Search** in the search bar and choose it from the **Services** section.
 
-      ![train-module](images/doc21.png)
+      ![train-module](images/P1T5S2.png)
    
 1. In **AI foundry | AI Search** tab, select **search-<inject key="Deployment ID" enableCopy="false"/>**.
 
-      ![train-module](images/doc22upd.png)
+      ![train-module](images/P1T5S22.png)
    
 1. In the Overview page of **search-<inject key="Deployment ID" enableCopy="false"/>**, click on **Import data**.
 
-      ![train-module](images/doc23.png)
+      ![train-module](images/P1T5S3.png)
 
 1. Provide the following values:
 

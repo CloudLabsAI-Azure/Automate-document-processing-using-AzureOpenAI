@@ -1,6 +1,6 @@
 # Lab 02: Utilize your Data Set using OpenAI
 
-### Estimated Duration: 1 Hour
+### Estimated Duration: 120 Minutes
 
 ## Overview
 In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into the Azure AI Foundry portal, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
@@ -12,19 +12,21 @@ In this lab, you will learn how to leverage Azure OpenAI to interact with custom
 ## Lab Objectives
 In this lab, you will perform,
 
-- Task 01: Navigate to Azure OpenAI Playground
-- Task 02: Upload your own data
-- Task 03: Interact with Azure OpenAI ChatGPT LLM using your own data
+- Task 1: Navigate to Azure OpenAI Playground
+- Task 2: Upload your own data
+- Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
-1. In the Azure portal, search for **OpenAI** in the search bar and select **Azure OpenAI** from **Services**.
+In this task, you will open the Azure OpenAI resource in the Azure portal. It navigates to the Azure AI Foundry portal from the resource page. If the direct option is missing, it provides an alternate navigation method to reach Azure AI Foundry.
 
-   ![OpenAI](images/ment1.png)
+1. In the Azure portal, search for **OpenAI (1)** in the search bar and select **Azure OpenAI (2)** from **Services**.
+
+   ![OpenAI](images/118.png)
 
 2. In the **AI Foundry | Azure OpenAI** tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
-   ![OpenAI](images/ment-2upd.png)
+   ![OpenAI](images/121.png)
 
 3. On the **Azure OpenAI** page, click on **Go to Azure AI Foundry portal**.
 
@@ -36,11 +38,11 @@ In this lab, you will perform,
 
 ## Task 2: Upload your own data
 
-In this step, we will be using Porsche's owner manual for Taycan, Panamera, and Cayenne models.
+In this task, you will be using Porsche's owner manual for Taycan, Panamera, and Cayenne models.
 
-1. In the Playground section, click on **Chat (1)**. Then, under the **Setup** tab in the **Chat playground**, click on **Add your data (2)** and then click **+ Add a data source (3)** section. 
+1. click on **Chat (1)** under Playgrounds section then, under the **Setup** tab in the **Chat playground**, click on **Add your data (2)** and then click **+ Add a data source (3)** section. 
 
-   ![Azure OpenAI Studio](images/l2t2p1.png)
+   ![Azure OpenAI Studio](images/119.png)
    
 1. Fill the following details in **Select or add data source** and click on **Next**.
     
@@ -60,7 +62,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
          - Search for storage account in the search bar and select **storage<inject key="Deployment ID" enableCopy="false"/>**.
          - In the left pane, search for **CORS (1)** and select **Resource sharing (CORS) (2)**.
 
-            ![Azure OpenAI Studio](images/CORS-1.png)
+            ![Azure OpenAI Studio](images/120.png)
           
          - In the first row, ensure only **GET**, **POST**, **OPTIONS**, **PUT** **(1)** is enabled under allowed methods, provide it as **content-length** **(2)** under exposed headers and set the Max age to **120** **(3)**.
          - In the second row, set the Allowed origins to * **(4)**, enable **GET**, **POST**, **OPTIONS**, **PUT** **(5)** under allowed methods, set the Allowed headers and Exposed headers to * **(6)** and * **(7)** respectively and the Max age to **200 (8)**.
@@ -70,11 +72,13 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
          - Navigate back to the Azure AI Foundry portal, close the window, and re-perform steps 1 and 2.
             
-    - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(4)**.
+    - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(1)**.
 
-    - Enter the index name: Give an index name as **aoaiworkshop** **(5)**
+    - Enter the index name: Give an index name as **aoaiworkshop** **(2)**
       
-    - Click on **Next**
+    - Click on **Next (3)**
+
+      ![data-management](images/P2T2S2.png)
       
 1. On the **Upload files** tab, click **Browse for a file (1)**. Navigate to the path `C:\LabFiles\Data\Lab 2` **(2)** and press Enter. Select all the **PDF files (3)** in this folder, then click **Open (4)** to upload them. 
 
@@ -84,7 +88,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
    ![data-management](images/100725(25)%20-%20Copy.png)
 
-1. On the **Data Management** page, from the drop-down select **Keyword (1)** as Search type and click on **Next (2)**.
+1. Select **Keyword (1)** On the **Data Management** page, from the drop-down as Search type and click on **Next (2)**.
 
    ![keyword](images/uploadfiles1.png)
 
@@ -98,7 +102,9 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
 ## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
-1. Under the **Add your data** pane, wait until your data upload is finished.
+In this task, you will be testing and customizes an Azure OpenAI ChatGPT model with your own uploaded data, adjusting instructions, parameters, and deploying it as a web app. It verifies the deployment in Azure App Services, troubleshooting if needed to ensure the bot runs correctly. Finally, it checks Azure Cosmos DB to confirm conversation history from the web app is being stored successfully.
+
+1. In the dropdown  **Add your data** pane, wait until your data upload is finished.
 
    ![upload-data](images/l2t3p1.png)
 
@@ -124,7 +130,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
     What is your name?
     ```
    
-   ![chat-session-two](images/new-automate-lab1-6.png)
+   ![chat-session-two](images/P2T3S5.png)
 
 1. In the **Setup** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
@@ -132,7 +138,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
 1. In the **Chat**, click on **Deploy (1)** from the top menu bar and select **...as a web app (2)**.
 
-   ![](images/default-1upd.png)
+   ![](images/P2T3S7.png)
 
 1. Add the following details and click on **Deploy**:
 
@@ -144,17 +150,17 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
    - **Enable** chat history in the web app **(6)**
    - Click **Deploy (7)**
 
-     ![](images/au-1.png)
+     ![](images/P2T3S8.png)
 
      > **Note:** Wait for 10 minutes for the webapp to be deployed successfully.
 
 1. In the Azure Portal, search for **App Services (1)** in the search bar and select **App Services (2)** from the **Services**. 
 
-      ![](images/100725(27)%20-%20Copy.png)
+      ![](images/P2T3S9.png)
 
 1. Select the **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)** App Service.
 
-      ![](images/100725(28)%20-%20Copy.png)
+      ![](images/P2T3S10.png)
       
 1. Click **Browse** to verify that the web app is running successfully after deployment.
 
@@ -166,7 +172,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
       > **Note:** In cases of permissions asked, click on **Accept**.
 
-      ![Alt text](images/doc50.png)
+      ![Alt text](images/P2T3S11.png)
 
       > **Note:** In case of an internal server error, navigate back to the Azure AI Foundry portal and follow the steps below:
 
@@ -176,7 +182,7 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
    - Click on **Update an existing web app (1)**, select the **default subscription (2)**, then choose **webapp-<inject key="Deployment ID" enableCopy="false"/> (3)**. Check the box for **Enable chat copilot in web app (4)**, and finally, click **Deploy (5)**.
      
-      ![](images/au-3.png)
+      ![](images/P2T3S11(1).png)
      
    - Navigate to **App Services**, select **webapp-<inject key="Deployment ID" enableCopy="false"/>**, click on **Deployment (1)**, then select **Deployment Center (2)**. Go to the **Logs** tab and verify that the status is **Success (3)**.
 
@@ -200,12 +206,13 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
     ![Create an indexer](images/100725(29)%20-%20Copy.png)
 
-<validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
  
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
+
+<validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
    
 ## Summary
 
