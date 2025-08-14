@@ -1,6 +1,6 @@
 # Lab 02: Utilize your Data Set using OpenAI
 
-### Estimated Duration: 1 Hour
+### Estimated Duration: 120 Minutes
 
 ## Overview
 In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into the Azure AI Foundry portal, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
@@ -12,15 +12,17 @@ In this lab, you will learn how to leverage Azure OpenAI to interact with custom
 ## Lab Objectives
 In this lab, you will perform,
 
-- Task 01: Navigate to Azure OpenAI Playground
-- Task 02: Upload your own data
-- Task 03: Interact with Azure OpenAI ChatGPT LLM using your own data
+- Task 1: Navigate to Azure OpenAI Playground
+- Task 2: Upload your own data
+- Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
-1. In the Azure portal, search for **OpenAI** in the search bar and select **Azure OpenAI** from **Services**.
+This task opens the Azure OpenAI resource in the Azure portal. It navigates to the Azure AI Foundry portal from the resource page. If the direct option is missing, it provides an alternate navigation method to reach Azure AI Foundry.
 
-   ![OpenAI](images/ment1.png)
+1. In the Azure portal, search for **OpenAI (1)** in the search bar and select **Azure OpenAI (2)** from **Services**.
+
+   ![OpenAI](images/118.png)
 
 2. In the **AI Foundry | Azure OpenAI** tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
@@ -97,6 +99,8 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
    ![Save and close](images/save-and-close.png)
 
 ## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
+
+This task tests and customizes an Azure OpenAI ChatGPT model with your own uploaded data, adjusting instructions, parameters, and deploying it as a web app. It verifies the deployment in Azure App Services, troubleshooting if needed to ensure the bot runs correctly. Finally, it checks Azure Cosmos DB to confirm conversation history from the web app is being stored successfully.
 
 1. Under the **Add your data** pane, wait until your data upload is finished.
 
@@ -200,12 +204,13 @@ In this step, we will be using Porsche's owner manual for Taycan, Panamera, and 
 
     ![Create an indexer](images/100725(29)%20-%20Copy.png)
 
-<validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
  
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
+
+<validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
    
 ## Summary
 
