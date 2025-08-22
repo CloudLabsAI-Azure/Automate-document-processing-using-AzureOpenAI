@@ -72,7 +72,7 @@ In this task, you will be using Porsche's owner manual for Taycan, Panamera, and
 
          - Navigate back to the Azure AI Foundry portal, close the window, and re-perform steps 1 and 2.
             
-    - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(1)**.
+    - Select Azure AI Search resource: Select the search service **search-<inject key="Deployment ID">** **(1)**.
 
     - Enter the index name: Give an index name as **aoaiworkshop** **(2)**
       
