@@ -43,11 +43,15 @@ In this task, you will set up the Document Intelligence environment in Azure so 
 
    >**Note:** If prompted, login using the below Azure credentials.
 
+1. On the Sign in tab, you will see the login screen. Enter the following **email/username (1)**, and click on **Next (2)**.
+
    **Email/Username:** <inject key="AzureAdUserEmail"></inject>
 
-   **Password:** <inject key="AzureAdUserPassword"></inject>
-
    ![](images/100725(08).png)
+
+1. Now enter the following password and click on **Sign in**.
+
+    **Password:** <inject key="AzureAdUserPassword"></inject>
 
    ![](images/100725(09).png)
 
