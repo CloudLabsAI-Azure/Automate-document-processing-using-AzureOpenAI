@@ -1,6 +1,6 @@
 # Lab 02: Utilize your Data Set using OpenAI
 
-### Estimated Duration: 80 Minutes
+### Estimated Duration: 120 Minutes
 
 ## Overview
 In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into the Azure AI Foundry portal, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
@@ -52,11 +52,11 @@ In this task, you will be using Porsche's owner manual for Taycan, Panamera, and
 
     - Select Azure Blob storage resource: Choose the already created storage account **storage<inject key="Deployment ID">** **(3)**. 
       
-         > **Note**: **Turn on CORS** when prompted.
+         > **Note:** **Turn on CORS** when prompted.
 
          ![](images/data-source.png)
 
-      > **Note**: If you encounter any issues while enabling CORS, please follow the steps below :
+      > **Note:** If you encounter any issues while enabling CORS, please follow the steps below :
 
          - Navigate to the Azure portal.
          - Search for storage account in the search bar and select **storage<inject key="Deployment ID" enableCopy="false"/>**.
@@ -140,7 +140,7 @@ In this task, you will be testing and customizes an Azure OpenAI ChatGPT model w
 
    ![](images/P2T3S7.png)
 
-1. Add the following details and click on **Deploy**:
+1. Add the following details and click on **Deploy:**
 
    - Name: **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)**
    - Subscription: **Select the default subscription (2)**
@@ -168,7 +168,7 @@ In this task, you will be testing and customizes an Azure OpenAI ChatGPT model w
     
     ![Alt text](images/doc51.png)
 
-      > **Note:** If you see a blank screen, wait for sometime and refresh the page.
+      > **Note:** If you see a blank screen, wait for some time and refresh the page.
 
       > **Note:** In cases of permissions asked, click on **Accept**.
 
@@ -206,7 +206,6 @@ In this task, you will be testing and customizes an Azure OpenAI ChatGPT model w
 
     ![Create an indexer](images/100725(29)%20-%20Copy.png)
 
- 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
 > - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
@@ -218,6 +217,6 @@ In this task, you will be testing and customizes an Azure OpenAI ChatGPT model w
 
 In this lab, you learned how to use Azure AI Foundry to upload your own data and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
 
-## You have successfully completed the lab
+## You have successfully completed the Hands-on lab!
 
 By completing this lab, you gained hands-on experience with Azure AI Foundry to extend ChatGPT with your own data. You configured the system to respond to domain-specific queries, deployed the model as a web application, and validated that all interactions were successfully logged in Cosmos DB. This exercise demonstrated how to build, deploy, and monitor a customized AI-powered solution end-to-end.
