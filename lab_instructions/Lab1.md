@@ -88,7 +88,7 @@ In this task, you will set up the Document Intelligence environment in Azure so 
 
 ## Task 2: Train and Label data
 
-In this step, you will upload 6 training documents to train the model.
+In this task, you will upload 6 training documents to train the model.
 
 1. Click on **Browse for files**.
 
