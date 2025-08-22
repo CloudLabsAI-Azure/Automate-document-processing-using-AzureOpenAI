@@ -45,7 +45,7 @@ Welcome to your Automate Document Processing using Azure AI Document Intelligenc
  
 Once you're ready to dive in, your virtual machine and guide will be right at your fingertips within your web browser.
 
-  ![OpenAI](images/new-get-start-25-9upd.png)
+  ![OpenAI](images/01.png)
  
 ## Exploring Your Lab Resources
  
@@ -69,7 +69,7 @@ Feel free to **Start, Restart,** or **Stop** your virtual machine as needed from
 
 After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
 
-   ![Inline Validation](images/new-get-start-25-5upd.png)
+   ![Inline Validation](images/02.png)
 
 ## Lab Guide Zoom In/Zoom Out
  
@@ -104,6 +104,46 @@ To adjust the zoom level for the environment page, click the **A↕: 100%** icon
 1. If prompted to **Stay signed in?**, click **"No"**.
  
 1. If a **Welcome to Microsoft Azure** pop-up window appears, simply click **Cancel** to skip the tour.
+
+    ![OpenAI](images/03.png)
+
+## Steps to Proceed with MFA Setup if Ask Later Option is Not Visible
+
+> **Note:** Continue with the exercises if MFA is already enabled or the option is unavailable.
+
+1. On the **Action Required** pop-up, click on **Next**.
+
+    ![](./images/04.png)
+
+2. In the Keep your account secure window, the window that appears and the steps that follow are for the Microsoft Authenticator app method. Select **Next**.
+
+    ![](./images/05.png)
+
+3. On the Set up your account page, select **Next**.
+
+   ![](./images/06.png)
+
+4. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
+
+   - Open **Google Play Store** (Android) or **App Store** (iOS).
+   - Search for **Microsoft Authenticator** and tap **Install**.
+   - Open the **Microsoft Authenticator app**, select **Add account**, then choose **Work or school account**.
+
+5. Scan the QR code with your phone. On the phone, inside the Authenticator app, select Work or school account, and scan the QR code. Select **Next**.
+
+   ![](./images/07.png)
+
+6. On the Keep your account secure page. Enter the code, which is shown on the Authenticator app.
+
+   ![](./images/08.png)
+
+7. Once the code is entered. click **Next**
+
+   ![](./images/09.png)
+
+8. Select Done on the Success! page.
+
+   ![](./images/10.png)
 
 ## Support Contact
 The CloudLabs support team is available 24/7, 365 days a year, via email and live chat to ensure seamless assistance at any time. We offer dedicated support channels tailored specifically for both learners and instructors, ensuring that all your needs are promptly and efficiently addressed.
