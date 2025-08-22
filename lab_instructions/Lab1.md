@@ -1,9 +1,9 @@
 # Lab 01: Automate Document Processing using Azure AI Document Intelligence
 
-### Estimated Duration: 160 Minutes
+### Estimated Duration: 120 Minutes
 
 ## Overview
-Processing of forms and documents is part of several scenarios, both in business and in everyday life. Manual data extraction from documents, either in electronic or printed format, is time-consuming, costly, and error-prone. Document processing using Azure involves leveraging Azure services and tools to analyze, extract information from, and manage various types of documents, such as text files, images, PDFs, and more. This process typically includes tasks like text extraction, data extraction, sentiment analysis, language detection, optical character recognition (OCR), and document classification. In this lab, you will learn how to train documents via the Document Intelligence resource. We will be processing the documents via **Azure Function Apps** and <code style="color : red">**Azure AI Document Intelligence**</code>.
+In this lab, you will explore how Azure can streamline document processing by automating data extraction and analysis. Instead of relying on manual entry, which is time-consuming and error-prone, you will use Azure AI Document Intelligence to train models that understand and extract information from documents such as PDFs, images, and forms. You will also integrate Azure Function Apps to process the documents programmatically, enabling scalable and automated document workflows.
 
 ## Architecture Diagram
 
@@ -41,7 +41,7 @@ In this task, you will set up the Document Intelligence environment in Azure so 
 
    ![Alt text](images/102.png)
 
-   >**Note:** If prompted, login using the below Azure credentials.
+   >**Note:** If prompted, log in using the below Azure credentials.
 
 1. On the Sign in tab, you will see the login screen. Enter the following **email/username (1)**, and click on **Next (2)**.
 
@@ -193,6 +193,7 @@ In this task, you will be using Azure Functions to process documents that are up
    - Select a Python interpreter to create a virtual environment → select **Python 3.11.9**.
      
      ![](images/110.png)
+
    - Select a template → choose **Blob trigger** and give the trigger a name or accept the default name. Press **Enter** to confirm.
 
      ![](images/111.png)
@@ -235,7 +236,7 @@ In this task, you will be using Azure Functions to process documents that are up
 
       >**Note:** If prompted, select how you would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
-7. In VS Code, from the **Explorer (1)** in the left pane, navigate to the function's **requirements.txt (2)** file. This file defines the dependencies for your script. Add the following **Python packages (3)** to the file and press ` Ctrl + S ` to save:
+7. In VS Code, from the **Explorer (1)** in the left pane, navigate to the function's **requirements.txt (2)** file. This file defines the dependencies for your script. Add the following **Python packages (3)** to the file and press `Ctrl + S` to save:
    
       ```
       cryptography
@@ -270,7 +271,6 @@ In this task, you will be using Azure Functions to process documents that are up
    - Replace **AzureWebJobsStorage** value with the storage account connection string **<inject key="connectionString" enableCopy="false"/></inject>**
    - Update the configuration by adding **`"AzureWebJobsSecretStorageType": "Files"`** if it isn’t already included.
    - Replace **storageaccount-name** in storageaccount-name_STORAGE with **storage<inject key="Deployment ID" enableCopy="false"/>** and its value with the storage account connection string **<inject key="connectionString" enableCopy="false"/></inject>**
-
 
 10. Open the **function-app.py (1)** file and add the following **import statements (2)** by replacing the existing ones:
 
@@ -329,6 +329,7 @@ In this task, you will be using Azure Functions to process documents that are up
       ![select-models](images/t3p12.png)
    
 13. Next, add code to query the service and get the returned data.
+
       ```
          resp = requests.post(url=post_url, data=source, headers=headers)
       
@@ -372,6 +373,7 @@ In this task, you will be using Azure Functions to process documents that are up
          blob_client = container_client.get_blob_client(blob_name)
          blob_client.upload_blob(data, overwrite=True)
       ```
+
       ![select-models](images/t3p14.png)
 
 15. Please verify to ensure that the final code matches as below.
@@ -479,7 +481,7 @@ In this task, you will be using Azure Functions to process documents that are up
 
 ## Task 4: Run the Function App
 
-In this task, you will run the function in VS Code, It uploads test invoices to the input container in the Azure Storage account to trigger the function. Finally, it verifies the output JSON files in the output container to confirm successful document analysis.
+In this task, you will run the function in VS Code. It uploads test invoices to the input container in the Azure Storage account to trigger the function. Finally, it verifies the output JSON files in the output container to confirm successful document analysis.
 
 1. In Visual Studio Code, click the **ellipsis (**...**)** in the top menu, then expand **Terminal (1)** and select **New Terminal (2)** from the dropdown. 
 
@@ -487,7 +489,7 @@ In this task, you will run the function in VS Code, It uploads test invoices to 
 
 1. Press **Ctrl + F5** to run the function.
 
-   > **Note:** If a debugger error appears, click **Debug Anyway**, then in the next pop-up, choose **Install debugpy Extension**. This will take you to the extension page, click **Install** to set up the **Python Debugger**. 
+   > **Note:** If a debugger error appears, click **Debug Anyway**, then in the next pop-up, choose **Install debugpy Extension**. This will take you to the extension page. Click **Install** to set up the **Python Debugger**. 
 
       ![select-models](images/t4p2(debug).png)
 
@@ -497,7 +499,7 @@ In this task, you will run the function in VS Code, It uploads test invoices to 
 
    > **Note:** Install the Python packages if required.
 
-   > **Note**: If any pop-up occurs, close it.
+   > **Note:** If any pop-up occurs, close it.
 
       ![select-models](images/t4p2.png)
 
@@ -524,7 +526,6 @@ In this task, you will run the function in VS Code, It uploads test invoices to 
 1. Navigate to `C:\LabFiles\Test` **(1)**, select **Invoice_6 and Invoice_7** **(2)**, and click on **Open (3)**.
 
    ![select-models](images/stu6upd.png)
-
    
 1. In the **Upload blob** pop-up window, click on **Upload** button.
 
