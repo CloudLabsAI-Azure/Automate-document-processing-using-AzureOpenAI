@@ -3,14 +3,16 @@
 ### Estimated Duration: 120 Minutes
 
 ## Overview
-In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into the Azure AI Foundry portal, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
-  
+
+In this lab, you will use Azure OpenAI to interact with custom data through the ChatGPT model. You'll upload data via the Azure AI Foundry portal, configure query handling, and deploy the model as a web app. Interactions will be stored in Azure Cosmos DB, providing traceability and persistence. This lab offers hands-on experience in customizing and deploying AI solutions with Azure.
+
 ## Architecture Diagram
 
 ![Name](images/aaaarch%20diagram%202.png)
 
 ## Lab Objectives
-In this lab, you will perform,
+
+You will be able to complete the following tasks:
 
 - Task 1: Navigate to Azure OpenAI Playground
 - Task 2: Upload your own data
@@ -217,6 +219,14 @@ In this task, you will be testing and customizes an Azure OpenAI ChatGPT model w
 
 In this lab, you learned how to use Azure AI Foundry to upload your own data and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
 
-## You have successfully completed the Hands-on lab!
+## Summary
+
+In this lab, you have completed the following:
+
+- Navigated to the Azure OpenAI Playground.
+- Uploaded and integrated your own data.
+- Interacted with the Azure OpenAI ChatGPT model using your uploaded data.
+
+## You have successfully completed the Hands-on lab.
 
 By completing this lab, you gained hands-on experience with Azure AI Foundry to extend ChatGPT with your own data. You configured the system to respond to domain-specific queries, deployed the model as a web application, and validated that all interactions were successfully logged in Cosmos DB. This exercise demonstrated how to build, deploy, and monitor a customized AI-powered solution end-to-end.

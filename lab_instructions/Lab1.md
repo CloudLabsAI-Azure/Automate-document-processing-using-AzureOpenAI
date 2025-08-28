@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this lab, you will explore how Azure can streamline document processing by automating data extraction and analysis. Instead of relying on manual entry, which is time-consuming and error-prone, you will use Azure AI Document Intelligence to train models that understand and extract information from documents such as PDFs, images, and forms. You will also integrate Azure Function Apps to process the documents programmatically, enabling scalable and automated document workflows.
+In this lab, you will explore how Azure simplifies document processing by automating data extraction and analysis. Using Azure AI Document Intelligence, you'll train models to extract information from documents such as PDFs, images, and forms. You'll also integrate Azure Function Apps to enable scalable, programmatic processing of documents.
 
 ## Architecture Diagram
 
@@ -12,7 +12,7 @@ In this lab, you will explore how Azure can streamline document processing by au
 
 ## Lab Objectives
 
-You will be able to complete the following tasks
+You will be able to complete the following tasks:
 
 - Task 1: Creating a Document Intelligence Resource
 - Task 2: Train and Label data
