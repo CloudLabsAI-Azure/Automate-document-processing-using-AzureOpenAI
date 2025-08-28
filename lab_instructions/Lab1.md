@@ -24,7 +24,7 @@ You will be able to complete the following tasks:
 
 In this task, you will set up the Document Intelligence environment in Azure so you can build and train a custom document extraction model. It creates a project in Document Intelligence Studio, connects it to the correct Azure resource, and links a storage location for training data. By the end, you have a fully configured project ready for model training.
 
-1. In the search bar, enter **Document Intelligence (1)** and select **Document Intelligence (2)** from the **Services** list.
+1. In the Azure portal, enter **Document Intelligence (1)** in the top search bar and select **Document Intelligence (2)** from the Services list.
 
    ![Alt text](images/100.png)
 
@@ -32,13 +32,13 @@ In this task, you will set up the Document Intelligence environment in Azure so 
 
    ![Alt text](images/101.png)
 
-1. In the **Overview (1)** pane, scroll down to the **Get Started** tab and click on **Go to Document Intelligence Studio (2)**.
+1. In the **Overview (1)** pane, scroll down to the **Get Started** section and click **Go to Document Intelligence Studio (2)**.
 
    ![Alt text](images2/t1s3.png)
 
    >**Note:** If prompted, sign in using the same credentials you used to log in to Azure.
 
-1. In **Document Intelligence Studio** page, scroll down to **Custom models** and click on **Get started** for **Custom extraction model**. 
+1. On the **Document Intelligence Studio** page, scroll to **Custom models** and click **Get started** under **Custom extraction model**. 
 
    ![Alt text](images2/t1s4.png)
 
@@ -60,14 +60,14 @@ In this task, you will set up the Document Intelligence environment in Azure so 
 
    ![](images/100725(03).png)
 
-1. Enter the following details for **Enter project details** and click on **Continue** **(3)**.
+1. Under **Enter project details**, provide the following details, then click **Continue (3)**.
 
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
      ![Alt text](images/103.png)
 
-1. Enter the following details for **Configure service resource** and click on **Continue** **(5)**.
+1. Under **Configure service resource**, provide the following details, then click **Continue (5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
@@ -85,19 +85,19 @@ In this task, you will set up the Document Intelligence environment in Azure so 
    
         ![storage account](images/doc1.png)
 
-1. Review the configuration and select **Create project**.
+1. Review the project configuration details and click **Create project**.
 
      ![Alt text](images2/t1s11.png)
 
 ## Task 2: Train and Label data
 
-In this task, you will upload 6 training documents to train the model.
+In this task, you will upload and label training documents to create a custom model, then train and test the model using labeled invoice data.
 
-1. Click on **Browse for files**.
+1. In the Label data section, click **Browse for files** to upload your training documents.
 
      ![Browse for files](images/106.png)
 
-1. On the file explorer, enter the following path `C:\LabFiles\Train`**(1)**, press **Enter**, select all train PDF files present inside **Train** folder, i.e, **Invoice_1 to Invoice_5** **(2)**, and click on **Open (3)**.
+1. In the file explorer, enter the path `C:\LabFiles\Train` **(1)** and press **Enter**, select all **PDF files (2)** (Invoice_1 to Invoice_5) in the folder, then click **Open (3)**.
 
    ![Alt text](images/t2p2(1).png)
 
@@ -105,7 +105,7 @@ In this task, you will upload 6 training documents to train the model.
 
      ![train-upload](images/107.png)
 
-1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization** **(3)** and press **Enter**.
+1. Click **+ Add a field (1)**, select **Field (2)**, enter **Organization (3)** as the field name, and press **Enter**.
 
      ![run-now](images2/t2s4.png)
 
@@ -113,13 +113,15 @@ In this task, you will upload 6 training documents to train the model.
 
 1. Follow the steps below:
 
-   - Ensure you have selected **Invoice_1**
+   - Select **Invoice_1.pdf (1)** from the left pane.
 
-   - Select **Contoso (1)** as shown in figure.
+   - Highlight **Contoso (2)** in the document.
 
-   - It will prompt you to select **Organization (2)** You will observe green tick on Invoice_1.pdf.
+   - From the prompt, choose **Organization (3)** to label the field. 
+   
+   - A green checkmark will appear next to **Invoice_1.pdf** indicating successful labeling.
 
-     ![train-module](images/doc15.png)
+     ![train-module](images2/t2s5.png)
 
 1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Address** **(3)** and hit **enter**.
 
@@ -127,15 +129,17 @@ In this task, you will upload 6 training documents to train the model.
 
    ![Alt text](images/imag1.png)
 
-1. Label the new field added by **selecting the address (2)** as shown in the image below, and do this for all the **five documents**.
+1. Highlight the **address (1)** text and assign it to the **Address (2)** field.
 
    ![train-module](images/doc16.png)
-   
+
+1. Repeat **step 5** and **step 7** for all five documents to ensure all fields are properly labeled.
+
 1. Once all the documents are labeled, click on **Train** in the top right corner.
 
      ![Train](images/doc17.png)
 
-1. In the **Train a new model** window, specify the Model ID as **model (1)**, Model Description as **custom model (2)** , from the drop-down select **Template (3)** as Build Mode and click on **Train (4)**.
+1. In the **Train a new model** window, enter **model (1)** as Model ID, **custom model (2)** as Model Description (2), choose **Template (3)** as Build Mode, and click **Train (4)**.
 
      ![Name](images2/t2s9.png)
 
@@ -143,7 +147,7 @@ In this task, you will upload 6 training documents to train the model.
 
    ![Name](images/doc32.png)
    
-1. Wait till the model status shows **Succeeded**. Once the status has succeeded, Select the model **model**  **(1)** you created and choose **Test** **(2)**.
+1. Wait until the model status shows **Succeeded**. Once it does, select the model **model (1)** you created and click on **Test (2)**.
 
      ![select-models](images/doc19.png)
 
@@ -151,11 +155,11 @@ In this task, you will upload 6 training documents to train the model.
 
      ![select-models](images/test-upload.png)
 
-1. On the file explorer, enter the following `C:\LabFiles\Test` **(1)** path, hit **Enter**, select all test PDF files **Invoice_6 and Invoice_7** **(2)**, and click on **Open** **(3)**.
+1. On the file explorer, enter the path `C:\LabFiles\Test` **(1)**, press **Enter**, select the test PDF files **Invoice_6 and Invoice_7 (2)**, and click **Open (3)**.
 
       ![select-models](images/stu6upd.png)
 
-1. Once uploaded, select one test model and click on **Run analysis**. Now you can see on the right-hand side that the model was able to detect the field **Organization** and **Address** we created in the last step, along with its confidence score.
+1. Once uploaded, select a test document and click **Run analysis**. On the right-hand side, you will see the detected fields **Organization** and **Address** along with their confidence scores.
 
    ![Name](images/stu7-upd.png)
    
@@ -579,9 +583,9 @@ In this task, you will run the function in VS Code. It uploads test invoices to 
 
 ## Task 5: Working with AI Search
 
-In this task, you will connect Azure AI Search to the output container in Blob Storage to index analyzed document data. It configures the index and indexer so fields like Organization and Address are searchable and facetable. Finally, it verifies the indexed data by running a search and confirming the trained fields appear correctly.
+In this task, you will connect Azure AI Search to Blob Storage to index analyzed document data. You will configure the search index and indexer to make key fields like Organization and Address searchable and facetable, then verify the indexed data by running search queries.
 
-1. In the Azure Portal, type **AI Search** in the search bar and choose it from the **Services** section.
+1. In the Azure portal, enter **AI Search (1)** in the top search bar and select **AI Search (2)** from the Services list.
 
       ![train-module](images/P1T5S2.png)
    
@@ -589,17 +593,17 @@ In this task, you will connect Azure AI Search to the output container in Blob S
 
       ![train-module](images/P1T5S22.png)
    
-1. In the Overview page of **search-<inject key="Deployment ID" enableCopy="false"/>**, click on **Import data**.
+1. In the Overview page of **search-<inject key="Deployment ID" enableCopy="false"/>**, click on **Import data** from the top menu bar.
 
       ![train-module](images/P1T5S3.png)
 
 1. Provide the following values:
 
-      - Data Source: **Azure Blob Storage (1)**
-      - Data Source Name: **data-source-<inject key="Deployment ID" enableCopy="false"/> (2)**
-      - Parsing Mode: **JSON (3)**
-      - Subscription: **Select the default subscription (4)**
-      - Connection string: Click on **Choose an existing Connection (5)**
+      - Data Source: **Azure Blob Storage (1)**.
+      - Data Source Name: **data-source-<inject key="Deployment ID" enableCopy="false"/> (2)**.
+      - Parsing Mode: **JSON (3)**.
+      - Subscription: Select the **Default subscription (4)**.
+      - Connection string: Click on **Choose an existing connection (5)**.
 
         ![train-module](images2/t5s4a.png)
 
