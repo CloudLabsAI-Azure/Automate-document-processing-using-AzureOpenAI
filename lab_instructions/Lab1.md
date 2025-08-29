@@ -504,21 +504,21 @@ In this task, you will be using Azure Functions to process documents that are up
 
 ## Task 4: Run the Function App
 
-In this task, you will run the function in VS Code. It uploads test invoices to the input container in the Azure Storage account to trigger the function. Finally, it verifies the output JSON files in the output container to confirm successful document analysis.
+In this task, you will run the function in VS Code, which uploads test invoices to the input container of the Azure Storage account to trigger the function. Afterwards, verify the output JSON files in the output container to confirm successful document analysis.
 
-1. In Visual Studio Code, click the **ellipsis (**...**)** in the top menu, then expand **Terminal (1)** and select **New Terminal (2)** from the dropdown. 
+1. In Visual Studio Code, click the **ellipsis (...) icon (1)** in the top menu, expand **Terminal (2)**, and select **New Terminal (3)** from the dropdown.
 
-   ![select-models](images/t4p1.png)
+   ![select-models](images2/t4s1.png)
 
-1. Press **Ctrl + F5** to run the function.
+1. Press **Ctrl + F5** to execute the function.
 
-   > **Note:** If a debugger error appears, click **Debug Anyway**, then in the next pop-up, choose **Install debugpy Extension**. This will take you to the extension page. Click **Install** to set up the **Python Debugger**. 
+   > **Note:** If a error appears, follow the steps below:
 
-   - If a debugger error appears, click **Debug Anyway**
+   - Click on **Debug Anyway**
 
       ![select-models](images/t4p2(debug).png)
 
-   - then in the next pop-up, choose **Install debugpy Extension**. This will take you to the extension page
+   - Then in the next pop-up, choose **Install debugpy Extension**. This will take you to the extension page.
 
       ![select-models](images/t4p2(debug)2.png)
 
@@ -526,15 +526,15 @@ In this task, you will run the function in VS Code. It uploads test invoices to 
 
       ![select-models](images/pythonextinst.png)
 
-   > **Note:** Install the Python packages if required.
+   - Press **Ctrl + F5** one more time to execute the function.
+
+1. Once the function runs successfully, navigate back to the **Azure Portal** to trigger it by adding an input file.
+
+   ![select-models](images2/t4s3.png)
 
    > **Note:** If any pop-up occurs, close it.
 
       ![select-models](images/t4p2.png)
-
-1. Once the function has been run successfully, navigate back to **Azure Portal** when it triggers to add an input file as shown below.
-
-   ![select-models](images2/t4s3.png)
 
 1. In the search bar, search and select **Storage Account (1)** under **Services (2)**.
 
@@ -544,7 +544,7 @@ In this task, you will run the function in VS Code. It uploads test invoices to 
 
    ![select-models](images/t4p5.png)
 
-1. In the storage account **storage<inject key="Deployment ID" enableCopy="false"/>**, under the **Data Storage (1)** tab, navigate to **Containers (2)** and select **input (3)** container.
+1. From the left navigation pane, expand **Data storage (1)**, select **Containers (2)**, then open the **input (3)** container.
 
    ![select-models](images/t4p6.png)
    
@@ -552,7 +552,7 @@ In this task, you will run the function in VS Code. It uploads test invoices to 
 
    ![select-models](images/t4p7.png)
 
-1. Navigate to `C:\LabFiles\Test` **(1)**, select **Invoice_6 and Invoice_7** **(2)**, and click on **Open (3)**.
+1. Navigate to `C:\LabFiles\Test` **(1)**, select **Invoice_6 and Invoice_7 (2)**, then click **Open (3)** to upload the files.
 
    ![select-models](images/stu6upd.png)
    
@@ -562,15 +562,15 @@ In this task, you will run the function in VS Code. It uploads test invoices to 
 
 1. Navigate back to the **VS code** and verify the **logs** in the **Terminal**.
 
-1. Once the function app is triggered successfully, navigate back to the **storage account**.
+1. Once the function app is triggered successfully, return to the **storage account** in the Azure portal.
 
    ![select-models](images2/t4s11.png)
 
-1. In the storage account, go to the **Data Storage (1)** section, click on **Containers (2)**, and then choose the **Output (3)** container.
-   
+1. From the left navigation pane, expand **Data storage (1)**, select **Containers (2)**, then open the **output (3)** container
+
    ![select-models](images/t4p12.png)
 
-1. In the **Output** container, click on the **input** folder and verify the **json** analysing the document has been generated successfully.
+1. In the **output** container, click on the **input** folder and verify the **json** analysing the document has been generated successfully.
 
    ![train-module](images/t4p13.png)
 
@@ -607,7 +607,7 @@ In this task, you will connect Azure AI Search to Blob Storage to index analyzed
 
         ![train-module](images2/t5s4a.png)
 
-      - Then Select **storage<inject key="Deployment ID" enableCopy="false"/> (6)** and then select **output (7)** container and click on **Select(8)**.
+      - From the left pane, select **storage<inject key="Deployment ID" enableCopy="false"/> (6)**, then select **output (7)** container, and click **Select (8)** at the bottom.
 
         ![train-module](images2/t5s4c.png)
 
@@ -617,29 +617,29 @@ In this task, you will connect Azure AI Search to Blob Storage to index analyzed
      
         ![train-module](images2/t5s4d.png)
 
-1. On the **Add cognitive skills (Optional)**, click on **Skip to : Customize target index**.
+1. On the **Add cognitive skills (Optional)** page, click **Skip to: Customize target index** at the bottom.
 
       ![](images2/t5s5.png)
 
-1. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
+1. On the **Customize target index** page, set the Index name to **azureblob-index (1)**, and ensure all fields are marked as **Retrievable (2)** and **Searchable (3)**.
 
       ![](images/retrievable-searchable.png)
 
-1. Expand the **analyzeResult** **(1)** > **documents** **(2)** > **fields** **(3)** , expand **Organization** and **Address** and make the two fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer (8)**.
+1. On the **Import data** page, expand **analyzeResult (1)** > **documents (2)** > **fields (3)**, then expand **Organization (4)** and check the Facetable boxes for **type, valueString, and content (5)**; do the same for **Address (6)** fields **type, valueString, and content (7)**, then click **Next: Create an indexer (8)**.
 
       ![](images2/t5s6.png)
 
       ![](images2/t5s7a.png)
       
-1. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+1. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)** at the bottom.
    
       ![Create an indexer](images/create-an-indexer.png)
 
-1. Under the **Search management (1)** tab, select **Indexes (2)** and then click on **azureblob-index (3)**.
+1. From the left navigation pane, expand **Search management (1)**, select **Indexes (2)**, then click **azureblob-index (3)**.
 
       ![Create an indexer](images/t5p9.png)
 
-1. In the **azureblob-index**, click on **Search** button.
+1. In the **azureblob-index**, click on the **Search** button next to the search bar.
 
       ![Create an indexer](images2/t5s10.png)
 
@@ -647,7 +647,7 @@ In this task, you will connect Azure AI Search to Blob Storage to index analyzed
 
       ![Create an indexer](images2/t5s11.png)
 
-1. Search for `fields` and verify the fields **Organization and Address**, given while training, the document has been analysed.
+1. Search for `fields` in the document and verify that the **Organization** and **Address** fields, created during training, have been correctly analyzed.
 
       ![Create an indexer](images2/t5s12.png)
 
