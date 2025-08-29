@@ -272,8 +272,8 @@ In this task, you will be using Azure Functions to process documents that are up
 
 1. Open the **local.settings.json (1)** file and replace its contents with the **configuration (2)** provided below, and press `Ctrl+S` to save.
 
-      ```json
-         {
+      ```
+      {
         "IsEncrypted": false,
         "Values": {
           "AzureWebJobsStorage": "<inject key="connectionString" enableCopy="false"/></inject>",

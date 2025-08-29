@@ -120,12 +120,11 @@ In this task, you will upload custom data to Azure AI Foundry and interact with 
 
 1. Customize your bot's responses by updating the **message (1)** under **Give the model instructions and context**, then click **Apply changes (2)**.
 
-
     ```
     Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information 
     ```
 
-   ![assistant-setup-system-message](images2/2/t3s3a.png)
+      ![assistant-setup-system-message](images2/2/t3s3a.png)
 
 1. On **Update system message?** pop-up, click on **Continue**.
 
