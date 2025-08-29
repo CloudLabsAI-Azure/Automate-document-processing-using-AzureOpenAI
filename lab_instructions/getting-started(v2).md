@@ -50,6 +50,10 @@ Once you're ready to dive in, your virtual machine and guide will be right at yo
 
   ![OpenAI](images2/access.png)
  
+## Virtual Machine & Lab Guide
+
+Your virtual machine is your workhorse throughout the workshop. The lab guide is your roadmap to success.
+
 ## Exploring Your Lab Resources
  
 To get a better understanding of your lab resources and credentials, navigate to the **Environment** tab.
@@ -68,17 +72,17 @@ Feel free to **Start, Restart,** or **Stop** your virtual machine as needed from
 
   ![OpenAI](images2/res.png)
 
-## Lab Validation
-
-After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
-
-   ![Inline Validation](images2/valid.png)
-
 ## Lab Guide Zoom In/Zoom Out
  
 To adjust the zoom level for the environment page, click the **A↕: 100%** icon located next to the timer in the lab environment.
 
   ![OpenAI](images2/zoom2.png)
+
+## Lab Validation
+
+After completing the task, hit the **Validate** button under the Validation tab integrated within your lab guide. If you receive a success message, you can proceed to the next task; if not, carefully read the error message and retry the step, following the instructions in the lab guide.
+
+   ![Inline Validation](images2/valid.png)
 
 ## Let's Get Started with Azure Portal
  
