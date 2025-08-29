@@ -552,7 +552,7 @@ In this task, you will run the function in VS Code, which uploads test invoices 
 
 1. Navigate to `C:\LabFiles\Test` **(1)**, select **Invoice_6 and Invoice_7 (2)**, then click **Open (3)** to upload the files.
 
-   ![select-models](images/stu6upd.png)
+   ![select-models](images2/t4s8.png)
    
 1. In the **Upload blob** pop-up window, click on **Upload** button.
 
