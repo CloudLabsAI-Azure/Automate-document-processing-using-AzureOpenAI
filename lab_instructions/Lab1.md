@@ -3,7 +3,8 @@
 ### Estimated Duration: 120 Minutes
 
 ## Overview
-In this lab, you will explore how Azure can streamline document processing by automating data extraction and analysis. Instead of relying on manual entry, which is time-consuming and error-prone, you will use Azure AI Document Intelligence to train models that understand and extract information from documents such as PDFs, images, and forms. You will also integrate Azure Function Apps to process the documents programmatically, enabling scalable and automated document workflows.
+
+In this lab, you will explore how Azure simplifies document processing by automating data extraction and analysis. Using Azure AI Document Intelligence, you'll train models to extract information from documents such as PDFs, images, and forms. You'll also integrate Azure Function Apps to enable scalable, programmatic processing of documents.
 
 ## Architecture Diagram
 
@@ -11,7 +12,7 @@ In this lab, you will explore how Azure can streamline document processing by au
 
 ## Lab Objectives
 
-In this lab, you will perform:
+You will be able to complete the following tasks:
 
 - Task 1: Creating a Document Intelligence Resource
 - Task 2: Train and Label data
@@ -23,7 +24,7 @@ In this lab, you will perform:
 
 In this task, you will set up the Document Intelligence environment in Azure so you can build and train a custom document extraction model. It creates a project in Document Intelligence Studio, connects it to the correct Azure resource, and links a storage location for training data. By the end, you have a fully configured project ready for model training.
 
-1. In the search bar, enter **Document Intelligence (1)** and select **Document Intelligence (2)** from the **Services** list.
+1. In the Azure portal, enter **Document Intelligence (1)** in the top search bar and select **Document Intelligence (2)** from the Services list.
 
    ![Alt text](images/100.png)
 
@@ -31,47 +32,49 @@ In this task, you will set up the Document Intelligence environment in Azure so 
 
    ![Alt text](images/101.png)
 
-1. In the **Overview (1)** pane, scroll down to the **Get Started** tab and click on **Go to Document Intelligence Studio (2)**.
+1. In the **Overview (1)** pane, scroll down to the **Get Started** section and click **Go to Document Intelligence Studio (2)**.
 
-   ![Alt text](images/100725(02).png)
+   ![Alt text](images2/t1s3.png)
 
    >**Note:** If prompted, sign in using the same credentials you used to log in to Azure.
 
-1. In **Document Intelligence Studio** page, scroll down to **Custom models** and click on **Get started** for **Custom extraction model**. 
+1. On the **Document Intelligence Studio** page, scroll to **Custom models** and click **Get started** under **Custom extraction model**. 
 
-   ![Alt text](images/102.png)
+   ![Alt text](images2/t1s4.png)
 
    >**Note:** If prompted, log in using the below Azure credentials.
 
-1. On the Sign in tab, you will see the login screen. Enter the following **email/username (1)**, and click on **Next (2)**.
+1. On the **Sign in** tab, you will see the login screen. Enter the following email/username, and click on **Next (2)**. 
 
-   **Email/Username:** <inject key="AzureAdUserEmail"></inject>
+   * **Email/Username:** <inject key="AzureAdUserEmail"></inject> **(1)**
+   
+      ![OpenAI](images2/signin.png)
+     
+1. Now enter the following password and click on **Sign in (2)**.
+   
+   * **Password:** <inject key="AzureAdUserPassword"></inject> **(1)**
+   
+      ![OpenAI](images2/pass.png)
 
-   ![](images/100725(08).png)
-
-1. Now enter the following password and click on **Sign in**.
-
-    **Password:** <inject key="AzureAdUserPassword"></inject>
-
-   ![](images/100725(09).png)
-
-1. Under **My Projects** blade, click on **+ Create a project**. Enter the following details and click on **Continue**  **(3)**.
+1. Under **My Projects** blade, click on **+ Create a project**.
 
    ![](images/100725(03).png)
-    
+
+1. Under **Enter project details**, provide the following details, then click **Continue (3)**.
+
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
      ![Alt text](images/103.png)
 
-1. Enter the following details for **Configure service resource** and click on **Continue** **(5)**.
+1. Under **Configure service resource**, provide the following details, then click **Continue (5)**.
 
    - Subscription: Select your **Default Subscription** **(1)**.
    - Resource group: **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(2)**.
    - Document Intelligence or Cognitive Service Resource: Select **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
    - API version: Select **2024-11-30 (4.0 General Availability)** **(4)**.
 
-     ![configuring service resource](images/104.png)
+     ![configuring service resource](images2/t1s9.png)
 
 1. Enter the following details for **Connect training data source** and click on **Continue** **(5)**.
 
@@ -82,19 +85,19 @@ In this task, you will set up the Document Intelligence environment in Azure so 
    
         ![storage account](images/doc1.png)
 
-1. Review the configuration and select **Create project**.
+1. Review the project configuration details and click **Create project**.
 
-     ![Alt text](images/105.png)
+     ![Alt text](images2/t1s11.png)
 
 ## Task 2: Train and Label data
 
-In this task, you will upload 6 training documents to train the model.
+In this task, you will upload and label training documents to create a custom model, then train and test the model using labeled invoice data.
 
-1. Click on **Browse for files**.
+1. In the Label data section, click **Browse for files** to upload your training documents.
 
      ![Browse for files](images/106.png)
 
-1. On the file explorer, enter the following path `C:\LabFiles\Train`**(1)**, press **Enter**, select all train PDF files present inside **Train** folder, i.e, **Invoice_1 to Invoice_5** **(2)**, and click on **Open (3)**.
+1. In the file explorer, enter the path `C:\LabFiles\Train` **(1)** and press **Enter**, select all **PDF files (2)** (Invoice_1 to Invoice_5) in the folder, then click **Open (3)**.
 
    ![Alt text](images/t2p2(1).png)
 
@@ -102,45 +105,49 @@ In this task, you will upload 6 training documents to train the model.
 
      ![train-upload](images/107.png)
 
-1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Organization** **(3)** and press **Enter**.
+1. Click **+ Add a field (1)**, select **Field (2)**, enter **Organization (3)** as the field name, and press **Enter**.
 
-     ![run-now](images/doc3.png)
+     ![run-now](images2/t2s4.png)
 
      ![run-now](images/doc14.png)
 
 1. Follow the steps below:
 
-   - Ensure you have selected **Invoice_1**
+   - Select **Invoice_1.pdf (1)** from the left pane.
 
-   - Select **Contoso (1)** as shown in figure.
+   - Highlight **Contoso (2)** in the document.
 
-   - It will prompt you to select **Organization (2)** You will observe green tick on Invoice_1.pdf.
+   - From the prompt, choose **Organization (3)** to label the field. 
+   
+   - A green checkmark will appear next to **Invoice_1.pdf** indicating successful labeling.
 
-     ![train-module](images/doc15.png)
+     ![train-module](images2/t2s5.png)
 
 1. Click on **+ Add a field** **(1)**, select **Field** **(2)**, enter the field name as **Address** **(3)** and hit **enter**.
 
-   ![Alt text](images/doc3.png)
+     ![run-now](images2/t2s4.png)
 
    ![Alt text](images/imag1.png)
 
-1. Label the new field added by **selecting the address (2)** as shown in the image below, and do this for all the **five documents**.
+1. Highlight the **address (1)** text and assign it to the **Address (2)** field.
 
    ![train-module](images/doc16.png)
-   
+
+1. Repeat **step 5** and **step 7** for all five documents to ensure all fields are properly labeled.
+
 1. Once all the documents are labeled, click on **Train** in the top right corner.
 
      ![Train](images/doc17.png)
 
-1. In the **Train a new model** window, specify the Model ID as **model (1)**, Model Description as **custom model (2)** , from the drop-down select **Template (3)** as Build Mode and click on **Train (4)**.
+1. In the **Train a new model** window, enter **model (1)** as Model ID, **custom model (2)** as Model Description (2), choose **Template (3)** as Build Mode, and click **Train (4)**.
 
-     ![Name](images/doc68.png)
+     ![Name](images2/t2s9.png)
 
 1. In **Training in process** pop-up window, click on **Go to Models**. 
 
    ![Name](images/doc32.png)
    
-1. Wait till the model status shows **Succeeded**. Once the status has succeeded, Select the model **model**  **(1)** you created and choose **Test** **(2)**.
+1. Wait until the model status shows **Succeeded**. Once it does, select the model **model (1)** you created and click on **Test (2)**.
 
      ![select-models](images/doc19.png)
 
@@ -148,11 +155,11 @@ In this task, you will upload 6 training documents to train the model.
 
      ![select-models](images/test-upload.png)
 
-1. On the file explorer, enter the following `C:\LabFiles\Test` **(1)** path, hit **Enter**, select all test PDF files **Invoice6 and Invoice7** **(2)**, and click on **Open** **(3)**.
+1. On the file explorer, enter the path `C:\LabFiles\Test` **(1)**, press **Enter**, select the test PDF files **Invoice_6 and Invoice_7 (2)**, and click **Open (3)**.
 
       ![select-models](images/stu6upd.png)
 
-1. Once uploaded, select one test model and click on **Run analysis**. Now you can see on the right-hand side that the model was able to detect the field **Organization** and **Address** we created in the last step, along with its confidence score.
+1. Once uploaded, select a test document and click **Run analysis**. On the right-hand side, you will see the detected fields **Organization** and **Address** along with their confidence scores.
 
    ![Name](images/stu7-upd.png)
    
@@ -160,27 +167,27 @@ In this task, you will upload 6 training documents to train the model.
 
 In this task, you will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
    
-1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it. 
+1. Open **Visual Studio Code** on the **Lab VM** by double-clicking the icon on the desktop.
 
    ![select-models](images/vs-code-1.png)
 
-2. Once inside VS-Code, click on **File -> Open Folder**.
+1. In Visual Studio Code, navigate to the **File (1)** from the top menu bar and select **Open Folder... (2)**.
 
-   ![select-models](images/vs-code-2.png)
+   ![select-models](images2/t3s2.png)
 
-3. Now, navigate to `C:/Labfiles` **(1)** and select **function-app (2)** folder and then click on **Select Folder (3)**.
+1. Now, navigate to `C:/Labfiles` **(1)** and select **function-app (2)** folder and then click on **Select Folder (3)**.
 
-   ![select-models](images/doc8upd.png)
+   ![select-models](images2/t3s3.png)
 
-4. On the **Do you trust the authors of the files in this folder?** tab, select **Yes, I trust the authors**.
+1. On the **Do you trust the authors of the files in this folder?** tab, select **Yes, I trust the authors**.
 
-      ![select-models](images/yesauth.png)
+   ![select-models](images2/t3s4.png)
 
-5. Select the **Azure symbol (1)** from the left pane, and click on **function-app icon (2)** and click **Create Function... (3)**
+1. Select the **Azure symbol (1)** from the left pane, and click on **function-app icon (2)** and click **Create Function... (3)**
 
    ![select-models](images/t3p5.png)
 
-6. You'll be prompted to configure several settings:
+1. You'll be prompted to configure several settings:
 
    - Select the folder → choose **function-app**.
 
@@ -188,13 +195,13 @@ In this task, you will be using Azure Functions to process documents that are up
      
    - Select a language → choose **Python**.
 
-     ![](images/109.png)
+     ![](images2/t3s6b.png)
 
-   - Select a Python interpreter to create a virtual environment → select **Python 3.11.9**.
+   - Select a Python interpreter to create a virtual environment → select **python 3.11.9**.
      
      ![](images/110.png)
 
-   - Select a template → choose **Blob trigger** and give the trigger a name or accept the default name. Press **Enter** to confirm.
+   - Select a template for your project's first function → choose **Blob trigger** and give the trigger a name or accept the default name. Press **Enter** to confirm.
 
      ![](images/111.png)
 
@@ -202,29 +209,31 @@ In this task, you will be using Azure Functions to process documents that are up
 
    - The path within your storage container that the trigger will monitor → type **input** and press **Enter**.
 
-     ![](images/113.png)
+     ![](images2/t3s6a.png)
 
-   - Select setting → choose **+ Create new local app setting** from the dropdown menu.
+   - Select the app setting → choose **+ Create new local app setting** from the dropdown menu.
 
      ![](images/114.png)
 
-   - Click on **Sign in to Azure** and click on **Allow** if prompted. This will navigate to the Azure Portal and select your Azure Account.
+   - Click on **Sign in to Azure**.
 
      ![](images/115.png)
 
+   - Click on **Allow** if prompted. This will navigate to the Azure Portal and select your Azure Account.
+
      ![](images/100725(18).png)
 
-     - Email: <inject key="AzureAdUserEmail" enableCopy="true"></inject>
+     - Enter Email: <inject key="AzureAdUserEmail" enableCopy="true"></inject> **(1)** and click **Next (2)**.
 
-      - Password: <inject key="AzureAdUserPassword"></inject>
- 
-         ![](images/100725(19).png)
+         ![](images2/signin.png)
 
-         ![](images/100725(20).png)
+     - Enter Password: <inject key="AzureAdUserPassword"></inject> **(1)** and click **Sign in (2)**.
 
-      - In the pop-up window click on **No, this app only**.
+         ![](images2/pass.png)
 
-         ![select-models](images/pop-upupd.png)
+     - In the pop-up window, select **No, this app only**.
+
+         ![select-models](images2/t3s6c.png)
 
          >**Note:** If prompted, select subscription → choose the **Default Subscription**.
 
@@ -232,11 +241,11 @@ In this task, you will be using Azure Functions to process documents that are up
 
      ![](images/116.png)
 
-     ![](images/117.png)
+     ![](images2/t3s6d.png)
 
       >**Note:** If prompted, select how you would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
-7. In VS Code, from the **Explorer (1)** in the left pane, navigate to the function's **requirements.txt (2)** file. This file defines the dependencies for your script. Add the following **Python packages (3)** to the file and press `Ctrl + S` to save:
+1. In VS Code, from the **Explorer (1)** in the left pane, navigate to the **requirements.txt (2)** file. This file defines the dependencies for your script. Add the following **Python packages (3)** to the file and press `Ctrl + S` to save:
    
       ```
       cryptography
@@ -247,32 +256,38 @@ In this task, you will be using Azure Functions to process documents that are up
       pandas
       numpy
       ```
-      ![select-models](images/t3p7.png)
+      ![select-models](images2/t3s7.png)
 
-8. From the **Terminal**, please run `pip install -r requirements.txt` to install all the requirements.
+1. Click the **ellipsis (⋯) (1)** from the top menu bar, go to **Terminal (2)**, and select **New Terminal (3)**.
+
+      ![select-models](images2/t3s8.png)
+
+1. Run the command below and press **Enter** to install all the requirements.
+
+    ```
+   pip install -r requirements.txt
+    ```
 
       ![select-models](images/t3p8.png)
 
-9. Open the **local.settings.json** file and replace its contents with the configuration provided below, and press `Ctrl+S` to save.
+1. Open the **local.settings.json (1)** file and replace its contents with the **configuration (2)** provided below, and press `Ctrl+S` to save.
 
       ```json
          {
         "IsEncrypted": false,
         "Values": {
-          "AzureWebJobsStorage": "<Connection-string>",
+          "AzureWebJobsStorage": "<inject key="connectionString" enableCopy="false"/></inject>",
           "FUNCTIONS_WORKER_RUNTIME": "python",
           "AzureWebJobsFeatureFlags": "EnableWorkerIndexing",
-          "storageaccount-name_STORAGE": "<inject key="connectionString" enableCopy="false"/></inject>",
+          "storage<inject key="Deployment ID" enableCopy="false"/>_STORAGE": "<inject key="connectionString" enableCopy="false"/></inject>",
           "AzureWebJobsSecretStorageType": "Files"
         }
       }
       ```
 
-   - Replace **AzureWebJobsStorage** value with the storage account connection string **<inject key="connectionString" enableCopy="false"/></inject>**
-   - Update the configuration by adding **`"AzureWebJobsSecretStorageType": "Files"`** if it isn’t already included.
-   - Replace **storageaccount-name** in storageaccount-name_STORAGE with **storage<inject key="Deployment ID" enableCopy="false"/>** and its value with the storage account connection string **<inject key="connectionString" enableCopy="false"/></inject>**
+   ![select-models](images2/t3s10a.png)
 
-10. Open the **function-app.py (1)** file and add the following **import statements (2)** by replacing the existing ones:
+1. Open the **function-app.py (1)** file and add the following **import statements (2)** by replacing the existing ones:
 
       ```
       import logging
@@ -290,9 +305,9 @@ In this task, you will be using Azure Functions to process documents that are up
 
       ![select-models](images/change_code-11upd.png)
    
-11.  Update the main function by copying and pasting the code provided below, then replace the **path** and **connection** placeholders with the specified values.
+1. Replace the main function by copying and pasting the code provided below, then replace the **path (1)** and **connection (2)** placeholders with the specified values.
 
-     ```
+      ```
       app = func.FunctionApp()
    
       @app.blob_trigger(arg_name="myblob", path="<container-name>", connection="<storage-account-name>_STORAGE")
@@ -302,15 +317,18 @@ In this task, you will be using Azure Functions to process documents that are up
                       f"Name: {myblob.name}" 
                       f"Blob Size: {myblob.length} bytes")
       ``` 
-      - path = **input**
+      - path = **input** 
       - connection = **storage<inject key="Deployment ID" enableCopy="false"/>_STORAGE**
 
-         ![select-models](images/t3p11.png)
+         ![select-models](images2/t3s11a.png)
 
-12. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document.
-   - Replace **Your Document Intelligence Endpoint** : **<inject key="documentIntelligenceEndpoint"></inject>**.
-   - Replace **Your Document Intelligence Key** : **<inject key="documentIntelligenceKey"></inject>**.
-   - Replace `<model-name>` with **model**.
+1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document.
+
+   - Replace **Your Document Intelligence Endpoint** : **<inject key="documentIntelligenceEndpoint"></inject>** **(1)**
+
+   - Replace **Your Document Intelligence Key** : **<inject key="documentIntelligenceKey"></inject>** **(2)**.
+
+   - Replace `<model-name>` with **model (3)**.
 
       ```
          # This is the call to the Document Intelligence endpoint
@@ -326,9 +344,9 @@ In this task, you will be using Azure Functions to process documents that are up
             }
       ```
 
-      ![select-models](images/t3p12.png)
+      ![select-models](images2/t3s13a.png)
    
-13. Next, add code to query the service and get the returned data.
+1. Next, add code to query the service and get the returned data.
 
       ```
          resp = requests.post(url=post_url, data=source, headers=headers)
@@ -356,9 +374,11 @@ In this task, you will be using Azure Functions to process documents that are up
          results = resp_json
       ```
 
-14. Add the following code to connect to the Azure Storage output container.
+      ![select-models](images2/t3s14.png)
+
+1. Add the following code to connect to the Azure Storage output container.
    
-    - Replace {storage-connection-string} : **<inject key="connectionString" enableCopy="false"/></inject>**
+    - Replace **{storage-connection-string}** : **<inject key="connectionString" enableCopy="false"/></inject>**
 
       ```
          # This is the connection to the blob storage, with the Azure Python SDK
@@ -374,9 +394,9 @@ In this task, you will be using Azure Functions to process documents that are up
          blob_client.upload_blob(data, overwrite=True)
       ```
 
-      ![select-models](images/t3p14.png)
+      ![select-models](images2/t3s15.png)
 
-15. Please verify to ensure that the final code matches as below.
+1. Please verify to ensure that the final code matches as below.
 
       ```
       import logging
@@ -397,8 +417,9 @@ In this task, you will be using Azure Functions to process documents that are up
       
       def blob_trigger(myblob: func.InputStream):
          logging.info(f"Python blob trigger function processed blob"
-                     f"Name: {myblob.name}"
-                     f"Blob Size: {myblob.length} bytes")
+                      f"Name: {myblob.name}"
+                      f"Blob Size: {myblob.length} bytes"
+         )
       
          # This is the call to the Document Intelligence endpoint
          endpoint = "<document-intelligence-endpoint>"
@@ -450,7 +471,7 @@ In this task, you will be using Azure Functions to process documents that are up
       ```
       > **Note:** Please make sure the indentation of the code remains unchanged and proper to run the code successfully
 
-16. Under `.vscode` **(1)** folder, open the **launch.json (2)** and replace the entire code with the code given below and press `Ctrl+S` to save:
+1. Under **.vscode (1)** folder, open the **launch.json (2)** and replace the entire code with the code given below and press **Ctrl+S** to save:
 
       ```
       {
@@ -477,35 +498,41 @@ In this task, you will be using Azure Functions to process documents that are up
       }
       ```
 
-      ![select-models](images/stu1aupd1.png)
+      ![select-models](images2/t3s17.png)
 
 ## Task 4: Run the Function App
 
-In this task, you will run the function in VS Code. It uploads test invoices to the input container in the Azure Storage account to trigger the function. Finally, it verifies the output JSON files in the output container to confirm successful document analysis.
+In this task, you will run the function in VS Code, which uploads test invoices to the input container of the Azure Storage account to trigger the function. Afterwards, verify the output JSON files in the output container to confirm successful document analysis.
 
-1. In Visual Studio Code, click the **ellipsis (**...**)** in the top menu, then expand **Terminal (1)** and select **New Terminal (2)** from the dropdown. 
+1. In Visual Studio Code, click the **ellipsis (...) icon (1)** in the top menu, expand **Terminal (2)**, and select **New Terminal (3)** from the dropdown.
 
-   ![select-models](images/t4p1.png)
+   ![select-models](images2/t4s1.png)
 
-1. Press **Ctrl + F5** to run the function.
+1. Press **Ctrl + F5** to execute the function.
 
-   > **Note:** If a debugger error appears, click **Debug Anyway**, then in the next pop-up, choose **Install debugpy Extension**. This will take you to the extension page. Click **Install** to set up the **Python Debugger**. 
+   > **Note:** If a error appears, follow the steps below:
+
+   - Click on **Debug Anyway**
 
       ![select-models](images/t4p2(debug).png)
 
+   - Then in the next pop-up, choose **Install debugpy Extension**. This will take you to the extension page.
+
       ![select-models](images/t4p2(debug)2.png)
+
+   - Click **Install** to set up the **Python Debugger**. 
 
       ![select-models](images/pythonextinst.png)
 
-   > **Note:** Install the Python packages if required.
+   - Press **Ctrl + F5** one more time to execute the function.
+
+1. Once the function runs successfully, navigate back to the **Azure Portal** to trigger it by adding an input file.
+
+   ![select-models](images2/t4s3.png)
 
    > **Note:** If any pop-up occurs, close it.
 
       ![select-models](images/t4p2.png)
-
-1. Once the function has been run successfully, navigate to `portal.azure.com` when it triggers to add an input file as shown below.
-
-   ![select-models](images/doc90.png)
 
 1. In the search bar, search and select **Storage Account (1)** under **Services (2)**.
 
@@ -515,7 +542,7 @@ In this task, you will run the function in VS Code. It uploads test invoices to 
 
    ![select-models](images/t4p5.png)
 
-1. In the storage account **storage<inject key="Deployment ID" enableCopy="false"/>**, under the **Data Storage (1)** tab, navigate to **Containers (2)** and select **input (3)** container.
+1. From the left navigation pane, expand **Data storage (1)**, select **Containers (2)**, then open the **input (3)** container.
 
    ![select-models](images/t4p6.png)
    
@@ -523,23 +550,25 @@ In this task, you will run the function in VS Code. It uploads test invoices to 
 
    ![select-models](images/t4p7.png)
 
-1. Navigate to `C:\LabFiles\Test` **(1)**, select **Invoice_6 and Invoice_7** **(2)**, and click on **Open (3)**.
+1. Navigate to `C:\LabFiles\Test` **(1)**, select **Invoice_6 and Invoice_7 (2)**, then click **Open (3)** to upload the files.
 
-   ![select-models](images/stu6upd.png)
+   ![select-models](images2/t4s8a.png)
    
 1. In the **Upload blob** pop-up window, click on **Upload** button.
 
-   ![select-models](images/t4p9.png)
+   ![select-models](images2/t4s9.png)
 
 1. Navigate back to the **VS code** and verify the **logs** in the **Terminal**.
 
-1. Once the function app is triggered successfully, navigate back to the **storage account**.
+1. Once the function app is triggered successfully, return to the **storage account** in the Azure portal.
 
-1. In the storage account, go to the **Data Storage (1)** section, click on **Containers (2)**, and then choose the **Output (3)** container.
-   
+   ![select-models](images2/t4s11.png)
+
+1. From the left navigation pane, expand **Data storage (1)**, select **Containers (2)**, then open the **output (3)** container
+
    ![select-models](images/t4p12.png)
 
-1. In the **Output** container, click on the **input** folder and verify the **json** analysing the document has been generated successfully.
+1. In the **output** container, click on the **input** folder and verify the **json** analysing the document has been generated successfully.
 
    ![train-module](images/t4p13.png)
 
@@ -552,9 +581,9 @@ In this task, you will run the function in VS Code. It uploads test invoices to 
 
 ## Task 5: Working with AI Search
 
-In this task, you will connect Azure AI Search to the output container in Blob Storage to index analyzed document data. It configures the index and indexer so fields like Organization and Address are searchable and facetable. Finally, it verifies the indexed data by running a search and confirming the trained fields appear correctly.
+In this task, you will connect Azure AI Search to Blob Storage to index analyzed document data. You will configure the search index and indexer to make key fields like Organization and Address searchable and facetable, then verify the indexed data by running search queries.
 
-1. In the Azure Portal, type **AI Search** in the search bar and choose it from the **Services** section.
+1. In the Azure portal, enter **AI Search (1)** in the top search bar and select **AI Search (2)** from the Services list.
 
       ![train-module](images/P1T5S2.png)
    
@@ -562,58 +591,76 @@ In this task, you will connect Azure AI Search to the output container in Blob S
 
       ![train-module](images/P1T5S22.png)
    
-1. In the Overview page of **search-<inject key="Deployment ID" enableCopy="false"/>**, click on **Import data**.
+1. In the Overview page of **search-<inject key="Deployment ID" enableCopy="false"/>**, click on **Import data** from the top menu bar.
 
       ![train-module](images/P1T5S3.png)
 
 1. Provide the following values:
 
-      - Data Source: **Azure Blob Storage (1)**
-      - Data Source Name: **data-source-<inject key="Deployment ID" enableCopy="false"/> (2)**
-      - Parsing Mode: **JSON (3)**
-      - Subscription: **Select the default subscription (4)**
-      - Connection string: Click on **Choose an existing Connection** then Select **storage<inject key="Deployment ID" enableCopy="false"/>** and then select **output** container **(5)**.
-      - Container Name: **output (6)**
-      - Blob Folder: **input (7)**
-      - Click on **Next: Add cognitive skills (Optional) (8)**
+      - Data Source: **Azure Blob Storage (1)**.
+      - Data Source Name: **data-source-<inject key="Deployment ID" enableCopy="false"/> (2)**.
+      - Parsing Mode: **JSON (3)**.
+      - Subscription: Select the **Default subscription (4)**.
+      - Connection string: Click on **Choose an existing connection (5)**.
+
+        ![train-module](images2/t5s4a.png)
+
+      - From the left pane, select **storage<inject key="Deployment ID" enableCopy="false"/> (6)**, then select **output (7)** container, and click **Select (8)** at the bottom.
+
+        ![train-module](images2/t5s4c.png)
+
+      - Container Name: **output (9)**
+      - Blob Folder: **input (10)**
+      - Click on **Next: Add cognitive skills (Optional) (11)**
      
-        ![train-module](images/t5p4.png)
+        ![train-module](images2/t5s4d.png)
 
-1. On the **Add cognitive skills (Optional)**, click on **Skip to : Customize target index**.
+1. On the **Add cognitive skills (Optional)** page, click **Skip to: Customize target index** at the bottom.
 
-1. On the **Customize target index**, enter Index name as **azureblob-index** **(1)**, make all fields **Retrievable** **(2)**, and **Searchable** **(3)**.
+      ![](images2/t5s5.png)
+
+1. On the **Customize target index** page, set the Index name to **azureblob-index (1)**, and ensure all fields are marked as **Retrievable (2)** and **Searchable (3)**.
 
       ![](images/retrievable-searchable.png)
 
-1. Expand the **AnalyzeResult** **(1)** > **documents** **(2)** > **fields** **(3)** , expand **Organization** and **Address** and make the two fields Facetable **(type, valueString & content)** **(6)** and click on **Next: Create an indexer**.
+1. On the **Import data** page, expand **analyzeResult (1)** > **documents (2)** > **fields (3)**, then expand **Organization (4)** and check the Facetable boxes for **type, valueString, and content (5)**; do the same for **Address (6)** fields **type, valueString, and content (7)**, then click **Next: Create an indexer (8)**.
 
-      ![](images/doc92.png)
+      ![](images2/t5s6.png)
+
+      ![](images2/t5s7a.png)
       
-1. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)**.
+1. On the **Create an indexer** page, enter the name as **azureblob-indexer** **(1)** and click on **Submit** **(2)** at the bottom.
    
       ![Create an indexer](images/create-an-indexer.png)
 
-1. Under the **Search management (1)** tab, select **Indexes (2)** and then click on **azureblob-index (3)**.
+1. From the left navigation pane, expand **Search management (1)**, select **Indexes (2)**, then click **azureblob-index (3)**.
 
       ![Create an indexer](images/t5p9.png)
 
-1. In the **azureblob-index**, click on **Search** button.
+1. In the **azureblob-index**, click on the **Search** button next to the search bar.
 
-      ![Create an indexer](images/t5p10.png)
+      ![Create an indexer](images2/t5s10.png)
 
 1. Verify the document that has been analysed.
 
-      ![Create an indexer](images/doc96.png)
+      ![Create an indexer](images2/t5s11.png)
 
-1. Search for `fields` and verify the fields **Organization and Address**, given while training, the document has been analysed.
+1. Search for `fields` in the document and verify that the **Organization** and **Address** fields, created during training, have been correctly analyzed.
 
-   ![Create an indexer](images/doc97.png)
+      ![Create an indexer](images2/t5s12.png)
 
-   ![Create an indexer](images/doc98.png)
+      ![Create an indexer](images2/t5s12a.png)
 
 ## Summary
 
-In this lab, you used Azure services to automate document processing by creating a **Document Intelligence** resource and training a custom model for data extraction. You then developed an **Azure Function App** to process documents from Blob Storage, analyze them via the Document Intelligence API, and store results as JSON files. Lastly, you set up Azure AI Search to index and search the analyzed documents, integrating these components for efficient document management.
+In this lab, you have completed the following:
 
-### Click on Next >> to proceed with the next Lab.
-![nextpage](images/nextpage.png)
+- Created a Document Intelligence resource.
+- Trained and labeled data for document analysis.
+- Developed and deployed an Azure Function App.
+- Executed the Function App to process documents.
+- Integrated and explored AI-powered search capabilities.
+
+### You have successfully completed the lab. Now, click on **Next >>** from the lower right corner to proceed on to the next lab.
+
+![nextpage](images2/nextpage.png)
