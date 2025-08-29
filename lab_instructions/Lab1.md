@@ -167,11 +167,11 @@ In this task, you will upload and label training documents to create a custom mo
 
 In this task, you will be using Azure Functions to process documents that are uploaded to an Azure blob storage container. This workflow extracts table data from stored documents using the Document Intelligence layout model and saves the data in a JSON file in Azure.
    
-1. Open **Visual Studio Code** from the Lab VM desktop by double-clicking on it. 
+1. Open **Visual Studio Code** on the **Lab VM** by double-clicking the icon on the desktop.
 
    ![select-models](images/vs-code-1.png)
 
-1. Once inside VS-Code, click on **File (1)**, then click on **Open Folder**.
+1. In Visual Studio Code, navigate to the **File (1)** from the top menu bar and select **Open Folder... (2)**.
 
    ![select-models](images2/t3s2.png)
 
@@ -197,11 +197,11 @@ In this task, you will be using Azure Functions to process documents that are up
 
      ![](images2/t3s6b.png)
 
-   - Select a Python interpreter to create a virtual environment → select **Python 3.11.9**.
+   - Select a Python interpreter to create a virtual environment → select **python 3.11.9**.
      
      ![](images/110.png)
 
-   - Select a template → choose **Blob trigger** and give the trigger a name or accept the default name. Press **Enter** to confirm.
+   - Select a template for your project's first function → choose **Blob trigger** and give the trigger a name or accept the default name. Press **Enter** to confirm.
 
      ![](images/111.png)
 
@@ -211,25 +211,27 @@ In this task, you will be using Azure Functions to process documents that are up
 
      ![](images2/t3s6a.png)
 
-   - Select setting → choose **+ Create new local app setting** from the dropdown menu.
+   - Select the app setting → choose **+ Create new local app setting** from the dropdown menu.
 
      ![](images/114.png)
 
-   - Click on **Sign in to Azure** and click on **Allow** if prompted. This will navigate to the Azure Portal and select your Azure Account.
+   - Click on **Sign in to Azure**.
 
      ![](images/115.png)
 
+   - Click on **Allow** if prompted. This will navigate to the Azure Portal and select your Azure Account.
+
      ![](images/100725(18).png)
 
-     - Email: <inject key="AzureAdUserEmail" enableCopy="true"></inject>
+     - Enter Email: <inject key="AzureAdUserEmail" enableCopy="true"></inject> **(1)** and click **Next (2)**.
 
-      - Password: <inject key="AzureAdUserPassword"></inject>
- 
-         ![](images/100725(19).png)
+         ![](images2/signin.png)
 
-         ![](images/100725(20).png)
+     - Enter Password: <inject key="AzureAdUserPassword"></inject> **(1)** and click **Sign in (2)**.
 
-      - In the pop-up window click on **No, this app only**.
+         ![](images2/pass.png)
+
+     - In the pop-up window, select **No, this app only**.
 
          ![select-models](images2/t3s6c.png)
 
@@ -243,7 +245,7 @@ In this task, you will be using Azure Functions to process documents that are up
 
       >**Note:** If prompted, select how you would like to open your project → choose **Open the project in the current window** from the dropdown menu.
 
-1. In VS Code, from the **Explorer (1)** in the left pane, navigate to the function's **requirements.txt (2)** file. This file defines the dependencies for your script. Add the following **Python packages (3)** to the file and press `Ctrl + S` to save:
+1. In VS Code, from the **Explorer (1)** in the left pane, navigate to the **requirements.txt (2)** file. This file defines the dependencies for your script. Add the following **Python packages (3)** to the file and press `Ctrl + S` to save:
    
       ```
       cryptography
@@ -256,7 +258,7 @@ In this task, you will be using Azure Functions to process documents that are up
       ```
       ![select-models](images2/t3s7.png)
 
-1. Click the **ellipsis (⋯) (1)** from the top menu, go to **Terminal (2)**, and select **New Terminal (3)**.
+1. Click the **ellipsis (⋯) (1)** from the top menu bar, go to **Terminal (2)**, and select **New Terminal (3)**.
 
       ![select-models](images2/t3s8.png)
 
@@ -268,7 +270,7 @@ In this task, you will be using Azure Functions to process documents that are up
 
       ![select-models](images/t3p8.png)
 
-1. Open the **local.settings.json** file and replace its contents with the configuration provided below, and press `Ctrl+S` to save.
+1. Open the **local.settings.json (1)** file and replace its contents with the **configuration (2)** provided below, and press `Ctrl+S` to save.
 
       ```json
          {
@@ -283,11 +285,7 @@ In this task, you will be using Azure Functions to process documents that are up
       }
       ```
 
-   - Replace **AzureWebJobsStorage** value with the storage account connection string **<inject key="connectionString" enableCopy="false"/></inject>**
-   - Update the configuration by adding **`"AzureWebJobsSecretStorageType": "Files"`** if it isn’t already included.
-   - Replace **storageaccount-name** in storageaccount-name_STORAGE with **storage<inject key="Deployment ID" enableCopy="false"/>** and its value with the storage account connection string **<inject key="connectionString" enableCopy="false"/></inject>**
-
-   ![select-models](images2/t3s10.png)
+   ![select-models](images2/t3s10a.png)
 
 1. Open the **function-app.py (1)** file and add the following **import statements (2)** by replacing the existing ones:
 
@@ -307,7 +305,7 @@ In this task, you will be using Azure Functions to process documents that are up
 
       ![select-models](images/change_code-11upd.png)
    
-1. Update the main function by copying and pasting the code provided below, then replace the **path** and **connection** placeholders with the specified values.
+1. Replace the main function by copying and pasting the code provided below, then replace the **path (1)** and **connection (2)** placeholders with the specified values.
 
       ```
       app = func.FunctionApp()
@@ -319,10 +317,10 @@ In this task, you will be using Azure Functions to process documents that are up
                       f"Name: {myblob.name}" 
                       f"Blob Size: {myblob.length} bytes")
       ``` 
-      - path = **input**
+      - path = **input** 
       - connection = **storage<inject key="Deployment ID" enableCopy="false"/>_STORAGE**
 
-         ![select-models](images/t3p11.png)
+         ![select-models](images2/t3s11a.png)
 
 1. Add the following code block that calls the **Document Intelligence Analyze Layout API** on the uploaded document.
 
@@ -380,7 +378,7 @@ In this task, you will be using Azure Functions to process documents that are up
 
 1. Add the following code to connect to the Azure Storage output container.
    
-    - Replace {storage-connection-string} : **<inject key="connectionString" enableCopy="false"/></inject>**
+    - Replace **{storage-connection-string}** : **<inject key="connectionString" enableCopy="false"/></inject>**
 
       ```
          # This is the connection to the blob storage, with the Azure Python SDK
