@@ -22,15 +22,15 @@ You will be able to complete the following tasks:
 
 In this task, you will open the Azure OpenAI resource in the Azure portal. It navigates to the Azure AI Foundry portal from the resource page. If the direct option is missing, it provides an alternate navigation method to reach Azure AI Foundry.
 
-1. In the Azure portal, search for **OpenAI (1)** in the search bar and select **Azure OpenAI (2)** from **Services**.
+1. In the Azure portal, search for **OpenAI (1)** in the search bar and select **Azure OpenAI (2)** from Services.
 
-   ![OpenAI](images/118.png)
+   ![OpenAI](images2/2/t1s1.png)
 
-2. In the **AI Foundry | Azure OpenAI** tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
+1. In the **AI Foundry | Azure OpenAI** tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
-   ![OpenAI](images/121.png)
+   ![OpenAI](images2/2/t1s2.png)
 
-3. On the **Azure OpenAI** page, click on **Go to Azure AI Foundry portal**.
+1. On the **Azure OpenAI** page, click **Go to Azure AI Foundry portal** to proceed to the AI Foundry interface
 
    ![OpenAI Studio](images/l2t1p3.png)
 
@@ -40,23 +40,23 @@ In this task, you will open the Azure OpenAI resource in the Azure portal. It na
 
 ## Task 2: Upload your own data
 
-In this task, you will be using Porsche's owner manual for Taycan, Panamera, and Cayenne models.
+In this task, you will upload Porsche's owner manuals (Taycan, Panamera, Cayenne) to Azure OpenAI Studio for use in a custom chat model.
 
-1. click on **Chat (1)** under Playgrounds section then, under the **Setup** tab in the **Chat playground**, click on **Add your data (2)** and then click **+ Add a data source (3)** section. 
+1. Click on **Chat (1)** under the Playgrounds section, then in the **Setup** tab of the Chat playground, expand **Add your data (2)** and click **+ Add a data source (3)** to connect your own data.
 
    ![Azure OpenAI Studio](images/119.png)
    
-1. Fill the following details in **Select or add data source** and click on **Next**.
+1. Fill in the required fields on the **Select or add data source** page as follows:
     
-    - Select data source: **Upload files (preview)** **(1)**
+    - Select data source: **Upload files (preview)** **(1)**.
 
-    - Subscription: Select your **subscription** from the drop-down section **(2)**
+    - Subscription: Select your **Default Subscription (2)** from the drop-down.
 
     - Select Azure Blob storage resource: Choose the already created storage account **storage<inject key="Deployment ID">** **(3)**. 
       
-         > **Note:** **Turn on CORS** when prompted.
+    - Click on **Turn on CORS (4)** when prompted.
 
-         ![](images/data-source.png)
+         ![](images2/2/t2s2a.png)
 
       > **Note:** If you encounter any issues while enabling CORS, please follow the steps below :
 
@@ -67,50 +67,50 @@ In this task, you will be using Porsche's owner manual for Taycan, Panamera, and
             ![Azure OpenAI Studio](images/120.png)
           
          - In the first row, ensure only **GET**, **POST**, **OPTIONS**, **PUT** **(1)** is enabled under allowed methods, provide it as **content-length** **(2)** under exposed headers and set the Max age to **120** **(3)**.
-         - In the second row, set the Allowed origins to * **(4)**, enable **GET**, **POST**, **OPTIONS**, **PUT** **(5)** under allowed methods, set the Allowed headers and Exposed headers to * **(6)** and * **(7)** respectively and the Max age to **200 (8)**.
+         - In the second row, set the Allowed origins to `*` **(4)**, enable **GET**, **POST**, **OPTIONS**, **PUT** **(5)** under allowed methods, set the Allowed headers and Exposed headers to `*` **(6)** and `*` **(7)** respectively and the Max age to **200 (8)**.
          - Click on **Save**.
           
            ![Azure OpenAI Studio](images/save.png)
 
          - Navigate back to the Azure AI Foundry portal, close the window, and re-perform steps 1 and 2.
             
-    - Select Azure AI Search resource: Select the search service **search-<inject key="Deployment ID">** **(1)**.
+    - Select Azure AI Search resource: Select **search-<inject key="Deployment ID">** **(1)** from the drop down.
 
-    - Enter the index name: Give an index name as **aoaiworkshop** **(2)**
+    - Enter the index name: **aoaiworkshop** **(2)**
       
     - Click on **Next (3)**
 
-      ![data-management](images/P2T2S2.png)
+      ![data-management](images2/2/t2s2.png)
       
-1. On the **Upload files** tab, click **Browse for a file (1)**. Navigate to the path `C:\LabFiles\Data\Lab 2` **(2)** and press Enter. Select all the **PDF files (3)** in this folder, then click **Open (4)** to upload them. 
+1. On the **Upload files** tab, click **Browse for a file (1)**. Navigate to the path `C:\LabFiles\Data\Lab 2` **(2)** and press **Enter**. Select all the **PDF files (3)** in this folder, then click **Open (4)** to upload them. 
 
    ![data-management](images/l2t2p3.png)
 
 1. Click on **Upload files** **(1)**, and then click **Next** **(2)**.
 
-   ![data-management](images/100725(25)%20-%20Copy.png)
+   ![data-management](images2/2/t2s4a.png)
 
-1. Select **Keyword (1)** On the **Data Management** page, from the drop-down as Search type and click on **Next (2)**.
+1. On the **Data Management** page, from the drop-down select **Keyword (1)** as the Search type and click **Next (2)**.
 
    ![keyword](images/uploadfiles1.png)
 
-1. On the **Data Connection page**, select **API Key** and click on **Next**.
+1. On the **Data Connection** step, choose **API Key (1)** as the **Azure resource authentication type**, then proceed by clicking **Next (2)**.
 
-   ![keyword](images/api.png)
+   ![keyword](images2/2/t2s6.png)
 
-1. On the **Review and finish** page, click on **Save and close**.
+1. On the **Review and finish** page, verify the configuration details, then click **Save and close** to complete the data source setup.
 
-   ![Save and close](images/save-and-close.png)
+   ![Save and close](images2/2/t2s7.png)
 
 ## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
-In this task, you will be testing and customizes an Azure OpenAI ChatGPT model with your own uploaded data, adjusting instructions, parameters, and deploying it as a web app. It verifies the deployment in Azure App Services, troubleshooting if needed to ensure the bot runs correctly. Finally, it checks Azure Cosmos DB to confirm conversation history from the web app is being stored successfully.
+In this task, you will upload custom data to Azure AI Foundry and interact with an Azure OpenAI ChatGPT model. You will customize the system message, test prompt responses, adjust model parameters, and deploy the chatbot as a web app via the Azure portal. The task also includes verifying conversation logging in Azure Cosmos DB and provides steps to troubleshoot deployment issues if needed.
 
-1. In the dropdown  **Add your data** pane, wait until your data upload is finished.
+1. In the **Add your data** pane, monitor the status until the data upload is complete and the source details are displayed.
 
    ![upload-data](images/l2t3p1.png)
 
-1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
+1. Under the **Chat Session** pane, begin testing your prompts by entering queries as shown below:
 
     ```
     How to operate Android Auto in the Porsche Taycan? give step-by-step instructions
@@ -118,15 +118,20 @@ In this task, you will be testing and customizes an Azure OpenAI ChatGPT model w
 
       ![chat-session-one](images/l2t3p2.png)
 
-1. You can customize the responses of your bot by  updating the message `Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information` **(1)** under **Give the model instructions and context**  and click on **Apply changes** **(2)**.
+1. Customize your bot's responses by updating the **message (1)** under **Give the model instructions and context**, then click **Apply changes (2)**.
 
-   ![assistant-setup-system-message](images/chat-1.png)
+
+    ```
+    Your name is Alice. You are an AI assistant that helps people find information about Porsche cars. Your responses should not contain any harmful information 
+    ```
+
+   ![assistant-setup-system-message](images2/2/t3s3a.png)
 
 1. On **Update system message?** pop-up, click on **Continue**.
 
-   ![Alt text](images/lab2uupdate.png)
+   ![Alt text](images2/2/t3s4.png)
 
-1. Under the **Chat Session** pane, you can start testing out your prompts by entering the query like this.
+1. Under the **Chat Session** pane, begin testing your prompts by entering queries as shown below:
 
     ```
     What is your name?
@@ -134,25 +139,24 @@ In this task, you will be testing and customizes an Azure OpenAI ChatGPT model w
    
    ![chat-session-two](images/P2T3S5.png)
 
-1. In the **Setup** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
+1. In the **Setup** pane, scroll down to **Parameters** and expand it, experiment with different settings to observe how they affect the model's behavior.
 
-    ![Alt text](images/imag6.png)
+    ![Alt text](images2/2/t3s6.png)
 
-1. In the **Chat**, click on **Deploy (1)** from the top menu bar and select **...as a web app (2)**.
+1. In the **Chat playground**, click on **Deploy (1)** in the top menu bar and select **…as a web app (2)** from the drop-down menu.
 
    ![](images/P2T3S7.png)
 
-1. Add the following details and click on **Deploy:**
+1. Add the following details and click on **Deploy (7)**
 
    - Name: **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)**
-   - Subscription: **Select the default subscription (2)**
+   - Subscription: Select the **Default subscription (2)**
    - Resource Group: Select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(3)**
-   - Location: **Select Sweden Central (4)**
-   - Pricing Plan: **Choose Standard (S1) (5)**
-   - **Enable** chat history in the web app **(6)**
-   - Click **Deploy (7)**
+   - Location: Select **Sweden Central (4)**
+   - Pricing Plan: Choose **Standard (S1) (5)**
+   - Check the box for **Enable chat history in the web app** **(6)**
 
-     ![](images/P2T3S8.png)
+     ![](images2/2/t3s8.png)
 
      > **Note:** Wait for 10 minutes for the webapp to be deployed successfully.
 
@@ -164,7 +168,7 @@ In this task, you will be testing and customizes an Azure OpenAI ChatGPT model w
 
       ![](images/P2T3S10.png)
       
-1. Click **Browse** to verify that the web app is running successfully after deployment.
+1. Click **Browse** from the top menu bar to open and verify that the web app is running successfully after deployment.
 
     ![](images/app-service-1.png)
     
@@ -176,9 +180,11 @@ In this task, you will be testing and customizes an Azure OpenAI ChatGPT model w
 
       ![Alt text](images/P2T3S11.png)
 
-      > **Note:** In case of an internal server error, navigate back to the Azure AI Foundry portal and follow the steps below:
+      > **Note:** In case of an internal server error or **Chat history is not enabled** error, navigate back to the **Azure AI Foundry portal** and follow the steps below:
 
-   - In the **Chat (1)** section under Playgrounds, click **Deploy to (2)** in the top-right corner, then select **...as a web app (3)**.
+      ![Alt text](images2/2/error.png)
+
+   - In the **Chat (1)** section under Chat playgrounds, click **Deploy (2)** in the top menu bar, then select **...as a web app (3)** from the drop-down menu.
 
        ![](images/default-1.png)
 
@@ -192,21 +198,25 @@ In this task, you will be testing and customizes an Azure OpenAI ChatGPT model w
      
    - Click on **Browse** from the overview tab again.
 
+      ![](images/app-service-1.png)
+
      >**Note:** If the internal server issue continues, restart the web app and then try accessing it. Please note that it may take some time to become available.
      
-1. Chat with the bot and check its working state. Provide questions related to the document we had previously uploaded.
+1. Interact with the chatbot by entering queries related to the documents you previously uploaded to verify its functionality.
+
+    ![Create an indexer](images2/2/t3s12.png)
 
 1. In the Azure Portal, search for **Azure Cosmos DB (1)** and select **Azure Cosmos DB (2)** from the **Services**.
 
     ![Create an indexer](images/l2t3p13.png)
 
-1. Verify **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** has been created and then select it.
+1. Verify **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** has been created, then **select** it.
    
    ![Create an indexer](images/100725(26)%20-%20Copy.png)
 
-1. In the **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** **(1)**, go to **Data Explorer (2)** in your Azure Cosmos DB account, then expand the **db_conversation_history (3)** database and the **conversations (4)** container. Verify that the conversation data has been successfully captured from the web app **(5)**, as shown in the image below.
+1. In the **db-webapp-<inject key="Deployment ID" enableCopy="false"/>** instance, navigate to **Data Explorer (1)** within your Azure Cosmos DB account. Expand the **conversations (2)** container and selects **items (3)**. Confirm that the **conversation data (5)** from the web app is successfully recorded by reviewing the displayed **documents (4)**.
 
-    ![Create an indexer](images/100725(29)%20-%20Copy.png)
+    ![Create an indexer](images2/2/t3s15.png)
 
 >**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
 > - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
@@ -215,10 +225,6 @@ In this task, you will be testing and customizes an Azure OpenAI ChatGPT model w
 
 <validation step="ba1751b9-d16b-47ac-9282-a6ecc8cb4870" />
    
-## Summary
-
-In this lab, you learned how to use Azure AI Foundry to upload your own data and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
-
 ## Summary
 
 In this lab, you have completed the following:
