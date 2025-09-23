@@ -17,7 +17,7 @@ You will be able to complete the following tasks:
 - Task 1: Creating a Document Intelligence Resource
 - Task 2: Train and Label data
 - Task 3: Upload files to Storage container
-- Task 5: Working with AI Search
+- Task 4: Working with AI Search
 
 ### Task 1: Creating a Document Intelligence Resource
 
