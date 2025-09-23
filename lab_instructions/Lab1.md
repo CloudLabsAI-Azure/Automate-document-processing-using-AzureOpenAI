@@ -8,7 +8,7 @@ In this lab, you will explore how Azure streamlines document processing and sear
 
 ## Architecture Diagram
 
-   ![Name](images/aaaarch%20diagram%201.png)
+   ![Name](images/Atg1.png)
 
 ## Lab Objectives
 
