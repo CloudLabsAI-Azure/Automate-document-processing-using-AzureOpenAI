@@ -24,18 +24,17 @@ Participants should have basic knowledge and understanding of the following:
   
 ## Architecture
 
-**Azure Document Intelligence** processes and extracts data from documents. **Azure Functions** trigger the document processing based on blob changes. **Azure Storage Account** stores the documents to be processed. **Azure AI Search** indexes and searches the extracted data. **Azure OpenAI Service** provides AI capabilities for natural language processing and generation. **Web Application** facilitates user interaction and displays the results of the AI processing. A storage mechanism stores chat history for viewing and analysis.
+**Azure Document Intelligence** processes and extracts data from documents. **Azure Storage Account** stores the documents to be processed. **Azure AI Search** indexes and searches the extracted data. **Azure OpenAI Service** provides AI capabilities for natural language processing and generation. **Web Application** facilitates user interaction and displays the results of the AI processing. A storage mechanism stores chat history for viewing and analysis.
 
 ## Architecture Diagram
 
-![Architecture](images/aaaarch%20diagram.png)
+![Architecture](images/Atg3.png)
 
 ## Explanation of Components
 
 The architecture for this lab involves the following key components:
 
 - **Azure Document Intelligence:** It is a service that uses AI to extract structured data from unstructured documents.
-- **Azure Functions:** It is a serverless compute service that allows you to run code without having to provision or manage infrastructure. You can write code in various languages and trigger it based on events like HTTP requests, timers, or messages from queues or topics.
 - **Azure AI Search:** It is a cloud-based search service that allows you to add search capabilities to your applications. It provides features like autocomplete, faceted search, and spell correction, making it easy for users to find relevant information.
 - **Azure OpenAI:** It is a service that provides access to OpenAI's powerful language models, such as GPT-3 and GPT-4, through Azure's cloud platform. This allows developers to build applications that can generate human-quality text, translate languages, write different kinds of creative content, and answer your questions in an informative way.
 - **Azure Web App:** It is a fully managed platform for building, deploying, and scaling web applications. It supports various programming languages and frameworks, and offers features like continuous deployment, scaling, and integration with other Azure services.
