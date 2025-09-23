@@ -534,7 +534,9 @@ In this task, you will run the function in VS Code, which uploads test invoices 
 
       ![select-models](images/t4p2.png)
 
-1. In the search bar, search and select **Storage Account (1)** under **Services (2)**.
+#### Task 3: Storage account
+
+1. In the search bar, search for **Storage Account (1)** and select **Storage Account (2)** under Services.
 
    ![select-models](images/p1s4.png)
 
@@ -558,6 +560,30 @@ In this task, you will run the function in VS Code, which uploads test invoices 
 
    ![select-models](images2/t4s9.png)
 
+1. From the left navigation pane, expand **Data storage (1)**, select **Containers (2)**, then open the **output (3)** container
+
+   ![select-models](images/t4p12.png)
+
+1. Select **+ Add directory**.
+
+   ![select-models](images/At16.png)
+
+1. Provide the name as **input (1)** and then **OK (2)**.
+
+   ![select-models](images/At17.png)
+
+1. In the output container, click on **Upload (1)** button, in the **Upload blob** pop-up window click on **Browse for files (2)**.
+
+   ![select-models](images/At18.png)   
+
+1. Navigate to `C:\LabFiles\Testfiles` **(1)**, select **Invoice_6.pdf and Invoice_7.pdf (2)**, then click **Open (3)** to upload the files.
+
+   ![select-models](images/At19.png) 
+
+1. In the **Upload blob** pop-up window, click on **Upload** button.
+
+   ![select-models](images2/At20.png)     
+
 1. Navigate back to the **VS code** and verify the **logs** in the **Terminal**.
 
 1. Once the function app is triggered successfully, return to the **storage account** in the Azure portal.
@@ -578,6 +604,14 @@ In this task, you will run the function in VS Code, which uploads test invoices 
 > - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
 
 <validation step="44d3193c-9401-4326-a2f5-067cf63f0c54" />
+
+
+
+
+
+
+
+
 
 ## Task 5: Working with AI Search
 
