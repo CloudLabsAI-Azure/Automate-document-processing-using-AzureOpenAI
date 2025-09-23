@@ -16,8 +16,7 @@ You will be able to complete the following tasks:
 
 - Task 1: Creating a Document Intelligence Resource
 - Task 2: Train and Label data
-- Task 3: Upload files to Storage container
-- Task 4: Working with AI Search
+- Task 3: Working with AI Search
 
 ### Task 1: Creating a Document Intelligence Resource
 
@@ -162,9 +161,9 @@ In this task, you will upload and label training documents to create a custom mo
 
    ![Name](images/stu7-upd.png)
    
-### Task 3: Upload files to Storage container
+### Task 3: Working with AI Search
 
-In this task, you will configure the Azure Storage account by uploading test and training documents to the input and output containers, ensuring that your data is ready for processing and indexing.
+In this task, you will first configure an Azure Storage account by uploading training and test documents to the input and output containers. Next, you’ll connect Azure AI Search to Blob Storage, set up the index and indexer to make fields like Organization and Address searchable and facetable, and verify the results by running search queries.
 
 1. In the search bar, search for **Storage Account (1)** and select **Storage Account (2)** under Services.
 
@@ -212,19 +211,7 @@ In this task, you will configure the Azure Storage account by uploading test and
 
 1. In the **Upload blob** pop-up window, click on **Upload** button.
 
-   ![select-models](images/At20.png)     
-
->**Congratulations** on completing the Task! Now, it's time to validate it. Here are the steps:
-> - Hit the Validate button for the corresponding task. If you receive a success message, you have successfully validated the lab. 
-> - If not, carefully read the error message and retry the step, following the instructions in the lab guide.
-> - If you need any assistance, please contact us at cloudlabs-support@spektrasystems.com.
-
-<validation step="44d3193c-9401-4326-a2f5-067cf63f0c54" />
-
-
-### Task 4: Working with AI Search
-
-In this task, you will connect Azure AI Search to Blob Storage to index analyzed document data. You will configure the search index and indexer to make key fields like Organization and Address searchable and facetable, then verify the indexed data by running search queries.
+   ![select-models](images/At20.png) 
 
 1. In the Azure portal, enter **AI Search (1)** in the top search bar and select **AI Search (2)** from the Services list.
 
@@ -300,7 +287,6 @@ In this lab, you have completed the following:
 
 - Created a Document Intelligence resource.
 - Trained and labeled data for document analysis.
-- Uploaded files to Storage container
 - Integrated and explored AI-powered search capabilities.
 
 ### You have successfully completed the lab. Now, click on **Next >>** from the lower right corner to proceed on to the next lab.
