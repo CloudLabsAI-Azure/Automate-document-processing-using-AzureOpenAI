@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this lab, you will explore how Azure simplifies document processing by automating data extraction and analysis. Using Azure AI Document Intelligence, you'll train models to extract information from documents such as PDFs, images, and forms. You'll also integrate Azure Function Apps to enable scalable, programmatic processing of documents.
+In this lab, you will explore how Azure streamlines document processing and search. Using Azure AI Document Intelligence, you'll create and train custom models to extract key information such as Organization and Address from invoices and other documents. You will also configure Azure Storage to manage input and output data, and integrate Azure AI Search to index and query extracted document data for easy retrieval and analysis.
 
 ## Architecture Diagram
 
@@ -16,8 +16,7 @@ You will be able to complete the following tasks:
 
 - Task 1: Creating a Document Intelligence Resource
 - Task 2: Train and Label data
-- Task 3: Creation of Function App
-- Task 4: Run the Function App
+- Task 3: Upload files to Storage container
 - Task 5: Working with AI Search
 
 ### Task 1: Creating a Document Intelligence Resource
@@ -163,7 +162,9 @@ In this task, you will upload and label training documents to create a custom mo
 
    ![Name](images/stu7-upd.png)
    
-### Task 3: Storage account
+### Task 3: Upload files to Storage container
+
+In this task, you will configure the Azure Storage account by uploading test and training documents to the input and output containers, ensuring that your data is ready for processing and indexing.
 
 1. In the search bar, search for **Storage Account (1)** and select **Storage Account (2)** under Services.
 
@@ -299,8 +300,7 @@ In this lab, you have completed the following:
 
 - Created a Document Intelligence resource.
 - Trained and labeled data for document analysis.
-- Developed and deployed an Azure Function App.
-- Executed the Function App to process documents.
+- Uploaded files to Storage container
 - Integrated and explored AI-powered search capabilities.
 
 ### You have successfully completed the lab. Now, click on **Next >>** from the lower right corner to proceed on to the next lab.
