@@ -48,7 +48,7 @@ Welcome to your Automate Document Processing using Azure AI Document Intelligenc
  
 Once you're ready to dive in, your virtual machine and guide will be right at your fingertips within your web browser.
 
-  ![OpenAI](images2/access.png)
+  ![OpenAI](images2/GS-0.png)
  
 ## Virtual Machine & Lab Guide
 
@@ -98,9 +98,9 @@ After completing the task, hit the **Validate** button under the Validation tab 
      
 1. Now enter the following password and click on **Sign in (2)**.
    
-   * **Password:** <inject key="AzureAdUserPassword"></inject> **(1)**
+   * **Enter Temporary Access Pass:** <inject key="AzureAdUserPassword"></inject> **(1)**
    
-      ![OpenAI](images2/pass.png)
+      ![OpenAI](images2/TAP.png)
 
 1. If you see the pop-up **Action Required**, keep default and then click on **Ask later**. If you see the pop-up Help us protect your account, click on **Skip for now** (14 days until this is required), and then click on **Next**.
 
