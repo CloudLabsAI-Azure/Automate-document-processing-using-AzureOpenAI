@@ -2,7 +2,7 @@
 
 ### Estimated Duration: 1 Hour
 
-In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into Azure AI Foundry portal, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
+In this lab, you will learn how to leverage Azure OpenAI to interact with custom data using the ChatGPT model. By uploading your own data into Microsoft Foundry portal, you will enable specific, tailored responses to user queries based on the uploaded content. The lab covers steps to upload files, configure the system to manage queries effectively, and deploy the ChatGPT model as a web app. Additionally, the interactions are captured and stored in Cosmos DB, ensuring traceability and persistence of conversation history. This lab provides hands-on experience with customizing AI responses and deploying AI models in a real-world application.
   
 ## Architecture Diagram
 
@@ -19,19 +19,19 @@ In this lab you will perform,
 
 1. In `portal.azure.com`, search for **openai** and select **Azure OpenAI**.
 
-   ![OpenAI](images/ment1.png)
+   ![OpenAI](images/AA1.png)
 
-2. In the Azure AI Services | Azure OpenAI tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
+2. In the Microsoft Foundry | Azure OpenAI tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
-      ![OpenAI](images/ment-2.png)
+      ![OpenAI](images/foundry01.png)
 
-3. On the **Azure OpenAI** page, click on **Go to Azure AI Foundry portal**.
+3. On the **Azure OpenAI** page, click on **Go to Foundry portal**.
 
-      ![OpenAI Studio](images/ima2.png)
+      ![OpenAI Studio](images/foundry2.png)
 
-4. On the **Azure AI Foundry**, scroll down and click on **Bring your own data**.
+4. On the **Microsoft Foundry**, scroll down and click on **Bring your own data**.
 
-   ![Azure OpenAI Studio](images/ima3.png)
+   ![Azure OpenAI Studio](images/ima30.png)
 
 ## Task 2: Upload your own data
 
@@ -59,7 +59,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
          - Search for storage account in the search bar and select **storage<inject key="Deployment ID" enableCopy="false"/>**.
          - In the left pane, search for **CORS (1)** and select **Resource sharing (CORS) (2)**.
 
-            ![Azure OpenAI Studio](images/CORS-1.png)
+            ![Azure OpenAI Studio](images/CORS-10.png)
           
          - In the first row, ensure only **GET**, **POST**, **OPTIONS**, **PUT** **(1)** is enabled under allowed methods, provide it as **content-length** **(2)** under exposed headers and set the Max age to **120** **(3)**.
          - In the second row, set the Allowed origins to * **(4)**, enable **GET**, **POST**, **OPTIONS**, **PUT** **(5)** under allowed methods , set the Allowed headers and Exposed headers to * **(6)** and * **(7)** respectively and the Max age to **200 (8)**.
@@ -67,7 +67,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
           
            ![Azure OpenAI Studio](images/save.png)
 
-         - Navigate back to the Azure AI Foundry portal , close the window and re-perform step 1 and 2.
+         - Navigate back to the Microsoft Foundry portal , close the window and re-perform step 1 and 2.
             
     - Select Azure Cognitive Search resource: Select the search service **search-<inject key="Deployment ID">** **(4)**.
 
@@ -123,7 +123,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
     What is your name
     ```
    
-   ![chat-session-two](images/new-automate-lab1-6.png)
+   ![chat-session-two](images/new-automate-lab1-60.png)
 
 1. In the **Configuration** pane, click on **Parameters**. You can try and experiment with different parameter configurations to see how they change the behavior of the model.
 
@@ -131,7 +131,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
 1. On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
 
-   ![](images/default-1.png)
+   ![](images/default-10.png)
 
 1. Add the following details and click on **Deploy**:
 
@@ -145,7 +145,7 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
      ![](images/au-1.png)
 
-1. Verify the successful deployment of the app in Azure AI Foundry portal by navigating to **Deployments (1)**, click on **App Deployments (2)** and verify the webapp is in **Succeeded (3)** state.
+1. Verify the successful deployment of the app in Microsoft Foundry portal by navigating to **Deployments (1)**, click on **App Deployments (2)** and verify the webapp is in **Succeeded (3)** state.
 
      ![](images/au-4.png)
     
@@ -163,11 +163,11 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
 
     ![Alt text](images/doc51.png)
 
-      > **Note:** In case of an internal server error, navigate back to Azure AI Foundry portal and follow the below steps:
+      > **Note:** In case of an internal server error, navigate back to Microsoft Foundry portal and follow the below steps:
 
    - On the **Chat (1)** , Click on **Deploy to (2)** on the top right and click on **as a webapp (3)**.
 
-       ![](images/default-1.png)
+       ![](images/default-10.png)
 
    - Click on **Update an existing web app (1)**, select the **default subscription (2)** and select **webapp-<inject key="Deployment ID" enableCopy="false"/>** (3), check in the box for **Enable chat copilot in web app (4)** and click on **Deploy (5)**.
      
@@ -202,6 +202,6 @@ In this step, we will be using Porche's owner manual for Taycan, Panamera, and C
    
 ## Summary
 
-In this lab, you learned how to use Azure AI Foundry to upload your own data, and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
+In this lab, you learned how to use Microsoft Foundry to upload your own data, and interact with the ChatGPT model using that data. You configured the system to handle specific queries and deployed the model as a web app. Finally, you verified that interactions were captured in Cosmos DB, completing the lab successfully.
 
 ### You have successfully completed the lab
