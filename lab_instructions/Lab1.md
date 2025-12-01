@@ -659,13 +659,7 @@ In this task, you will connect Azure AI Search to Blob Storage to index analyzed
 
 ## Summary
 
-In this lab, you have completed the following:
-
-- Created a Document Intelligence resource.
-- Trained and labeled data for document analysis.
-- Developed and deployed an Azure Function App.
-- Executed the Function App to process documents.
-- Integrated and explored AI-powered search capabilities.
+In this lab, you created a Document Intelligence resource and trained a template-based model by labeling sample documents. You then developed and deployed an Azure Function App to automate document processing and executed it to validate the workflow. Finally, you integrated the output with AI-powered search capabilities to explore enriched document insights.
 
 ### You have successfully completed the lab. Now, click on **Next >>** from the lower right corner to proceed on to the next lab.
 
