@@ -222,11 +222,7 @@ In this task, you will upload custom data to Microsoft Foundry and interact with
    
 ## Summary
 
-In this lab, you have completed the following:
-
-- Navigated to the Azure OpenAI Playground.
-- Uploaded and integrated your own data.
-- Interacted with the Azure OpenAI ChatGPT model using your uploaded data.
+In this lab, you accessed the Azure OpenAI Playground, uploaded your own dataset, and integrated it with the chat experience. You then interacted with the Azure OpenAI ChatGPT model to generate responses grounded in your uploaded data.
 
 ## You have successfully completed the Hands-on lab.
 
