@@ -30,13 +30,17 @@ In this task, you will set up the Document Intelligence environment in Azure so 
 
 1. Navigate to **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>**.
 
-   ![Alt text](images/101.png)
+   ![Alt text](images/au1.png)
 
 1. In the **Overview (1)** pane, scroll down to the **Get Started** section and click **Go to Document Intelligence Studio (2)**.
 
-   ![Alt text](images2/t1s3.png)
+   ![Alt text](images/au2.png)
 
    >**Note:** If prompted, sign in using the same credentials you used to log in to Azure.
+
+1. Select **Start with Document Intelligence**.
+
+   ![Alt text](images/au3.png)
 
 1. On the **Document Intelligence Studio** page, scroll to **Custom models** and click **Get started** under **Custom extraction model**. 
 
@@ -74,7 +78,9 @@ In this task, you will set up the Document Intelligence environment in Azure so 
    - Document Intelligence or Cognitive Service Resource: Select **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
    - API version: Select **2024-11-30 (4.0 General Availability)** **(4)**.
 
-     ![configuring service resource](images2/t1s9.png)
+     ![configuring service resource](images/au4.png)
+
+      >**Note**: Please ignore the error that appears when selecting Document Intelligence or Cognitive Service Resource. Since we are using the **Template** model training approach, this error does not impact the workflow.
 
 1. Enter the following details for **Connect training data source** and click on **Continue** **(5)**.
 
@@ -227,13 +233,13 @@ In this task, you will be using Azure Functions to process documents that are up
 
          ![](images2/signin.png)
 
-     - Enter Password: <inject key="AzureAdUserPassword"></inject> **(1)** and click **Sign in (2)**.
+     - Enter Temporary Access Pass:: <inject key="AzureAdUserPassword"></inject> **(1)** and click **Sign in (2)**.
 
-         ![](images2/pass.png)
+         ![](images2/TAP.png)
 
      - In the pop-up window, select **No, this app only**.
 
-         ![select-models](images2/t3s6c.png)
+         ![select-models](images/au5.png)
 
          >**Note:** If prompted, select subscription → choose the **Default Subscription**.
 
@@ -313,7 +319,7 @@ In this task, you will be using Azure Functions to process documents that are up
       @app.blob_trigger(arg_name="myblob", path="<container-name>", connection="<storage-account-name>_STORAGE")
    
       def blob_trigger(myblob: func.InputStream):
-          logging.info(f"Python blob trigger function processed blob"
+         logging.info(f"Python blob trigger function processed blob"
                       f"Name: {myblob.name}" 
                       f"Blob Size: {myblob.length} bytes")
       ``` 
