@@ -593,7 +593,7 @@ In this task, you will connect Azure AI Search to Blob Storage to index analyzed
 
       ![train-module](images/P1T5S2.png)
    
-1. In **AI foundry | AI Search** tab, select **search-<inject key="Deployment ID" enableCopy="false"/>**.
+1. In **Microsoft foundry | AI Search** tab, select **search-<inject key="Deployment ID" enableCopy="false"/>**.
 
       ![train-module](images/P1T5S22.png)
    
