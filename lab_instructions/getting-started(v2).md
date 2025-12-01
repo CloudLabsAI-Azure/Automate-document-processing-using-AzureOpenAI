@@ -12,7 +12,7 @@ Use Azure services to automate document processing, including data extraction, s
 
 - **Automate document processing using Azure Document Intelligence:** Explore how Azure services can be used to process documents by extracting and analyzing information from various file types, such as PDFs and images. Train document models via Azure Document Intelligence and integrate them with Azure OpenAI for intelligent data extraction and interaction.
 
-- **Utilize your Data Set using OpenAI:** Learn how to upload custom data into Azure AI Foundry, interact with the Azure OpenAI model using the uploaded content, and deploy the AI as a web app. Additionally, capture and store conversation history in Cosmos DB for enhanced traceability and persistence.
+- **Utilize your Data Set using OpenAI:** Learn how to upload custom data into Microsoft Foundry, interact with the Azure OpenAI model using the uploaded content, and deploy the AI as a web app. Additionally, capture and store conversation history in Cosmos DB for enhanced traceability and persistence.
   
 ## Pre-requisites
 
@@ -116,43 +116,6 @@ After completing the task, hit the **Validate** button under the Validation tab 
 
     ![OpenAI](images/03.png)
 
-## Steps to Proceed with MFA Setup if Ask Later Option is Not Visible
-
-> **Note:** Continue with the exercises if MFA is already enabled or the option is unavailable.
-
-1. On the **Action Required** pop-up, click on **Next**.
-
-    ![](./images/04.png)
-
-2. In the Keep your account secure window, the window that appears and the steps that follow are for the Microsoft Authenticator app method. Select **Next**.
-
-    ![](./images/05.png)
-
-3. On the Set up your account page, select **Next**.
-
-   ![](./images/06.png)
-
-4. **Note:** If you don’t have the Microsoft Authenticator app installed on your mobile device:
-
-   - Open **Google Play Store** (Android) or **App Store** (iOS).
-   - Search for **Microsoft Authenticator** and tap **Install**.
-   - Open the **Microsoft Authenticator app**, select **Add account**, then choose **Work or school account**.
-
-5. Scan the QR code with your phone. On the phone, inside the Authenticator app, select Work or school account, and scan the QR code. Select **Next**.
-
-   ![](./images/07.png)
-
-6. On the Keep your account secure page. Enter the code, which is shown on the Authenticator app.
-
-   ![](./images/08.png)
-
-7. Once the code is entered. click **Next**
-
-   ![](./images/09.png)
-
-8. Select Done on the Success! page.
-
-   ![](./images/10.png)
 
 ## Support Contact
 

@@ -4,7 +4,7 @@
 
 ## Overview
 
-In this lab, you will use Azure OpenAI to interact with custom data through the ChatGPT model. You'll upload data via the Azure AI Foundry portal, configure query handling, and deploy the model as a web app. Interactions will be stored in Azure Cosmos DB, providing traceability and persistence. This lab offers hands-on experience in customizing and deploying AI solutions with Azure.
+In this lab, you will use Azure OpenAI to interact with custom data through the ChatGPT model. You'll upload data via the Microsoft Foundry portal, configure query handling, and deploy the model as a web app. Interactions will be stored in Azure Cosmos DB, providing traceability and persistence. This lab offers hands-on experience in customizing and deploying AI solutions with Azure.
 
 ## Architecture Diagram
 
@@ -20,23 +20,19 @@ You will be able to complete the following tasks:
 
 ## Task 1: Navigate to Azure OpenAI Playground
 
-In this task, you will open the Azure OpenAI resource in the Azure portal. It navigates to the Azure AI Foundry portal from the resource page. If the direct option is missing, it provides an alternate navigation method to reach Azure AI Foundry.
+In this task, you will open the Azure OpenAI resource in the Azure portal. It navigates to the Microsoft Foundry portal from the resource page. If the direct option is missing, it provides an alternate navigation method to reach Microsoft Foundry.
 
 1. In the Azure portal, search for **OpenAI (1)** in the search bar and select **Azure OpenAI (2)** from Services.
 
    ![OpenAI](images2/2/t1s1.png)
 
-1. In the **AI Foundry | Azure OpenAI** tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
+1. In the **Microsoft Foundry | Azure OpenAI** tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
-   ![OpenAI](images2/2/t1s2.png)
+   ![OpenAI](images/au6.png)
 
-1. On the **Azure OpenAI** page, click **Go to Azure AI Foundry portal** to proceed to the AI Foundry interface
+1. On the **Azure OpenAI** page, click **Go to Foundry portal** to proceed to the Microsoft Foundry interface
 
-   ![OpenAI Studio](images/l2t1p3.png)
-
-   > **Note:** If you don’t see an option like the one shown in the image above, refer to the image below to navigate to Azure AI Foundry.
-
-      ![OpenAI Studio](images/aifoundry.png)
+   ![OpenAI Studio](images/au7.png)
 
 ## Task 2: Upload your own data
 
@@ -44,7 +40,7 @@ In this task, you will upload Porsche's owner manuals (Taycan, Panamera, Cayenne
 
 1. Click on **Chat (1)** under the Playgrounds section, then in the **Setup** tab of the Chat playground, expand **Add your data (2)** and click **+ Add a data source (3)** to connect your own data.
 
-   ![Azure OpenAI Studio](images/119.png)
+   ![Azure OpenAI Studio](images/au8.png)
    
 1. Fill in the required fields on the **Select or add data source** page as follows:
     
@@ -72,7 +68,7 @@ In this task, you will upload Porsche's owner manuals (Taycan, Panamera, Cayenne
           
            ![Azure OpenAI Studio](images/save.png)
 
-         - Navigate back to the Azure AI Foundry portal, close the window, and re-perform steps 1 and 2.
+         - Navigate back to the Azure Microsoft Foundry portal, close the window, and re-perform steps 1 and 2.
             
     - Select Azure AI Search resource: Select **search-<inject key="Deployment ID">** **(1)** from the drop down.
 
@@ -104,7 +100,7 @@ In this task, you will upload Porsche's owner manuals (Taycan, Panamera, Cayenne
 
 ## Task 3: Interact with Azure OpenAI ChatGPT LLM using your own data
 
-In this task, you will upload custom data to Azure AI Foundry and interact with an Azure OpenAI ChatGPT model. You will customize the system message, test prompt responses, adjust model parameters, and deploy the chatbot as a web app via the Azure portal. The task also includes verifying conversation logging in Azure Cosmos DB and provides steps to troubleshoot deployment issues if needed.
+In this task, you will upload custom data to Microsoft Foundry and interact with an Azure OpenAI ChatGPT model. You will customize the system message, test prompt responses, adjust model parameters, and deploy the chatbot as a web app via the Azure portal. The task also includes verifying conversation logging in Azure Cosmos DB and provides steps to troubleshoot deployment issues if needed.
 
 1. In the **Add your data** pane, monitor the status until the data upload is complete and the source details are displayed.
 
@@ -179,7 +175,7 @@ In this task, you will upload custom data to Azure AI Foundry and interact with 
 
       ![Alt text](images/P2T3S11.png)
 
-      > **Note:** In case of an internal server error or **Chat history is not enabled** error, navigate back to the **Azure AI Foundry portal** and follow the steps below:
+      > **Note:** In case of an internal server error or **Chat history is not enabled** error, navigate back to the **Microsoft Foundry portal** and follow the steps below:
 
       ![Alt text](images2/2/error.png)
 
@@ -226,12 +222,10 @@ In this task, you will upload custom data to Azure AI Foundry and interact with 
    
 ## Summary
 
-In this lab, you have completed the following:
-
-- Navigated to the Azure OpenAI Playground.
-- Uploaded and integrated your own data.
-- Interacted with the Azure OpenAI ChatGPT model using your uploaded data.
+In this lab, you accessed the Azure OpenAI Playground, uploaded your own dataset, and integrated it with the chat experience. You then interacted with the Azure OpenAI ChatGPT model to generate responses grounded in your uploaded data.
 
 ## You have successfully completed the Hands-on lab.
 
-By completing this lab, you gained hands-on experience with Azure AI Foundry to extend ChatGPT with your own data. You configured the system to respond to domain-specific queries, deployed the model as a web application, and validated that all interactions were successfully logged in Cosmos DB. This exercise demonstrated how to build, deploy, and monitor a customized AI-powered solution end-to-end.
+### Conclusion
+
+By completing this lab, you gained hands-on experience with Azure Microsoft Foundry to extend ChatGPT with your own data. You configured the system to respond to domain-specific queries, deployed the model as a web application, and validated that all interactions were successfully logged in Cosmos DB. This exercise demonstrated how to build, deploy, and monitor a customized AI-powered solution end-to-end.
