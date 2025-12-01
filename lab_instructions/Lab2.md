@@ -26,17 +26,13 @@ In this task, you will open the Azure OpenAI resource in the Azure portal. It na
 
    ![OpenAI](images2/2/t1s1.png)
 
-1. In the **AI Foundry | Azure OpenAI** tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
+1. In the **Microsoft Foundry | Azure OpenAI** tab, select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>**.
 
-   ![OpenAI](images2/2/t1s2.png)
+   ![OpenAI](images/au6.png)
 
-1. On the **Azure OpenAI** page, click **Go to Azure AI Foundry portal** to proceed to the AI Foundry interface
+1. On the **Azure OpenAI** page, click **Go to Foundry portal** to proceed to the AI Foundry interface
 
-   ![OpenAI Studio](images/l2t1p3.png)
-
-   > **Note:** If you don’t see an option like the one shown in the image above, refer to the image below to navigate to Azure AI Foundry.
-
-      ![OpenAI Studio](images/aifoundry.png)
+   ![OpenAI Studio](images/au7.png)
 
 ## Task 2: Upload your own data
 
@@ -44,7 +40,7 @@ In this task, you will upload Porsche's owner manuals (Taycan, Panamera, Cayenne
 
 1. Click on **Chat (1)** under the Playgrounds section, then in the **Setup** tab of the Chat playground, expand **Add your data (2)** and click **+ Add a data source (3)** to connect your own data.
 
-   ![Azure OpenAI Studio](images/119.png)
+   ![Azure OpenAI Studio](images/au8.png)
    
 1. Fill in the required fields on the **Select or add data source** page as follows:
     
