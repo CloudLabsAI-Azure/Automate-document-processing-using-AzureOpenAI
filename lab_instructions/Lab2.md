@@ -147,7 +147,7 @@ In this task, you will upload custom data to Microsoft Foundry and interact with
    - Name: **webapp-<inject key="Deployment ID" enableCopy="false"/> (1)**
    - Subscription: Select the **Default subscription (2)**
    - Resource Group: Select **OpenAI-<inject key="Deployment ID" enableCopy="false"/>** **(3)**
-   - Location: Select **East US 2 (4)**
+   - Location: Select **<inject key="Region" enableCopy="false"/> (4)**
    - Pricing Plan: Choose **Standard (S1) (5)**
    - Check the box for **Enable chat history in the web app** **(6)**
 
