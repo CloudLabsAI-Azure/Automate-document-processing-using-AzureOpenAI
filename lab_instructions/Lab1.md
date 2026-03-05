@@ -30,21 +30,21 @@ In this task, you will set up the Document Intelligence environment in Azure so 
 
 1. Navigate to **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>**.
 
-   ![Alt text](images/au1.png)
+   ![Alt text](images/automate-image1.png)
 
 1. In the **Overview (1)** pane, scroll down to the **Get Started** section and click **Go to Document Intelligence Studio (2)**.
 
-   ![Alt text](images/au2.png)
+   ![Alt text](images/automate-image2.png)
 
    >**Note:** If prompted, sign in using the same credentials you used to log in to Azure.
 
 1. Select **Start with Document Intelligence**.
 
-   ![Alt text](images/au3.png)
+   ![Alt text](images/automate-image3.png)
 
 1. On the **Document Intelligence Studio** page, scroll to **Custom models** and click **Get started** under **Custom extraction model**. 
 
-   ![Alt text](images2/t1s4.png)
+   ![Alt text](images2/automate-image4.png)
 
    >**Note:** If prompted, log in using the below Azure credentials.
 
@@ -69,7 +69,7 @@ In this task, you will set up the Document Intelligence environment in Azure so 
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
-     ![Alt text](images/103.png)
+     ![Alt text](images/automate-image5.png)
 
 1. Under **Configure service resource**, provide the following details, then click **Continue (5)**.
 
@@ -78,7 +78,7 @@ In this task, you will set up the Document Intelligence environment in Azure so 
    - Document Intelligence or Cognitive Service Resource: Select **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
    - API version: Select **2024-11-30 (4.0 General Availability)** **(4)**.
 
-     ![configuring service resource](images/au4.png)
+     ![configuring service resource](images/automate-image6.png)
 
       >**Note**: Please ignore the error that appears when selecting Document Intelligence or Cognitive Service Resource. Since we are using the **Template** model training approach, this error does not impact the workflow.
 
@@ -89,11 +89,11 @@ In this task, you will set up the Document Intelligence environment in Azure so 
    - Storage account: Select **storage<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
    - Blob container: **analysis** **(4)**.
    
-        ![storage account](images/doc1.png)
+        ![storage account](images/automate-image7.png)
 
 1. Review the project configuration details and click **Create project**.
 
-     ![Alt text](images2/t1s11.png)
+     ![Alt text](images2/automate-image8.png)
 
 ## Task 2: Train and Label data
 
