@@ -30,21 +30,21 @@ In this task, you will set up the Document Intelligence environment in Azure so 
 
 1. Navigate to **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>**.
 
-   ![Alt text](images/au1.png)
+   ![Alt text](images2/automate-image1.png)
 
 1. In the **Overview (1)** pane, scroll down to the **Get Started** section and click **Go to Document Intelligence Studio (2)**.
 
-   ![Alt text](images/au2.png)
+   ![Alt text](images2/automate-image2.png)
 
    >**Note:** If prompted, sign in using the same credentials you used to log in to Azure.
 
 1. Select **Start with Document Intelligence**.
 
-   ![Alt text](images/au3.png)
+   ![Alt text](images2/automate-image3.png)
 
 1. On the **Document Intelligence Studio** page, scroll to **Custom models** and click **Get started** under **Custom extraction model**. 
 
-   ![Alt text](images2/t1s4.png)
+   ![Alt text](images2/automate-image4.png)
 
    >**Note:** If prompted, log in using the below Azure credentials.
 
@@ -69,7 +69,7 @@ In this task, you will set up the Document Intelligence environment in Azure so 
    - Project name: **testproject** **(1)**.
    - Description: **Custom model project** **(2)**.
 
-     ![Alt text](images/103.png)
+     ![Alt text](images2/automate-image5.png)
 
 1. Under **Configure service resource**, provide the following details, then click **Continue (5)**.
 
@@ -78,7 +78,7 @@ In this task, you will set up the Document Intelligence environment in Azure so 
    - Document Intelligence or Cognitive Service Resource: Select **document-intelligence-<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
    - API version: Select **2024-11-30 (4.0 General Availability)** **(4)**.
 
-     ![configuring service resource](images/au4.png)
+     ![configuring service resource](images2/automate-image6.png)
 
       >**Note**: Please ignore the error that appears when selecting Document Intelligence or Cognitive Service Resource. Since we are using the **Template** model training approach, this error does not impact the workflow.
 
@@ -89,11 +89,11 @@ In this task, you will set up the Document Intelligence environment in Azure so 
    - Storage account: Select **storage<inject key="Deployment ID" enableCopy="false"/>** **(3)**.
    - Blob container: **analysis** **(4)**.
    
-        ![storage account](images/doc1.png)
+        ![storage account](images2/automate-image7.png)
 
 1. Review the project configuration details and click **Create project**.
 
-     ![Alt text](images2/t1s11.png)
+     ![Alt text](images2/automate-image8.png)
 
 ## Task 2: Train and Label data
 
@@ -102,6 +102,8 @@ In this task, you will upload and label training documents to create a custom mo
 1. In the Label data section, click **Browse for files** to upload your training documents.
 
      ![Browse for files](images/106.png)
+
+   **>Note:** If the information pop-up appears on the screen (such as Upload documents or Let us know how we're doing), please close the pop-up by clicking the **X** before continuing with the next step.
 
 1. In the file explorer, enter the path `C:\LabFiles\Train` **(1)** and press **Enter**, select all **PDF files (2)** (Invoice_1 to Invoice_5) in the folder, then click **Open (3)**.
 
@@ -244,6 +246,8 @@ In this task, you will be using Azure Functions to process documents that are up
          >**Note:** If prompted, select subscription → choose the **Default Subscription**.
 
    - Select a storage account type for development → choose **Use Azure Storage for remote storage** and select **storage<inject key="Deployment ID" enableCopy="false"/>** → then select the name of the storage **input** container. Press **Enter** to confirm.
+  
+     **>Note:** If you are unable to select **Use Azure Storage for remote storage** and see "No subscription found", please reperform Steps 5–6 (including all sub-steps). After completing them again, you should be able to see Use Azure Storage for remote storage.
 
      ![](images/116.png)
 
